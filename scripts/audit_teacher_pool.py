@@ -18,6 +18,7 @@ import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+import sys
 
 import torch
 
@@ -134,6 +135,9 @@ def main() -> int:
     parser.add_argument("--probe-image", type=Path, help="one real image for qualified strict forward probes")
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args()
+    # Reviewed factories live in the project; executing this script puts
+    # scripts/ on sys.path, not the project root.
+    sys.path.insert(0, str(args.root.resolve()))
     entries = json.loads(args.manifest.read_text()) if args.manifest else [{"id": ident, "path": path} for ident, path in DEFAULT_TEACHERS]
     report = {"generated_at": datetime.now(timezone.utc).isoformat(), "schema_version": 1, "policy": "Inspection is not teacher qualification. QUALIFIED requires strict=True and a real-image forward pass.", "teachers": [inspect(entry, args.root, args.probe_image) for entry in entries]}
     report["summary"] = {"qualified": sum(item.get("qualification", {}).get("status") == "QUALIFIED" for item in report["teachers"]), "not_qualified": sum(item.get("qualification", {}).get("status") != "QUALIFIED" for item in report["teachers"])}
