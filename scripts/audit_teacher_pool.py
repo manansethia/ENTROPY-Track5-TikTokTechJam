@@ -26,12 +26,12 @@ DEFAULT_TEACHERS = [
     ("V1", "checkpoints/tri_hybrid_v1/best_model.pt"),
     ("V2", "checkpoints/tri_hybrid_3stream_v2/best_model.pt"),
     ("V3", "checkpoints/tri_hybrid_45k_v3/best_model.pt"),
-    ("V4", "checkpoints/forensic_multiscale_v4/best_model.pt"),
+    ("V4", "checkpoints/experimental/v4_3_champion_config_c.pt"),
     ("V5", "checkpoints/experimental/v5/v5_champion_cag.pt"),
     ("C0", "checkpoints/production/final_champion_frozen_model.pt"),
-    ("C1", "checkpoints/portrait_rem/c1_portrait_rem_epoch3.pt"),
+    ("C1", "checkpoints/portrait_rem_1/portrait_rem_1_epoch_3.pt"),
     ("C2", "checkpoints/specialists_v3/c2_spai_vit_best.pt"),
-    ("C3", "../ai-storage/aigc_data/models/community_forensics_vit_small/model.safetensors"),
+    ("C3", "/mnt/ai-storage/aigc_data/models/community_forensics_vit_small/model.safetensors"),
     ("C4", "checkpoints/specialists_v3/c4_convnext_base_best.pt"),
     ("C5", "checkpoints/specialists_v3/c5_convnext_tiny_best.pt"),
     ("C6", "checkpoints/specialists_v3/c6_efficientnet_b0_best.pt"),
@@ -69,12 +69,12 @@ def tensor_summary(state: dict[str, torch.Tensor] | None) -> dict[str, Any]:
     }
 
 
-def build_factory(spec: str):
+def build_factory(spec: str, kwargs: dict[str, Any]):
     module_name, separator, attr_name = spec.partition(":")
     if not separator:
         raise ValueError("factory must be written as module:callable")
     factory = getattr(importlib.import_module(module_name), attr_name)
-    return factory()
+    return factory(**kwargs)
 
 
 def strict_probe(entry: dict[str, Any], checkpoint: Path, image: Path | None) -> dict[str, Any]:
@@ -85,7 +85,7 @@ def strict_probe(entry: dict[str, Any], checkpoint: Path, image: Path | None) ->
     if image is None:
         return {"status": "NOT_QUALIFIED", "reason": "no real probe image supplied"}
     try:
-        model = build_factory(factory)
+        model = build_factory(factory, entry.get("factory_kwargs", {}))
         payload = torch.load(checkpoint, map_location="cpu", weights_only=False)
         state, state_key = resolve_state(payload)
         if state is None:
@@ -107,7 +107,8 @@ def strict_probe(entry: dict[str, Any], checkpoint: Path, image: Path | None) ->
 
 
 def inspect(entry: dict[str, Any], root: Path, image: Path | None) -> dict[str, Any]:
-    checkpoint = (root / entry["path"]).resolve()
+    raw_path = Path(entry["path"])
+    checkpoint = (raw_path if raw_path.is_absolute() else root / raw_path).resolve()
     record: dict[str, Any] = {"id": entry["id"], "requested_path": entry["path"], "exists": checkpoint.is_file()}
     if not checkpoint.is_file():
         record.update({"qualification": {"status": "NOT_QUALIFIED", "reason": "artifact missing"}})
