@@ -60,9 +60,13 @@
   {
     "id": "C1",
     "path": "checkpoints/portrait_rem_1/portrait_rem_1_epoch_3.pt",
-    "architecture": "ScientificVisionDetector candidate pending strict identity check",
-    "output_type": "binary logit expected",
-    "standalone": false
+    "architecture": "ScientificVisionDetector ConfigA portrait-remediation candidate",
+    "factory": "deployment.portable_model:ScientificVisionDetector",
+    "input_resolution": 224,
+    "normalization": {"mean": [0.48145466, 0.4578275, 0.40821073], "std": [0.26862954, 0.26130258, 0.27577711]},
+    "output_type": "binary logit; optional evidence vector and SRM features",
+    "classes": ["REAL", "AIGC"],
+    "standalone": true
   },
   {
     "id": "C2",
