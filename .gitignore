@@ -1,0 +1,83 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.ipynb_checkpoints/
+
+checkpoints/*.pth
+logs/*
+!logs/README.md
+
+data/train/real/*
+!data/train/real/.gitkeep
+data/train/synthetic/*
+!data/train/synthetic/.gitkeep
+data/val_demo/coco_val2017/*
+!data/val_demo/coco_val2017/.gitkeep
+data/val_demo/dalle_advanced/*
+!data/val_demo/dalle_advanced/.gitkeep
+
+results*.json
+robustness_results*.csv
+*.log
+.DS_Store
+
+# Private planning, runtime state, and internal audit outputs
+docs/MASTER_FINALIZING_PROJECT.md
+reports/final_project_audit.md
+reports/model_registry.json
+reports/benchmark_isolation_audit.json
+reports/training_preflight.json
+runtime/
+.codex-backups/
+
+# The deployable frontend is maintained in its own repository at app/.
+/app/
+# Large local assets
+*.pth
+*.pt
+*.bin
+*.safetensors
+/data/**
+/mnt/
+*.parquet
+*.tar
+*.zip
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# SSH/private keys
+*.pem
+*.key
+id_rsa
+id_ed25519
+id_ecdsa
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ML artifacts
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Large datasets
+data/
+datasets/
+models/
+checkpoints/
+features/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
