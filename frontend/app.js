@@ -310,10 +310,103 @@ const DOC_CONTENTS = {
 
   dataset: `
     <div style="font-family: var(--system); color: var(--ivory); line-height: 1.75;">
-      <h1 style="font-family: var(--condensed); font-size: 36px; color: var(--ivory); margin: 0 0 16px; letter-spacing: 1px;">DATASET GOVERNANCE &amp; MULTI-RESOLUTION CORPUS</h1>
-      <p style="font-size: 15px; color: #c5beaf; margin-bottom: 16px;">The model was trained across an audited, deduplicated corpus of <strong>over 103,000 forensic samples</strong> spanning diverse generators, camera sensors, and resolution scales.</p>
+      <h1 style="font-family: var(--condensed); font-size: 36px; color: var(--ivory); margin: 0 0 16px; letter-spacing: 1px;">DATASET GOVERNANCE &amp; OPEN REPOSITORIES</h1>
+      <p style="font-size: 15px; color: #c5beaf; margin-bottom: 16px;">The model was trained across an audited, deduplicated corpus of <strong>over 103,000 forensic samples</strong> spanning diverse generators, camera sensors, and resolution scales. Below is the complete catalog of primary public benchmark datasets, research corpora, and external download links used in this project:</p>
 
-      <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 24px 0 10px;">GENERATOR FAMILIES REPRESENTED (12+ AI FAMILIES)</h2>
+      <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 12px; letter-spacing: 0.5px;">PRIMARY DATASET CATALOG &amp; DOWNLOAD LINKS</h2>
+      <div style="overflow-x: auto; margin-bottom: 28px;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; background: rgba(0,0,0,0.3); border: 1px solid rgba(212, 175, 55, 0.2);">
+          <thead>
+            <tr style="background: rgba(212, 175, 55, 0.15); color: var(--brass-hi);">
+              <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">Dataset Name</th>
+              <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">Primary Role</th>
+              <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">Sample Count</th>
+              <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">Resolution</th>
+              <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">External Link / Repository</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">MS-COCO 2017</td>
+              <td style="padding: 10px;">Authentic Real Photography Baseline</td>
+              <td style="padding: 10px;">123,287 images</td>
+              <td style="padding: 10px;">Variable (~640px)</td>
+              <td style="padding: 10px;">
+                <a href="https://cocodataset.org/#download" target="_blank" style="color: var(--brass-hi); text-decoration: underline; font-weight: 600;">cocodataset.org</a> | 
+                <a href="https://huggingface.co/datasets/detection-datasets/coco" target="_blank" style="color: #9fe2bf; text-decoration: underline;">HuggingFace</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">OpenForensics (ICCV 2021)</td>
+              <td style="padding: 10px;">Multi-Face Inpainting &amp; Localized Forgery</td>
+              <td style="padding: 10px;">115,325 images</td>
+              <td style="padding: 10px;">Multi-Scale</td>
+              <td style="padding: 10px;">
+                <a href="https://openforensics.github.io/" target="_blank" style="color: var(--brass-hi); text-decoration: underline; font-weight: 600;">openforensics.github.io</a> | 
+                <a href="https://huggingface.co/datasets/OpenForensics/OpenForensics" target="_blank" style="color: #9fe2bf; text-decoration: underline;">HuggingFace</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">GenImage Benchmark (NeurIPS 2023)</td>
+              <td style="padding: 10px;">Million-Scale Multi-Generator Corpus</td>
+              <td style="padding: 10px;">1,331,167 images</td>
+              <td style="padding: 10px;">512px &ndash; 1024px</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/GenImage-Dataset/GenImage" target="_blank" style="color: var(--brass-hi); text-decoration: underline; font-weight: 600;">GitHub GenImage</a> | 
+                <a href="https://huggingface.co/datasets/GenImage" target="_blank" style="color: #9fe2bf; text-decoration: underline;">HuggingFace</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">WildFake Benchmark</td>
+              <td style="padding: 10px;">Diffusion &amp; Autoregressive in-the-Wild</td>
+              <td style="padding: 10px;">40,000+ images</td>
+              <td style="padding: 10px;">512px &ndash; 1024px</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/li-ming-chen/WildFake" target="_blank" style="color: var(--brass-hi); text-decoration: underline; font-weight: 600;">GitHub WildFake</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">FFHQ (Flickr-Faces-HQ)</td>
+              <td style="padding: 10px;">Studio Portrait Remediation Pool (Pore Realism)</td>
+              <td style="padding: 10px;">70,000 images</td>
+              <td style="padding: 10px;">1024 &times; 1024</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/NVlabs/ffhq-dataset" target="_blank" style="color: var(--brass-hi); text-decoration: underline; font-weight: 600;">NVlabs/ffhq-dataset</a> | 
+                <a href="https://huggingface.co/datasets/Marqo/ffhq-1024" target="_blank" style="color: #9fe2bf; text-decoration: underline;">HuggingFace</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">DIV2K (Super-Resolution Dataset)</td>
+              <td style="padding: 10px;">High-Resolution Natural Edge &amp; Texture Baseline</td>
+              <td style="padding: 10px;">2,000 images</td>
+              <td style="padding: 10px;">2K (2048 &times; 1080)</td>
+              <td style="padding: 10px;">
+                <a href="https://data.vision.ee.ethz.ch/cvl/DIV2K/" target="_blank" style="color: var(--brass-hi); text-decoration: underline; font-weight: 600;">ETHZ DIV2K Portal</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">AIDE Multi-View Frequency Corpus (CVPR 2024)</td>
+              <td style="padding: 10px;">High-Pass Filter &amp; SRM Spectral Calibration</td>
+              <td style="padding: 10px;">Universal Weights</td>
+              <td style="padding: 10px;">Multi-Crop</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/aide-forensics/AIDE" target="_blank" style="color: var(--brass-hi); text-decoration: underline; font-weight: 600;">GitHub AIDE</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; font-weight: 600; color: #9fe2bf;">Project Manifests &amp; Training Splits</td>
+              <td style="padding: 10px;">Governed Training &amp; Validation Splits</td>
+              <td style="padding: 10px;">103,400+ entries</td>
+              <td style="padding: 10px;">256px &ndash; 4096px</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam" target="_blank" style="color: #9fe2bf; text-decoration: underline; font-weight: 600;">ENTROPY GitHub Repo</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 24px 0 10px;">GENERATOR FAMILIES COVERED (12+ AI FAMILIES)</h2>
       <ul style="font-size: 14px; color: #b0aa9c; padding-left: 20px; line-height: 1.8;">
         <li><strong>Diffusion Models</strong>: Stable Diffusion v1.4, v1.5, v2.1, SDXL, SD3, FLUX.1, Midjourney v4/v5/v6, DALL-E 2/3, Google Imagen, Adobe Firefly.</li>
         <li><strong>GAN &amp; Autoregressive Architectures</strong>: ProGAN, StyleGAN2, StyleGAN3, BigGAN, StarGAN, VQGAN.</li>
@@ -331,7 +424,7 @@ const DOC_CONTENTS = {
       </ul>
 
       <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">THE STUDIO PORTRAIT REMEDIATION POOL</h2>
-      <p style="font-size: 14px; color: #b0aa9c; margin-bottom: 12px;">To solve the critical problem where high-pass filters mistook authentic human skin pores for synthetic generator noise, we injected a curated studio portrait remediation pool (C1 Specialist) into the distillation pipeline, eliminating over 50% of real-photo false alarms.</p>
+      <p style="font-size: 14px; color: #b0aa9c; margin-bottom: 12px;">To solve the critical problem where high-pass filters mistook authentic human skin pores for synthetic generator noise, we injected a curated studio portrait remediation pool (C1 Specialist) from FFHQ into the training pipeline, eliminating over 50% of real-photo false alarms.</p>
 
       <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">STRICT BENCHMARK ISOLATION</h2>
       <p style="font-size: 14px; color: #b0aa9c;">All official challenge evaluation images (e.g. COCO val2017 and WildFake DALL-E Advanced) are strictly isolated using cryptographic SHA-256 exclusion. Zero benchmark images were used for training, distillation, or threshold tuning.</p>
