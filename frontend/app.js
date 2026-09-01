@@ -384,7 +384,7 @@ const DOC_CONTENTS = {
   releases: `
     <div style="font-family: var(--system); color: var(--ivory); line-height: 1.75;">
       <h1 style="font-family: var(--condensed); font-size: 36px; color: var(--ivory); margin: 0 0 16px; letter-spacing: 1px;">OFFICIAL MODEL RELEASES &amp; DOWNLOADS</h1>
-      <p style="font-size: 15px; color: #c5beaf; margin-bottom: 16px;">All models are verified, tested, and cataloged. Choose the appropriate checkpoint based on your deployment environment:</p>
+      <p style="font-size: 15px; color: #c5beaf; margin-bottom: 16px;">All models are verified, tested, and cataloged. Click below to download weights directly for local execution:</p>
 
       <div style="overflow-x: auto; margin-bottom: 24px;">
         <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; background: rgba(0,0,0,0.3); border: 1px solid rgba(212, 175, 55, 0.2);">
@@ -395,25 +395,29 @@ const DOC_CONTENTS = {
               <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">Format</th>
               <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">Size</th>
               <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">GPU Latency</th>
-              <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">Recommended Target</th>
+              <th style="padding: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">Direct Download</th>
             </tr>
           </thead>
           <tbody>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">HighCap Distilled (FP16) ⭐</td>
-              <td style="padding: 10px;">96.59M</td>
-              <td style="padding: 10px; color: var(--brass-hi);">FP16</td>
-              <td style="padding: 10px;">184.4 MB</td>
-              <td style="padding: 10px;">17.1 ms</td>
-              <td style="padding: 10px; color: #9fe2bf;">Primary Server &amp; Production API</td>
-            </tr>
             <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
               <td style="padding: 10px; font-weight: 600; color: var(--ivory);">HighCap Distilled (INT8) ⚡</td>
               <td style="padding: 10px;">96.59M</td>
               <td style="padding: 10px; color: var(--brass-hi);">INT8</td>
               <td style="padding: 10px;">92.5 MB</td>
               <td style="padding: 10px;">7.5 ms</td>
-              <td style="padding: 10px; color: #9fe2bf;">Fast Edge &amp; Mobile Serving</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/raw/main/checkpoints/distilled/highcap_distilled_forensic_model_int8.pt" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">HighCap Distilled (FP16) ⭐</td>
+              <td style="padding: 10px;">96.59M</td>
+              <td style="padding: 10px; color: var(--brass-hi);">FP16</td>
+              <td style="padding: 10px;">184.4 MB</td>
+              <td style="padding: 10px;">17.1 ms</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
+              </td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
               <td style="padding: 10px; font-weight: 600; color: var(--ivory);">HighCap Distilled (FP32)</td>
@@ -421,7 +425,9 @@ const DOC_CONTENTS = {
               <td style="padding: 10px; color: var(--brass-hi);">FP32</td>
               <td style="padding: 10px;">368.6 MB</td>
               <td style="padding: 10px;">26.9 ms</td>
-              <td style="padding: 10px;">Academic Reference / Float32</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(255, 255, 255, 0.1); border: 1px solid #888; border-radius: 3px; color: #ccc; text-decoration: none; font-size: 11px;">DOWNLOAD (.PT)</a>
+              </td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
               <td style="padding: 10px; font-weight: 600; color: var(--ivory);">UltraLight Distilled (FP16)</td>
@@ -429,7 +435,9 @@ const DOC_CONTENTS = {
               <td style="padding: 10px; color: var(--brass-hi);">FP16</td>
               <td style="padding: 10px;">8.97 MB</td>
               <td style="padding: 10px;">2.2 ms</td>
-              <td style="padding: 10px;">Compact Triage (&lt;10 MB)</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/raw/main/checkpoints/distilled/master_distilled_forensic_model_fp16.pt" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
+              </td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
               <td style="padding: 10px; font-weight: 600; color: var(--ivory);">UltraLight Distilled (INT8)</td>
@@ -437,15 +445,29 @@ const DOC_CONTENTS = {
               <td style="padding: 10px; color: var(--brass-hi);">INT8</td>
               <td style="padding: 10px;">4.82 MB</td>
               <td style="padding: 10px;">1.8 ms</td>
-              <td style="padding: 10px;">Micro-IoT / Embedded (&lt;5 MB)</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/raw/main/checkpoints/distilled/master_distilled_forensic_model_int8.pt" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
+              </td>
             </tr>
             <tr>
-              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">Master Unified Ensemble</td>
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">Model C0 (Triple-Hybrid Champion)</td>
+              <td style="padding: 10px;">735.0M</td>
+              <td style="padding: 10px; color: var(--brass-hi);">FP32</td>
+              <td style="padding: 10px;">1,470 MB</td>
+              <td style="padding: 10px;">45.0 ms</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">Master Unified Teacher Ensemble</td>
               <td style="padding: 10px;">1,818.5M</td>
               <td style="padding: 10px; color: var(--brass-hi);">FP16</td>
               <td style="padding: 10px;">3,470.2 MB</td>
               <td style="padding: 10px;">1,252.5 ms</td>
-              <td style="padding: 10px;">11-Teacher Historical Ensemble</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(255, 255, 255, 0.1); border: 1px solid #888; border-radius: 3px; color: #ccc; text-decoration: none; font-size: 11px;">DOWNLOAD (.PT)</a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -457,7 +479,7 @@ import torch
 from scripts.final.highcap_distilled_forensic_model import HighCapacityStudentForensicModel
 
 model = HighCapacityStudentForensicModel().eval().cuda().half()
-ckpt = torch.load("checkpoints/distilled/highcap_distilled_forensic_model_fp16.pt")
+ckpt = torch.load("checkpoints/distilled/highcap_distilled_forensic_model_int8.pt")
 model.load_state_dict(ckpt["model_state_dict"])
 out = model(image_tensor_224) # Returns class_logits, probabilities, segmentation_heatmap</pre>
     </div>
@@ -474,44 +496,23 @@ out = model(image_tensor_224) # Returns class_logits, probabilities, segmentatio
 # Single Image Evaluation
 python infer.py \
   --image test_inputs/sample.jpg \
-  --checkpoint checkpoints/distilled/highcap_distilled_forensic_model_fp16.pt \
+  --checkpoint checkpoints/distilled/highcap_distilled_forensic_model_int8.pt \
   --device cuda
 
 # Batch Directory Evaluation with Full Forensic Metadata
-python infer.py \
+python predict.py \
   --input-dir ./test_images \
-  --output predictions.json \
-  --detailed</pre>
+  --output predictions.json</pre>
 
       <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">STANDARDIZED JSON FORENSIC SCHEMA</h2>
       <p style="font-size: 14px; color: #b0aa9c; margin-bottom: 12px;">All inference jobs emit machine-readable JSON forensic dossiers:</p>
       <pre style="background: rgba(0,0,0,0.5); padding: 14px; border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 4px; font-family: var(--mono); font-size: 12px; color: var(--ivory); overflow-x: auto;">
-{
-  "evidence_id": "sess_1725178900_c84a",
-  "sha256": "4b72e1c98f...d90a",
-  "verdict": "PARTIAL_AIGC",
-  "confidence": 0.9142,
-  "probabilities": {
-    "REAL": 0.0418,
-    "PARTIAL_AIGC": 0.9142,
-    "FULL_AIGC": 0.0440
-  },
-  "affected_area_pct": 8.42,
-  "bounding_boxes": [
-    { "box_xywh": [120, 45, 340, 280], "confidence": 0.892 }
-  ],
-  "spatial_signals": {
-    "fft_high_freq_ratio": 0.0412,
-    "srm_residual_energy": 1.8420,
-    "laplacian_variance": 142.50
-  },
-  "provenance": {
-    "camera_model": "Canon EOS R5",
-    "lens_model": "RF 85mm f/1.2L USM",
-    "c2pa_status": "NOT DETECTED"
-  },
-  "inference_latency_ms": 17.12
-}</pre>
+[
+  {
+    "image_path": "test_images/sample1.jpg",
+    "pred": 0.9142
+  }
+]</pre>
 
       <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">GIT REPOSITORY &amp; MODEL WEIGHTS</h2>
       <p style="font-size: 14px; color: #b0aa9c;">Full project codebase, manifests, and documentation are hosted on GitHub: <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam" target="_blank" style="color: var(--brass-hi); text-decoration: underline;">ENTROPY-Track5-TikTokTechJam</a>.</p>
