@@ -1,21 +1,27 @@
 # ENTROPY — Multi-Paradigm AIGC Forensic Vision Platform
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![PyTorch 2.2+](https://img.shields.io/badge/pytorch-2.2+-ee4c2c.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com/)
+<p align="center">
+  <img src="assets/brand_cards.jpg" width="460" alt="ENTROPY AIGC Forensic Intelligence Station" style="border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.6);">
+</p>
+
+<p align="center">
+  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="Python 3.10+"></a>
+  <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/pytorch-2.2+-ee4c2c.svg" alt="PyTorch 2.2+"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+  <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-0.110+-009688.svg" alt="FastAPI"></a>
+</p>
 
 An explainable, robust AI-generated content (AIGC) forensic detection platform and physical investigation workstation engineered for high-assurance image authenticity verification, localized AI inpainting detection, and cross-generator resilience under real-world social media redistribution.
 
 **Project Author**: Manan Sethia  
 **Track**: Track 5 — Robust AIGC Image Detection (TikTok TechJam)  
-**Comprehensive Documentation**: See [`PROJECT_KNOWLEDGE_MASTER.md`](PROJECT_KNOWLEDGE_MASTER.md) for the authoritative 54-section technical knowledge base.
+**Comprehensive Master Knowledge Base**: See [`PROJECT_KNOWLEDGE_MASTER.md`](PROJECT_KNOWLEDGE_MASTER.md) for the exhaustive 54-section technical compendium.
 
 ---
 
-## 1. System Architecture & Model Ecosystem
+## 1. System Architecture & Multi-Model Ecosystem
 
-The ENTROPY platform encompasses a multi-paradigm forensic vision ecosystem:
+ENTROPY is architected as an end-to-end forensic vision ecosystem capable of operating in high-assurance multi-modal server mode or ultra-fast edge standalone mode:
 
 ```mermaid
 graph TD
@@ -42,12 +48,12 @@ graph TD
     SpatialEng --> Dossier
 ```
 
-### Active Production Anchor: Model C0 (Triple-Hybrid Champion ~735M)
+### Primary Live Web Station Engine: Model C0 (Triple-Hybrid Champion ~735M)
 The live web analysis station is powered by the **Triple-Hybrid Champion Anchor (Model C0)**:
-- **Stream A (OpenAI CLIP ViT-L/14, 304M)**: High-level semantic composition, lighting consistency, and anatomical geometry.
-- **Stream B (Google SigLIP SO400M, 400M)**: Fine-grained multi-modal photorealism fidelity and texture alignment.
-- **Stream C (Spatial Rich Model + Haar Wavelet + ConvNeXt, 31M)**: Deterministic high-frequency spatial noise residuals and generator upsampling grid artifacts.
-- **Reliability Gating & Temperature Calibration**: Learned softmax router dynamically weights streams, calibrated via temperature scaling ($T=1.5230$) for strict enterprise operating points ($\text{FPR} \le 0.10\%$).
+- **Stream A (OpenAI CLIP ViT-L/14, 304M params)**: High-level semantic composition, optical perspective, and anatomical coherence.
+- **Stream B (Google SigLIP SO400M, 400M params)**: Multi-modal photorealism fidelity and fine-grained texture consistency.
+- **Stream C (Spatial Rich Model + Haar Wavelet + ConvNeXt, 31M params)**: Deterministic high-frequency spatial noise residuals and generator upsampling grid artifacts.
+- **Reliability Gating & Calibration**: Learned gating dynamically downweights frequency reliance when lossy compression or blur erases frequency traces. Calibrated via temperature scaling ($T=1.5230$) for strict enterprise operating points ($\text{FPR} \le 0.10\%$).
 
 ### Standalone Distilled Candidate: High-Capacity Student (96.59M)
 Distilled from the 1.82B 11-teacher ensemble into a single neural network with **100% zero teacher dependencies**:
@@ -92,7 +98,7 @@ Why do certain forensic models excel on specific image domains while struggling 
 
 ## 4. Governed Dataset & Resolution Stratification
 
-The model was trained across an audited, deduplicated corpus of **over 103,000 forensic samples**:
+The models were trained across an audited, deduplicated corpus of **over 103,000 forensic samples**:
 - **Generators Represented**: FLUX.1, SDXL, SD3, Stable Diffusion v1.4/v1.5/v2.1, Midjourney v4/v5/v6, DALL-E 2/3, Google Imagen, Adobe Firefly, ProGAN, StyleGAN2/3, BigGAN, StarGAN, and FaceForensics++.
 - **Resolution Stratification**:
   - *Low-Res ($<512\text{px}$)*: Social media thumbnails & compressed web imagery.
@@ -119,7 +125,7 @@ Run inference on any image using the standalone model:
 
 ```bash
 # Standard inference
-python infer.py --image test_inputs/4women.webp --checkpoint checkpoints/distilled/highcap_distilled_forensic_model_fp16.pt
+python infer.py --image test_inputs/sample.jpg --checkpoint checkpoints/distilled/highcap_distilled_forensic_model_fp16.pt
 
 # Batch directory inference
 python infer.py --input-dir ./test_inputs --output predictions.json --detailed

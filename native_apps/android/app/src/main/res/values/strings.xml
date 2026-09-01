@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">AetherForensics</string>
-    <string name="title_activity_main">AetherForensics</string>
-    <string name="package_name">com.tiktok.aetherforensics</string>
-    <string name="custom_url_scheme">com.tiktok.aetherforensics</string>
-</resources>

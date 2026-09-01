@@ -40,6 +40,7 @@ logs/
 runtime/
 .codex-backups/
 .pytest_cache/
+native_apps/
 
 # Sensitive keys
 *.pem
@@ -47,3 +48,16 @@ runtime/
 id_rsa
 id_ed25519
 id_ecdsa
+
+# Ignore all loose/scrap images by default (except brand banner and UI textures)
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+!assets/brand_cards.jpg
+!frontend/assets/*.jpg
+!frontend/assets/*.png
+!frontend/assets/*.svg
+!frontend/assets/materials/*.jpg
+!deployment/frontend/assets/*.jpg
