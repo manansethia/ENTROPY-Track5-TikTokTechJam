@@ -9,15 +9,19 @@ venv/
 !.env.example
 .ipynb_checkpoints/
 
-# Checkpoint and weight files (>50MB)
+# Heavy weight files (>100MB)
 *.pth
-*.pt
 *.bin
 *.ckpt
 *.safetensors
 *.onnx
 *.engine
-checkpoints/
+checkpoints/*
+!checkpoints/distilled/
+checkpoints/distilled/*
+!checkpoints/distilled/highcap_distilled_forensic_model_int8.pt
+!checkpoints/distilled/master_distilled_forensic_model_fp16.pt
+!checkpoints/distilled/master_distilled_forensic_model_int8.pt
 
 # Large datasets, storage & heavy manifests (>50MB)
 data/
