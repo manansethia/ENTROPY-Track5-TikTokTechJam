@@ -1,14 +1,15 @@
 """
 server/spatial_engine.py
 Deterministic Spatial & Frequency Forensic Analysis Engine
-Computes real-time FFT radial spectral decay, SRM noise residuals, and edge variance.
+Computes real-time FFT radial spectral decay, SRM noise residuals, edge variance,
+and smooth, high-contrast forensic heatmaps.
 """
 
 import io
 import base64
 from typing import Dict, Any, Tuple, Optional
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 
 
 def pil_to_base64(img: Image.Image, format: str = "PNG") -> str:
@@ -24,7 +25,7 @@ def compute_deterministic_spatial_evidence(pil_img: Image.Image) -> Dict[str, An
     2. 5x5 SRM (Spatial-Rich Model) High-Pass Residual Energy
     3. Laplacian Edge Variance & Gradient Discontinuity
     4. Affected Area % estimation via thresholded residual variance
-    5. Diagnostic visual artifact maps (SRM PNG, FFT power spectrum PNG, Heatmap PNG)
+    5. Diagnostic visual artifact maps (SRM PNG, FFT power spectrum PNG, Smooth Heatmap PNG)
     """
     img_rgb = pil_img.convert("RGB")
     w_orig, h_orig = img_rgb.size
@@ -64,7 +65,6 @@ def compute_deterministic_spatial_evidence(pil_img: Image.Image) -> Dict[str, An
     
     # 2D convolution with reflection padding
     pad_arr = np.pad(arr, 2, mode="reflect")
-    # Vectorized 5x5 window conv
     srm_res = np.zeros_like(arr)
     for ky in range(5):
         for kx in range(5):
@@ -78,41 +78,43 @@ def compute_deterministic_spatial_evidence(pil_img: Image.Image) -> Dict[str, An
     srm_img = Image.fromarray(srm_vis, mode="L")
 
     # 3. Laplacian Edge Variance
-    # Discrete Laplacian kernel: [[0, 1, 0], [1, -4, 1], [0, 1, 0]]
     pad1 = np.pad(arr, 1, mode="reflect")
     lap = (pad1[0:-2, 1:-1] + pad1[2:, 1:-1] + pad1[1:-1, 0:-2] + pad1[1:-1, 2:] - 4.0 * pad1[1:-1, 1:-1])
     lap_var = float(np.var(lap))
 
-    # 4. Localized Inpainting / Area % Estimation
-    # Compute local spatial variance grid (16x16 cells = 16px per block)
-    block_size = 16
-    n_blocks = proc_size // block_size
-    grid_scores = np.zeros((n_blocks, n_blocks), dtype=np.float32)
-    
-    for by in range(n_blocks):
-        for bx in range(n_blocks):
-            patch_srm = srm_abs[by*block_size:(by+1)*block_size, bx*block_size:(bx+1)*block_size]
-            grid_scores[by, bx] = float(np.mean(patch_srm))
-            
-    # Baseline threshold for anomalous noise
-    median_score = np.median(grid_scores)
-    std_score = np.std(grid_scores) + 1e-6
-    z_scores = (grid_scores - median_score) / std_score
-    anomalous_cells = z_scores > 2.2
-    affected_percentage = float(np.sum(anomalous_cells) / anomalous_cells.size * 100.0)
+    # 4. Multi-Scale Continuous Anomaly Map
+    # Combine SRM residual with localized Laplacian magnitude
+    lap_abs = np.abs(lap)
+    norm_srm = (srm_abs - np.min(srm_abs)) / (np.percentile(srm_abs, 98) - np.min(srm_abs) + 1e-6)
+    norm_lap = (lap_abs - np.min(lap_abs)) / (np.percentile(lap_abs, 98) - np.min(lap_abs) + 1e-6)
+    combined_anomaly = np.clip(0.60 * norm_srm + 0.40 * norm_lap, 0.0, 1.0)
 
-    # 5. Build Attribution Heatmap RGBA overlay
-    # Upsample grid to image size
-    heatmap_grid = Image.fromarray((np.clip(z_scores * 50, 0, 255)).astype(np.uint8), mode="L")
-    heatmap_upscaled = heatmap_grid.resize((proc_size, proc_size), Image.Resampling.BICUBIC)
-    hm_arr = np.array(heatmap_upscaled, dtype=np.float32) / 255.0
-    
-    # Generate Turbo/Inferno-like RGBA colormap
+    # Smooth the continuous anomaly map with a 2D Gaussian filter
+    anomaly_pil = Image.fromarray((combined_anomaly * 255.0).astype(np.uint8), mode="L")
+    anomaly_smoothed = anomaly_pil.filter(ImageFilter.GaussianBlur(radius=3.5))
+    hm_arr = np.array(anomaly_smoothed, dtype=np.float32) / 255.0
+
+    # Estimate affected area percentage
+    threshold = 0.52
+    affected_cells = hm_arr > threshold
+    affected_percentage = float(np.sum(affected_cells) / hm_arr.size * 100.0)
+
+    # 5. Build Attribution Heatmap RGBA overlay (Jet Color Mapping)
     rgba_heatmap = np.zeros((proc_size, proc_size, 4), dtype=np.uint8)
-    rgba_heatmap[..., 0] = np.clip(hm_arr * 255 * 1.4, 0, 255).astype(np.uint8)  # Red
-    rgba_heatmap[..., 1] = np.clip((1.0 - np.abs(hm_arr - 0.5) * 2) * 180, 0, 255).astype(np.uint8) # Gold/Green
-    rgba_heatmap[..., 2] = np.clip((1.0 - hm_arr) * 120, 0, 255).astype(np.uint8) # Blue
-    rgba_heatmap[..., 3] = np.clip(hm_arr * 210, 0, 210).astype(np.uint8) # Alpha
+    
+    # Red: High on upper half, zero on low
+    r_chan = np.clip((hm_arr - 0.35) / 0.65 * 255.0, 0, 255).astype(np.uint8)
+    # Green: Peaks around mid-level (0.45 - 0.70)
+    g_chan = np.clip((1.0 - np.abs(hm_arr - 0.50) * 2.2) * 220.0, 0, 220).astype(np.uint8)
+    # Blue: High on lower half, drops on high anomaly
+    b_chan = np.clip((0.65 - hm_arr) / 0.65 * 240.0, 0, 240).astype(np.uint8)
+    # Alpha: Low on cool regions (50-70), vivid on anomalous regions (180-220)
+    a_chan = np.clip(45 + hm_arr * 175.0, 30, 220).astype(np.uint8)
+
+    rgba_heatmap[..., 0] = r_chan
+    rgba_heatmap[..., 1] = g_chan
+    rgba_heatmap[..., 2] = b_chan
+    rgba_heatmap[..., 3] = a_chan
 
     heatmap_img = Image.fromarray(rgba_heatmap, mode="RGBA")
 
