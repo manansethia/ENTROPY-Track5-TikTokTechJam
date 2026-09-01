@@ -996,6 +996,13 @@ function toEvidenceCard(result, stagedItem) {
   const fileInfo = result.file_info || {};
   const exposure = [metadata.exposure_time, metadata.aperture, metadata.iso ? `ISO ${metadata.iso}` : null]
     .filter(Boolean).join(" · ") || "NOT PRESENT";
+  
+  const rawProb = Number.isFinite(result.ai_probability)
+    ? result.ai_probability
+    : (Number.isFinite(result.probability_aigc)
+      ? result.probability_aigc
+      : (Number.isFinite(result.confidence) ? result.confidence : 0.5));
+
   return {
     ...result,
     id: stagedItem?.id || result.evidence_id,
@@ -1004,7 +1011,13 @@ function toEvidenceCard(result, stagedItem) {
     title: result.filename,
     dimensions: fileInfo.dimensions || stagedItem?.dimensions || "UNKNOWN",
     affected_area: result.affected_area_percentage ?? 0,
-    sha256: fileInfo.sha256,
+    probability_aigc: rawProb,
+    ai_probability: rawProb,
+    confidence: result.confidence ?? rawProb,
+    verdict: result.verdict || "FULL_AIGC",
+    verdict_badge: result.verdict_badge || (result.verdict === "REAL" ? "AUTHENTIC PHOTOGRAPH" : "SYNTHETIC IMAGE"),
+    verdict_desc: result.verdict_description || result.verdict_desc || "Forensic evaluation completed.",
+    sha256: fileInfo.sha256 || result.sha256,
     fft_high_freq: spatial.fft_high_frequency_ratio,
     srm_energy: spatial.srm_residual_energy,
     lap_var: spatial.laplacian_variance,
@@ -1207,7 +1220,8 @@ function openInspection(item) {
   if (vTitle) vTitle.innerText = item.verdict_badge || item.verdict;
   if (vDesc) vDesc.innerText = item.verdict_desc || "Forensic evaluation completed.";
   if (vTier) vTier.innerText = item.confidence_tier || "HIGH CONFIDENCE";
-  if (aiProb) aiProb.innerText = Number.isFinite(item.probability_aigc) ? `${(item.probability_aigc * 100).toFixed(1)}%` : "NOT AVAILABLE";
+  const pVal = Number.isFinite(item.probability_aigc) ? item.probability_aigc : (Number.isFinite(item.ai_probability) ? item.ai_probability : item.confidence);
+  if (aiProb) aiProb.innerText = Number.isFinite(pVal) ? `${(pVal * 100).toFixed(1)}%` : "NOT AVAILABLE";
   if (affected) affected.innerText = item.affected_area > 0 ? `${item.affected_area}% (LOCAL)` : `0.0% (GLOBAL)`;
 
   // Spectral & Noise Signals (Stream C)
