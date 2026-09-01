@@ -1,0 +1,11 @@
+{
+  "id": "doubleggunther/aigc-gpu-selftest",
+  "title": "aigc-gpu-selftest",
+  "code_file": "gpu-selftest.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "accelerator": "nvidiaTeslaT4"
+}

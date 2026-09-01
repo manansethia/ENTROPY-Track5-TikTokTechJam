@@ -1,0 +1,129 @@
+[
+  {
+    "id": "V1",
+    "path": "checkpoints/tri_hybrid_v1/best_model.pt",
+    "architecture": "DynamicGatingFusionHead feature fusion head",
+    "input_resolution": null,
+    "normalization": null,
+    "output_type": "two-class logits plus routing weights",
+    "classes": ["REAL", "AIGC"],
+    "standalone": false,
+    "teacher_role": "feature-level only; requires separately audited CLIP/SigLIP feature extractors"
+  },
+  {
+    "id": "V2",
+    "path": "checkpoints/tri_hybrid_3stream_v2/best_model.pt",
+    "architecture": "DynamicGatingFusionHead feature fusion head",
+    "input_resolution": null,
+    "normalization": null,
+    "output_type": "two-class logits plus routing weights",
+    "classes": ["REAL", "AIGC"],
+    "standalone": false,
+    "teacher_role": "feature-level only; architecture parameters require state reconstruction"
+  },
+  {
+    "id": "V3",
+    "path": "checkpoints/tri_hybrid_45k_v3/best_model.pt",
+    "architecture": "DynamicGatingFusionHead feature fusion head",
+    "input_resolution": null,
+    "normalization": null,
+    "output_type": "two-class logits plus routing weights",
+    "classes": ["REAL", "AIGC"],
+    "standalone": false,
+    "teacher_role": "feature-level only; architecture parameters require state reconstruction"
+  },
+  {
+    "id": "V4",
+    "path": "checkpoints/experimental/v4_3_champion_config_c.pt",
+    "architecture": "experimental global-plus-patch model",
+    "output_type": "not accepted until a reviewed loader is recovered",
+    "standalone": false
+  },
+  {
+    "id": "V5",
+    "path": "checkpoints/experimental/v5/v5_champion_cag.pt",
+    "architecture": "Context-Conditioned Attention-Gated Multi-Scale engine",
+    "output_type": "whole-image, patch, mask and attention tensors claimed by training source",
+    "standalone": false
+  },
+  {
+    "id": "C0",
+    "path": "checkpoints/production/final_champion_frozen_model.pt",
+    "architecture": "ScientificVisionDetector ConfigA",
+    "factory": "deployment.portable_model:ScientificVisionDetector",
+    "input_resolution": 224,
+    "normalization": {"mean": [0.48145466, 0.4578275, 0.40821073], "std": [0.26862954, 0.26130258, 0.27577711]},
+    "output_type": "binary logit; optional evidence vector and SRM features",
+    "classes": ["REAL", "AIGC"],
+    "standalone": true
+  },
+  {
+    "id": "C1",
+    "path": "checkpoints/portrait_rem_1/portrait_rem_1_epoch_3.pt",
+    "architecture": "ScientificVisionDetector candidate pending strict identity check",
+    "output_type": "binary logit expected",
+    "standalone": false
+  },
+  {
+    "id": "C2",
+    "path": "checkpoints/specialists_v3/c2_spai_vit_best.pt",
+    "architecture": "torchvision ResNet-50 binary specialist (verified from loader source)",
+    "factory": "torchvision.models:resnet50",
+    "factory_kwargs": {"num_classes": 1},
+    "input_resolution": 224,
+    "output_type": "binary logit",
+    "classes": ["REAL", "AIGC"],
+    "standalone": true
+  },
+  {
+    "id": "C3",
+    "path": "/mnt/ai-storage/aigc_data/models/community_forensics_vit_small/model.safetensors",
+    "architecture": "CommunityForensics ViT-Small; adapter not yet recovered",
+    "output_type": "unknown until reviewed config and adapter are present",
+    "standalone": false
+  },
+  {
+    "id": "C4",
+    "path": "checkpoints/specialists_v3/c4_convnext_base_best.pt",
+    "architecture": "torchvision ConvNeXt-Tiny binary specialist; filename is contradicted by checkpoint size and loader source",
+    "factory": "torchvision.models:convnext_tiny",
+    "factory_kwargs": {"num_classes": 1},
+    "input_resolution": 224,
+    "output_type": "binary logit",
+    "classes": ["REAL", "AIGC"],
+    "standalone": true
+  },
+  {
+    "id": "C5",
+    "path": "checkpoints/specialists_v3/c5_convnext_tiny_best.pt",
+    "architecture": "torchvision ConvNeXt-Tiny binary specialist",
+    "factory": "torchvision.models:convnext_tiny",
+    "factory_kwargs": {"num_classes": 1},
+    "input_resolution": 224,
+    "output_type": "binary logit",
+    "classes": ["REAL", "AIGC"],
+    "standalone": true
+  },
+  {
+    "id": "C6",
+    "path": "checkpoints/specialists_v3/c6_efficientnet_b0_best.pt",
+    "architecture": "torchvision EfficientNet-B0 binary specialist",
+    "factory": "torchvision.models:efficientnet_b0",
+    "factory_kwargs": {"num_classes": 1},
+    "input_resolution": 224,
+    "output_type": "binary logit",
+    "classes": ["REAL", "AIGC"],
+    "standalone": true
+  },
+  {
+    "id": "C7",
+    "path": "checkpoints/specialists_v3/c7_resnet50_best.pt",
+    "architecture": "torchvision ResNet-50 binary specialist",
+    "factory": "torchvision.models:resnet50",
+    "factory_kwargs": {"num_classes": 1},
+    "input_resolution": 224,
+    "output_type": "binary logit",
+    "classes": ["REAL", "AIGC"],
+    "standalone": true
+  }
+]

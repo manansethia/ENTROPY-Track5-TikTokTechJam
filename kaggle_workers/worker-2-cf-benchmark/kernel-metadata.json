@@ -1,0 +1,10 @@
+{
+  "id": "doubleggunther/aigc-worker-2-cf-benchmark",
+  "title": "aigc-worker-2-cf-benchmark",
+  "code_file": "worker-2-cf-benchmark.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true"
+}

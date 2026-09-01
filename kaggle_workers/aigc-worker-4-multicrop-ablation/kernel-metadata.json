@@ -1,0 +1,10 @@
+{
+  "id": "doubleggunther/aigc-worker-4-multicrop-ablation",
+  "title": "aigc-worker-4-multicrop-ablation",
+  "code_file": "aigc-worker-4-multicrop-ablation.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true"
+}

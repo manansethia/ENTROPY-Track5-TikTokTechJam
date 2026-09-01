@@ -1,0 +1,10 @@
+{
+  "id": "doubleggunther/aigc-worker-3-highres-benchmark",
+  "title": "aigc-worker-3-highres-benchmark",
+  "code_file": "aigc-worker-3-highres-benchmark.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true"
+}

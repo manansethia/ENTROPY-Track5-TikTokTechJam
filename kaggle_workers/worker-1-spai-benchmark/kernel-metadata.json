@@ -1,0 +1,10 @@
+{
+  "id": "doubleggunther/worker-1-spai-benchmark",
+  "title": "AIGC Robustness Worker 1 - SPAI Benchmark",
+  "code_file": "worker-1-spai-benchmark.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true"
+}
