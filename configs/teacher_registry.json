@@ -82,9 +82,15 @@
   {
     "id": "C3",
     "path": "/mnt/ai-storage/aigc_data/models/community_forensics_vit_small/model.safetensors",
-    "architecture": "CommunityForensics ViT-Small; adapter not yet recovered",
-    "output_type": "unknown until reviewed config and adapter are present",
-    "standalone": false
+    "architecture": "Hugging Face ViTForImageClassification binary ViT-Small",
+    "loader": "hf_vit_binary",
+    "factory": "transformers:unused",
+    "vit_config": {"image_size": 384, "patch_size": 16, "num_channels": 3, "hidden_size": 384, "num_hidden_layers": 12, "num_attention_heads": 6, "intermediate_size": 1536, "num_labels": 1, "qkv_bias": true, "layer_norm_eps": 0.000001},
+    "input_resolution": 384,
+    "normalization": {"mean": [0.48145466, 0.4578275, 0.40821073], "std": [0.26862954, 0.26130258, 0.27577711]},
+    "output_type": "single binary logit",
+    "classes": ["REAL", "AIGC"],
+    "standalone": true
   },
   {
     "id": "C4",

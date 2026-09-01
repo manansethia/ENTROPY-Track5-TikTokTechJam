@@ -86,9 +86,15 @@ def strict_probe(entry: dict[str, Any], checkpoint: Path, image: Path | None) ->
     if image is None:
         return {"status": "NOT_QUALIFIED", "reason": "no real probe image supplied"}
     try:
-        model = build_factory(factory, entry.get("factory_kwargs", {}))
-        payload = torch.load(checkpoint, map_location="cpu", weights_only=False)
-        state, state_key = resolve_state(payload)
+        if entry.get("loader") == "hf_vit_binary":
+            from safetensors.torch import load_file
+            from transformers import ViTConfig, ViTForImageClassification
+            model = ViTForImageClassification(ViTConfig(**entry["vit_config"])) 
+            state, state_key = load_file(str(checkpoint), device="cpu"), "safetensors"
+        else:
+            model = build_factory(factory, entry.get("factory_kwargs", {}))
+            payload = torch.load(checkpoint, map_location="cpu", weights_only=False)
+            state, state_key = resolve_state(payload)
         if state is None:
             return {"status": "NOT_QUALIFIED", "reason": "no tensor state dict"}
         model.load_state_dict(state, strict=True)
@@ -116,7 +122,10 @@ def inspect(entry: dict[str, Any], root: Path, image: Path | None) -> dict[str, 
         return record
     record.update({"file_size_bytes": checkpoint.stat().st_size, "sha256": sha256(checkpoint)})
     if checkpoint.suffix == ".safetensors":
-        record.update({"format": "safetensors", "qualification": {"status": "NOT_QUALIFIED", "reason": "architecture adapter required for strict load"}})
+        from safetensors import safe_open
+        with safe_open(str(checkpoint), framework="pt", device="cpu") as handle:
+            state = {key: handle.get_tensor(key) for key in handle.keys()}
+        record.update({"format": "safetensors", **tensor_summary(state), "qualification": strict_probe(entry, checkpoint, image)})
         return record
     try:
         payload = torch.load(checkpoint, map_location="meta", weights_only=True)
