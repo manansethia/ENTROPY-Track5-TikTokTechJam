@@ -1,6 +1,17 @@
-# AIGC Forensics — Multi-Paradigm Image Authenticity & Forensic Station
+# ENTROPY — Multi-Paradigm Image Authenticity & Forensic Station
 
 A production-grade, explainable AI-generated content (AIGC) forensic detection platform and physical investigation workstation designed for high-assurance image authenticity verification, localized AI edit localization, and cross-generator robustness.
+
+Project author: Manan Sethia.
+
+## Current release status
+
+The deployed service currently uses the audited C0 forensic model. The
+96,590,564-parameter HighCap FP16 student is a standalone candidate with a
+strictly verified checkpoint load and real-image forward pass at 384px. It is
+not described as performance-equivalent until an independent evaluation report
+is complete. The organizer benchmark is excluded from all training and model
+selection activity.
 
 ---
 
