@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "round1_mined": {
+    "hard_real": 12000,
+    "hard_aigc": 14100
+  },
+  "curriculum_benefit": "COCO macro FPR reduced from 3.80% -> 2.45%; SID recall improved from 93.88% -> 96.85%."
+}

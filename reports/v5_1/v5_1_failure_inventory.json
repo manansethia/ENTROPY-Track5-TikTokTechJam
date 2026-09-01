@@ -1,0 +1,233 @@
+{
+  "timestamp": "2026-08-31 18:30:34 UTC",
+  "v5_baseline_checkpoint": "/home/manan/aigc_robust_detection/checkpoints/experimental/v5/v5_champion_cag.pt",
+  "highres_real_false_positives": {
+    "description": "Authentic 8K/12K DSLR photographs misclassified as FULL_AIGC or PARTIAL_AIGC due to optical bokeh / smooth out-of-focus background patches",
+    "2K_accuracy": 85.0,
+    "4K_accuracy": 75.0,
+    "8K_accuracy": 0.0,
+    "12K_accuracy": 0.0,
+    "root_cause": "On 24MP+ images, a 512px crop covers <8% of the image. Natural depth-of-field blur (bokeh) produces low-gradient, high-smoothness patches that mimic generative AI diffusion without sensor noise cues.",
+    "remediation": "Add Absolute Megapixel & Sensor Resolution Conditioning, High-Frequency Residual Texture Analysis, and Resolution-Aware Reliability Thresholding."
+  },
+  "soft_aigc_false_negatives": {
+    "description": "Photorealistic synthetic images with smooth shading, soft lighting, and low high-frequency artifacting misclassified as REAL",
+    "examples_analyzed": [
+      {
+        "verdict": "REAL",
+        "confidence": 0.5234,
+        "ai_probability": 0.4766,
+        "class_probabilities": {
+          "REAL": 0.5234,
+          "PARTIAL_AIGC": 0.4765,
+          "FULL_AIGC": 0.0001
+        },
+        "affected_area_percentage": 0.0,
+        "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_008613_v5_heatmap.jpg",
+        "suspicious_regions": [],
+        "patch_evidence": [
+          {
+            "patch_id": 0,
+            "bbox": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "scale": 512,
+            "ai_probability": 0.2229,
+            "attention_weight": 0.8678
+          },
+          {
+            "patch_id": 1,
+            "bbox": [
+              384,
+              0,
+              512,
+              512
+            ],
+            "scale": 512,
+            "ai_probability": 0.0301,
+            "attention_weight": 0.0261
+          },
+          {
+            "patch_id": 2,
+            "bbox": [
+              0,
+              384,
+              512,
+              512
+            ],
+            "scale": 512,
+            "ai_probability": 0.2063,
+            "attention_weight": 0.0831
+          },
+          {
+            "patch_id": 3,
+            "bbox": [
+              384,
+              384,
+              512,
+              512
+            ],
+            "scale": 512,
+            "ai_probability": 0.0157,
+            "attention_weight": 0.0096
+          },
+          {
+            "patch_id": 4,
+            "bbox": [
+              0,
+              0,
+              768,
+              768
+            ],
+            "scale": 768,
+            "ai_probability": 0.145,
+            "attention_weight": 0.0106
+          },
+          {
+            "patch_id": 5,
+            "bbox": [
+              0,
+              0,
+              1024,
+              1024
+            ],
+            "scale": 1024,
+            "ai_probability": 0.1467,
+            "attention_weight": 0.0029
+          }
+        ],
+        "provenance": {
+          "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+          "c2pa": {
+            "c2pa_status": "NOT_DETECTED",
+            "manifest_detected": false,
+            "signature_markers": []
+          },
+          "camera": {
+            "make": null,
+            "model": null,
+            "datetime_original": null
+          },
+          "software": null,
+          "format": "JPEG",
+          "dimensions": {
+            "width": 1024,
+            "height": 1024
+          },
+          "exif_tag_count": 0
+        },
+        "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /mnt/ai-storage/aigc_data/datasets/v4_3_large_partial_ai_corpus/images/partial_ai_008613.jpg\n  Resolution: 1024 x 1024 (1.05 Megapixels)\n  Inference Time: 67.0 ms\n\n  FORENSIC VERDICT: REAL (Confidence: 52.34%)\n    - Real Probability        : 52.34%\n    - Partial-AIGC Probability: 47.65%\n    - Full-AIGC Probability   : 0.01%\n    - Aggregate AI Probability: 47.66%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 0.00%\n    - Suspicious Regions Count: 0\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_008613_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+        "inference_time_ms": 67.0
+      },
+      {
+        "verdict": "REAL",
+        "confidence": 0.5586,
+        "ai_probability": 0.4414,
+        "class_probabilities": {
+          "REAL": 0.5586,
+          "PARTIAL_AIGC": 0.4404,
+          "FULL_AIGC": 0.0009
+        },
+        "affected_area_percentage": 0.0,
+        "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_006990_v5_heatmap.jpg",
+        "suspicious_regions": [],
+        "patch_evidence": [
+          {
+            "patch_id": 0,
+            "bbox": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "scale": 512,
+            "ai_probability": 0.0281,
+            "attention_weight": 0.0329
+          },
+          {
+            "patch_id": 1,
+            "bbox": [
+              0,
+              384,
+              512,
+              512
+            ],
+            "scale": 512,
+            "ai_probability": 0.2942,
+            "attention_weight": 0.9546
+          },
+          {
+            "patch_id": 2,
+            "bbox": [
+              0,
+              0,
+              768,
+              768
+            ],
+            "scale": 768,
+            "ai_probability": 0.0567,
+            "attention_weight": 0.0074
+          },
+          {
+            "patch_id": 3,
+            "bbox": [
+              0,
+              0,
+              1024,
+              1024
+            ],
+            "scale": 1024,
+            "ai_probability": 0.1038,
+            "attention_weight": 0.0051
+          }
+        ],
+        "provenance": {
+          "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+          "c2pa": {
+            "c2pa_status": "NOT_DETECTED",
+            "manifest_detected": false,
+            "signature_markers": []
+          },
+          "camera": {
+            "make": null,
+            "model": null,
+            "datetime_original": null
+          },
+          "software": null,
+          "format": "JPEG",
+          "dimensions": {
+            "width": 683,
+            "height": 1024
+          },
+          "exif_tag_count": 0
+        },
+        "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /mnt/ai-storage/aigc_data/datasets/v4_3_large_partial_ai_corpus/images/partial_ai_006990.jpg\n  Resolution: 683 x 1024 (0.70 Megapixels)\n  Inference Time: 107.4 ms\n\n  FORENSIC VERDICT: REAL (Confidence: 55.86%)\n    - Real Probability        : 55.86%\n    - Partial-AIGC Probability: 44.04%\n    - Full-AIGC Probability   : 0.09%\n    - Aggregate AI Probability: 44.14%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 0.00%\n    - Suspicious Regions Count: 0\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_006990_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+        "inference_time_ms": 107.4
+      }
+    ],
+    "root_cause": "State-of-the-art generators (Midjourney v6, Flux.1, SDXL Turbo) produce photorealistic global composition and smooth skin/sky textures without sharp edge discontinuities.",
+    "remediation": "Construct dedicated Soft-AIGC hard positive training pool with specialized patch-level spectral/noise consistency modeling."
+  },
+  "hard_real_compression_fpr": {
+    "validation_hard_real_fpr": 20.79,
+    "test_hard_real_fpr": 19.35,
+    "root_cause": "Lossy JPEG Q40-75 compression, unsharp masking, and Lightroom/CLAHE tone mapping create localized high-frequency edge gradients that trigger false positive patch activations.",
+    "target_fpr": "<= 1.0% via validation-calibrated operating thresholds"
+  },
+  "partial_ai_localization": {
+    "independent_test_partial_ap": 0.6122,
+    "mean_iou": 0.6828,
+    "mean_dice": 0.6861,
+    "affected_area_error_pct": 6.62,
+    "remaining_weakness": "Small inpaintings (<3% area) on textured backgrounds sometimes fail to reach the 0.50 patch threshold."
+  },
+  "remediation_strategy": {
+    "component_1": "High-Resolution Forensic Branch with Absolute Resolution PosEmb & High-Frequency Noise Residuals",
+    "component_2": "Targeted 25,000-sample Remediation Pool (High-Res DSLR + Hard-Real + Soft-AIGC + Subtle Partial-AI)",
+    "component_3": "Resolution-Aware Reliability & Calibrated Operating Thresholds (Target Hard-Real FPR <= 1.0%)",
+    "component_4": "Ambiguity / REVIEW_REQUIRED State for Conflicting Multimodal Evidence"
+  }
+}

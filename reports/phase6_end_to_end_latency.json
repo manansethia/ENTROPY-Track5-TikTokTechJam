@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "hardware_device": "NVIDIA GeForce RTX 3050 6GB Laptop GPU (31 GB RAM)",
+  "throughput_classifications": {
+    "cached_feature_forward_throughput": "845,000 images/sec (Evaluating MLP head on pre-extracted 2,212-d NVMe/RAM tensors)",
+    "raw_image_end_to_end_throughput": "4.66 images/sec (Decoding raw JPEG -> ViT Feature Extraction -> Head Classification)"
+  },
+  "stage_latency_breakdown_ms": {
+    "raw_image_preprocessing": 2.45,
+    "clip_vit_l14_forward": 78.5,
+    "siglip_so400m_forward": 122.3,
+    "srm_dwt_filtering": 4.85,
+    "stage1_tri_stream_head": 0.38,
+    "stage2_dino_edge_verifier": 92.4
+  },
+  "end_to_end_latency_percentiles_ms": {
+    "average_latency_ms": 214.76,
+    "p50_latency_ms": 208.48,
+    "p95_latency_ms": 208.48,
+    "p99_latency_ms": 300.88,
+    "worst_case_latency_ms": 300.88
+  },
+  "resource_allocation": {
+    "peak_vram_mib": 4993,
+    "vram_headroom_mib": 811,
+    "host_ram_used_gib": 3.8,
+    "sustained_swap_delta_gb": 0.0
+  }
+}

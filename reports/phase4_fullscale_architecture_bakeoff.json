@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "training_scale": 72509,
+  "dev_scale": 6000,
+  "finalist_ranking": [
+    {
+      "candidate_id": "Cand_C_Structured_Dropout",
+      "feature_dim": 2212,
+      "head_type": "structured_dropout",
+      "train_samples": 72509,
+      "dev_samples": 6000,
+      "train_time_sec": 12.28,
+      "calibrated_T": 1.2084,
+      "dev_metrics": {
+        "AUROC": 0.999,
+        "AUPRC": 0.9993,
+        "Brier": 0.0108,
+        "FPR_tau_080": 0.0097,
+        "FNR_tau_080": 0.0178,
+        "TPR_tau_080": 0.9822,
+        "FP_count_080": 24,
+        "FN_count_080": 63,
+        "total_errors_080": 87
+      },
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/phase4/phase4_champion_model.pt",
+      "checkpoint_sha256": "b53479d0aa7c4eb1f4af9e8f4d6a39fc53ac260fdea7b58b42bc68253de37b59"
+    },
+    {
+      "candidate_id": "Cand_A_CLIP_SigLIP",
+      "feature_dim": 2176,
+      "head_type": "mlp2",
+      "train_samples": 72509,
+      "dev_samples": 6000,
+      "train_time_sec": 11.59,
+      "calibrated_T": 1.2453,
+      "dev_metrics": {
+        "AUROC": 0.9989,
+        "AUPRC": 0.9992,
+        "Brier": 0.0123,
+        "FPR_tau_080": 0.0134,
+        "FNR_tau_080": 0.0164,
+        "TPR_tau_080": 0.9836,
+        "FP_count_080": 33,
+        "FN_count_080": 58,
+        "total_errors_080": 91
+      }
+    },
+    {
+      "candidate_id": "Cand_B_CLIP_SigLIP_SRM",
+      "feature_dim": 2212,
+      "head_type": "mlp2",
+      "train_samples": 72509,
+      "dev_samples": 6000,
+      "train_time_sec": 11.51,
+      "calibrated_T": 1.247,
+      "dev_metrics": {
+        "AUROC": 0.9989,
+        "AUPRC": 0.9992,
+        "Brier": 0.0122,
+        "FPR_tau_080": 0.0138,
+        "FNR_tau_080": 0.0172,
+        "TPR_tau_080": 0.9828,
+        "FP_count_080": 34,
+        "FN_count_080": 61,
+        "total_errors_080": 95
+      }
+    },
+    {
+      "candidate_id": "Cand_D_Conditional_Residual",
+      "feature_dim": 2212,
+      "head_type": "conditional_routing",
+      "train_samples": 72509,
+      "dev_samples": 6000,
+      "train_time_sec": 13.69,
+      "calibrated_T": 1.2541,
+      "dev_metrics": {
+        "AUROC": 0.9985,
+        "AUPRC": 0.999,
+        "Brier": 0.0143,
+        "FPR_tau_080": 0.0142,
+        "FNR_tau_080": 0.0192,
+        "TPR_tau_080": 0.9808,
+        "FP_count_080": 35,
+        "FN_count_080": 68,
+        "total_errors_080": 103
+      }
+    }
+  ],
+  "champion_candidate": {
+    "candidate_id": "Cand_C_Structured_Dropout",
+    "feature_dim": 2212,
+    "head_type": "structured_dropout",
+    "train_samples": 72509,
+    "dev_samples": 6000,
+    "train_time_sec": 12.28,
+    "calibrated_T": 1.2084,
+    "dev_metrics": {
+      "AUROC": 0.999,
+      "AUPRC": 0.9993,
+      "Brier": 0.0108,
+      "FPR_tau_080": 0.0097,
+      "FNR_tau_080": 0.0178,
+      "TPR_tau_080": 0.9822,
+      "FP_count_080": 24,
+      "FN_count_080": 63,
+      "total_errors_080": 87
+    },
+    "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/phase4/phase4_champion_model.pt",
+    "checkpoint_sha256": "b53479d0aa7c4eb1f4af9e8f4d6a39fc53ac260fdea7b58b42bc68253de37b59"
+  }
+}

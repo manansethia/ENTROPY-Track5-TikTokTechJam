@@ -1,0 +1,6 @@
+{
+  "reward_scaling": {
+    "supported": 1.0,
+    "unsupported": -2.5
+  }
+}

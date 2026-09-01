@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-08-28T19:35:31Z",
+  "approved_raw_dataset_inventory": {
+    "massive_balanced_50k": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k",
+      "status": "AVAILABLE",
+      "image_count": 34746
+    },
+    "Defactify": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/defactify",
+      "status": "AVAILABLE",
+      "image_count": 0
+    },
+    "GenImage": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/genimage",
+      "status": "AVAILABLE",
+      "image_count": 0
+    },
+    "WikiArt_Hard_Negatives": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/wikiart",
+      "status": "NOT_MOUNTED_OR_EMPTY",
+      "image_count": 0
+    },
+    "AIGI_Quality_Paradox": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/aigi_quality_paradox",
+      "status": "AVAILABLE",
+      "image_count": 0
+    },
+    "ArtBench_10": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/artbench",
+      "status": "NOT_MOUNTED_OR_EMPTY",
+      "image_count": 0
+    },
+    "Vintage_Archival": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/vintage_photos",
+      "status": "NOT_MOUNTED_OR_EMPTY",
+      "image_count": 0
+    }
+  },
+  "total_approved_images_available": 34746,
+  "large_scale_training_corpus_target": {
+    "target_total_images": 34746,
+    "real_class_allocation": "25,000 Authentic (COCO photography, WikiArt fine-art, Vintage archival, OpenImages RAW)",
+    "synthetic_class_allocation": "25,000 Synthetic (FLUX.1, Midjourney v5/v6, SDXL, SD3, DALL-E 3, StyleGAN)",
+    "stratified_split_allocation": {
+      "training_split_80pct": "40,000 samples (20,000 Real / 20,000 Fake)",
+      "validation_split_10pct": "5,000 samples (2,500 Real / 2,500 Fake)",
+      "internal_test_split_10pct": "5,000 samples (2,500 Real / 2,500 Fake)"
+    }
+  },
+  "external_ood_quarantine_enforcement": {
+    "Synthbuster": "LOCKED (Zero-Shot OOD Generalization Test Only)",
+    "AIGIBench": "LOCKED (Zero-Shot OOD Generalization Test Only)",
+    "Chameleon": "LOCKED (Zero-Shot OOD Generalization Test Only)",
+    "VCT2": "LOCKED (DeepFake Facial Manipulation Benchmark)",
+    "WildRF": "LOCKED (In-the-Wild Real-World Compression Benchmark)",
+    "SynthWildX": "LOCKED (Extreme Social Media Distortion Benchmark)",
+    "Hackathon_Validation_LOCKED": "LOCKED (Official Competition Evaluation Set)"
+  },
+  "deduplication_and_contamination_rule": "Cryptographic SHA-256 deduplication enforced across all 50,000 samples. Train, Validation, and Test splits are strictly disjoint."
+}

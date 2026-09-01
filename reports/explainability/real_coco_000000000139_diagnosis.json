@@ -1,0 +1,98 @@
+{
+  "image_path": "in_memory_image",
+  "prob_aigc": 0.0011331350542604923,
+  "verdict": "AUTHENTIC REAL",
+  "is_synthetic": false,
+  "spectral_metrics": {
+    "high_freq_energy_ratio": 0.4508381485939026,
+    "grid_peak_anomaly_score": 5.115011215209961,
+    "is_frequency_anomalous": true
+  },
+  "edge_metrics": {
+    "edge_anomaly_score": 0.5743570327758789
+  },
+  "top_anomalous_patches": [
+    {
+      "patch_idx": 105,
+      "bbox": [
+        320,
+        213,
+        366,
+        243
+      ],
+      "gradcam_score": 0.4496217966079712,
+      "attention_score": 0.5,
+      "frequency_score": 0.2792903420099119,
+      "edge_score": 0.2260984182357788,
+      "composite_risk": 0.38344538086192803,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 135,
+      "bbox": [
+        411,
+        274,
+        457,
+        304
+      ],
+      "gradcam_score": 0.3564084768295288,
+      "attention_score": 0.5,
+      "frequency_score": 0.30202991384984273,
+      "edge_score": 0.22055664658546448,
+      "composite_risk": 0.35426027897739654,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 178,
+      "bbox": [
+        457,
+        365,
+        503,
+        396
+      ],
+      "gradcam_score": 0.49205318093299866,
+      "attention_score": 0.5,
+      "frequency_score": 0.14098681269911256,
+      "edge_score": 0.10917495936155319,
+      "composite_risk": 0.3472509677386827,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 134,
+      "bbox": [
+        366,
+        274,
+        411,
+        304
+      ],
+      "gradcam_score": 0.2792913615703583,
+      "attention_score": 0.5,
+      "frequency_score": 0.35912448579245704,
+      "edge_score": 0.26198410987854004,
+      "composite_risk": 0.3469736956838248,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 124,
+      "bbox": [
+        549,
+        243,
+        594,
+        274
+      ],
+      "gradcam_score": 0.34168627858161926,
+      "attention_score": 0.5,
+      "frequency_score": 0.295926559990328,
+      "edge_score": 0.19228042662143707,
+      "composite_risk": 0.34223159482591975,
+      "primary_anomaly_category": "ViT Patch Focus"
+    }
+  ],
+  "model_gates": [
+    0.07102040946483612,
+    0.4051438868045807,
+    0.16949905455112457,
+    0.354336678981781
+  ],
+  "dashboard_output_path": "reports/explainability/real_coco_000000000139_diagnosis.jpg"
+}

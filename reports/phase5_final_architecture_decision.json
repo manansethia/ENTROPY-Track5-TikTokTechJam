@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "protocol_name": "PHASE 5 ULTRA-LOW-FPR & HARD-EXAMPLE MINING MASTER PIPELINE",
+  "champion_specifications": {
+    "FINAL_ARCHITECTURE": "Tri-Stream with Structured Branch Dropout (Phase5_Structured_Dropout_UltraLowFPR)",
+    "FINAL_EXPERT_BRANCHES": "CLIP-ViT-L/14 (1024d) + SigLIP-SO400M-224 (1152d) + SRM-DWT (36d)",
+    "FINAL_FEATURE_DIMENSIONS": 2212,
+    "FINAL_FUSION_MECHANISM": "Structured Branch Dropout MLP (p=0.15, hidden_dim=256, LayerNorm, GELU)",
+    "FINAL_TRAINABLE_PARAMETERS": 567297,
+    "FINAL_LOSS": "Asymmetric False-Positive Penalized BCE (lambda_fp = 2.5)",
+    "FINAL_LAMBDA_FP": 2.5,
+    "FINAL_CALIBRATION_METHOD": "Post-Hoc Tail-Optimized Temperature Scaling",
+    "FINAL_TEMPERATURE": 1.213654,
+    "FINAL_THRESHOLD": 0.8,
+    "FINAL_ABSTENTION_POLICY": "High-Confidence Real (<0.65), Review Band [0.65, 0.80], High-Confidence AIGC (>=0.80)",
+    "FINAL_TRAINING_DATA_SIZE": 68509,
+    "FINAL_REAL_AIGC_DISTRIBUTION": "28,145 Real / 40,364 AIGC with 2.5x Hard-Negative Upweighting",
+    "FINAL_VALIDATION_DESIGN": "Pristine PHASE5_DEV (10,000 samples, 0% historical overlap)",
+    "FINAL_CALIBRATION_DESIGN": "Dedicated PHASE5_CALIBRATION (4,000 samples)",
+    "FINAL_TEST_DESIGN": "Locked PHASE5_INTERNAL_TEST (10,316 samples, single frozen evaluation)",
+    "FINAL_LATENCY": "0.38 ms average / 1.15 ms worst-case",
+    "FINAL_VRAM": "4,993 MiB peak (811 MiB headroom on RTX 3050 6GB)",
+    "FINAL_RAM": "3.8 GiB / 31 GiB (0.00 GB sustained swap delta)",
+    "FINAL_THROUGHPUT": "845,000 images/sec (Head Forward)"
+  },
+  "final_internal_test_metrics": {
+    "AUROC": 0.9986,
+    "AUPRC": 0.999,
+    "Brier": 0.0134,
+    "ECE": 0.0091,
+    "FPR": 0.0094,
+    "FNR": 0.024,
+    "TPR": 0.976,
+    "TP": 5932,
+    "TN": 4198,
+    "FP": 40,
+    "FN": 146,
+    "TPR_0_5": 0.9605,
+    "TPR_0_1": 0.9041
+  },
+  "final_ood_metrics": {
+    "Synthbuster_9K_Zenodo": {
+      "benchmark_name": "Synthbuster Multi-Generator Benchmark",
+      "samples": 9000,
+      "AUROC": 0.9868,
+      "AUPRC": 0.9892,
+      "FPR_tau_080": 0.0098,
+      "TPR_tau_080": 0.952,
+      "status": "VERIFIED_GENERALIZED"
+    },
+    "AIGIBench_Evaluation": {
+      "benchmark_name": "AIGIBench HorizonTEL Benchmark",
+      "AUROC": 0.984,
+      "AUPRC": 0.9875,
+      "status": "VERIFIED_GENERALIZED"
+    }
+  },
+  "ultra_low_fpr_operating_matrix": {
+    "FPR_le_1_00_pct": {
+      "TPR": 0.9842,
+      "description": "High-Sensitivity Operational Mode"
+    },
+    "FPR_le_0_50_pct": {
+      "TPR": 0.9605,
+      "description": "Ultra-Low False Alarm Standard Mode"
+    },
+    "FPR_le_0_10_pct": {
+      "TPR": 0.9041,
+      "description": "Mission-Critical Ultra-Safe Mode"
+    }
+  }
+}

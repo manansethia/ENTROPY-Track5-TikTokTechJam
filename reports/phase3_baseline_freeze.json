@@ -1,0 +1,72 @@
+{
+  "status": "PHASE_2_BASELINE_FROZEN_AND_VERIFIED",
+  "timestamp": "2026-08-29T09:45:00Z",
+  "baseline_summary": {
+    "model_architecture": "Tri-Stream 2-Layer MLP (CLIP-ViT-L/14 + SigLIP-SO400M + SRM-DWT -> 2212-d)",
+    "trainable_parameters": 567297,
+    "total_dataset_size": 103137,
+    "train_samples": 82509,
+    "val_samples": 10312,
+    "test_samples": 10316,
+    "validation_AUROC": 0.9988,
+    "validation_AUPRC": 0.999,
+    "internal_test_AUROC": 0.9983,
+    "internal_test_AUPRC": 0.9985,
+    "internal_test_FPR_tau_080": 0.0132,
+    "internal_test_TPR_tau_080": 0.9822,
+    "calibrated_temperature_T": 1.2622,
+    "internal_test_status": "LOCKED & UNTOUCHED UNTIL FINAL PHASE 3 COMPARISON"
+  },
+  "provenance_hashes": {
+    "checkpoints/phase2_champion_model.pt": {
+      "sha256": "7a7eda62aff535d1b4c57e90c16c994da759050493fe01a038dc1af87a7bd028",
+      "size_bytes": 2298109,
+      "status": "VERIFIED_PRESENT"
+    },
+    "manifests/phase2_150k_manifest.jsonl": {
+      "sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+      "size_bytes": 41390672,
+      "status": "VERIFIED_PRESENT"
+    },
+    "reports/phase2_final_report.json": {
+      "sha256": "0b343ba60c9f6c791f9829b94164504a6baf6de76a20da59d15606a0fa73acfe",
+      "size_bytes": 601,
+      "status": "VERIFIED_PRESENT"
+    },
+    "reports/phase2_internal_test.json": {
+      "sha256": "d873e90e65dd67ca8d1c571d0a8c926da624adfb62d60dafe0f878b34e9e993f",
+      "size_bytes": 394,
+      "status": "VERIFIED_PRESENT"
+    },
+    "reports/phase2_threshold_analysis.json": {
+      "sha256": "fa1162c695a8a80fac81b587a0dee5dbc1f4c86f38b91afb052e5844a30bf921",
+      "size_bytes": 1745,
+      "status": "VERIFIED_PRESENT"
+    },
+    "reports/phase2_generator_breakdown.json": {
+      "sha256": "6ec35864a34eac0818727eb23ba05ec18b4ee98c6ae073aebab45bbcf2758f18",
+      "size_bytes": 659,
+      "status": "VERIFIED_PRESENT"
+    },
+    "reports/phase2_domain_breakdown.json": {
+      "sha256": "a44efc24c0edb065fb97bd3f67974f539657420b038219415c00774e445a6eab",
+      "size_bytes": 421,
+      "status": "VERIFIED_PRESENT"
+    },
+    "reports/phase2_calibration.json": {
+      "sha256": "c30c4bf67cb56892e439ef53df45fe4a898cf94bfa4e7f097f3623b560aaa2df",
+      "size_bytes": 215,
+      "status": "VERIFIED_PRESENT"
+    },
+    "reports/phase2_manifest_audit.json": {
+      "sha256": "e119962bff5befff6780ec73a479bbccd618e914c8ee434eae1ad32fead1e350",
+      "size_bytes": 1231,
+      "status": "VERIFIED_PRESENT"
+    },
+    "reports/phase2_feature_cache_integrity.json": {
+      "sha256": "3a119109f255c1d777649cca1859c88a364e05fd4316fb36f81eaaabc7828e14",
+      "size_bytes": 403,
+      "status": "VERIFIED_PRESENT"
+    }
+  }
+}

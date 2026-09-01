@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-08-29T09:30:51Z",
+  "total_approved_images": 103137,
+  "class_composition": {
+    "real_images": 42369,
+    "real_percent": 41.08,
+    "aigc_images": 60768,
+    "aigc_percent": 58.92
+  },
+  "source_datasets": {
+    "loose_synthetic_corpus": 36768,
+    "wikiart_fine_art": 24996,
+    "aigi_quality_paradox": 24000,
+    "loose_authentic_corpus": 17373
+  },
+  "generator_families": {
+    "Synthetic_HighFrequency_CF": 29917,
+    "Authentic_WikiArt_FineArt": 24996,
+    "Synthetic_QualityParadox_ModernDiffusion": 24000,
+    "Synthetic_SID_Diffusion": 6851,
+    "Authentic_Real_General": 14380,
+    "Authentic_COCO": 2993
+  },
+  "partition_sizes": {
+    "PHASE2_TRAIN": 82509,
+    "PHASE2_VAL": 10312,
+    "PHASE2_INTERNAL_TEST": 10316
+  },
+  "cryptographic_isolation_status": "PASSED (Zero hash/path overlap across train, val, and test)"
+}

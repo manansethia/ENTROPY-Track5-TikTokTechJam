@@ -1,0 +1,6 @@
+{
+  "loss_function": "False-Positive Penalized BCE (lambda_FP = 2.0)",
+  "optimizer": "AdamW (lr=1e-3, weight_decay=1e-4, CosineAnnealing)",
+  "effective_penalty_on_real_fp": "2.0x weight on authentic real classification errors",
+  "val_AUROC": 0.9988
+}

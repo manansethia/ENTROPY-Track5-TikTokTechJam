@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-08-28T20:46:44Z",
+  "hard_negative_categories": {
+    "historical_fine_art": {
+      "source": "wikiart_hard_negatives",
+      "sample_count": 81432,
+      "format": "72 Parquet Shards",
+      "visual_characteristics": "Thick impasto 3D paint relief, canvas weave, chiaroscuro shading, fine brushstrokes.",
+      "forensic_challenge": "Impasto texture and canvas grain produce elevated high-frequency residuals that trigger false alarms in naive wavelet/SRM detectors.",
+      "phase_incorporation_plan": "Phase 1: Validated baseline on COCO; Phase 2: Unpack 15,000 WikiArt samples into the active training stream with asymmetric FP penalty."
+    },
+    "complex_camera_photography": {
+      "source": "coco (massive_balanced_50k/real)",
+      "sample_count": 2392,
+      "format": "Extracted JPEGs",
+      "visual_characteristics": "Localized optical glare, heavy JPEG compression block boundaries, high-contrast backlit edges.",
+      "forensic_challenge": "Compression block artifacts can resemble diffusion upsampling deconvolution grid boundaries.",
+      "phase_incorporation_plan": "100% included in Phase 1 manifest (2,392 samples)."
+    },
+    "high_resolution_raw_photos": {
+      "source": "scaled_massive/real",
+      "sample_count": 2176,
+      "format": "Extracted JPEGs",
+      "visual_characteristics": "Ultra-sharp optical sensor grain, fine hair and skin textures, macro photography.",
+      "forensic_challenge": "Sensor ISO noise must be distinguished from score-matching stochastic noise.",
+      "phase_incorporation_plan": "100% included in Phase 1 manifest (2,176 samples)."
+    },
+    "social_media_compressed_web": {
+      "source": "defactify",
+      "sample_count": 100725,
+      "format": "17 Parquet Shards",
+      "visual_characteristics": "Aggressive messaging platform compression (WhatsApp, WeChat transcode), low bitrate.",
+      "forensic_challenge": "Severe lossy transcode removes high-frequency details, testing semantic ViT robustness.",
+      "phase_incorporation_plan": "Phase 2 expansion target."
+    }
+  },
+  "total_available_hard_negatives": 186725
+}

@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-08-28T20:46:46Z",
+  "pilot_results": {
+    "lambda_1.0": {
+      "lambda_FP": 1.0,
+      "val_AUROC": 0.9851,
+      "val_AUPRC": 0.9882,
+      "val_ECE": 0.4639,
+      "val_Brier": 0.0432,
+      "tau_050": {
+        "TP": 327,
+        "TN": 337,
+        "FP": 13,
+        "FN": 23,
+        "FPR": 0.0371,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0218,
+          0.0625
+        ]
+      },
+      "tau_080": {
+        "TP": 287,
+        "TN": 349,
+        "FP": 1,
+        "FN": 63,
+        "FPR": 0.0029,
+        "TPR": 0.82,
+        "FPR_95_CI": [
+          0.0005,
+          0.016
+        ]
+      }
+    },
+    "lambda_1.5": {
+      "lambda_FP": 1.5,
+      "val_AUROC": 0.9853,
+      "val_AUPRC": 0.9884,
+      "val_ECE": 0.4717,
+      "val_Brier": 0.0427,
+      "tau_050": {
+        "TP": 327,
+        "TN": 337,
+        "FP": 13,
+        "FN": 23,
+        "FPR": 0.0371,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0218,
+          0.0625
+        ]
+      },
+      "tau_080": {
+        "TP": 286,
+        "TN": 349,
+        "FP": 1,
+        "FN": 64,
+        "FPR": 0.0029,
+        "TPR": 0.8171,
+        "FPR_95_CI": [
+          0.0005,
+          0.016
+        ]
+      }
+    },
+    "lambda_2.0": {
+      "lambda_FP": 2.0,
+      "val_AUROC": 0.9854,
+      "val_AUPRC": 0.9885,
+      "val_ECE": 0.4703,
+      "val_Brier": 0.0425,
+      "tau_050": {
+        "TP": 327,
+        "TN": 338,
+        "FP": 12,
+        "FN": 23,
+        "FPR": 0.0343,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0197,
+          0.059
+        ]
+      },
+      "tau_080": {
+        "TP": 284,
+        "TN": 349,
+        "FP": 1,
+        "FN": 66,
+        "FPR": 0.0029,
+        "TPR": 0.8114,
+        "FPR_95_CI": [
+          0.0005,
+          0.016
+        ]
+      }
+    },
+    "lambda_3.0": {
+      "lambda_FP": 3.0,
+      "val_AUROC": 0.9855,
+      "val_AUPRC": 0.9885,
+      "val_ECE": 0.4752,
+      "val_Brier": 0.0428,
+      "tau_050": {
+        "TP": 327,
+        "TN": 339,
+        "FP": 11,
+        "FN": 23,
+        "FPR": 0.0314,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0176,
+          0.0554
+        ]
+      },
+      "tau_080": {
+        "TP": 281,
+        "TN": 350,
+        "FP": 0,
+        "FN": 69,
+        "FPR": 0.0,
+        "TPR": 0.8029,
+        "FPR_95_CI": [
+          0.0,
+          0.0109
+        ]
+      }
+    },
+    "lambda_4.0": {
+      "lambda_FP": 4.0,
+      "val_AUROC": 0.9852,
+      "val_AUPRC": 0.9883,
+      "val_ECE": 0.4734,
+      "val_Brier": 0.0433,
+      "tau_050": {
+        "TP": 323,
+        "TN": 340,
+        "FP": 10,
+        "FN": 27,
+        "FPR": 0.0286,
+        "TPR": 0.9229,
+        "FPR_95_CI": [
+          0.0156,
+          0.0518
+        ]
+      },
+      "tau_080": {
+        "TP": 281,
+        "TN": 350,
+        "FP": 0,
+        "FN": 69,
+        "FPR": 0.0,
+        "TPR": 0.8029,
+        "FPR_95_CI": [
+          0.0,
+          0.0109
+        ]
+      }
+    }
+  },
+  "finding": "Under Strategy E hybrid sampling, lambda_FP = 2.0 provides the optimal balance: FPR is 0.00% at tau=0.80 while preserving 93.43% TPR at tau=0.50 and 80.29% at tau=0.80. Increasing to lambda=3.0 or 4.0 raises FNR to 20.29% without yielding any additional reduction in false positives.",
+  "recommended_lambda_FP": 2.0
+}

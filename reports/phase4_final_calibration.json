@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "champion_candidate": "Cand_C_Structured_Dropout",
+  "calibrated_T": 1.208418607711792,
+  "ECE_before_calibration": 0.021,
+  "ECE_after_calibration": 0.0078,
+  "Brier_score": 0.0108
+}

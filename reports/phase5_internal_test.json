@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "model_champion": "Phase5_Structured_Dropout_UltraLowFPR",
+  "feature_dim": 2212,
+  "test_samples": 10316,
+  "real_samples": 4238,
+  "aigc_samples": 6078,
+  "calibrated_T": 1.213654,
+  "operating_threshold": 0.8,
+  "metrics": {
+    "AUROC": 0.9986,
+    "AUPRC": 0.999,
+    "Brier": 0.0134,
+    "ECE": 0.0091,
+    "FPR": 0.0094,
+    "FNR": 0.024,
+    "TPR": 0.976,
+    "TNR": 0.9906,
+    "TP": 5932,
+    "TN": 4198,
+    "FP": 40,
+    "FN": 146,
+    "TPR_at_FPR_le_0_50_pct": 0.9605,
+    "TPR_at_FPR_le_0_10_pct": 0.9041
+  }
+}

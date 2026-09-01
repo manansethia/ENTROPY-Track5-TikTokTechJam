@@ -1,0 +1,218 @@
+{
+  "timestamp": "2026-08-28T20:14:12Z",
+  "total_false_positives_at_050": 11,
+  "total_false_negatives_at_050": 23,
+  "top_false_positives": [
+    {
+      "image_id": "fresh_5k_00922",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/coco_000000341681.jpg",
+      "source": "Authentic_COCO_Photo",
+      "predicted_prob": 0.7899,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_03207",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00029-of-00249_real_00066.jpg",
+      "source": "Authentic_Real_General",
+      "predicted_prob": 0.7495,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_04061",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/coco_000000234807.jpg",
+      "source": "Authentic_COCO_Photo",
+      "predicted_prob": 0.6323,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_04070",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00040-of-00249_real_00142.jpg",
+      "source": "Authentic_Real_General",
+      "predicted_prob": 0.613,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_02746",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/coco_000000416269.jpg",
+      "source": "Authentic_COCO_Photo",
+      "predicted_prob": 0.5648,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_03905",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00033-of-00249_real_00240.jpg",
+      "source": "Authentic_Real_General",
+      "predicted_prob": 0.5458,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_03085",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/coco_000000177383.jpg",
+      "source": "Authentic_COCO_Photo",
+      "predicted_prob": 0.5285,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_04429",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/coco_000000398438.jpg",
+      "source": "Authentic_COCO_Photo",
+      "predicted_prob": 0.527,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_03417",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00006-of-00249_real_00090.jpg",
+      "source": "Authentic_Real_General",
+      "predicted_prob": 0.526,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_02089",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00018-of-00249_real_00124.jpg",
+      "source": "Authentic_Real_General",
+      "predicted_prob": 0.5198,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    },
+    {
+      "image_id": "fresh_5k_01629",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00049-of-00249_real_00116.jpg",
+      "source": "Authentic_Real_General",
+      "predicted_prob": 0.5004,
+      "ground_truth": 0,
+      "category": "HARD_NEGATIVE_REAL_AS_FAKE"
+    }
+  ],
+  "top_false_negatives": [
+    {
+      "image_id": "fresh_5k_01732",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00003-of-00249_sidfake_00098.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.007,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_00564",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00002-of-00249_sidfake_00104.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.0152,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_01111",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_48_fake_00137.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.038,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_00071",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00000-of-00249_sidfake_00249.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.0561,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_03954",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00002-of-00249_sidfake_00373.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.0601,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_04946",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_16_fake_00099.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.0606,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_01328",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_32_fake_00295.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.0901,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_01992",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00000-of-00249_sidfake_00058.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.1058,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_02403",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00002-of-00249_sidfake_00017.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.1165,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_03015",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00003-of-00249_sidfake_00033.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.1365,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_03413",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00003-of-00249_sidfake_00218.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.1955,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_04795",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00000-of-00249_sidfake_00497.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.2001,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_04993",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_23_fake_00188.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.2082,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_03537",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00001-of-00249_sidfake_00370.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.2213,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    },
+    {
+      "image_id": "fresh_5k_00756",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_39_fake_00099.jpg",
+      "generator": "Synthetic_Diffusion_General",
+      "predicted_prob": 0.2264,
+      "ground_truth": 1,
+      "category": "HARD_POSITIVE_FAKE_AS_REAL"
+    }
+  ],
+  "error_pattern_analysis": "False positives at standard threshold are concentrated in extreme vintage film grain and heavy oil painting impasto; False negatives are concentrated in hyper-realistic subtle diffusion textures."
+}

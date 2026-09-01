@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "routing_window": [
+    0.35,
+    0.85
+  ],
+  "verified_dev_invocations": 138,
+  "verified_dev_rate": "1.38%",
+  "rescued_errors": {
+    "rescued_fp": 18,
+    "rescued_fn": 80,
+    "net_reduction": 92
+  }
+}

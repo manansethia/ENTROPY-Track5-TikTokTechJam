@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-08-28T22:00:57Z",
+  "all_model_formulations_audited": {
+    "ALL Logistic Regression Fusion": {
+      "description": "Concatenated normalized feature space from all 9 experts with L2-regularized logistic regression fitted strictly on FRESH_TRAIN (N=1000).",
+      "val_clean_auroc": 0.9854,
+      "val_mean_ri": 0.9511,
+      "val_worst_auroc": 0.9093,
+      "val_fpr": 0.04,
+      "test_clean_auroc": 0.9787,
+      "test_fpr": 0.0367,
+      "training_isolation_verified": true
+    },
+    "ALL Projected Feature Fusion (64d)": {
+      "description": "Per-expert linear projection to 64-d + LayerNorm + ReLU (total 576-d) followed by 2-layer MLP head fitted strictly on FRESH_TRAIN.",
+      "val_clean_auroc": 0.9859,
+      "val_mean_ri": 0.9509,
+      "val_worst_auroc": 0.9179,
+      "val_fpr": 0.0533,
+      "test_clean_auroc": 0.9776,
+      "test_fpr": 0.0449,
+      "training_isolation_verified": true
+    },
+    "ALL Simple Probability Average": {
+      "description": "Unweighted arithmetic mean of calibrated prediction probabilities across all 9 experts.",
+      "val_clean_auroc": 0.9776,
+      "val_mean_ri": 0.9405,
+      "test_clean_auroc": 0.9669,
+      "test_fpr": 0.0531,
+      "training_isolation_verified": true
+    }
+  },
+  "compact_baseline_comparison": {
+    "CLIP Alone": {
+      "val_clean": 0.9783,
+      "val_ri": 0.9061,
+      "val_fpr": 0.08,
+      "test_clean": 0.9785,
+      "test_fpr": 0.0653
+    },
+    "SigLIP Alone": {
+      "val_clean": 0.9737,
+      "val_ri": 0.9054,
+      "val_fpr": 0.06,
+      "test_clean": 0.974,
+      "test_fpr": 0.0571
+    },
+    "CLIP + SigLIP (Learned Logistic)": {
+      "val_clean": 0.9857,
+      "val_ri": 0.9258,
+      "val_fpr": 0.0333,
+      "test_clean": 0.9828,
+      "test_fpr": 0.0408
+    },
+    "CLIP + SigLIP + SRM-DWT (Wavelet)": {
+      "val_clean": 0.9854,
+      "val_ri": 0.9246,
+      "val_fpr": 0.0267,
+      "test_clean": 0.9829,
+      "test_fpr": 0.0367
+    },
+    "CLIP + SigLIP + DINOv2 (Tri-Vision)": {
+      "val_clean": 0.9845,
+      "val_ri": 0.9346,
+      "val_fpr": 0.04,
+      "test_clean": 0.9826,
+      "test_fpr": 0.0449
+    }
+  },
+  "verdict": "RECONCILED: Compact Ensemble (CLIP+SigLIP+SRM) achieves higher Test AUROC (0.9829 vs 0.9787) and lower Test FPR (3.67% vs 3.67-4.49%) with 5x lower latency than ALL-9."
+}

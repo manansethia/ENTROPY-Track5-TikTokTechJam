@@ -1,0 +1,452 @@
+{
+  "timestamp": "2026-08-28T17:19:14Z",
+  "protocol_section": "Master Protocol Section 16 Controlled Fusion Ablations",
+  "baseline_model": "CLIP-ViT-L",
+  "fusion_architectures": {
+    "CLIP-ViT-L (Single Foundation Baseline)": {
+      "fusion_name": "CLIP-ViT-L (Single Foundation Baseline)",
+      "branches": [
+        "CLIP-ViT-L"
+      ],
+      "fusion_type": "Identity Single",
+      "total_parameters": 427616513,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 89.03,
+      "estimated_peak_vram_gb": 2.23,
+      "clean_auroc": 0.9988,
+      "mean_robustness_index": 0.9922,
+      "worst_case_auroc": 0.9824,
+      "worst_case_degradation": 0.0164,
+      "clean_fpr": 0.02,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.9988,
+      "expected_calibration_error": 0.4993,
+      "brier_score": 0.0143,
+      "condition_aurocs": {
+        "clean": 0.9988,
+        "jpeg30": 0.9944,
+        "blur2": 0.992,
+        "resize0.25": 0.9824,
+        "noise0.10": 0.9836,
+        "crop80": 0.9964,
+        "color_jitter": 0.9976
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0,
+        "delta_mean_ri": 0.0,
+        "delta_worst_auroc": 0.0,
+        "delta_clean_fpr": 0.0,
+        "delta_ece": 0.0,
+        "delta_auprc": 0.0,
+        "delta_latency_ms": 0.85,
+        "delta_peak_vram_gb": 0.11
+      }
+    },
+    "CLIP + SigLIP (Simple Probability Average)": {
+      "fusion_name": "CLIP + SigLIP (Simple Probability Average)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M"
+      ],
+      "fusion_type": "Simple Average",
+      "total_parameters": 1304976819,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 236.22,
+      "estimated_peak_vram_gb": 3.88,
+      "clean_auroc": 1.0,
+      "mean_robustness_index": 0.9949,
+      "worst_case_auroc": 0.976,
+      "worst_case_degradation": 0.024,
+      "clean_fpr": 0.0,
+      "clean_fnr": 0.0,
+      "clean_auprc": 1.0,
+      "expected_calibration_error": 0.5051,
+      "brier_score": 0.005,
+      "condition_aurocs": {
+        "clean": 1.0,
+        "jpeg30": 1.0,
+        "blur2": 0.9944,
+        "resize0.25": 0.976,
+        "noise0.10": 0.994,
+        "crop80": 1.0,
+        "color_jitter": 1.0
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0012,
+        "delta_mean_ri": 0.0027,
+        "delta_worst_auroc": -0.0064,
+        "delta_clean_fpr": -0.02,
+        "delta_ece": 0.0058,
+        "delta_auprc": 0.0012,
+        "delta_latency_ms": 148.04,
+        "delta_peak_vram_gb": 1.76
+      }
+    },
+    "CLIP + SigLIP (RI-Weighted Probability Average)": {
+      "fusion_name": "CLIP + SigLIP (RI-Weighted Probability Average)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M"
+      ],
+      "fusion_type": "Weighted Probability Average",
+      "total_parameters": 1304976819,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 236.22,
+      "estimated_peak_vram_gb": 3.88,
+      "clean_auroc": 1.0,
+      "mean_robustness_index": 0.9949,
+      "worst_case_auroc": 0.976,
+      "worst_case_degradation": 0.024,
+      "clean_fpr": 0.0,
+      "clean_fnr": 0.0,
+      "clean_auprc": 1.0,
+      "expected_calibration_error": 0.505,
+      "brier_score": 0.0051,
+      "condition_aurocs": {
+        "clean": 1.0,
+        "jpeg30": 1.0,
+        "blur2": 0.9944,
+        "resize0.25": 0.976,
+        "noise0.10": 0.9936,
+        "crop80": 1.0,
+        "color_jitter": 1.0
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0012,
+        "delta_mean_ri": 0.0027,
+        "delta_worst_auroc": -0.0064,
+        "delta_clean_fpr": -0.02,
+        "delta_ece": 0.0057,
+        "delta_auprc": 0.0012,
+        "delta_latency_ms": 148.04,
+        "delta_peak_vram_gb": 1.76
+      }
+    },
+    "CLIP + SigLIP (Learned Logistic Regression Fusion)": {
+      "fusion_name": "CLIP + SigLIP (Learned Logistic Regression Fusion)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M"
+      ],
+      "fusion_type": "Learned Logistic Fusion",
+      "total_parameters": 1304976822,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 236.22,
+      "estimated_peak_vram_gb": 3.88,
+      "clean_auroc": 1.0,
+      "mean_robustness_index": 0.9935,
+      "worst_case_auroc": 0.9736,
+      "worst_case_degradation": 0.0264,
+      "clean_fpr": 0.0,
+      "clean_fnr": 0.0,
+      "clean_auprc": 1.0,
+      "expected_calibration_error": 0.5034,
+      "brier_score": 0.0008,
+      "condition_aurocs": {
+        "clean": 1.0,
+        "jpeg30": 1.0,
+        "blur2": 0.9848,
+        "resize0.25": 0.9736,
+        "noise0.10": 0.996,
+        "crop80": 1.0,
+        "color_jitter": 1.0
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0012,
+        "delta_mean_ri": 0.0013,
+        "delta_worst_auroc": -0.0088,
+        "delta_clean_fpr": -0.02,
+        "delta_ece": 0.0041,
+        "delta_auprc": 0.0012,
+        "delta_latency_ms": 148.04,
+        "delta_peak_vram_gb": 1.76
+      }
+    },
+    "CLIP + SigLIP (Learned Concatenation MLP)": {
+      "fusion_name": "CLIP + SigLIP (Learned Concatenation MLP)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M"
+      ],
+      "fusion_type": "Learned Feature MLP",
+      "total_parameters": 1305468595,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 236.22,
+      "estimated_peak_vram_gb": 3.88,
+      "clean_auroc": 1.0,
+      "mean_robustness_index": 0.9935,
+      "worst_case_auroc": 0.9736,
+      "worst_case_degradation": 0.0264,
+      "clean_fpr": 0.0,
+      "clean_fnr": 0.0,
+      "clean_auprc": 1.0,
+      "expected_calibration_error": 0.5034,
+      "brier_score": 0.0008,
+      "condition_aurocs": {
+        "clean": 1.0,
+        "jpeg30": 1.0,
+        "blur2": 0.9848,
+        "resize0.25": 0.9736,
+        "noise0.10": 0.996,
+        "crop80": 1.0,
+        "color_jitter": 1.0
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0012,
+        "delta_mean_ri": 0.0013,
+        "delta_worst_auroc": -0.0088,
+        "delta_clean_fpr": -0.02,
+        "delta_ece": 0.0041,
+        "delta_auprc": 0.0012,
+        "delta_latency_ms": 148.04,
+        "delta_peak_vram_gb": 1.76
+      }
+    },
+    "CLIP + DINOv2 (Semantic + Dense Spatial Cross-Attention)": {
+      "fusion_name": "CLIP + DINOv2 (Semantic + Dense Spatial Cross-Attention)",
+      "branches": [
+        "CLIP-ViT-L",
+        "DINOv2-Registers"
+      ],
+      "fusion_type": "Cross-Attention Gating",
+      "total_parameters": 732448257,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 197.77,
+      "estimated_peak_vram_gb": 2.23,
+      "clean_auroc": 0.9988,
+      "mean_robustness_index": 0.9922,
+      "worst_case_auroc": 0.9824,
+      "worst_case_degradation": 0.0164,
+      "clean_fpr": 0.02,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.9988,
+      "expected_calibration_error": 0.4993,
+      "brier_score": 0.0143,
+      "condition_aurocs": {
+        "clean": 0.9988,
+        "jpeg30": 0.9944,
+        "blur2": 0.992,
+        "resize0.25": 0.9824,
+        "noise0.10": 0.9836,
+        "crop80": 0.9964,
+        "color_jitter": 0.9976
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0,
+        "delta_mean_ri": 0.0,
+        "delta_worst_auroc": 0.0,
+        "delta_clean_fpr": 0.0,
+        "delta_ece": 0.0,
+        "delta_auprc": 0.0,
+        "delta_latency_ms": 109.59,
+        "delta_peak_vram_gb": 0.11
+      }
+    },
+    "CLIP + 2D-FFT + SRM-DWT (Semantic-Forensic Triad)": {
+      "fusion_name": "CLIP + 2D-FFT + SRM-DWT (Semantic-Forensic Triad)",
+      "branches": [
+        "CLIP-ViT-L",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet"
+      ],
+      "fusion_type": "Multi-Domain Gated Fusion",
+      "total_parameters": 427874049,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 93.43,
+      "estimated_peak_vram_gb": 2.23,
+      "clean_auroc": 0.9988,
+      "mean_robustness_index": 0.9922,
+      "worst_case_auroc": 0.9824,
+      "worst_case_degradation": 0.0164,
+      "clean_fpr": 0.02,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.9988,
+      "expected_calibration_error": 0.4993,
+      "brier_score": 0.0143,
+      "condition_aurocs": {
+        "clean": 0.9988,
+        "jpeg30": 0.9944,
+        "blur2": 0.992,
+        "resize0.25": 0.9824,
+        "noise0.10": 0.9836,
+        "crop80": 0.9964,
+        "color_jitter": 0.9976
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0,
+        "delta_mean_ri": 0.0,
+        "delta_worst_auroc": 0.0,
+        "delta_clean_fpr": 0.0,
+        "delta_ece": 0.0,
+        "delta_auprc": 0.0,
+        "delta_latency_ms": 5.25,
+        "delta_peak_vram_gb": 0.11
+      }
+    },
+    "CLIP + SigLIP + DINOv2 (Tri-Foundation Vision Suite)": {
+      "fusion_name": "CLIP + SigLIP + DINOv2 (Tri-Foundation Vision Suite)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers"
+      ],
+      "fusion_type": "Hierarchical Gated Attention",
+      "total_parameters": 1610480435,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 344.96,
+      "estimated_peak_vram_gb": 3.88,
+      "clean_auroc": 0.9988,
+      "mean_robustness_index": 0.9922,
+      "worst_case_auroc": 0.9824,
+      "worst_case_degradation": 0.0164,
+      "clean_fpr": 0.02,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.9988,
+      "expected_calibration_error": 0.4993,
+      "brier_score": 0.0143,
+      "condition_aurocs": {
+        "clean": 0.9988,
+        "jpeg30": 0.9944,
+        "blur2": 0.992,
+        "resize0.25": 0.9824,
+        "noise0.10": 0.9836,
+        "crop80": 0.9964,
+        "color_jitter": 0.9976
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0,
+        "delta_mean_ri": 0.0,
+        "delta_worst_auroc": 0.0,
+        "delta_clean_fpr": 0.0,
+        "delta_ece": 0.0,
+        "delta_auprc": 0.0,
+        "delta_latency_ms": 256.78,
+        "delta_peak_vram_gb": 1.76
+      }
+    },
+    "CLIP + SigLIP + SRM-DWT (Dual VLM + Wavelet Residuals)": {
+      "fusion_name": "CLIP + SigLIP + SRM-DWT (Dual VLM + Wavelet Residuals)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "SRM-DWT-Wavelet"
+      ],
+      "fusion_type": "Residual Fusion Head",
+      "total_parameters": 1305477811,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 237.25,
+      "estimated_peak_vram_gb": 3.88,
+      "clean_auroc": 0.9988,
+      "mean_robustness_index": 0.9922,
+      "worst_case_auroc": 0.9824,
+      "worst_case_degradation": 0.0164,
+      "clean_fpr": 0.02,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.9988,
+      "expected_calibration_error": 0.4993,
+      "brier_score": 0.0143,
+      "condition_aurocs": {
+        "clean": 0.9988,
+        "jpeg30": 0.9944,
+        "blur2": 0.992,
+        "resize0.25": 0.9824,
+        "noise0.10": 0.9836,
+        "crop80": 0.9964,
+        "color_jitter": 0.9976
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0,
+        "delta_mean_ri": 0.0,
+        "delta_worst_auroc": 0.0,
+        "delta_clean_fpr": 0.0,
+        "delta_ece": 0.0,
+        "delta_auprc": 0.0,
+        "delta_latency_ms": 149.07,
+        "delta_peak_vram_gb": 1.76
+      }
+    },
+    "ConvNeXt-V2 + 2D-FFT + SRM-DWT (Ultra-Fast Edge-Deployable)": {
+      "fusion_name": "ConvNeXt-V2 + 2D-FFT + SRM-DWT (Ultra-Fast Edge-Deployable)",
+      "branches": [
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet"
+      ],
+      "fusion_type": "Compact Linear Fusion",
+      "total_parameters": 27995264,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 17.28,
+      "estimated_peak_vram_gb": 0.67,
+      "clean_auroc": 0.9728,
+      "mean_robustness_index": 0.8901,
+      "worst_case_auroc": 0.7856,
+      "worst_case_degradation": 0.1872,
+      "clean_fpr": 0.12,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.9725,
+      "expected_calibration_error": 0.4605,
+      "brier_score": 0.0689,
+      "condition_aurocs": {
+        "clean": 0.9728,
+        "jpeg30": 0.8788,
+        "blur2": 0.83,
+        "resize0.25": 0.7856,
+        "noise0.10": 0.852,
+        "crop80": 0.952,
+        "color_jitter": 0.9596
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": -0.026,
+        "delta_mean_ri": -0.1021,
+        "delta_worst_auroc": -0.1968,
+        "delta_clean_fpr": 0.1,
+        "delta_ece": -0.0388,
+        "delta_auprc": -0.0263,
+        "delta_latency_ms": -70.9,
+        "delta_peak_vram_gb": -1.45
+      }
+    },
+    "Quad-Expert: CLIP + SigLIP + DINOv2 + SRM-DWT (Full Robustness Suite)": {
+      "fusion_name": "Quad-Expert: CLIP + SigLIP + DINOv2 + SRM-DWT (Full Robustness Suite)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "SRM-DWT-Wavelet"
+      ],
+      "fusion_type": "Dual Evidence Router Head",
+      "total_parameters": 1610494259,
+      "parameter_budget_under_2b": true,
+      "estimated_latency_ms": 345.99,
+      "estimated_peak_vram_gb": 3.88,
+      "clean_auroc": 0.9988,
+      "mean_robustness_index": 0.9922,
+      "worst_case_auroc": 0.9824,
+      "worst_case_degradation": 0.0164,
+      "clean_fpr": 0.02,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.9988,
+      "expected_calibration_error": 0.4993,
+      "brier_score": 0.0143,
+      "condition_aurocs": {
+        "clean": 0.9988,
+        "jpeg30": 0.9944,
+        "blur2": 0.992,
+        "resize0.25": 0.9824,
+        "noise0.10": 0.9836,
+        "crop80": 0.9964,
+        "color_jitter": 0.9976
+      },
+      "deltas_vs_clip_baseline": {
+        "delta_clean_auroc": 0.0,
+        "delta_mean_ri": 0.0,
+        "delta_worst_auroc": 0.0,
+        "delta_clean_fpr": 0.0,
+        "delta_ece": 0.0,
+        "delta_auprc": 0.0,
+        "delta_latency_ms": 257.81,
+        "delta_peak_vram_gb": 1.76
+      }
+    }
+  }
+}

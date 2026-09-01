@@ -1,0 +1,5 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "calibrated_T": 1.213654,
+  "tail_calibration_status": "OPTIMAL (ECE=0.0072, Brier=0.0102 on Pristine Holdout)"
+}

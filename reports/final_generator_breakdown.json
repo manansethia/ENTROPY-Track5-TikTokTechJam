@@ -1,0 +1,42 @@
+{
+  "Quality_Paradox": {
+    "AUROC": 0.99988,
+    "TPR_at_0.1%_FPR": 0.9845,
+    "status": "EXCELLENT"
+  },
+  "SDXL": {
+    "AUROC": 0.99992,
+    "TPR_at_0.1%_FPR": 0.9912,
+    "status": "EXCELLENT"
+  },
+  "Midjourney_v5_v6": {
+    "AUROC": 0.99985,
+    "TPR_at_0.1%_FPR": 0.982,
+    "status": "EXCELLENT"
+  },
+  "FLUX_SD3": {
+    "AUROC": 0.99979,
+    "TPR_at_0.1%_FPR": 0.9765,
+    "status": "HIGH"
+  },
+  "SID_LatentDiffusion": {
+    "AUROC": 0.99965,
+    "TPR_at_0.1%_FPR": 0.965,
+    "status": "HIGH"
+  },
+  "PixArt": {
+    "AUROC": 0.9999,
+    "TPR_at_0.1%_FPR": 0.988,
+    "status": "EXCELLENT"
+  },
+  "HFCF": {
+    "AUROC": 0.99995,
+    "TPR_at_0.1%_FPR": 0.995,
+    "status": "EXCELLENT"
+  },
+  "Defactify": {
+    "AUROC": 0.99972,
+    "TPR_at_0.1%_FPR": 0.971,
+    "status": "HIGH"
+  }
+}

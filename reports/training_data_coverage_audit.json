@@ -1,0 +1,167 @@
+{
+  "report_id": "TRAINING_DATA_COVERAGE_AUDIT",
+  "total_train_samples": 244255,
+  "real_train_samples": 132102,
+  "aigc_train_samples": 112153,
+  "covered_inventory": [
+    {
+      "domain_key": "WikiArt_Fine_Art",
+      "display_name": "Authentic Fine Art & Historical Paintings",
+      "class": "REAL",
+      "architecture": "REAL_PHOTOGRAPHY_AND_ART",
+      "sample_count": 77338,
+      "pct_within_class": 58.54,
+      "pct_of_total_train": 31.66,
+      "resolution_profile": "High-Res Varying (>1500x1000)",
+      "prompt_domain": "Oil on Canvas, Acrylic, Classical & Modern Art"
+    },
+    {
+      "domain_key": "Diverse_Generators",
+      "display_name": "Diverse Multi-Generator Diffusion Pool (HFCF)",
+      "class": "AIGC",
+      "architecture": "Pixel & Latent Diffusion (Mixed)",
+      "sample_count": 36227,
+      "pct_within_class": 32.3,
+      "pct_of_total_train": 14.83,
+      "resolution_profile": "512x512",
+      "prompt_domain": "Broad Web Imagery, Objects, Scenes"
+    },
+    {
+      "domain_key": "COCO_Authentic_Photography",
+      "display_name": "Authentic In-The-Wild Natural Photography (MS-COCO)",
+      "class": "REAL",
+      "architecture": "REAL_PHOTOGRAPHY_AND_ART",
+      "sample_count": 34517,
+      "pct_within_class": 26.13,
+      "pct_of_total_train": 14.13,
+      "resolution_profile": "640x480 / 1024x683",
+      "prompt_domain": "Everyday Objects, Animals, People, Street Scenes"
+    },
+    {
+      "domain_key": "Quality_Paradox_Photorealism",
+      "display_name": "High-Fidelity Photorealism Diffusion Fine-Tunes",
+      "class": "AIGC",
+      "architecture": "Latent Diffusion (RealisticVision / Photorealism)",
+      "sample_count": 22569,
+      "pct_within_class": 20.12,
+      "pct_of_total_train": 9.24,
+      "resolution_profile": "1024x1024 / 944x624",
+      "prompt_domain": "Portraits, Faces, Architecture, Macro Photography"
+    },
+    {
+      "domain_key": "SDXL_Midjourney",
+      "display_name": "Latent Diffusion & Large Multi-Modal (SDXL / MJ)",
+      "class": "AIGC",
+      "architecture": "Latent Diffusion (Ensemble Backbones)",
+      "sample_count": 16390,
+      "pct_within_class": 14.61,
+      "pct_of_total_train": 6.71,
+      "resolution_profile": "512x512 / 1024x1024",
+      "prompt_domain": "Photorealism, Art, General Prompts"
+    },
+    {
+      "domain_key": "Diffusion_Synthetics",
+      "display_name": "Standard Denoising Diffusion Probabilistic Models",
+      "class": "AIGC",
+      "architecture": "Pixel & Latent UNet Diffusion",
+      "sample_count": 15335,
+      "pct_within_class": 13.67,
+      "pct_of_total_train": 6.28,
+      "resolution_profile": "512x512",
+      "prompt_domain": "General Text-to-Image"
+    },
+    {
+      "domain_key": "SID_LatentDiffusion",
+      "display_name": "Synthetic Image Detection Benchmark (SID)",
+      "class": "AIGC",
+      "architecture": "Latent Diffusion Models (LDM / SD 1.x)",
+      "sample_count": 14112,
+      "pct_within_class": 12.58,
+      "pct_of_total_train": 5.78,
+      "resolution_profile": "1024x1024",
+      "prompt_domain": "Natural Scenes, Objects"
+    },
+    {
+      "domain_key": "Natural_SID_Photography",
+      "display_name": "Authentic Pristine Real Photography (SID Real)",
+      "class": "REAL",
+      "architecture": "REAL_PHOTOGRAPHY_AND_ART",
+      "sample_count": 13689,
+      "pct_within_class": 10.36,
+      "pct_of_total_train": 5.6,
+      "resolution_profile": "1024x768 / 1024x680",
+      "prompt_domain": "High-Resolution DSLR Camera Captures"
+    },
+    {
+      "domain_key": "Natural_Photography",
+      "display_name": "Authentic Natural Imagery (Diverse Natural Pool)",
+      "class": "REAL",
+      "architecture": "REAL_PHOTOGRAPHY_AND_ART",
+      "sample_count": 6558,
+      "pct_within_class": 4.96,
+      "pct_of_total_train": 2.68,
+      "resolution_profile": "1024x768",
+      "prompt_domain": "Landscapes, Wildlife, Unmodified Nature"
+    },
+    {
+      "domain_key": "Defactify_AIGC",
+      "display_name": "Defactify Multimodal Synthetic Suite",
+      "class": "AIGC",
+      "architecture": "Cross-Generator Text-to-Image",
+      "sample_count": 4679,
+      "pct_within_class": 4.17,
+      "pct_of_total_train": 1.92,
+      "resolution_profile": "1024x1024",
+      "prompt_domain": "Fact-Checking, Visual Manipulation, News"
+    },
+    {
+      "domain_key": "Latent_Diffusion",
+      "display_name": "Counterfactual Latent Diffusion Slices",
+      "class": "AIGC",
+      "architecture": "Latent Diffusion Models (SD 1.4)",
+      "sample_count": 2841,
+      "pct_within_class": 2.53,
+      "pct_of_total_train": 1.16,
+      "resolution_profile": "512x512",
+      "prompt_domain": "Paired Conceptual Imagery"
+    }
+  ],
+  "absent_or_weak_families": [
+    {
+      "generator_family": "DALL-E 2 / UnCLIP Architecture",
+      "architecture_type": "Two-Stage Cascaded Diffusion + CLIP Prior",
+      "status_in_train": "ABSENT / HEAVILY UNDERREPRESENTED",
+      "observed_ood_performance": "20.0% Detection Rate on Synthbuster",
+      "forensic_vulnerability": "Uses unCLIP prior space + cascaded upsamplers rather than standard single-stage latent diffusion, producing distinct non-square spectral footprints."
+    },
+    {
+      "generator_family": "Adobe Firefly / Proprietary Commercial Diffusion",
+      "architecture_type": "Proprietary Commercial Diffusion with Heavy In-Line Post-Processing",
+      "status_in_train": "ABSENT",
+      "observed_ood_performance": "56.0% Detection Rate on Synthbuster",
+      "forensic_vulnerability": "Commercial safety filtering, aggressive color post-processing, and custom rendering pipelines smooth out high-frequency residual anomalies."
+    },
+    {
+      "generator_family": "Stable Diffusion 2.x (v-prediction / 768px)",
+      "architecture_type": "v-Objective Latent Diffusion (OpenCLIP ViT-H)",
+      "status_in_train": "UNDERREPRESENTED (<2%)",
+      "observed_ood_performance": "57.0% Detection Rate on Synthbuster",
+      "forensic_vulnerability": "v-prediction formulation and OpenCLIP text encoder create different latent noise dynamics compared to SD 1.x / SDXL."
+    },
+    {
+      "generator_family": "GLIDE / Pure Pixel-Space Diffusion",
+      "architecture_type": "Text-Guided Cascaded Pixel Diffusion",
+      "status_in_train": "ABSENT / MINIMAL",
+      "observed_ood_performance": "77.0% Detection Rate on Synthbuster",
+      "forensic_vulnerability": "Operates directly in pixel space without VAE autoencoder latent compression artifacts."
+    },
+    {
+      "generator_family": "Autoregressive / MaskGIT / Flow-Matching (e.g. Flux, Muse)",
+      "architecture_type": "Non-Diffusion (Rectified Flow, Masked Token Modeling)",
+      "status_in_train": "ABSENT",
+      "observed_ood_performance": "UNKNOWN (Emerging)",
+      "forensic_vulnerability": "Completely lacks diffusion denoising steps; generates tokens or straight-line ODE trajectories."
+    }
+  ],
+  "audited_at": "2026-08-30T04:14:46Z"
+}

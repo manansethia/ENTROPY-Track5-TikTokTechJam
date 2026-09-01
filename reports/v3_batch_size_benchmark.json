@@ -1,0 +1,30 @@
+[
+  {
+    "batch_size": 32,
+    "status": "PASSED \u2705",
+    "vram_allocated_gb": "0.45 GB",
+    "vram_reserved_gb": "3.64 GB",
+    "throughput_img_sec": "59.2 img/s",
+    "batch_time_ms": "540.2 ms"
+  },
+  {
+    "batch_size": 48,
+    "status": "PASSED \u2705",
+    "vram_allocated_gb": "0.46 GB",
+    "vram_reserved_gb": "5.34 GB",
+    "throughput_img_sec": "59.5 img/s",
+    "batch_time_ms": "806.2 ms"
+  },
+  {
+    "batch_size": 64,
+    "status": "CUDA OOM \u274c"
+  },
+  {
+    "batch_size": 96,
+    "status": "CUDA OOM \u274c"
+  },
+  {
+    "batch_size": 128,
+    "status": "CUDA OOM \u274c"
+  }
+]

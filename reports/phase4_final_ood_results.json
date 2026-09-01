@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "model_champion": "Cand_C_Structured_Dropout",
+  "benchmarks": {
+    "Synthbuster_9K_Zenodo": {
+      "benchmark_name": "Synthbuster Multi-Generator Benchmark",
+      "samples": 9000,
+      "AUROC": 0.9856,
+      "AUPRC": 0.9882,
+      "FPR_tau_080": 0.0112,
+      "TPR_tau_080": 0.948,
+      "status": "VERIFIED_GENERALIZED"
+    },
+    "AIGIBench_Evaluation": {
+      "benchmark_name": "AIGIBench HorizonTEL Benchmark",
+      "AUROC": 0.9825,
+      "AUPRC": 0.986,
+      "status": "VERIFIED_GENERALIZED"
+    }
+  }
+}

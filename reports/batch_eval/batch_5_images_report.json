@@ -1,0 +1,154 @@
+{
+  "Image 1 (Crab Nebula - Hubble)": {
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.8472,
+    "ai_probability": 0.8963,
+    "class_probabilities": {
+      "REAL": 0.1037,
+      "PARTIAL_AIGC": 0.3904,
+      "FULL_AIGC": 0.506
+    },
+    "affected_area_percentage": 54.17,
+    "max_patch_anomaly": 0.8472,
+    "suspicious_regions_count": 4,
+    "suspicious_regions": [
+      {
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8349,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8472,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.8138,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.7369,
+        "scale": 768
+      }
+    ],
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img1_crab_nebula_heatmap.jpg",
+    "physics_metrics": {
+      "srm_variance": 21.241,
+      "srm_kurtosis": 10.0383
+    },
+    "label": "Image 1 (Crab Nebula - Hubble)"
+  },
+  "Image 2 (Earth from Space - Satellite)": {
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.6031,
+    "ai_probability": 0.963,
+    "class_probabilities": {
+      "REAL": 0.037,
+      "PARTIAL_AIGC": 0.3062,
+      "FULL_AIGC": 0.6567
+    },
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.6031,
+    "suspicious_regions_count": 1,
+    "suspicious_regions": [
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.6031,
+        "scale": 512
+      }
+    ],
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img2_earth_globe_heatmap.jpg",
+    "physics_metrics": {
+      "srm_variance": 127.7981,
+      "srm_kurtosis": 29.343
+    },
+    "label": "Image 2 (Earth from Space - Satellite)"
+  },
+  "Image 3 (Volcanic Prehistoric Earth)": {
+    "verdict": "REAL",
+    "confidence": 0.9788,
+    "ai_probability": 0.5509,
+    "class_probabilities": {
+      "REAL": 0.4491,
+      "PARTIAL_AIGC": 0.4111,
+      "FULL_AIGC": 0.1398
+    },
+    "affected_area_percentage": 0.0,
+    "max_patch_anomaly": 0.0212,
+    "suspicious_regions_count": 0,
+    "suspicious_regions": [],
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img3_volcano_meteors_heatmap.jpg",
+    "physics_metrics": {
+      "srm_variance": 68.5049,
+      "srm_kurtosis": 9.0769
+    },
+    "label": "Image 3 (Volcanic Prehistoric Earth)"
+  },
+  "Image 4 (Dakshineswar Temple Reflection)": {
+    "verdict": "REAL",
+    "confidence": 0.9061,
+    "ai_probability": 0.6934,
+    "class_probabilities": {
+      "REAL": 0.3066,
+      "PARTIAL_AIGC": 0.693,
+      "FULL_AIGC": 0.0003
+    },
+    "affected_area_percentage": 0.0,
+    "max_patch_anomaly": 0.0939,
+    "suspicious_regions_count": 0,
+    "suspicious_regions": [],
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img4_temple_reflection_heatmap.jpg",
+    "physics_metrics": {
+      "srm_variance": 54.861,
+      "srm_kurtosis": 57.398
+    },
+    "label": "Image 4 (Dakshineswar Temple Reflection)"
+  },
+  "Image 5 (Sci-Fi Floating Globe City)": {
+    "verdict": "REAL",
+    "confidence": 0.9933,
+    "ai_probability": 0.4477,
+    "class_probabilities": {
+      "REAL": 0.5523,
+      "PARTIAL_AIGC": 0.4456,
+      "FULL_AIGC": 0.0021
+    },
+    "affected_area_percentage": 0.0,
+    "max_patch_anomaly": 0.0067,
+    "suspicious_regions_count": 0,
+    "suspicious_regions": [],
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img5_scifi_globe_city_heatmap.jpg",
+    "physics_metrics": {
+      "srm_variance": 89.4621,
+      "srm_kurtosis": 35.9552
+    },
+    "label": "Image 5 (Sci-Fi Floating Globe City)"
+  }
+}

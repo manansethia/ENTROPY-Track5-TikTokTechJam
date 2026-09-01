@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-08-28T22:00:57Z",
+  "expert_rescues": {
+    "CLIP-ViT-L": {
+      "standalone_errors": 23,
+      "all_errors": 24,
+      "errors_corrected_by_all": 7,
+      "errors_introduced_by_all": 8,
+      "net_error_reduction": -1,
+      "rescue_rate_exp_by_all": 0.3043
+    },
+    "SigLIP-SO400M": {
+      "standalone_errors": 25,
+      "all_errors": 24,
+      "errors_corrected_by_all": 12,
+      "errors_introduced_by_all": 11,
+      "net_error_reduction": 1,
+      "rescue_rate_exp_by_all": 0.48
+    },
+    "DINOv2-Registers": {
+      "standalone_errors": 56,
+      "all_errors": 24,
+      "errors_corrected_by_all": 37,
+      "errors_introduced_by_all": 5,
+      "net_error_reduction": 32,
+      "rescue_rate_exp_by_all": 0.6607
+    },
+    "EVA-02-Large-448": {
+      "standalone_errors": 50,
+      "all_errors": 24,
+      "errors_corrected_by_all": 29,
+      "errors_introduced_by_all": 3,
+      "net_error_reduction": 26,
+      "rescue_rate_exp_by_all": 0.58
+    },
+    "ConvNeXt-V2": {
+      "standalone_errors": 56,
+      "all_errors": 24,
+      "errors_corrected_by_all": 44,
+      "errors_introduced_by_all": 12,
+      "net_error_reduction": 32,
+      "rescue_rate_exp_by_all": 0.7857
+    },
+    "2D-FFT-Spectral": {
+      "standalone_errors": 97,
+      "all_errors": 24,
+      "errors_corrected_by_all": 83,
+      "errors_introduced_by_all": 10,
+      "net_error_reduction": 73,
+      "rescue_rate_exp_by_all": 0.8557
+    },
+    "SRM-DWT-Wavelet": {
+      "standalone_errors": 116,
+      "all_errors": 24,
+      "errors_corrected_by_all": 105,
+      "errors_introduced_by_all": 13,
+      "net_error_reduction": 92,
+      "rescue_rate_exp_by_all": 0.9052
+    },
+    "Edge-Specialist": {
+      "standalone_errors": 82,
+      "all_errors": 24,
+      "errors_corrected_by_all": 72,
+      "errors_introduced_by_all": 14,
+      "net_error_reduction": 58,
+      "rescue_rate_exp_by_all": 0.878
+    },
+    "Patch-MIL": {
+      "standalone_errors": 133,
+      "all_errors": 24,
+      "errors_corrected_by_all": 118,
+      "errors_introduced_by_all": 9,
+      "net_error_reduction": 109,
+      "rescue_rate_exp_by_all": 0.8872
+    }
+  },
+  "summary": "ALL-MODEL fusion corrects 118 errors of Patch-MIL, 105 errors of SRM-DWT, 83 errors of 2D-FFT, 72 errors of Edge, 44 errors of ConvNeXt, 37 errors of DINOv2, 29 errors of EVA-02, 12 errors of SigLIP, and 7 errors of CLIP, while introducing 3 to 14 net new errors across individual models."
+}

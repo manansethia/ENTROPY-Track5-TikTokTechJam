@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIGC Forensics — Image Authenticity Lab & Physical Forensic Station</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Background Environment Layers -->
+  <div class="archival-bg"></div>
+  <div class="environment-vignette"></div>
+
+  <!-- Top-Down Realistic Roulette Metaphor Asset (Slow Continuous Drift) -->
+  <div class="roulette-container" id="rouletteContainer">
+    <div class="roulette-disc"></div>
+  </div>
+
+  <!-- Floating Luxury Navbar -->
+  <header class="floating-navbar">
+    <div class="brand-group">
+      <span class="brand-title">AIGC FORENSICS</span>
+      <span class="brand-subtitle">IMAGE AUTHENTICITY LAB</span>
+    </div>
+
+    <nav class="nav-links">
+      <button class="nav-btn active" onclick="scrollToStage('home')">ANALYZE</button>
+      <button class="nav-btn" onclick="openDocModal('about')">ABOUT</button>
+      <button class="nav-btn" onclick="openDocModal('technology')">TECHNOLOGY</button>
+      <button class="nav-btn" onclick="openDocModal('dataset')">DATASETS</button>
+      <button class="nav-btn" onclick="openDocModal('lineage')">MODEL LINEAGE</button>
+      <button class="nav-btn" onclick="openDocModal('openforensics')">OPEN FORENSICS</button>
+    </nav>
+
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div class="status-badge" id="backendStatusBadge" title="Inference engine status">
+        <span class="status-pulse"></span>
+        <span id="backendStatusText">ANALYSIS ENGINE</span>
+      </div>
+
+      <button class="btn-luxury btn-secondary" id="demoModeToggle" onclick="toggleDemoMode()" style="padding: 6px 12px; font-size: 10px;">
+        <i data-lucide="sparkles" style="width: 13px; height: 13px; color: var(--brass-bright);"></i>
+        <span>DEMO MODE</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Homepage Hero Section -->
+  <section class="hero-section" id="heroSection">
+    <h1 class="hero-heading">SEE WHAT AI CHANGED.</h1>
+    <p class="hero-subtext">
+      Forensic image analysis for authentic photographs, localized AI edits, and fully synthetic images.
+    </p>
+  </section>
+
+  <!-- Physical Green Felt Investigation Table (Bottom 52% of Viewport) -->
+  <main class="physical-table" id="physicalTable">
+    <div class="table-walnut-bezel"></div>
+    <div class="table-brass-inlay"></div>
+
+    <!-- Central Interactive Evidence Stage -->
+    <div class="evidence-stage" id="evidenceStage">
+
+      <!-- 1. Smoked Acrylic Evidence Tray (Initial Upload State) -->
+      <div class="smoked-acrylic-tray" id="uploadTray" onclick="triggerFileInput()">
+        <input type="file" id="evidenceFileInput" multiple accept="image/*" style="display: none;" onchange="handleFileSelect(event)">
+        
+        <div style="margin-bottom: 12px; display: flex; justify-content: center;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(184, 146, 72, 0.15); border: 1px solid rgba(184, 146, 72, 0.4); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="folder-search" style="width: 24px; height: 24px; color: var(--brass-bright);"></i>
+          </div>
+        </div>
+
+        <h2 class="tray-title">DROP YOUR EVIDENCE</h2>
+        <p class="tray-subtitle">UP TO 100 IMAGES · 500 MB SESSION</p>
+
+        <div class="tray-btn-row" onclick="event.stopPropagation()">
+          <button class="btn-luxury btn-primary" onclick="triggerFileInput()">
+            <i data-lucide="upload" style="width: 14px; height: 14px;"></i>
+            <span>SELECT IMAGES</span>
+          </button>
+          <button class="btn-luxury btn-secondary" onclick="loadDemoSession()">
+            <i data-lucide="box" style="width: 14px; height: 14px; color: var(--brass-bright);"></i>
+            <span>LOAD DEMO DECK</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Stacked 3D Evidence Deck (Staging State after Upload) -->
+      <div class="deck-view-container" id="deckContainer">
+        
+        <!-- Live Forensic Scanning Stage Stepper -->
+        <div id="stageIndicator" style="display: none; align-items: center; gap: 8px; background: rgba(13, 17, 23, 0.85); padding: 8px 18px; border-radius: 999px; border: 1px solid rgba(184, 146, 72, 0.3); font-family: var(--font-mono); font-size: 11px; color: var(--brass-bright);">
+          <span class="status-pulse"></span>
+          <span id="currentStageText">INGESTING EVIDENCE</span>
+        </div>
+
+        <!-- 3D Physics Card Stack -->
+        <div class="physical-deck-anchor" id="physicalDeck" onclick="previewTopCard()">
+          <div class="scan-beam" id="deckScanBeam"></div>
+          <!-- Evidence Cards dynamically rendered by app.js -->
+        </div>
+
+        <!-- Deck Action Row -->
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button class="btn-luxury btn-primary" id="analyzeBtn" onclick="runForensicAnalysis()">
+            <i data-lucide="scan-line" style="width: 15px; height: 15px;"></i>
+            <span id="analyzeBtnText">ANALYZE EVIDENCE DECK (10 ITEMS)</span>
+          </button>
+          <button class="btn-luxury btn-secondary" onclick="clearEvidenceDeck()">
+            <i data-lucide="trash-2" style="width: 14px; height: 14px;"></i>
+            <span>CLEAR DECK</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. Three-Deck Categorized Physical Piles (Dealt Results State) -->
+      <div class="three-piles-stage" id="threePilesStage">
+        
+        <!-- Pile 1: REAL / AUTHENTIC -->
+        <div class="pile-column">
+          <div class="pile-header">
+            <span class="real-text">REAL</span>
+            <span class="pile-count-badge real-badge" id="realCountBadge">0</span>
+          </div>
+          <div class="pile-plate real-plate" id="realPile" onclick="openPileInspection('REAL')">
+            <span style="font-size: 11px; font-family: var(--font-mono); color: #64748b;" id="realEmptyText">NO ITEMS</span>
+          </div>
+          <span style="font-size: 10px; font-weight: 600; letter-spacing: 1px; color: #94a3b8; text-transform: uppercase;">AUTHENTIC PHOTOGRAPHS</span>
+        </div>
+
+        <!-- Pile 2: PARTIAL-AI / LOCALIZED INPAINTING -->
+        <div class="pile-column">
+          <div class="pile-header">
+            <span class="partial-text">PARTIAL-AI</span>
+            <span class="pile-count-badge partial-badge" id="partialCountBadge">0</span>
+          </div>
+          <div class="pile-plate partial-plate" id="partialPile" onclick="openPileInspection('PARTIAL_AI')">
+            <span style="font-size: 11px; font-family: var(--font-mono); color: #64748b;" id="partialEmptyText">NO ITEMS</span>
+          </div>
+          <span style="font-size: 10px; font-weight: 600; letter-spacing: 1px; color: #94a3b8; text-transform: uppercase;">LOCALIZED AI MANIPULATION</span>
+        </div>
+
+        <!-- Pile 3: FULL-AIGC / SYNTHETIC -->
+        <div class="pile-column">
+          <div class="pile-header">
+            <span class="aigc-text">FULL-AIGC</span>
+            <span class="pile-count-badge aigc-badge" id="aigcCountBadge">0</span>
+          </div>
+          <div class="pile-plate aigc-plate" id="aigcPile" onclick="openPileInspection('FULL_AIGC')">
+            <span style="font-size: 11px; font-family: var(--font-mono); color: #64748b;" id="aigcEmptyText">NO ITEMS</span>
+          </div>
+          <span style="font-size: 10px; font-weight: 600; letter-spacing: 1px; color: #94a3b8; text-transform: uppercase;">FULLY SYNTHETIC IMAGES</span>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Full Forensic Inspection View Modal (Detailed Forensic Dossier) -->
+  <div class="forensic-modal-backdrop" id="forensicModal">
+    <button class="modal-close-btn" onclick="closeForensicModal()">
+      <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+    </button>
+
+    <div class="forensic-modal-container">
+      
+      <!-- Left Column: Large Interactive Image Viewer -->
+      <div class="forensic-viewer-card">
+        <div class="viewer-mode-bar">
+          <div class="mode-btn-group">
+            <button class="mode-btn active" id="btnModeOrig" onclick="setViewerMode('ORIGINAL')">ORIGINAL</button>
+            <button class="mode-btn" id="btnModeHeatmap" onclick="setViewerMode('HEATMAP')">HEATMAP</button>
+            <button class="mode-btn" id="btnModeSRM" onclick="setViewerMode('SRM')">SRM NOISE</button>
+            <button class="mode-btn" id="btnModeFFT" onclick="setViewerMode('FFT')">2D FFT SPECTRUM</button>
+            <button class="mode-btn" id="btnModeCompare" onclick="setViewerMode('COMPARE')">COMPARE</button>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span class="mono" style="font-size: 11px; color: #94a3b8;" id="overlayOpacityLabel">OPACITY: 75%</span>
+            <input type="range" id="opacitySlider" min="0" max="100" value="75" oninput="updateOverlayOpacity(this.value)" style="width: 90px; accent-color: var(--brass-bright);">
+          </div>
+        </div>
+
+        <div class="image-canvas-viewport" id="viewportArea">
+          <img id="viewerBaseImage" src="" alt="Evidence Image">
+          <img id="viewerOverlayImage" class="heatmap-overlay-layer" src="" alt="Forensic Overlay" style="display: none; opacity: 0.75;">
+          <div class="compare-slider-handle" id="compareHandle" style="display: none; left: 50%;"></div>
+        </div>
+
+        <!-- Forensic Replay Stepper -->
+        <div class="replay-stepper">
+          <span class="mono" style="font-size: 10px; color: #94a3b8; text-transform: uppercase;">FORENSIC REPLAY:</span>
+          <div style="display: flex; gap: 12px;">
+            <button class="replay-step-btn active" onclick="setReplayStep('INGEST')">1. INGEST</button>
+            <button class="replay-step-btn" onclick="setReplayStep('GLOBAL')">2. GLOBAL</button>
+            <button class="replay-step-btn" onclick="setReplayStep('PATCHES')">3. PATCHES</button>
+            <button class="replay-step-btn" onclick="setReplayStep('HEATMAP')">4. HEATMAP</button>
+            <button class="replay-step-btn" onclick="setReplayStep('PROVENANCE')">5. PROVENANCE</button>
+            <button class="replay-step-btn" onclick="setReplayStep('VERDICT')">6. VERDICT</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Forensic Evidence Panel -->
+      <div class="forensic-panel">
+        
+        <!-- Verdict Banner -->
+        <div class="verdict-banner" id="verdictBanner">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span class="verdict-title" id="verdictTitle">SYNTHETIC AIGC DETECTED</span>
+            <span class="mono" style="font-size: 11px; font-weight: 700; color: #cbd5e1;" id="evidenceIdDisplay">AF-0047</span>
+          </div>
+          <p style="font-size: 12px; color: #cbd5e1; line-height: 1.4;" id="verdictDescription">
+            High-confidence synthetic generation markers detected across frequency and semantic channels.
+          </p>
+        </div>
+
+        <!-- Key Metrics Grid -->
+        <div class="metric-grid-2">
+          <div class="metric-box">
+            <div class="metric-label">AI PROBABILITY</div>
+            <div class="metric-value" id="metricAiProb">98.4%</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">AI-AFFECTED AREA</div>
+            <div class="metric-value" id="metricAffectedArea">0.0% (GLOBAL)</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">CONFIDENCE TIER</div>
+            <div class="metric-value" style="font-size: 14px; color: var(--brass-bright);" id="metricConfTier">HIGH CONFIDENCE</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">INCONSISTENCY STATUS</div>
+            <div class="metric-value" style="font-size: 13px;" id="metricInconsistency">ANOMALY DETECTED</div>
+          </div>
+        </div>
+
+        <!-- Global & Spatial Evidence -->
+        <div>
+          <div class="forensic-section-title">
+            <i data-lucide="activity" style="width: 14px; height: 14px;"></i>
+            <span>TRIPLE-HYBRID MODEL EVIDENCE</span>
+          </div>
+          <table class="metadata-table">
+            <tr><td>Model Architecture</td><td>CLIP ViT-L + SigLIP + SRM Wavelet</td></tr>
+            <tr><td>Model Parameters</td><td>735,038,561 (~735M)</td></tr>
+            <tr><td>Inference Service</td><td id="tableHostName">Private inference service</td></tr>
+            <tr><td>2D FFT High-Freq Energy</td><td id="tableFftEnergy">0.2418</td></tr>
+            <tr><td>SRM Noise Energy</td><td id="tableSrmEnergy">5.8420</td></tr>
+            <tr><td>Laplacian Edge Variance</td><td id="tableLapVar">612.4</td></tr>
+          </table>
+        </div>
+
+        <!-- Provenance & C2PA -->
+        <div>
+          <div class="forensic-section-title">
+            <i data-lucide="shield-check" style="width: 14px; height: 14px;"></i>
+            <span>PROVENANCE & CONTENT CREDENTIALS</span>
+          </div>
+          <table class="metadata-table">
+            <tr><td>C2PA Manifest</td><td id="tableC2paStatus">NOT DETECTED</td></tr>
+            <tr><td>Content Credentials</td><td id="tableCredentialsPresent">NOT PRESENT</td></tr>
+            <tr><td>AI Generator Signature</td><td id="tableAiSignatures">NONE DETECTED</td></tr>
+            <tr><td>Provenance Summary</td><td id="tableProvenanceSummary">Standard container structure</td></tr>
+          </table>
+        </div>
+
+        <!-- Camera EXIF Metadata -->
+        <div>
+          <div class="forensic-section-title">
+            <i data-lucide="camera" style="width: 14px; height: 14px;"></i>
+            <span>EXIF & CONTAINER METADATA</span>
+          </div>
+          <table class="metadata-table">
+            <tr><td>Camera Hardware</td><td id="tableCamera">NOT PRESENT (STRIPPED)</td></tr>
+            <tr><td>Lens Model</td><td id="tableLens">N/A</td></tr>
+            <tr><td>Exposure / ISO</td><td id="tableExposure">N/A</td></tr>
+            <tr><td>Dimensions</td><td id="tableDimensions">2048 × 2048</td></tr>
+            <tr><td>SHA-256 Checksum</td><td id="tableSha256">a4f9...2b8c</td></tr>
+          </table>
+        </div>
+
+        <!-- Action Row -->
+        <div style="display: flex; gap: 12px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+          <button class="btn-luxury btn-primary" style="flex: 1;" onclick="exportForensicReport('JSON')">
+            <i data-lucide="download" style="width: 14px; height: 14px;"></i>
+            <span>EXPORT DOSSIER (JSON)</span>
+          </button>
+          <button class="btn-luxury btn-secondary" style="flex: 1;" onclick="exportForensicReport('PRINT')">
+            <i data-lucide="printer" style="width: 14px; height: 14px;"></i>
+            <span>PRINT FORENSIC REPORT</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Secondary Documentation Modals (About, Technology, Datasets, Model Lineage, Open Forensics) -->
+  <div class="doc-modal-backdrop" id="docModal">
+    <button class="modal-close-btn" onclick="closeDocModal()">
+      <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+    </button>
+    <div class="doc-modal-container">
+      <div class="doc-content" id="docModalContent">
+        <!-- Injected dynamically based on selected tab -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

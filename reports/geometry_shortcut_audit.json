@@ -1,0 +1,49 @@
+{
+  "report_id": "GEOMETRY_RESOLUTION_SHORTCUT_AUDIT",
+  "resolution_shortcut_flag": false,
+  "delta_high_to_low_res": 0.0027668748736971657,
+  "variants_summary": {
+    "original_res": {
+      "mean_p_aigc": 0.058042429030255076,
+      "median_p_aigc": 0.012140494771301746,
+      "mean_srm_energy": 6.256152210849346,
+      "sample_count": 101
+    },
+    "downscaled_256px": {
+      "mean_p_aigc": 0.06080930390395224,
+      "median_p_aigc": 0.011944376863539219,
+      "mean_srm_energy": 6.008361341953278,
+      "sample_count": 100
+    },
+    "crop_square_1x1": {
+      "mean_p_aigc": 0.11090135352575395,
+      "median_p_aigc": 0.019266951829195023,
+      "mean_srm_energy": 6.069945780357512,
+      "sample_count": 101
+    },
+    "crop_portrait_4x5": {
+      "mean_p_aigc": 0.11493545293918636,
+      "median_p_aigc": 0.01591966114938259,
+      "mean_srm_energy": 5.978776672098896,
+      "sample_count": 101
+    },
+    "crop_landscape_16x9": {
+      "mean_p_aigc": 0.07763550520441172,
+      "median_p_aigc": 0.01278861053287983,
+      "mean_srm_energy": 6.445197769910982,
+      "sample_count": 101
+    },
+    "downscaled_512px": {
+      "mean_p_aigc": 0.16926583940429346,
+      "median_p_aigc": 0.035451848059892654,
+      "mean_srm_energy": 4.241546136992318,
+      "sample_count": 7
+    },
+    "downscaled_1024px": {
+      "mean_p_aigc": 0.9988308548927307,
+      "median_p_aigc": 0.9988308548927307,
+      "mean_srm_energy": 6.716115474700928,
+      "sample_count": 1
+    }
+  }
+}

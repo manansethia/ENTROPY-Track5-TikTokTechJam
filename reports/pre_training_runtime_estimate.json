@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-08-28T19:35:31Z",
+  "hardware_target": "NVIDIA GeForce RTX 3050 (6,144 MB VRAM, CUDA 13.0)",
+  "memory_budget": {
+    "peak_vram_observed_gb": 3.7,
+    "vram_ceiling_gb": 6.144,
+    "vram_headroom_gb": 2.444,
+    "cpu_ram_budget_gb": 32.0,
+    "feature_cache_disk_gb": 0.4
+  },
+  "throughput_benchmarks": {
+    "clip_vitl14_throughput_img_per_sec": 50,
+    "siglip_so400m_throughput_img_per_sec": 33,
+    "srm_dwt_throughput_img_per_sec": 3000,
+    "combined_extraction_throughput_img_per_sec": 20
+  },
+  "staged_48h_schedule": [
+    {
+      "phase": "Phase 0",
+      "name": "Final Pre-Training Implementation Audit",
+      "runtime_hours": 0.5,
+      "status": "COMPLETED",
+      "gpu_usage": "Low (<1 GB)"
+    },
+    {
+      "phase": "Phase 1",
+      "name": "Large-Scale 50K Manifest Construction & Cryptographic Deduplication",
+      "runtime_hours": 1.5,
+      "status": "PLANNED",
+      "gpu_usage": "None (CPU/Disk)"
+    },
+    {
+      "phase": "Phase 2",
+      "name": "Sequential Frozen Feature Extraction (CLIP + SigLIP + SRM for 50K images)",
+      "runtime_hours": 0.7,
+      "status": "PLANNED",
+      "gpu_usage": "Active (~3.7 GB VRAM, batch size 32)"
+    },
+    {
+      "phase": "Phase 3",
+      "name": "Supervised Fusion-Head Training (50 epochs with OHEM mining & FP regularization)",
+      "runtime_hours": 2.5,
+      "status": "PLANNED",
+      "gpu_usage": "Moderate (~1.5 GB VRAM, RAM cache)"
+    },
+    {
+      "phase": "Phase 4",
+      "name": "Multi-Condition Robustness Validation (7 transformations across 5,000 validation images)",
+      "runtime_hours": 4.0,
+      "status": "PLANNED",
+      "gpu_usage": "Active (~3.7 GB VRAM)"
+    },
+    {
+      "phase": "Phase 5",
+      "name": "Post-Hoc Isotonic Calibration & Multi-Objective Threshold Optimization",
+      "runtime_hours": 1.0,
+      "status": "PLANNED",
+      "gpu_usage": "Low (<1 GB)"
+    },
+    {
+      "phase": "Phase 6",
+      "name": "Held-Out Internal Test Generalization Audit (5,000 samples)",
+      "runtime_hours": 1.5,
+      "status": "PLANNED",
+      "gpu_usage": "Active (~3.7 GB VRAM)"
+    },
+    {
+      "phase": "Phase 7",
+      "name": "Locked External OOD Benchmark Evaluation (Synthbuster, AIGIBench, Chameleon, VCT\u00b2)",
+      "runtime_hours": 6.0,
+      "status": "PLANNED",
+      "gpu_usage": "Active (~3.7 GB VRAM)"
+    },
+    {
+      "phase": "Phase 8",
+      "name": "False Positive / False Negative Forensic Attribution Audit",
+      "runtime_hours": 3.0,
+      "status": "PLANNED",
+      "gpu_usage": "Active (~2.5 GB VRAM)"
+    }
+  ],
+  "total_estimated_runtime_hours": 20.7,
+  "fits_within_48_hour_window": true,
+  "slack_time_hours": 27.3
+}

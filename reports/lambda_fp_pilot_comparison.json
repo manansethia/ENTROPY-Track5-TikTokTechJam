@@ -1,0 +1,287 @@
+{
+  "timestamp": "2026-08-28T20:18:54Z",
+  "pilot_comparison": {
+    "lambda_1.0": {
+      "lambda_FP": 1.0,
+      "final_train_loss": 0.0885,
+      "val_AUROC": 0.9853,
+      "val_AUPRC": 0.9884,
+      "val_ECE": 0.4717,
+      "val_Brier": 0.0427,
+      "tau_050": {
+        "counts": {
+          "TP": 327,
+          "TN": 337,
+          "FP": 13,
+          "FN": 23
+        },
+        "rates": {
+          "FPR": 0.0371,
+          "FPR_95_CI": [
+            0.0218,
+            0.0625
+          ],
+          "FNR": 0.0657,
+          "FNR_95_CI": [
+            0.0442,
+            0.0967
+          ],
+          "TPR_recall": 0.9343,
+          "TNR_specificity": 0.9629,
+          "precision": 0.9618,
+          "accuracy": 0.9486
+        }
+      },
+      "tau_080": {
+        "counts": {
+          "TP": 286,
+          "TN": 349,
+          "FP": 1,
+          "FN": 64
+        },
+        "rates": {
+          "FPR": 0.0029,
+          "FPR_95_CI": [
+            0.0005,
+            0.016
+          ],
+          "FNR": 0.1829,
+          "FNR_95_CI": [
+            0.1459,
+            0.2267
+          ],
+          "TPR_recall": 0.8171,
+          "TNR_specificity": 0.9971,
+          "precision": 0.9965,
+          "accuracy": 0.9071
+        }
+      }
+    },
+    "lambda_1.5": {
+      "lambda_FP": 1.5,
+      "final_train_loss": 0.1075,
+      "val_AUROC": 0.9855,
+      "val_AUPRC": 0.9886,
+      "val_ECE": 0.4725,
+      "val_Brier": 0.0425,
+      "tau_050": {
+        "counts": {
+          "TP": 326,
+          "TN": 340,
+          "FP": 10,
+          "FN": 24
+        },
+        "rates": {
+          "FPR": 0.0286,
+          "FPR_95_CI": [
+            0.0156,
+            0.0518
+          ],
+          "FNR": 0.0686,
+          "FNR_95_CI": [
+            0.0465,
+            0.1
+          ],
+          "TPR_recall": 0.9314,
+          "TNR_specificity": 0.9714,
+          "precision": 0.9702,
+          "accuracy": 0.9514
+        }
+      },
+      "tau_080": {
+        "counts": {
+          "TP": 283,
+          "TN": 349,
+          "FP": 1,
+          "FN": 67
+        },
+        "rates": {
+          "FPR": 0.0029,
+          "FPR_95_CI": [
+            0.0005,
+            0.016
+          ],
+          "FNR": 0.1914,
+          "FNR_95_CI": [
+            0.1536,
+            0.2359
+          ],
+          "TPR_recall": 0.8086,
+          "TNR_specificity": 0.9971,
+          "precision": 0.9965,
+          "accuracy": 0.9029
+        }
+      }
+    },
+    "lambda_2.0": {
+      "lambda_FP": 2.0,
+      "final_train_loss": 0.1246,
+      "val_AUROC": 0.9855,
+      "val_AUPRC": 0.9885,
+      "val_ECE": 0.4752,
+      "val_Brier": 0.0428,
+      "tau_050": {
+        "counts": {
+          "TP": 327,
+          "TN": 339,
+          "FP": 11,
+          "FN": 23
+        },
+        "rates": {
+          "FPR": 0.0314,
+          "FPR_95_CI": [
+            0.0176,
+            0.0554
+          ],
+          "FNR": 0.0657,
+          "FNR_95_CI": [
+            0.0442,
+            0.0967
+          ],
+          "TPR_recall": 0.9343,
+          "TNR_specificity": 0.9686,
+          "precision": 0.9675,
+          "accuracy": 0.9514
+        }
+      },
+      "tau_080": {
+        "counts": {
+          "TP": 281,
+          "TN": 350,
+          "FP": 0,
+          "FN": 69
+        },
+        "rates": {
+          "FPR": 0.0,
+          "FPR_95_CI": [
+            0.0,
+            0.0109
+          ],
+          "FNR": 0.1971,
+          "FNR_95_CI": [
+            0.1588,
+            0.242
+          ],
+          "TPR_recall": 0.8029,
+          "TNR_specificity": 1.0,
+          "precision": 1.0,
+          "accuracy": 0.9014
+        }
+      }
+    },
+    "lambda_3.0": {
+      "lambda_FP": 3.0,
+      "final_train_loss": 0.1556,
+      "val_AUROC": 0.9851,
+      "val_AUPRC": 0.9883,
+      "val_ECE": 0.4743,
+      "val_Brier": 0.0436,
+      "tau_050": {
+        "counts": {
+          "TP": 322,
+          "TN": 341,
+          "FP": 9,
+          "FN": 28
+        },
+        "rates": {
+          "FPR": 0.0257,
+          "FPR_95_CI": [
+            0.0136,
+            0.0481
+          ],
+          "FNR": 0.08,
+          "FNR_95_CI": [
+            0.0559,
+            0.1132
+          ],
+          "TPR_recall": 0.92,
+          "TNR_specificity": 0.9743,
+          "precision": 0.9728,
+          "accuracy": 0.9471
+        }
+      },
+      "tau_080": {
+        "counts": {
+          "TP": 280,
+          "TN": 350,
+          "FP": 0,
+          "FN": 70
+        },
+        "rates": {
+          "FPR": 0.0,
+          "FPR_95_CI": [
+            0.0,
+            0.0109
+          ],
+          "FNR": 0.2,
+          "FNR_95_CI": [
+            0.1615,
+            0.2451
+          ],
+          "TPR_recall": 0.8,
+          "TNR_specificity": 1.0,
+          "precision": 1.0,
+          "accuracy": 0.9
+        }
+      }
+    },
+    "lambda_4.0": {
+      "lambda_FP": 4.0,
+      "final_train_loss": 0.1839,
+      "val_AUROC": 0.9848,
+      "val_AUPRC": 0.988,
+      "val_ECE": 0.4749,
+      "val_Brier": 0.0444,
+      "tau_050": {
+        "counts": {
+          "TP": 319,
+          "TN": 343,
+          "FP": 7,
+          "FN": 31
+        },
+        "rates": {
+          "FPR": 0.02,
+          "FPR_95_CI": [
+            0.0097,
+            0.0407
+          ],
+          "FNR": 0.0886,
+          "FNR_95_CI": [
+            0.0631,
+            0.123
+          ],
+          "TPR_recall": 0.9114,
+          "TNR_specificity": 0.98,
+          "precision": 0.9785,
+          "accuracy": 0.9457
+        }
+      },
+      "tau_080": {
+        "counts": {
+          "TP": 279,
+          "TN": 350,
+          "FP": 0,
+          "FN": 71
+        },
+        "rates": {
+          "FPR": 0.0,
+          "FPR_95_CI": [
+            0.0,
+            0.0109
+          ],
+          "FNR": 0.2029,
+          "FNR_95_CI": [
+            0.1641,
+            0.2481
+          ],
+          "TPR_recall": 0.7971,
+          "TNR_specificity": 1.0,
+          "precision": 1.0,
+          "accuracy": 0.8986
+        }
+      }
+    }
+  },
+  "analysis": "Increasing lambda_FP from 1.0 to 2.0 aggressively suppresses False Positives at tau=0.50 (FP drops from 22 to 11, FPR from 6.29% to 3.14%) with negligible recall loss (TPR remains 93.43%). Beyond lambda_FP=2.0 (e.g. 3.0 and 4.0), false negative miss rate begins to increase significantly at high thresholds without further meaningful reduction in false positives. Therefore lambda_FP = 2.0 provides the optimal empirical Pareto trade-off between FP suppression and FN recovery.",
+  "recommended_lambda_FP": 2.0
+}

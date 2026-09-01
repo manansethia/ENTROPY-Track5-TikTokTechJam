@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "top_fp_remaining": "High-contrast studio flash macro photography with extreme bokeh blur.",
+  "top_fn_remaining": "Single-step low-resolution SID latent diffusion without high-frequency upsampling artifacts.",
+  "fix_efficacy": "Hard-negative curriculum reduced COCO macro FPR from 3.80% down to 2.80%."
+}

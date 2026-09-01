@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-08-29T09:31:25Z",
+  "gpu_device": "NVIDIA GeForce RTX 3050 6GB",
+  "peak_vram_mib": 4993,
+  "sustained_swap_delta_gb": 0.0,
+  "host_ram_used_gib": 3.8,
+  "throughput_samples_sec": 423.45,
+  "status": "HEALTHY"
+}

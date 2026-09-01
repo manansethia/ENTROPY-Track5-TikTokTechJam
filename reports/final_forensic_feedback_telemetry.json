@@ -1,0 +1,10 @@
+{
+  "vlm_model": "vikhyatk/moondream2 (2024-08-26)",
+  "hard_fp_mined": 2000,
+  "hard_fn_mined": 2000,
+  "feedback_optimizer_steps": 2608,
+  "feedback_backward_passes": 2608,
+  "feedback_rounds_completed": 2,
+  "dev_auroc_gain": -0.00012449844674944366,
+  "dev_tpr_at_0.1%_gain": -0.00321162947937792
+}

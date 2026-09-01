@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-08-29T10:12:50Z",
+  "routing_policy_evaluation": {
+    "[0.30, 0.70]": {
+      "window_range": [
+        0.3,
+        0.7
+      ],
+      "stage2_invocation_pct": 4.2,
+      "fp_rescued": 12,
+      "fn_rescued": 74,
+      "new_fp": 1,
+      "new_fn": 2,
+      "net_error_reduction": 83,
+      "latency_profile_ms": {
+        "average_ms": 212.35,
+        "p95_ms": 208.48,
+        "worst_case_ms": 300.88
+      },
+      "pareto_status": "SUBOPTIMAL"
+    },
+    "[0.35, 0.75]": {
+      "window_range": [
+        0.35,
+        0.75
+      ],
+      "stage2_invocation_pct": 5.1,
+      "fp_rescued": 15,
+      "fn_rescued": 88,
+      "new_fp": 2,
+      "new_fn": 3,
+      "net_error_reduction": 98,
+      "latency_profile_ms": {
+        "average_ms": 213.19,
+        "p95_ms": 208.48,
+        "worst_case_ms": 300.88
+      },
+      "pareto_status": "SUBOPTIMAL"
+    },
+    "[0.35, 0.85]": {
+      "window_range": [
+        0.35,
+        0.85
+      ],
+      "stage2_invocation_pct": 6.8,
+      "fp_rescued": 18,
+      "fn_rescued": 112,
+      "new_fp": 2,
+      "new_fn": 4,
+      "net_error_reduction": 124,
+      "latency_profile_ms": {
+        "average_ms": 214.76,
+        "p95_ms": 208.48,
+        "worst_case_ms": 300.88
+      },
+      "pareto_status": "OPTIMAL_PARETO_WINDOW"
+    },
+    "[0.40, 0.90]": {
+      "window_range": [
+        0.4,
+        0.9
+      ],
+      "stage2_invocation_pct": 8.9,
+      "fp_rescued": 21,
+      "fn_rescued": 124,
+      "new_fp": 3,
+      "new_fn": 6,
+      "net_error_reduction": 136,
+      "latency_profile_ms": {
+        "average_ms": 216.7,
+        "p95_ms": 208.48,
+        "worst_case_ms": 300.88
+      },
+      "pareto_status": "SUBOPTIMAL"
+    }
+  },
+  "recommended_operational_policy": {
+    "stage1_trunk": "CLIP-ViT-L/14 + SigLIP-SO400M-224 + SRM-DWT (2,212d)",
+    "stage2_verifier": "DINOv2-Registers + Edge-Specialist (1,046d)",
+    "routing_window": [
+      0.35,
+      0.85
+    ],
+    "three_way_deployment_bands": {
+      "high_confidence_real": "< 0.35 (Direct Release as Authentic)",
+      "stage2_verification_band": "[0.35, 0.85] (Invoke DINO/Edge Specialist Verifier)",
+      "human_dual_review_band": "[0.65, 0.80] (Human Escalation Band)",
+      "high_confidence_aigc": ">= 0.80 (Direct Action as Synthetic)"
+    }
+  }
+}

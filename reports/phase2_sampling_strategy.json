@@ -1,0 +1,15 @@
+{
+  "strategy": "Phase 2 Generator-Aware & Domain-Aware Stratified Hybrid Sampler",
+  "batch_ratio": "50% REAL / 50% AIGC",
+  "synthetic_sub_weights": {
+    "Synthetic_QualityParadox_ModernDiffusion": "33.3%",
+    "Synthetic_SID_Diffusion": "33.3%",
+    "Synthetic_HighFrequency_and_General": "33.4%"
+  },
+  "authentic_sub_weights": {
+    "Authentic_WikiArt_FineArt": "33.3%",
+    "Authentic_HighRes_Photo_and_COCO": "33.3%",
+    "Authentic_Real_General": "33.4%"
+  },
+  "objective": "Prevents any single generator or texture domain from dominating gradient updates."
+}

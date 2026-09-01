@@ -1,0 +1,13 @@
+{
+  "cache_path": "/home/manan/aigc_nvme_cache/phase2_103k_features_91bcd1de6968.npz",
+  "manifest_sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+  "total_vectors": 103137,
+  "feature_dim": 2212,
+  "dtype": "float32",
+  "backbones": [
+    "CLIP-ViT-L/14 (1024-d)",
+    "SigLIP-SO400M-224 (1152-d)",
+    "SRM-DWT (36-d)"
+  ],
+  "cache_status": "VERIFIED_CRYPTO_HASH_MATCH"
+}

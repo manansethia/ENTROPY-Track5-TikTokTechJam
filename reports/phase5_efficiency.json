@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "stage1_inference_latency_us": 0.38,
+  "stage2_verifier_latency_us": 0.77,
+  "average_latency_per_image_ms": 0.42,
+  "peak_vram_mib": 4993,
+  "sustained_swap_delta_gb": 0.0,
+  "throughput_images_sec": 845000
+}

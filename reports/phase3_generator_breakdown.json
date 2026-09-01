@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-08-29T09:19:00Z",
+  "champion_id": "B_CLIP_SigLIP_mlp2",
+  "operating_threshold": 0.8,
+  "subgroup_metrics": {
+    "Synthetic_HighFrequency_CF": {
+      "count": 2982,
+      "TPR_tau_080": 0.9779
+    },
+    "Synthetic_QualityParadox_ModernDiffusion": {
+      "count": 2444,
+      "TPR_tau_080": 0.9869
+    },
+    "Synthetic_SID_Diffusion": {
+      "count": 650,
+      "TPR_tau_080": 0.8692
+    }
+  }
+}

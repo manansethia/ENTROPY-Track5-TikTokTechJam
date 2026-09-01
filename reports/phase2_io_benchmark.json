@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-08-29T00:52:19Z",
+  "benchmark_results": {
+    "Config_A_SingleWorker_Direct": {
+      "num_workers": 0,
+      "pinned_memory": false,
+      "prefetch_factor": null,
+      "samples_processed": 2000,
+      "elapsed_seconds": 27.16,
+      "throughput_img_per_sec": 73.64
+    },
+    "Config_B_MultiWorker_Unpinned": {
+      "num_workers": 4,
+      "pinned_memory": false,
+      "prefetch_factor": 2,
+      "samples_processed": 2000,
+      "elapsed_seconds": 4.85,
+      "throughput_img_per_sec": 412.48
+    },
+    "Config_C_Streaming_NVMe_RAM_Pinned": {
+      "num_workers": 4,
+      "pinned_memory": true,
+      "prefetch_factor": 2,
+      "samples_processed": 2000,
+      "elapsed_seconds": 4.72,
+      "throughput_img_per_sec": 423.45
+    }
+  },
+  "selected_pipeline": "Config_C_Streaming_NVMe_RAM_Pinned",
+  "peak_throughput_img_per_sec": 423.45,
+  "expected_103k_feature_extraction_hours": 0.07,
+  "host_ram_footprint_buffer_gb": 4.5,
+  "swap_delta_gb": 0.0,
+  "io_architecture": "NVMe Source Staging -> 4 Worker Async Prefetch -> Pinned Host RAM -> Non-Blocking GPU CUDA Stream"
+}

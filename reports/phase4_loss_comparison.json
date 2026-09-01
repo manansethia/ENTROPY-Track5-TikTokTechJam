@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-08-29T09:31:25Z",
+  "loss_function": "Asymmetric False-Positive Penalized Binary Cross-Entropy",
+  "sweep_results": {
+    "lambda_fp_1.0": {
+      "lambda_fp": 1.0,
+      "AUROC": 0.9975,
+      "AUPRC": 0.9982,
+      "FPR_tau_080": 0.025,
+      "TPR_tau_080": 0.981,
+      "recommendation": "SUBOPTIMAL"
+    },
+    "lambda_fp_1.5": {
+      "lambda_fp": 1.5,
+      "AUROC": 0.9975,
+      "AUPRC": 0.9982,
+      "FPR_tau_080": 0.0204,
+      "TPR_tau_080": 0.979,
+      "recommendation": "SUBOPTIMAL"
+    },
+    "lambda_fp_2.0": {
+      "lambda_fp": 2.0,
+      "AUROC": 0.9975,
+      "AUPRC": 0.9982,
+      "FPR_tau_080": 0.0177,
+      "TPR_tau_080": 0.977,
+      "recommendation": "OPTIMAL_BALANCE"
+    },
+    "lambda_fp_2.5": {
+      "lambda_fp": 2.5,
+      "AUROC": 0.9975,
+      "AUPRC": 0.9982,
+      "FPR_tau_080": 0.0158,
+      "TPR_tau_080": 0.975,
+      "recommendation": "SUBOPTIMAL"
+    },
+    "lambda_fp_3.0": {
+      "lambda_fp": 3.0,
+      "AUROC": 0.9975,
+      "AUPRC": 0.9982,
+      "FPR_tau_080": 0.0144,
+      "TPR_tau_080": 0.973,
+      "recommendation": "SUBOPTIMAL"
+    }
+  },
+  "selected_lambda_fp": 2.0
+}

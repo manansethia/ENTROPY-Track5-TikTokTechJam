@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "operating_curve": {
+    "tau_0.50": {
+      "tau": 0.5,
+      "FPR": 0.0294,
+      "TPR": 0.999,
+      "precision": 0.996,
+      "recall": 0.999
+    },
+    "tau_0.60": {
+      "tau": 0.6,
+      "FPR": 0.0201,
+      "TPR": 0.999,
+      "precision": 0.9966,
+      "recall": 0.999
+    },
+    "tau_0.70": {
+      "tau": 0.7,
+      "FPR": 0.0137,
+      "TPR": 0.999,
+      "precision": 0.9972,
+      "recall": 0.999
+    },
+    "tau_0.75": {
+      "tau": 0.75,
+      "FPR": 0.0114,
+      "TPR": 0.999,
+      "precision": 0.9975,
+      "recall": 0.999
+    },
+    "tau_0.80": {
+      "tau": 0.8,
+      "FPR": 0.0094,
+      "TPR": 0.976,
+      "precision": 0.9978,
+      "recall": 0.976
+    },
+    "tau_0.85": {
+      "tau": 0.85,
+      "FPR": 0.0078,
+      "TPR": 0.9472,
+      "precision": 0.9981,
+      "recall": 0.9472
+    },
+    "tau_0.90": {
+      "tau": 0.9,
+      "FPR": 0.0064,
+      "TPR": 0.9192,
+      "precision": 0.9984,
+      "recall": 0.9192
+    },
+    "tau_0.92": {
+      "tau": 0.92,
+      "FPR": 0.006,
+      "TPR": 0.9082,
+      "precision": 0.9985,
+      "recall": 0.9082
+    },
+    "tau_0.94": {
+      "tau": 0.94,
+      "FPR": 0.0055,
+      "TPR": 0.8974,
+      "precision": 0.9986,
+      "recall": 0.8974
+    },
+    "tau_0.95": {
+      "tau": 0.95,
+      "FPR": 0.0053,
+      "TPR": 0.892,
+      "precision": 0.9987,
+      "recall": 0.892
+    },
+    "tau_0.96": {
+      "tau": 0.96,
+      "FPR": 0.0051,
+      "TPR": 0.8867,
+      "precision": 0.9988,
+      "recall": 0.8867
+    },
+    "tau_0.97": {
+      "tau": 0.97,
+      "FPR": 0.0049,
+      "TPR": 0.8814,
+      "precision": 0.9988,
+      "recall": 0.8814
+    },
+    "tau_0.98": {
+      "tau": 0.98,
+      "FPR": 0.0047,
+      "TPR": 0.8761,
+      "precision": 0.9989,
+      "recall": 0.8761
+    },
+    "tau_0.99": {
+      "tau": 0.99,
+      "FPR": 0.0046,
+      "TPR": 0.8708,
+      "precision": 0.9989,
+      "recall": 0.8708
+    }
+  },
+  "recommended_operational_threshold": 0.8,
+  "ultra_safe_threshold": 0.9993,
+  "abstention_review_band": [
+    0.65,
+    0.8
+  ]
+}

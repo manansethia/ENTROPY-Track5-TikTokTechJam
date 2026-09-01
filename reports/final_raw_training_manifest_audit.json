@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-08-29T10:58:30Z",
+  "audit_status": "MANIFEST_VERIFIED_AND_ISOLATED",
+  "manifest_path": "manifests/phase2_150k_manifest.jsonl",
+  "manifest_sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+  "total_manifest_samples": 103137,
+  "split_distribution": {
+    "PHASE2_TRAIN": 82509,
+    "PHASE2_VAL": 10312,
+    "PHASE2_INTERNAL_TEST": 10316
+  },
+  "training_expansion_spec": {
+    "target_training_images": 260184,
+    "target_real_count": 149000,
+    "target_aigc_count": 111184,
+    "holdout_dev_count": 10000,
+    "holdout_cal_count": 4000,
+    "holdout_locked_test_count": 10316
+  },
+  "generator_families_in_train": [
+    "Synthetic_QualityParadox_ModernDiffusion",
+    "Synthetic_HighFrequency_CF",
+    "Synthetic_SID_Diffusion",
+    "Synthetic_Defactify",
+    "Synthetic_SDXL_Midjourney_FLUX",
+    "Authentic_COCO_WikiArt_Archival_Macro"
+  ],
+  "disjoint_isolation_proof": {
+    "train_dev_overlap": 0,
+    "train_cal_overlap": 0,
+    "train_test_overlap": 0,
+    "dev_cal_overlap": 0,
+    "dev_test_overlap": 0,
+    "cal_test_overlap": 0,
+    "ood_contamination_count": 0
+  },
+  "locked_ood_audit": {
+    "synthbuster_in_manifest": false,
+    "aigibench_in_manifest": false,
+    "chameleon_in_manifest": false,
+    "vct2_in_manifest": false,
+    "wildrf_in_manifest": false,
+    "synthwildx_in_manifest": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-08-29T10:12:54Z",
+  "validation_verdict": "CHAMPION_ARCHITECTURE_VALIDATED_FOR_FULL_CORPUS",
+  "primary_trunk": {
+    "architecture": "Tri-Stream (CLIP-ViT-L/14 + SigLIP-SO400M-224 + SRM-DWT)",
+    "dimensions": 2212,
+    "fusion_head": "Structured Branch Dropout MLP (p=0.15, hidden_dim=256, LayerNorm, GELU)",
+    "trainable_parameters": 567297,
+    "backbones_state": "FROZEN_PRETRAINED"
+  },
+  "conditional_verifier": {
+    "specialists": "DINOv2-Registers (1024d) + Edge-Specialist (22d)",
+    "routing_window": [
+      0.35,
+      0.85
+    ],
+    "gating_mechanism": "Bounded Tanh Residual Modulation"
+  },
+  "training_hyperparameters": {
+    "loss": "Asymmetric False-Positive Penalized BCE (lambda_fp = 2.5)",
+    "optimizer": "AdamW (lr=2e-3, weight_decay=1e-4)",
+    "scheduler": "CosineAnnealingLR (T_max=35, eta_min=1e-5)",
+    "batch_size": 1024,
+    "target_epochs": 35
+  },
+  "hardware_telemetry_guarantees": {
+    "peak_vram_limit_mib": 4993,
+    "headroom_mib": 811,
+    "host_ram_bound_gib": 4.2,
+    "sustained_swap_delta_gb": 0.0,
+    "estimated_training_duration_hours": 3.8
+  }
+}

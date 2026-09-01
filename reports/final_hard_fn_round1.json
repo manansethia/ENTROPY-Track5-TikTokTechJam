@@ -1,0 +1,172 @@
+[
+  {
+    "case_id": "HARD_FN_074772",
+    "true_label": "AIGC",
+    "detector_probability": 1.9125446940135987e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FN_061713",
+    "true_label": "AIGC",
+    "detector_probability": 1.952734035668563e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FN_026409",
+    "true_label": "AIGC",
+    "detector_probability": 2.0939791513154699e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FN_035627",
+    "true_label": "AIGC",
+    "detector_probability": 2.5458159343648423e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FN_072988",
+    "true_label": "AIGC",
+    "detector_probability": 2.7458504220367885e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FN_072046",
+    "true_label": "AIGC",
+    "detector_probability": 2.923985381077243e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FN_024417",
+    "true_label": "AIGC",
+    "detector_probability": 3.670193218351797e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FN_039845",
+    "true_label": "AIGC",
+    "detector_probability": 3.72811888782118e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FN_067801",
+    "true_label": "AIGC",
+    "detector_probability": 4.347635532836458e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FN_029001",
+    "true_label": "AIGC",
+    "detector_probability": 4.5253636450116874e-13,
+    "vlm_forensic_explanation": "Latent diffusion high-aesthetic generation with subtle frequency boundary blurring across background foliage.",
+    "qualitative_region": "background foliage boundary",
+    "forensic_signals": {
+      "dino_embedding_norm": 22.89,
+      "sobel_gradient_mean": 14.52,
+      "laplacian_residual": 0.018,
+      "srm_energy": 8.42
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_AIGC_ATTRIBUTION"
+  }
+]

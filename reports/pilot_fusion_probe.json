@@ -1,0 +1,7 @@
+{
+  "status": "PILOT_TRAINING_PARTIAL_DATA",
+  "pilot_samples": 500,
+  "f1_auc": 1.0,
+  "f2_auc": 1.0,
+  "f3_auc": 1.0
+}

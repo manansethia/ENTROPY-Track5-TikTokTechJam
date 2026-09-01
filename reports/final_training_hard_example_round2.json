@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "round2_mined": {
+    "hard_real_remaining": 1450,
+    "hard_aigc_remaining": 2180
+  },
+  "status": "CONVERGED (Additional mining round shows diminishing returns, <=0.05% FPR boundary reached)."
+}

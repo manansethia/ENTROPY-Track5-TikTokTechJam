@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-08-29T09:30:51Z",
+  "manifest_file": "/home/manan/aigc_robust_detection/manifests/phase2_150k_manifest.jsonl",
+  "sha256_hash": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+  "integrity_checks": {
+    "corrupted_images": 0,
+    "label_conflicts": 0,
+    "missing_files": 0,
+    "quarantined_ood_leakage": 0
+  },
+  "status": "VERIFIED_100%_INTEGRITY"
+}

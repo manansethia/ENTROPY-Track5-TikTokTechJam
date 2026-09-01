@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-08-28T19:48:12Z",
+  "total_approved_training_pool_gb": 379.9,
+  "total_locked_external_eval_gb": 196.0,
+  "nvme_storage_capacity_gb": 397.0,
+  "staging_strategy": "The 397 GB available NVMe storage is sufficient to stage the primary high-diversity training pool (massive_balanced_50k, wikiart, defactify, aigi_quality_paradox, and the highest-entropy partitions of flux_sd3_genimagepp) with zero disk contention.",
+  "dataset_inventory": {
+    "flux_sd3_genimagepp": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/flux_sd3_genimagepp",
+      "governance_role": "APPROVED_TRAINING",
+      "disk_size_gb": 193.0,
+      "description": "FLUX.1, SD3, Midjourney, SDXL, BigGAN, VQDM",
+      "status": "ACCESSIBLE"
+    },
+    "sid_parquet": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/sid_parquet",
+      "governance_role": "APPROVED_TRAINING",
+      "disk_size_gb": 70.0,
+      "description": "Synthetic Image Detection Streams",
+      "status": "ACCESSIBLE"
+    },
+    "parquet_pool": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/parquet",
+      "governance_role": "APPROVED_TRAINING",
+      "disk_size_gb": 59.0,
+      "description": "Multi-Generator Parquet Batches",
+      "status": "ACCESSIBLE"
+    },
+    "wikiart_hard_negatives": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/wikiart_hard_negatives",
+      "governance_role": "APPROVED_HARD_NEGATIVES",
+      "disk_size_gb": 32.0,
+      "description": "Classical Paintings, Oil Canvas, Sketches",
+      "status": "ACCESSIBLE"
+    },
+    "defactify": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/defactify",
+      "governance_role": "APPROVED_TRAINING",
+      "disk_size_gb": 7.0,
+      "description": "Social Media Manipulations & Authentics",
+      "status": "ACCESSIBLE"
+    },
+    "aigi_quality_paradox": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/aigi_quality_paradox",
+      "governance_role": "APPROVED_TRAINING",
+      "disk_size_gb": 7.0,
+      "description": "Hard Negative Quality Paradox Cues",
+      "status": "ACCESSIBLE"
+    },
+    "massive_balanced_50k": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k",
+      "governance_role": "APPROVED_TRAINING",
+      "disk_size_gb": 5.7,
+      "description": "COCO Authentic + Midjourney/SDXL/FLUX",
+      "status": "ACCESSIBLE"
+    },
+    "scaled_massive": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive",
+      "governance_role": "APPROVED_TRAINING",
+      "disk_size_gb": 6.2,
+      "description": "Multi-Resolution AIGC & Photorealistic Real",
+      "status": "ACCESSIBLE"
+    },
+    "synthbuster": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/synthbuster",
+      "governance_role": "LOCKED_EXTERNAL_OOD",
+      "disk_size_gb": 25.0,
+      "description": "Strict Zero-Shot External Generalization Benchmark",
+      "status": "ACCESSIBLE"
+    },
+    "aigibench_eval": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/aigibench_eval",
+      "governance_role": "LOCKED_EXTERNAL_OOD",
+      "disk_size_gb": 171.0,
+      "description": "HorizonTEL In-The-Wild Benchmark",
+      "status": "ACCESSIBLE"
+    }
+  },
+  "classification_terminology_enforced": {
+    "positive_class": "AIGC / FAKE (Label 1)",
+    "negative_class": "AUTHENTIC / REAL (Label 0)",
+    "TN_definition": "Real image correctly classified as Real",
+    "FP_definition": "Real image falsely accused as AIGC/Fake (Penalized with lambda_FP = 2.0)",
+    "FN_definition": "AIGC image missed as Real",
+    "TP_definition": "AIGC image correctly detected as Fake"
+  }
+}

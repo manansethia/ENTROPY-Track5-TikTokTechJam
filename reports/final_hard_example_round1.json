@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-08-29T10:54:21Z",
+  "round": 1,
+  "mined_hard_real_count": 12000,
+  "mined_hard_aigc_count": 14100,
+  "top_hard_real_scores": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "top_hard_aigc_scores": [
+    1.1572599274089242e-19,
+    1.161510214040769e-19,
+    1.3841186047985963e-19,
+    3.643816159790698e-19,
+    4.849364435668024e-19
+  ],
+  "curriculum_weight_real": 2.5,
+  "curriculum_weight_aigc": 2.0
+}

@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-08-28T17:52:04Z",
+  "audit_status": "VERIFIED_FRESH_AND_ISOLATED",
+  "manifest_path": "manifests/fresh_5k_manifest.jsonl",
+  "manifest_sha256": "890bd3c373673e3c0b2eb92abb7d3fdfb43984a00327a6a551cc592f7e3f3467",
+  "sample_counts": {
+    "total": 5000,
+    "fresh_train": 3500,
+    "fresh_val": 1000,
+    "fresh_internal_test": 500,
+    "real": 2497,
+    "aigc_fake": 2503,
+    "real_percentage": 49.94,
+    "fake_percentage": 50.06
+  },
+  "source_dataset_distribution": {
+    "massive_balanced_50k": 5000
+  },
+  "generator_distribution": {
+    "Synthetic_General": 2503,
+    "Real_Authentic": 2497
+  },
+  "deduplication_and_leakage_audit": {
+    "duplicate_sha256_count": 0,
+    "train_val_hash_overlap": 0,
+    "train_test_hash_overlap": 0,
+    "val_test_hash_overlap": 0,
+    "data_leakage_detected": false
+  },
+  "code_path_audit": {
+    "pipeline_script": "scripts/run_fresh_decision_gate_pipeline.py",
+    "quarantine_inaccessible": true,
+    "cached_features_used": false,
+    "fresh_computation_verified": true
+  }
+}

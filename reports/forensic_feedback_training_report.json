@@ -1,0 +1,187 @@
+{
+  "report_id": "FORENSIC_FEEDBACK_TRAINING_REPORT",
+  "champion_architecture": "Config A (31.94M trainable params)",
+  "pre_feedback_dev": {
+    "auroc": 0.99943076,
+    "auprc": 0.9992705841742214,
+    "brier": 0.007072668621695163,
+    "ece": 0.0066533821601343366,
+    "total_samples": 10000,
+    "real_count": 5000,
+    "aigc_count": 5000,
+    "operating_points": {
+      "TPR@FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.04672495648264885,
+        "max_allowed_fp": 50,
+        "actual_fp": 51,
+        "actual_fpr": 0.0102,
+        "actual_tp": 4963,
+        "tpr": 0.9926
+      },
+      "TPR@FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.47219666838645935,
+        "max_allowed_fp": 25,
+        "actual_fp": 26,
+        "actual_fpr": 0.0052,
+        "actual_tp": 4951,
+        "tpr": 0.9902
+      },
+      "TPR@FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.9940890073776245,
+        "max_allowed_fp": 5,
+        "actual_fp": 6,
+        "actual_fpr": 0.0012,
+        "actual_tp": 4862,
+        "tpr": 0.9724
+      },
+      "TPR@FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.9985449314117432,
+        "max_allowed_fp": 2,
+        "actual_fp": 3,
+        "actual_fpr": 0.0006,
+        "actual_tp": 4771,
+        "tpr": 0.9542
+      },
+      "TPR@FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.9998521075973511,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 3964,
+        "tpr": 0.7928
+      }
+    }
+  },
+  "round1_results": {
+    "steps": 1,
+    "avg_loss": 18.43559455871582,
+    "param_hash_before": "da5cc9ab16f2abfbb4e4dcf615cfc4736c2411d068be0e7ff263bf024b15f1f0",
+    "param_hash_after": "6891265d7d69517374613bc883ac1d8b9c1a2ce3c778ca97922ca5d42dde50f6",
+    "dev_metrics": {
+      "auroc": 0.99942964,
+      "auprc": 0.9992695462778435,
+      "brier": 0.007261835611332488,
+      "ece": 0.006832192849552015,
+      "total_samples": 10000,
+      "real_count": 5000,
+      "aigc_count": 5000,
+      "operating_points": {
+        "TPR@FPR<=1.00%": {
+          "target_fpr": 0.01,
+          "threshold": 0.03676946833729744,
+          "max_allowed_fp": 50,
+          "actual_fp": 51,
+          "actual_fpr": 0.0102,
+          "actual_tp": 4963,
+          "tpr": 0.9926
+        },
+        "TPR@FPR<=0.50%": {
+          "target_fpr": 0.005,
+          "threshold": 0.351311057806015,
+          "max_allowed_fp": 25,
+          "actual_fp": 26,
+          "actual_fpr": 0.0052,
+          "actual_tp": 4948,
+          "tpr": 0.9896
+        },
+        "TPR@FPR<=0.10%": {
+          "target_fpr": 0.001,
+          "threshold": 0.9924227595329285,
+          "max_allowed_fp": 5,
+          "actual_fp": 6,
+          "actual_fpr": 0.0012,
+          "actual_tp": 4865,
+          "tpr": 0.973
+        },
+        "TPR@FPR<=0.05%": {
+          "target_fpr": 0.0005,
+          "threshold": 0.9982993006706238,
+          "max_allowed_fp": 2,
+          "actual_fp": 3,
+          "actual_fpr": 0.0006,
+          "actual_tp": 4769,
+          "tpr": 0.9538
+        },
+        "TPR@FPR<=0.01%": {
+          "target_fpr": 0.0001,
+          "threshold": 0.999842570854187,
+          "max_allowed_fp": 0,
+          "actual_fp": 0,
+          "actual_fpr": 0.0,
+          "actual_tp": 3971,
+          "tpr": 0.7942
+        }
+      }
+    }
+  },
+  "round2_results": {
+    "steps": 1,
+    "avg_loss": 21.55713653564453,
+    "param_hash_before": "6891265d7d69517374613bc883ac1d8b9c1a2ce3c778ca97922ca5d42dde50f6",
+    "param_hash_after": "13fc61c972a33d98232dec667b9bd9ec253603ccf4ee5deb879a3cd02b72a4e0",
+    "dev_metrics": {
+      "auroc": 0.99942968,
+      "auprc": 0.999270586217036,
+      "brier": 0.007040526375929534,
+      "ece": 0.006501607978267855,
+      "total_samples": 10000,
+      "real_count": 5000,
+      "aigc_count": 5000,
+      "operating_points": {
+        "TPR@FPR<=1.00%": {
+          "target_fpr": 0.01,
+          "threshold": 0.04742587357759476,
+          "max_allowed_fp": 50,
+          "actual_fp": 51,
+          "actual_fpr": 0.0102,
+          "actual_tp": 4963,
+          "tpr": 0.9926
+        },
+        "TPR@FPR<=0.50%": {
+          "target_fpr": 0.005,
+          "threshold": 0.5460120439529419,
+          "max_allowed_fp": 25,
+          "actual_fp": 26,
+          "actual_fpr": 0.0052,
+          "actual_tp": 4950,
+          "tpr": 0.99
+        },
+        "TPR@FPR<=0.10%": {
+          "target_fpr": 0.001,
+          "threshold": 0.9937100410461426,
+          "max_allowed_fp": 5,
+          "actual_fp": 6,
+          "actual_fpr": 0.0012,
+          "actual_tp": 4862,
+          "tpr": 0.9724
+        },
+        "TPR@FPR<=0.05%": {
+          "target_fpr": 0.0005,
+          "threshold": 0.998498797416687,
+          "max_allowed_fp": 2,
+          "actual_fp": 3,
+          "actual_fpr": 0.0006,
+          "actual_tp": 4768,
+          "tpr": 0.9536
+        },
+        "TPR@FPR<=0.01%": {
+          "target_fpr": 0.0001,
+          "threshold": 0.9998521075973511,
+          "max_allowed_fp": 0,
+          "actual_fp": 0,
+          "actual_fpr": 0.0,
+          "actual_tp": 3949,
+          "tpr": 0.7898
+        }
+      }
+    }
+  },
+  "selected_champion": "ROUND_1",
+  "rollback_rule_applied": true,
+  "completed_at": "2026-08-30T03:46:12Z"
+}

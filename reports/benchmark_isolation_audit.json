@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-08-31T22:54:28+00:00",
+  "manifest_files_scanned": 13,
+  "matching_records": [],
+  "note": "Dataset names and filenames are not sufficient proof of organizer-benchmark isolation. Supply the official benchmark SHA-256 list.",
+  "official_benchmark_hashes_provided": 0,
+  "records_scanned": 1085168,
+  "split_counts": {
+    "CALIBRATION": 10152,
+    "DEV": 38472,
+    "FRESH_INTERNAL_TEST": 500,
+    "FRESH_TRAIN": 4500,
+    "FRESH_VAL": 1300,
+    "INTERNAL_TEST": 41264,
+    "PHASE1_INTERNAL_TEST": 5000,
+    "PHASE1_TRAIN": 40000,
+    "PHASE1_VAL": 5000,
+    "PHASE2_INTERNAL_TEST": 10316,
+    "PHASE2_TRAIN": 92509,
+    "PHASE2_VAL": 10312,
+    "TRAIN": 795592,
+    "UNKNOWN": 30251
+  },
+  "status": "BLOCKED_OFFICIAL_BENCHMARK_HASH_LIST_REQUIRED"
+}

@@ -1,0 +1,401 @@
+{
+  "device": "cuda",
+  "mean_latency_ms": 157.75,
+  "memory_leak_verified": true,
+  "stress_test_cycles": 20,
+  "samples_evaluated": 4,
+  "reports": {
+    "real": {
+      "image_path": "data/explainability_samples/sample_real_authentic.png",
+      "prob_aigc": 0.042,
+      "verdict": "AUTHENTIC REAL",
+      "is_synthetic": false,
+      "spectral_metrics": {
+        "high_freq_energy_ratio": 0.5822345018386841,
+        "grid_peak_anomaly_score": 5.765111446380615,
+        "is_frequency_anomalous": true
+      },
+      "edge_metrics": {
+        "edge_anomaly_score": 0.631830632686615
+      },
+      "top_anomalous_patches": [
+        {
+          "patch_idx": 112,
+          "bbox": [
+            0,
+            293,
+            37,
+            329
+          ],
+          "gradcam_score": 0.9368913173675537,
+          "attention_score": 0.5,
+          "frequency_score": 0.12976535542972326,
+          "edge_score": 0.08935493975877762,
+          "composite_risk": 0.49673602011634393,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 138,
+          "bbox": [
+            439,
+            329,
+            475,
+            366
+          ],
+          "gradcam_score": 0.9320402145385742,
+          "attention_score": 0.5,
+          "frequency_score": 0.1305413681934264,
+          "edge_score": 0.0912691056728363,
+          "composite_risk": 0.4955761698617535,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 129,
+          "bbox": [
+            110,
+            329,
+            146,
+            366
+          ],
+          "gradcam_score": 0.9180006384849548,
+          "attention_score": 0.5,
+          "frequency_score": 0.12302351320172925,
+          "edge_score": 0.09308364242315292,
+          "composite_risk": 0.48952165459471064,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 134,
+          "bbox": [
+            293,
+            329,
+            329,
+            366
+          ],
+          "gradcam_score": 0.8795394897460938,
+          "attention_score": 0.5,
+          "frequency_score": 0.1288386478989116,
+          "edge_score": 0.08521364629268646,
+          "composite_risk": 0.47564928024945236,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 125,
+          "bbox": [
+            475,
+            293,
+            512,
+            329
+          ],
+          "gradcam_score": 0.8722118139266968,
+          "attention_score": 0.5,
+          "frequency_score": 0.12685932155187393,
+          "edge_score": 0.0916188582777977,
+          "composite_risk": 0.4739697708402782,
+          "primary_anomaly_category": "Semantic Saliency"
+        }
+      ],
+      "model_gates": [
+        0.45,
+        0.4,
+        0.1,
+        0.05
+      ],
+      "dashboard_output_path": "reports/explainability/real_sample_diagnosis.jpg"
+    },
+    "diffusion": {
+      "image_path": "data/explainability_samples/sample_synthetic_diffusion.png",
+      "prob_aigc": 0.968,
+      "verdict": "SYNTHETIC AIGC",
+      "is_synthetic": true,
+      "spectral_metrics": {
+        "high_freq_energy_ratio": 0.26054972410202026,
+        "grid_peak_anomaly_score": 16.262224197387695,
+        "is_frequency_anomalous": true
+      },
+      "edge_metrics": {
+        "edge_anomaly_score": 0.5528725385665894
+      },
+      "top_anomalous_patches": [
+        {
+          "patch_idx": 47,
+          "bbox": [
+            183,
+            110,
+            219,
+            146
+          ],
+          "gradcam_score": 0.8694446682929993,
+          "attention_score": 0.5,
+          "frequency_score": 0.2271937002162467,
+          "edge_score": 0.10507894307374954,
+          "composite_risk": 0.49576016256054894,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 49,
+          "bbox": [
+            256,
+            110,
+            293,
+            146
+          ],
+          "gradcam_score": 0.8816356658935547,
+          "attention_score": 0.5,
+          "frequency_score": 0.20154727271422984,
+          "edge_score": 0.09730968624353409,
+          "composite_risk": 0.49334387485429687,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 75,
+          "bbox": [
+            183,
+            183,
+            219,
+            219
+          ],
+          "gradcam_score": 0.8494748473167419,
+          "attention_score": 0.5,
+          "frequency_score": 0.2311946661071308,
+          "edge_score": 0.10396792739629745,
+          "composite_risk": 0.48934871526154533,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 61,
+          "bbox": [
+            183,
+            146,
+            219,
+            183
+          ],
+          "gradcam_score": 0.8769004940986633,
+          "attention_score": 0.5,
+          "frequency_score": 0.16207165696789455,
+          "edge_score": 0.07146093994379044,
+          "composite_risk": 0.47862169231686913,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 33,
+          "bbox": [
+            183,
+            73,
+            219,
+            110
+          ],
+          "gradcam_score": 0.8664072155952454,
+          "attention_score": 0.5,
+          "frequency_score": 0.1609277076885135,
+          "edge_score": 0.07301193475723267,
+          "composite_risk": 0.4750304539474851,
+          "primary_anomaly_category": "Semantic Saliency"
+        }
+      ],
+      "model_gates": [
+        0.35,
+        0.5,
+        0.1,
+        0.05
+      ],
+      "dashboard_output_path": "reports/explainability/diffusion_sample_diagnosis.jpg"
+    },
+    "gan": {
+      "image_path": "data/explainability_samples/sample_synthetic_gan.png",
+      "prob_aigc": 0.994,
+      "verdict": "SYNTHETIC AIGC",
+      "is_synthetic": true,
+      "spectral_metrics": {
+        "high_freq_energy_ratio": 0.27183306217193604,
+        "grid_peak_anomaly_score": 27.184370040893555,
+        "is_frequency_anomalous": true
+      },
+      "edge_metrics": {
+        "edge_anomaly_score": 0.5927121043205261
+      },
+      "top_anomalous_patches": [
+        {
+          "patch_idx": 153,
+          "bbox": [
+            475,
+            366,
+            512,
+            402
+          ],
+          "gradcam_score": 0.0,
+          "attention_score": 0.5,
+          "frequency_score": 0.3597011687290868,
+          "edge_score": 0.44282326102256775,
+          "composite_risk": 0.2855048859503309,
+          "primary_anomaly_category": "ViT Patch Focus"
+        },
+        {
+          "patch_idx": 55,
+          "bbox": [
+            475,
+            110,
+            512,
+            146
+          ],
+          "gradcam_score": 0.0,
+          "attention_score": 0.5,
+          "frequency_score": 0.3562321271374405,
+          "edge_score": 0.44494664669036865,
+          "composite_risk": 0.28523575476556184,
+          "primary_anomaly_category": "ViT Patch Focus"
+        },
+        {
+          "patch_idx": 192,
+          "bbox": [
+            366,
+            475,
+            402,
+            512
+          ],
+          "gradcam_score": 0.0,
+          "attention_score": 0.5,
+          "frequency_score": 0.3401167869767082,
+          "edge_score": 0.4445660710334778,
+          "composite_risk": 0.2819365716020372,
+          "primary_anomaly_category": "ViT Patch Focus"
+        },
+        {
+          "patch_idx": 94,
+          "bbox": [
+            366,
+            219,
+            402,
+            256
+          ],
+          "gradcam_score": 0.0,
+          "attention_score": 0.5,
+          "frequency_score": 0.33652649951702235,
+          "edge_score": 0.4369392395019531,
+          "composite_risk": 0.2796931478037951,
+          "primary_anomaly_category": "ViT Patch Focus"
+        },
+        {
+          "patch_idx": 146,
+          "bbox": [
+            219,
+            366,
+            256,
+            402
+          ],
+          "gradcam_score": 0.0,
+          "attention_score": 0.5,
+          "frequency_score": 0.3325053367038807,
+          "edge_score": 0.4383467137813568,
+          "composite_risk": 0.2791704100970475,
+          "primary_anomaly_category": "ViT Patch Focus"
+        }
+      ],
+      "model_gates": [
+        0.15,
+        0.2,
+        0.25,
+        0.4
+      ],
+      "dashboard_output_path": "reports/explainability/gan_sample_diagnosis.jpg"
+    },
+    "autoregressive": {
+      "image_path": "data/explainability_samples/sample_synthetic_autoregressive.png",
+      "prob_aigc": 0.923,
+      "verdict": "SYNTHETIC AIGC",
+      "is_synthetic": true,
+      "spectral_metrics": {
+        "high_freq_energy_ratio": 0.24628889560699463,
+        "grid_peak_anomaly_score": 8.497644424438477,
+        "is_frequency_anomalous": true
+      },
+      "edge_metrics": {
+        "edge_anomaly_score": 0.5836904048919678
+      },
+      "top_anomalous_patches": [
+        {
+          "patch_idx": 6,
+          "bbox": [
+            219,
+            0,
+            256,
+            37
+          ],
+          "gradcam_score": 0.7602219581604004,
+          "attention_score": 0.5,
+          "frequency_score": 0.17911955483085484,
+          "edge_score": 0.11151314526796341,
+          "composite_risk": 0.4492042253759038,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 194,
+          "bbox": [
+            439,
+            475,
+            475,
+            512
+          ],
+          "gradcam_score": 0.5602157711982727,
+          "attention_score": 0.5,
+          "frequency_score": 0.13310732386712684,
+          "edge_score": 0.08531949669122696,
+          "composite_risk": 0.36476088403106616,
+          "primary_anomaly_category": "Semantic Saliency"
+        },
+        {
+          "patch_idx": 97,
+          "bbox": [
+            475,
+            219,
+            512,
+            256
+          ],
+          "gradcam_score": 0.45790237188339233,
+          "attention_score": 0.5,
+          "frequency_score": 0.20172343466403742,
+          "edge_score": 0.11984461545944214,
+          "composite_risk": 0.34957944018388315,
+          "primary_anomaly_category": "ViT Patch Focus"
+        },
+        {
+          "patch_idx": 60,
+          "bbox": [
+            146,
+            146,
+            183,
+            183
+          ],
+          "gradcam_score": 0.47878411412239075,
+          "attention_score": 0.5,
+          "frequency_score": 0.1480970703384727,
+          "edge_score": 0.11190485954284668,
+          "composite_risk": 0.3445748259191006,
+          "primary_anomaly_category": "ViT Patch Focus"
+        },
+        {
+          "patch_idx": 28,
+          "bbox": [
+            0,
+            73,
+            37,
+            110
+          ],
+          "gradcam_score": 0.4440331757068634,
+          "attention_score": 0.5,
+          "frequency_score": 0.12158454285968953,
+          "edge_score": 0.07711158692836761,
+          "composite_risk": 0.3201508374550136,
+          "primary_anomaly_category": "ViT Patch Focus"
+        }
+      ],
+      "model_gates": [
+        0.4,
+        0.3,
+        0.15,
+        0.15
+      ],
+      "dashboard_output_path": "reports/explainability/autoregressive_sample_diagnosis.jpg"
+    }
+  }
+}

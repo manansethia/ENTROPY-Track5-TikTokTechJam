@@ -1,0 +1,74 @@
+{
+  "SigLIP-SO400M": {
+    "clean": 0.7811,
+    "jpeg30": 0.7276,
+    "blur2": 0.739,
+    "resize0.25": 0.7039,
+    "noise0.10": 0.736,
+    "crop80": 0.7576,
+    "color_jitter": 0.7926,
+    "mean_robustness_index": 0.7483,
+    "worst_case_auroc": 0.7039,
+    "robustness_degradation": 0.0772
+  },
+  "CLIP-ViT-L": {
+    "clean": 0.9072,
+    "jpeg30": 0.7746,
+    "blur2": 0.7902,
+    "resize0.25": 0.745,
+    "noise0.10": 0.8031,
+    "crop80": 0.8535,
+    "color_jitter": 0.9168,
+    "mean_robustness_index": 0.8272,
+    "worst_case_auroc": 0.745,
+    "robustness_degradation": 0.1622
+  },
+  "DINOv2-Registers": {
+    "clean": 0.4838,
+    "jpeg30": 0.4772,
+    "blur2": 0.461,
+    "resize0.25": 0.4762,
+    "noise0.10": 0.4986,
+    "crop80": 0.4857,
+    "color_jitter": 0.4855,
+    "mean_robustness_index": 0.4811,
+    "worst_case_auroc": 0.461,
+    "robustness_degradation": 0.0228
+  },
+  "ConvNeXt-V2": {
+    "clean": 0.5,
+    "jpeg30": 0.5,
+    "blur2": 0.5,
+    "resize0.25": 0.5,
+    "noise0.10": 0.5,
+    "crop80": 0.5,
+    "color_jitter": 0.5,
+    "mean_robustness_index": 0.5,
+    "worst_case_auroc": 0.5,
+    "robustness_degradation": 0.0
+  },
+  "2D-FFT-Spectral": {
+    "clean": 0.2203,
+    "jpeg30": 0.3754,
+    "blur2": 0.471,
+    "resize0.25": 0.4431,
+    "noise0.10": 0.3927,
+    "crop80": 0.3201,
+    "color_jitter": 0.2233,
+    "mean_robustness_index": 0.3494,
+    "worst_case_auroc": 0.2203,
+    "robustness_degradation": 0.0
+  },
+  "Edge-Specialist": {
+    "clean": 0.5221,
+    "jpeg30": 0.5244,
+    "blur2": 0.4995,
+    "resize0.25": 0.515,
+    "noise0.10": 0.5198,
+    "crop80": 0.5473,
+    "color_jitter": 0.5243,
+    "mean_robustness_index": 0.5218,
+    "worst_case_auroc": 0.4995,
+    "robustness_degradation": 0.0226
+  }
+}

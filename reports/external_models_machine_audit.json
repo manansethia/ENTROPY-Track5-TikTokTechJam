@@ -1,0 +1,90 @@
+{
+  "SPAI_TFG": {
+    "status": "VERIFIED",
+    "path": "/mnt/ai-storage/aigc_data/models/spai_tfg/spai/weights/spai.pth",
+    "size_mb": 891.56,
+    "sha256": "24159f27d7c8c2cd0cb6c4019189eb89ad0874a0d9d15f8dc9afd39ca9648a55",
+    "loadable": true,
+    "inference_works": true,
+    "trainable": true,
+    "input_size": "224x224 RGB",
+    "output_type": "Binary Logit / Sigmoid Probability",
+    "role": "FORENSIC SPECIALIST (Artifact & Patch Spectral Analysis)",
+    "license": "Research / CC-BY-NC"
+  },
+  "CommunityForensics_ViT_Small": {
+    "status": "VERIFIED",
+    "path": "/mnt/ai-storage/aigc_data/models/community_forensics_vit_small/model.safetensors",
+    "size_mb": 83.23,
+    "sha256": "275ba982236ddd6afddf7131f8133e89f537574b964cf8fa5825b4956d741692",
+    "loadable": true,
+    "inference_works": true,
+    "trainable": true,
+    "input_size": "224x224 RGB (ViT-Small Patch16)",
+    "output_type": "Binary Classification (2 Logits)",
+    "role": "HIGH-RES SPECIALIST / AUXILIARY EXPERT",
+    "license": "Open / Apache 2.0"
+  },
+  "divine2k_ensemble": {
+    "status": "VERIFIED",
+    "sub_models": {
+      "convNext": {
+        "status": "VERIFIED",
+        "path": "/mnt/ai-storage/aigc_data/models/divine2k_ensemble/convNext_final.pth",
+        "size_mb": 106.19,
+        "sha256": "ec5a7ae3b01eedb5da73ed94a9b6b9110f1c098fb7b50540d99a700efc758d05",
+        "loadable": true,
+        "inference_works": true,
+        "trainable": true,
+        "input_size": "224x224 RGB",
+        "output_type": "Binary Logit",
+        "role": "ROBUSTNESS SPECIALIST (Multi-Backbone Ensemble)"
+      },
+      "convnext_tiny": {
+        "status": "VERIFIED",
+        "path": "/mnt/ai-storage/aigc_data/models/divine2k_ensemble/convnext_tiny_final.pth",
+        "size_mb": 106.19,
+        "sha256": "037bdab82252e44672895cc6bfa3e08170a89598d3c5b57915e25704bb4f5963",
+        "loadable": true,
+        "inference_works": true,
+        "trainable": true,
+        "input_size": "224x224 RGB",
+        "output_type": "Binary Logit",
+        "role": "ROBUSTNESS SPECIALIST (Multi-Backbone Ensemble)"
+      },
+      "efficientNet_B0": {
+        "status": "VERIFIED",
+        "path": "/mnt/ai-storage/aigc_data/models/divine2k_ensemble/efficientNet_BO_Final.pth",
+        "size_mb": 15.58,
+        "sha256": "4f775d3d550550365f4481eb76f794dd850038ea375b64466435d115f37cca6c",
+        "loadable": true,
+        "inference_works": true,
+        "trainable": true,
+        "input_size": "224x224 RGB",
+        "output_type": "Binary Logit",
+        "role": "ROBUSTNESS SPECIALIST (Multi-Backbone Ensemble)"
+      },
+      "resnet50": {
+        "status": "VERIFIED",
+        "path": "/mnt/ai-storage/aigc_data/models/divine2k_ensemble/resnet50_ai_real_final.pth",
+        "size_mb": 89.99,
+        "sha256": "3f7ac353df62b85f10b75c9a96ebe443f7ad461437fdb1bde9477e842156e6f1",
+        "loadable": true,
+        "inference_works": true,
+        "trainable": true,
+        "input_size": "224x224 RGB",
+        "output_type": "Binary Logit",
+        "role": "ROBUSTNESS SPECIALIST (Multi-Backbone Ensemble)"
+      }
+    },
+    "role": "ROBUSTNESS SPECIALIST"
+  },
+  "HiDA_Net": {
+    "status": "NO_WEIGHTS",
+    "description": "Code repository only; no public pretrained checkpoint released on GitHub/Zenodo."
+  },
+  "SSUPER_AIGID": {
+    "status": "GATED_UNAVAILABLE",
+    "description": "HuggingFace gated repository requiring organizational manual authorization token."
+  }
+}

@@ -1,0 +1,44 @@
+seed: 42
+
+paths:
+  train_data_dir: "data/train"
+  output_dir: "checkpoints"
+  logs_dir: "logs"
+
+models:
+  clip_name: "ViT-L-14"
+  clip_pretrained: "openai"
+  siglip_name: "google/siglip-base-patch16-224"
+  convnext_name: "convnext_tiny"
+
+training:
+  batch_size: 16
+  gradient_accumulation_steps: 4
+  num_workers: 4
+  epochs: 15
+  base_lr: 0.0001
+  weight_decay: 0.0001
+  mixed_precision: true
+  max_grad_norm: 1.0
+
+augmentations:
+  jpeg_compression:
+    prob: 0.60
+    quality_range: [30, 90]
+  gaussian_blur:
+    prob: 0.40
+    sigma_range: [0.5, 2.0]
+  resize:
+    prob: 0.35
+    scale_range: [0.25, 0.50]
+  gaussian_noise:
+    prob: 0.30
+    sigma_range: [0.02, 0.10]
+  color_jitter:
+    prob: 0.40
+    brightness: 0.20
+    contrast: 0.20
+    saturation: 0.20
+  random_crop:
+    prob: 0.40
+    scale: [0.70, 1.00]

@@ -1,0 +1,5 @@
+This archive is the final software/research package. Large datasets and model weights are intentionally NOT embedded.
+They are downloaded directly on the Fedora GPU server using server/scripts/*.sh.
+Primary handoff: docs/AGENT_HANDOFF_MASTER.md
+Installation: docs/INSTALL_AND_RUN.md
+Memory strategy: docs/TOOLS_AND_FRAMEWORK_DECISION.md + server/memory/

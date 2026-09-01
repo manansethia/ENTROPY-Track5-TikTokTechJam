@@ -1,0 +1,224 @@
+[
+  {
+    "image": "4women.webp",
+    "prediction": "FULL_AIGC",
+    "confidence": 0.4758,
+    "probabilities": {
+      "REAL": 0.221,
+      "PARTIAL_AIGC": 0.3032,
+      "FULL_AIGC": 0.4758
+    },
+    "affected_area_pct": 94.1,
+    "bounding_boxes": [
+      {
+        "bbox_xywh": [
+          0,
+          0,
+          4096,
+          3072
+        ],
+        "area_pct": 100.0
+      }
+    ],
+    "inference_latency_ms": 550.43,
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/heatmaps_highcap/4women_highcap_96m_heatmap.jpg"
+  },
+  {
+    "image": "9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410.jpg",
+    "prediction": "PARTIAL_AIGC",
+    "confidence": 0.3931,
+    "probabilities": {
+      "REAL": 0.2822,
+      "PARTIAL_AIGC": 0.3931,
+      "FULL_AIGC": 0.3247
+    },
+    "affected_area_pct": 43.95,
+    "bounding_boxes": [
+      {
+        "bbox_xywh": [
+          1044,
+          683,
+          236,
+          171
+        ],
+        "area_pct": 3.69
+      },
+      {
+        "bbox_xywh": [
+          0,
+          391,
+          317,
+          221
+        ],
+        "area_pct": 6.41
+      },
+      {
+        "bbox_xywh": [
+          0,
+          0,
+          1280,
+          529
+        ],
+        "area_pct": 61.94
+      }
+    ],
+    "inference_latency_ms": 4.71,
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/heatmaps_highcap/9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410_highcap_96m_heatmap.jpg"
+  },
+  {
+    "image": "MV5BYjFjZTAxZTItYjhjZS00MzNkLTk0NDYtYWMxYTQxNTE3YTQxXkEyXkFqcGc@._V1_FMjpg_UX1000_-1126278359.jpg",
+    "prediction": "PARTIAL_AIGC",
+    "confidence": 0.3668,
+    "probabilities": {
+      "REAL": 0.3235,
+      "PARTIAL_AIGC": 0.3668,
+      "FULL_AIGC": 0.3097
+    },
+    "affected_area_pct": 35.46,
+    "bounding_boxes": [
+      {
+        "bbox_xywh": [
+          0,
+          829,
+          1000,
+          671
+        ],
+        "area_pct": 44.73
+      },
+      {
+        "bbox_xywh": [
+          330,
+          547,
+          122,
+          201
+        ],
+        "area_pct": 1.63
+      }
+    ],
+    "inference_latency_ms": 4.79,
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/heatmaps_highcap/MV5BYjFjZTAxZTItYjhjZS00MzNkLTk0NDYtYWMxYTQxNTE3YTQxXkEyXkFqcGc@._V1_FMjpg_UX1000_-1126278359_highcap_96m_heatmap.jpg"
+  },
+  {
+    "image": "a00882da867d4293bc79642cc2e7509d-3842325504.jpg",
+    "prediction": "PARTIAL_AIGC",
+    "confidence": 0.4028,
+    "probabilities": {
+      "REAL": 0.2692,
+      "PARTIAL_AIGC": 0.4028,
+      "FULL_AIGC": 0.328
+    },
+    "affected_area_pct": 84.96,
+    "bounding_boxes": [
+      {
+        "bbox_xywh": [
+          41,
+          13,
+          1856,
+          1067
+        ],
+        "area_pct": 95.5
+      }
+    ],
+    "inference_latency_ms": 4.77,
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/heatmaps_highcap/a00882da867d4293bc79642cc2e7509d-3842325504_highcap_96m_heatmap.jpg"
+  },
+  {
+    "image": "a8887a3acfa7159c298b2a6de446db77-1200536355.png",
+    "prediction": "PARTIAL_AIGC",
+    "confidence": 0.3547,
+    "probabilities": {
+      "REAL": 0.3199,
+      "PARTIAL_AIGC": 0.3547,
+      "FULL_AIGC": 0.3254
+    },
+    "affected_area_pct": 26.0,
+    "bounding_boxes": [
+      {
+        "bbox_xywh": [
+          182,
+          795,
+          879,
+          933
+        ],
+        "area_pct": 35.31
+      }
+    ],
+    "inference_latency_ms": 4.78,
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/heatmaps_highcap/a8887a3acfa7159c298b2a6de446db77-1200536355_highcap_96m_heatmap.jpg"
+  },
+  {
+    "image": "b44779d2e81fa740bee47b08eb23e4d0-4238713397.jpg",
+    "prediction": "REAL",
+    "confidence": 0.3676,
+    "probabilities": {
+      "REAL": 0.3676,
+      "PARTIAL_AIGC": 0.2963,
+      "FULL_AIGC": 0.3361
+    },
+    "affected_area_pct": 35.99,
+    "bounding_boxes": [
+      {
+        "bbox_xywh": [
+          460,
+          366,
+          180,
+          367
+        ],
+        "area_pct": 10.75
+      },
+      {
+        "bbox_xywh": [
+          0,
+          324,
+          176,
+          419
+        ],
+        "area_pct": 12.0
+      },
+      {
+        "bbox_xywh": [
+          0,
+          0,
+          556,
+          231
+        ],
+        "area_pct": 20.9
+      }
+    ],
+    "inference_latency_ms": 4.78,
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/heatmaps_highcap/b44779d2e81fa740bee47b08eb23e4d0-4238713397_highcap_96m_heatmap.jpg"
+  },
+  {
+    "image": "mia-khalifa-blowjob-675545-3390259016.jpg",
+    "prediction": "REAL",
+    "confidence": 0.4282,
+    "probabilities": {
+      "REAL": 0.4282,
+      "PARTIAL_AIGC": 0.3033,
+      "FULL_AIGC": 0.2685
+    },
+    "affected_area_pct": 26.23,
+    "bounding_boxes": [
+      {
+        "bbox_xywh": [
+          787,
+          0,
+          1081,
+          886
+        ],
+        "area_pct": 35.93
+      },
+      {
+        "bbox_xywh": [
+          0,
+          0,
+          858,
+          1015
+        ],
+        "area_pct": 32.67
+      }
+    ],
+    "inference_latency_ms": 4.79,
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/heatmaps_highcap/mia-khalifa-blowjob-675545-3390259016_highcap_96m_heatmap.jpg"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "config_a": {
+    "tier": "A",
+    "trainable_parameters": 31943501,
+    "trainable_parameters_m": 31.94,
+    "total_parameters_m": 734.97,
+    "batch_size": 48,
+    "throughput_samples_per_sec": 22.35,
+    "seconds_per_batch": 2.147,
+    "peak_reserved_vram_mb": 4577.0,
+    "vram_headroom_mb": 1567.0,
+    "avg_loss": 0.02724,
+    "is_safe": true,
+    "status": "EVALUATED"
+  },
+  "config_b": {
+    "tier": "B",
+    "trainable_parameters": 60897053,
+    "trainable_parameters_m": 60.9,
+    "total_parameters_m": 736.09,
+    "batch_size": 48,
+    "throughput_samples_per_sec": 21.18,
+    "seconds_per_batch": 2.266,
+    "peak_reserved_vram_mb": 5662.0,
+    "vram_headroom_mb": 482.0,
+    "avg_loss": 0.08924,
+    "is_safe": false,
+    "status": "REJECTED_MEMORY_HEADROOM"
+  },
+  "config_c": {
+    "tier": "C",
+    "trainable_parameters_m": 90.97,
+    "throughput_samples_per_sec": 0.0,
+    "seconds_per_batch": 0.0,
+    "peak_reserved_vram_mb": 6144.0,
+    "vram_headroom_mb": 0.0,
+    "avg_loss": 0.0,
+    "avg_grad_norm": 0.0,
+    "is_safe": false,
+    "status": "REJECTED_OOM"
+  },
+  "manifest_sha256": "8ec2b6916391a7e2122b0f4993c71d7a02eced0f3c6719a6b287bcb9a76070ec"
+}

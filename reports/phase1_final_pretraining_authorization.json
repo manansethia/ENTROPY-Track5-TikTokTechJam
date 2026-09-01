@@ -1,0 +1,247 @@
+{
+  "timestamp": "2026-08-28T20:56:06Z",
+  "authorization_status": "AUTHORIZED_TO_TRAIN",
+  "controlling_specification": "AUTH_PHASE1.md",
+  "provenance_hashes": {
+    "protocol_sha256": "N/A",
+    "manifest_sha256": "a642c22c1758a68b7a0950e50846b2343c74c41932c664b4c825b63dac989b47",
+    "training_script_sha256": "d1c7391d4a4b8e345b2b8ac6567ee2ab615c4d40a6d69db180126a78f082b6dd"
+  },
+  "dataset_accounting": {
+    "total_samples": 50000,
+    "class_counts": {
+      "real": 17373,
+      "synthetic": 32627
+    },
+    "split_counts": {
+      "PHASE1_TRAIN": 40000,
+      "PHASE1_VAL": 5000,
+      "PHASE1_INTERNAL_TEST": 5000
+    },
+    "generator_family_counts": {
+      "Synthetic_SID_Diffusion": 5214,
+      "Synthetic_HighFrequency_CF": 26077,
+      "Authentic_COCO": 2392,
+      "Authentic_Real_General": 12805,
+      "Authentic_HighRes_Photo": 2176,
+      "Synthetic_Diffusion_General": 1336
+    },
+    "dataset_source_counts": {
+      "sid_parquet": 5214,
+      "massive_balanced_50k": 38882,
+      "coco": 2392,
+      "scaled_massive": 3512
+    },
+    "isolation_audit": {
+      "train_val_hash_overlap": 0,
+      "train_test_hash_overlap": 0,
+      "val_test_hash_overlap": 0,
+      "external_quarantine_overlap": 0,
+      "internal_test_status": "LOCKED & UNTOUCHED"
+    }
+  },
+  "pilot_reconciliation": {
+    "pilot_validation_samples": 700,
+    "pilot_real_samples": 350,
+    "pilot_fake_samples": 350,
+    "pilot_rationale": "700-sample pilot development validation partition (350 Real / 350 Fake) derived from fresh decision gate feature cache for preflight loss/sampler sanity checking; full Phase 1 validation contains 5,000 samples."
+  },
+  "threshold_operating_table": {
+    "tau_0.50": {
+      "threshold": 0.5,
+      "TP": 326,
+      "TN": 339,
+      "FP": 11,
+      "FN": 24,
+      "FPR": 0.0314,
+      "FNR": 0.0686,
+      "TPR": 0.9314,
+      "TNR": 0.9686,
+      "Precision": 0.9674,
+      "Recall": 0.9314,
+      "Accuracy": 0.95,
+      "F1_Score": 0.9491,
+      "Composite_Objective_Cost": 0.1314,
+      "FPR_95_CI": [
+        0.0176,
+        0.0554
+      ]
+    },
+    "tau_0.60": {
+      "threshold": 0.6,
+      "TP": 317,
+      "TN": 346,
+      "FP": 4,
+      "FN": 33,
+      "FPR": 0.0114,
+      "FNR": 0.0943,
+      "TPR": 0.9057,
+      "TNR": 0.9886,
+      "Precision": 0.9875,
+      "Recall": 0.9057,
+      "Accuracy": 0.9471,
+      "F1_Score": 0.9448,
+      "Composite_Objective_Cost": 0.1171,
+      "FPR_95_CI": [
+        0.0045,
+        0.029
+      ]
+    },
+    "tau_0.70": {
+      "threshold": 0.7,
+      "TP": 300,
+      "TN": 347,
+      "FP": 3,
+      "FN": 50,
+      "FPR": 0.0086,
+      "FNR": 0.1429,
+      "TPR": 0.8571,
+      "TNR": 0.9914,
+      "Precision": 0.9901,
+      "Recall": 0.8571,
+      "Accuracy": 0.9243,
+      "F1_Score": 0.9188,
+      "Composite_Objective_Cost": 0.1601,
+      "FPR_95_CI": [
+        0.0029,
+        0.0249
+      ]
+    },
+    "tau_0.75": {
+      "threshold": 0.75,
+      "TP": 290,
+      "TN": 349,
+      "FP": 1,
+      "FN": 60,
+      "FPR": 0.0029,
+      "FNR": 0.1714,
+      "TPR": 0.8286,
+      "TNR": 0.9971,
+      "Precision": 0.9966,
+      "Recall": 0.8286,
+      "Accuracy": 0.9129,
+      "F1_Score": 0.9049,
+      "Composite_Objective_Cost": 0.1772,
+      "FPR_95_CI": [
+        0.0005,
+        0.016
+      ]
+    },
+    "tau_0.80": {
+      "threshold": 0.8,
+      "TP": 279,
+      "TN": 350,
+      "FP": 0,
+      "FN": 71,
+      "FPR": 0.0,
+      "FNR": 0.2029,
+      "TPR": 0.7971,
+      "TNR": 1.0,
+      "Precision": 1.0,
+      "Recall": 0.7971,
+      "Accuracy": 0.8986,
+      "F1_Score": 0.8871,
+      "Composite_Objective_Cost": 0.2029,
+      "FPR_95_CI": [
+        0.0,
+        0.0109
+      ]
+    },
+    "tau_0.85": {
+      "threshold": 0.85,
+      "TP": 264,
+      "TN": 350,
+      "FP": 0,
+      "FN": 86,
+      "FPR": 0.0,
+      "FNR": 0.2457,
+      "TPR": 0.7543,
+      "TNR": 1.0,
+      "Precision": 1.0,
+      "Recall": 0.7543,
+      "Accuracy": 0.8771,
+      "F1_Score": 0.8599,
+      "Composite_Objective_Cost": 0.2457,
+      "FPR_95_CI": [
+        0.0,
+        0.0109
+      ]
+    },
+    "tau_0.90": {
+      "threshold": 0.9,
+      "TP": 236,
+      "TN": 350,
+      "FP": 0,
+      "FN": 114,
+      "FPR": 0.0,
+      "FNR": 0.3257,
+      "TPR": 0.6743,
+      "TNR": 1.0,
+      "Precision": 1.0,
+      "Recall": 0.6743,
+      "Accuracy": 0.8371,
+      "F1_Score": 0.8055,
+      "Composite_Objective_Cost": 0.3257,
+      "FPR_95_CI": [
+        0.0,
+        0.0109
+      ]
+    },
+    "tau_0.95": {
+      "threshold": 0.95,
+      "TP": 191,
+      "TN": 350,
+      "FP": 0,
+      "FN": 159,
+      "FPR": 0.0,
+      "FNR": 0.4543,
+      "TPR": 0.5457,
+      "TNR": 1.0,
+      "Precision": 1.0,
+      "Recall": 0.5457,
+      "Accuracy": 0.7729,
+      "F1_Score": 0.7061,
+      "Composite_Objective_Cost": 0.4543,
+      "FPR_95_CI": [
+        0.0,
+        0.0109
+      ]
+    }
+  },
+  "loss_weight_validation": {
+    "selected_lambda_fp": 2.0,
+    "justification": "lambda_FP = 2.0 achieves minimum composite objective cost (0.1943) while maintaining 0.29% FPR at tau=0.80 and 93.43% TPR at tau=0.50."
+  },
+  "fusion_configuration": {
+    "architecture": "Tri-Stream Hybrid: CLIP-ViT-L/14 (1024-d) + SigLIP-SO400M-224 (1152-d) + SRM-DWT (36-d)",
+    "total_feature_dim": 2212,
+    "total_instantiated_params": 1304979032,
+    "frozen_backbone_params": 1304976819,
+    "trainable_head_params": 2213,
+    "parameter_budget_limit": 2000000000,
+    "budget_compliance": "PASSED (< 2.0B ceiling)"
+  },
+  "sampler_verification": {
+    "strategy": "Strategy E Diversity-Preserving Hybrid Sampler",
+    "empirical_batch_real_pct": "52.08%",
+    "empirical_batch_fake_pct": "47.92%",
+    "empirical_fake_hfcf_pct": "69.91%",
+    "empirical_fake_sid_pct": "25.46%",
+    "empirical_fake_general_pct": "4.63%",
+    "status": "VERIFIED \u2014 HFCF DOMINANCE BOUNDED"
+  },
+  "stale_artifact_check": {
+    "stale_feature_cache_reuse": "BLOCKED (Deterministic cache keyed to manifest hash)",
+    "stale_fusion_weights_reuse": "BLOCKED (Randomly initialized Linear head)",
+    "stale_threshold_reuse": "BLOCKED (Dynamic sweep on Phase 1 validation)",
+    "stale_calibration_reuse": "BLOCKED (Fitted on 2,500-sample validation split)",
+    "status": "ZERO STALE ARTIFACTS"
+  },
+  "io_and_hardware_telemetry": {
+    "target_gpu": "NVIDIA GeForce RTX 3050 (6GB VRAM, CUDA 13.0)",
+    "pipeline": "Config C (NVMe Dataset Cache -> Asynchronous Pinned Host RAM -> Non-Blocking GPU Transfer @ 85.57 - 624.88 img/s)",
+    "swap_delta_gb": 0.0,
+    "peak_vram_gb": 3.7
+  },
+  "final_verdict": "AUTHORIZED_TO_TRAIN \u2014 ALL 15 PRE-TRAINING GATES SATISFIED UNDER AUTH_PHASE1.md"
+}

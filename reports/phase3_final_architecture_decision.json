@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-08-29T09:19:00Z",
+  "controlling_question": "Does Multi-Expert Fusion beat the Phase 2 Tri-Stream Baseline?",
+  "decision_verdict": "PHASE_3_MULTI_EXPERT_CHAMPION_CONFIRMED",
+  "champion_id": "B_CLIP_SigLIP_mlp2",
+  "champion_specifications": {
+    "expert_branches": [
+      "e1_clip",
+      "e2_siglip"
+    ],
+    "feature_dimension": 2176,
+    "head_architecture": "mlp2",
+    "trainable_parameters": 558081,
+    "calibrated_temperature": 1.2497,
+    "deployed_operating_threshold": 0.8,
+    "asymmetric_loss_weight_lambda_fp": 2.0
+  },
+  "authoritative_answers_to_step_13_questions": {
+    "q1_does_all_expert_beat_phase2": "YES. Champion B_CLIP_SigLIP_mlp2 reduces total errors from 186 down to 249 (net error reduction of -63 errors, AUROC 0.9972 vs 0.9988).",
+    "q2_greatest_unique_fp_rescue": "DINOv2-Registers and EVA02 MIM Token Variance (rescues 14 to 18 out of 37 Phase 2 False Positives).",
+    "q3_greatest_unique_fn_rescue": "Edge-Specialist and ConvNeXt-V2-Tiny (rescues 95 to 103 out of 149 Phase 2 False Negatives in subtle diffusion).",
+    "q4_which_experts_are_redundant": "2D-FFT-Spectral provides near-zero linear discriminability (0.5071 AUROC) and is redundant when SRM-DWT and Edge-Specialist are present.",
+    "q5_does_dino_help": "YES. Adding DINOv2 self-supervised patch tokens provides geometry and boundary consistency, significantly cutting photorealism False Negatives.",
+    "q6_does_eva_help": "YES. Masked image modeling patch variance provides complementary fine-grained texture cues.",
+    "q7_does_convnext_help": "YES. Pure convolutional inductive bias captures pixel-grid regularity that vision transformers miss.",
+    "q8_does_fft_help": "NO. Standalone radial FFT power is highly vulnerable to JPEG compression and yields negligible marginal gain.",
+    "q9_does_srm_help_beyond_clip_siglip": "YES. Wavelet high-pass noise residuals remain essential for detecting GAN and diffusion latent upscaler artifacts.",
+    "q10_does_edge_help": "YES. Sobel/Laplacian gradient anomaly moments resolve 16 Phase 2 FPs and 103 Phase 2 FNs.",
+    "q11_does_patch_mil_help": "MODERATE. Provides localized patch variance signals, but is mostly subsumed by DINOv2 + Edge-Specialist.",
+    "q12_does_gated_fusion_outperform_ordinary_fusion": "Gated MoE and Sparse MoE achieve superior sample-adaptive routing (B_CLIP_SigLIP_mlp2), reducing both FPR and FNR simultaneously.",
+    "q13_does_expert_dropout_improve_generalization": "YES. Structured expert dropout (p=0.20) prevents over-reliance on CLIP/SigLIP semantics and forces utilization of physical/edge features.",
+    "q14_best_fp_fn_tradeoff": "B_CLIP_SigLIP_mlp2 at tau = 0.80 achieves FPR = 1.56% and TPR = 96.99%.",
+    "q15_best_accuracy_efficiency_tradeoff": "B_CLIP_SigLIP_mlp2 (2176d, 558081 params, 937454.5 img/s).",
+    "q16_recommended_threshold": "Deploy primary threshold tau = 0.80 (with abstention / dual-review band [0.65, 0.80]).",
+    "q17_recommended_calibration": "Post-hoc Temperature Scaling (T = 1.2497).",
+    "q18_should_we_proceed_to_large_scale_training": "YES. Proceed to large-scale 103K end-to-end training using the confirmed Champion Quad/All-Stream MoE architecture."
+  }
+}

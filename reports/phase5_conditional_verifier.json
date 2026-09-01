@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "stage1_architecture": "CLIP-ViT-L/14 + SigLIP-SO400M-224 + SRM-DWT (2,212d)",
+  "stage2_verifier": "DINOv2-Registers + Edge-Specialist (1,046d Gated Residual Head)",
+  "routing_policy": "Uncertain Window [0.35, 0.85] triggers Stage 2 forensic verification",
+  "uncertain_window_fraction": "6.8% of test images trigger Stage 2 verifier",
+  "mean_latency_ms": 0.42,
+  "worst_case_latency_ms": 1.15
+}

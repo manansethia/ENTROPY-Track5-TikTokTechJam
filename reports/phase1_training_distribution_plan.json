@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-08-28T20:46:46Z",
+  "governance_decision": "PRESERVE 50K MANIFEST ON DISK + ENFORCE STRATEGY E DIVERSITY-PRESERVING HYBRID SAMPLER",
+  "rationale": "Rather than discarding 15,254 synthetic images from the manifest, we retain the 50,000-sample pool and enforce Strategy E hybrid sampling during DataLoader iteration. This eliminates generator bias during training while preserving full data provenance for Phase 2 full-corpus expansion.",
+  "training_data_plan": {
+    "total_samples_in_manifest": 50000,
+    "train_samples": 40000,
+    "val_samples": 5000,
+    "internal_test_samples": 5000,
+    "dataloader_sampler": "GeneratorAwareWeightedRandomSampler (Real: 50%, Synthetic: 50% with SID: 45%, General: 20%, HFCF: 35%)"
+  },
+  "phase2_transition_plan": {
+    "approved_corpus_size_gb": 379.9,
+    "raw_samples_available": "> 450,000",
+    "phase2_milestones": [
+      "Unpack 15,000 authentic WikiArt fine-art masterpieces from 72 parquet shards to expand hard negatives.",
+      "Unpack 24,000 modern photorealistic generations from AIGI Quality Paradox parquets (FLUX.1, SDXL, SD3, PixArt-alpha).",
+      "Scale generator-aware sampling across all 12 generator families.",
+      "Maintain strict 100% quarantine over Synthbuster, AIGIBench, Chameleon, VCT2, WildRF, and SynthWildX."
+    ]
+  },
+  "validation_matrix_plan": {
+    "overall_metrics": [
+      "AUROC",
+      "AUPRC",
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "FPR",
+      "FNR",
+      "TNR",
+      "ECE",
+      "Brier"
+    ],
+    "stratified_breakdowns": [
+      "Per-generator synthetic subgroups (SID, HFCF, Diffusion General)",
+      "Per-source authentic subgroups (COCO, General Photography, High-Res)",
+      "15-condition adversarial robustness matrix",
+      "Hard-negative false positive and subtle-AIGC false negative catalog"
+    ]
+  }
+}

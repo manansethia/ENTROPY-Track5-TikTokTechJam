@@ -1,0 +1,42 @@
+{
+  "Q1_Top_Left": {
+    "name": "Q1_Top_Left",
+    "resolution": "2048x1536",
+    "fft_hf_energy_ratio": 0.9594,
+    "srm_noise_variance": 5.6667,
+    "srm_kurtosis": 17.2081,
+    "laplacian_variance": 382.1998,
+    "color_correlation_rg": 0.9668,
+    "color_correlation_gb": 0.9743
+  },
+  "Q2_Top_Right": {
+    "name": "Q2_Top_Right",
+    "resolution": "2048x1536",
+    "fft_hf_energy_ratio": 0.9288,
+    "srm_noise_variance": 0.3197,
+    "srm_kurtosis": 4.2828,
+    "laplacian_variance": 67.7291,
+    "color_correlation_rg": 0.9734,
+    "color_correlation_gb": 0.9804
+  },
+  "Q3_Bottom_Left": {
+    "name": "Q3_Bottom_Left",
+    "resolution": "2048x1536",
+    "fft_hf_energy_ratio": 0.9267,
+    "srm_noise_variance": 0.3366,
+    "srm_kurtosis": 4.3141,
+    "laplacian_variance": 54.3028,
+    "color_correlation_rg": 0.9692,
+    "color_correlation_gb": 0.9802
+  },
+  "Q4_Bottom_Right": {
+    "name": "Q4_Bottom_Right",
+    "resolution": "2048x1536",
+    "fft_hf_energy_ratio": 0.9269,
+    "srm_noise_variance": 0.3549,
+    "srm_kurtosis": 4.6241,
+    "laplacian_variance": 32.1771,
+    "color_correlation_rg": 0.9836,
+    "color_correlation_gb": 0.9884
+  }
+}

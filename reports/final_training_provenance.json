@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-08-29T10:31:51Z",
+  "training_directive": "FINAL MASTER TRAINING DIRECTIVE",
+  "phase5_checkpoint_sha256": "9cc1da9e364d60f3873ad6818b9c733ed522f4b425e7875d8e3ad54faeb45c0e",
+  "manifest_sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+  "verified_corpus_scale": 284500,
+  "train_scale": 260184,
+  "dev_scale": 10000,
+  "calibration_scale": 4000,
+  "test_scale": 10316,
+  "isolation_status": "100%_DISJOINT_ZERO_LEAKAGE"
+}

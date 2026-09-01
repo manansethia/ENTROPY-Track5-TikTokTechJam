@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "dino_fp_rescue_count": 18,
+  "edge_fn_rescue_count": 112,
+  "srm_gan_upsampler_rescue_count": 45,
+  "net_error_delta_from_verification": -28
+}

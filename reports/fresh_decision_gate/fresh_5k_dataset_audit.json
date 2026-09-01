@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-08-28T17:51:09Z",
+  "protocol_requirement": "Master Protocol Fresh ~5,000-Image Dataset",
+  "random_seed": 20260828,
+  "total_samples": 5000,
+  "splits": {
+    "fresh_train": 3500,
+    "fresh_val": 1000,
+    "fresh_internal_test": 500
+  },
+  "class_counts": {
+    "real": 2497,
+    "fake": 2503
+  },
+  "generator_distribution": {
+    "Synthetic_General": 2503,
+    "Real_Authentic": 2497
+  },
+  "source_distribution": {
+    "massive_balanced_50k": 5000
+  },
+  "quarantined_benchmarks_verified_untouched": [
+    "synthwildx",
+    "synthbuster",
+    "wildrf",
+    "vct2",
+    "validation_LOCKED",
+    "aigibench_eval",
+    "chameleon"
+  ]
+}

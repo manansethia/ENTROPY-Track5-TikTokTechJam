@@ -1,0 +1,93 @@
+{
+  "real_photography_pools": {
+    "Massive Balanced 50k Real DSLR/Portraits": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real",
+      "count": 17373
+    },
+    "Scaled 45k Real Mixed Photography": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_45k/real",
+      "count": 2993
+    },
+    "High-Resolution 50k Real": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/hires_50k_benchmark/real",
+      "count": 0
+    },
+    "Ultra High-Res Gigapixel Real": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/ultra_highres_gigapixel_pool/real",
+      "count": 0
+    },
+    "NTIRE 2026 Real Photography": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/ntire_2026_robust_train/real",
+      "count": 0
+    },
+    "Studio & Social Media Real Portraits": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/portrait_remediation",
+      "count": 4239
+    },
+    "Archival & Historical Real Photography": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/archival_photography_negatives",
+      "count": 0
+    },
+    "Vintage & Scanned Real Photography": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/vintage_archival_photos",
+      "count": 0
+    }
+  },
+  "hard_real_negative_pools": {
+    "Post-Processed & Social Media Hard Negatives": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/hard_negative_remediation",
+      "count": 8000
+    },
+    "Complex Art & Illustration Hard Negatives": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/artbench_hard_negatives",
+      "count": 0
+    },
+    "Compression & Filtering Remediation Pool": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/remediation_expansion_pool",
+      "count": 13500
+    }
+  },
+  "full_aigc_pools": {
+    "Massive Balanced 50k AIGC": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/aigc",
+      "count": 0
+    },
+    "Scaled 45k AIGC Multimodal": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_45k/aigc",
+      "count": 0
+    },
+    "Flux.1, SD3, GenImage++ State-of-the-Art": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/flux_sd3_genimagepp",
+      "count": 0
+    },
+    "SynthBuster Multi-Generator Suite": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/synthbuster",
+      "count": 9000
+    },
+    "Ultra High-Res AIGC Generations": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/ultra_highres_gigapixel_pool/aigc",
+      "count": 0
+    },
+    "NTIRE 2026 Robust Challenge AIGC": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/ntire_2026_robust_train/aigc",
+      "count": 0
+    }
+  },
+  "partial_ai_pools": {
+    "V4.2 Prototype Partial-AI Corpus": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/v4_partial_ai_corpus",
+      "count": 1210
+    },
+    "DeFactify Forensic Splicing & Inpainting": {
+      "path": "/mnt/ai-storage/aigc_data/datasets/defactify",
+      "count": 0
+    }
+  },
+  "total_summary": {
+    "total_real": 24605,
+    "total_hard_real": 21500,
+    "total_aigc": 9000,
+    "total_partial_ai": 1210,
+    "grand_total_available": 56315
+  }
+}

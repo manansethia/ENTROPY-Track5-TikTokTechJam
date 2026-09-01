@@ -1,0 +1,50 @@
+{
+  "total_base_training_duration_seconds": 35500.74,
+  "total_base_training_duration_hours": 9.86,
+  "total_raw_images_processed": 732765,
+  "total_optimizer_steps": 13995,
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "duration_seconds": 13656.86,
+      "throughput_samples_per_sec": 17.88,
+      "seconds_per_batch": 2.6845,
+      "avg_loss": 0.45181,
+      "opt_steps": 3817,
+      "param_hash": "d30576355b4c..."
+    },
+    {
+      "epoch": 2,
+      "duration_seconds": 10936.29,
+      "throughput_samples_per_sec": 22.33,
+      "seconds_per_batch": 2.149,
+      "avg_loss": 0.12055,
+      "opt_steps": 8906,
+      "param_hash": "467216b10678..."
+    },
+    {
+      "epoch": 3,
+      "duration_seconds": 10907.59,
+      "throughput_samples_per_sec": 22.39,
+      "seconds_per_batch": 2.1433,
+      "avg_loss": 0.04987,
+      "opt_steps": 13995,
+      "param_hash": "5f69f6c3bc4b02ea1912c4f22c6fb066237885920991a3446bad3b3e4aafaa1b"
+    }
+  ],
+  "final_parameter_hash": "5f69f6c3bc4b02ea1912c4f22c6fb066237885920991a3446bad3b3e4aafaa1b",
+  "immutable_checkpoint_sha256": "bcded8a67acd853cc80bc63be6788b3a3b6bfbe1400f68cdea5d915a8be304d8",
+  "gradient_statistics": {
+    "clipping_threshold": 1.0,
+    "clip_block23_post_clipping_norm": 0.99916,
+    "siglip_block26_post_clipping_norm": 0.04312,
+    "gradient_flow_finite": true
+  },
+  "hardware_telemetry": {
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "vram_total_mb": 6144.0,
+    "vram_peak_reserved_mb": 4717.0,
+    "ram_used_gb": 10.4,
+    "swap_used_mb": 556.0
+  }
+}

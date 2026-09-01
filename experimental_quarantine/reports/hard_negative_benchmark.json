@@ -1,0 +1,8 @@
+{
+  "total_hard_negatives": 200,
+  "false_positive_count": 0,
+  "false_positive_rate_percent": 0.0,
+  "mean_synthetic_probability": 0.024853247408755122,
+  "p95_synthetic_probability": 0.03913923390209668,
+  "guardrail_status": "PASS (FPR < 2.0%)"
+}

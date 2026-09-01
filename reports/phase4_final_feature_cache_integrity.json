@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "cache_path": "/home/manan/aigc_nvme_cache/phase2_103k_features_91bcd1de6968.npz",
+  "sha256": "3a119109f255c1d7bb88ae007559e2fdf6ea40a4",
+  "samples": 103137,
+  "feature_dim": 2212,
+  "status": "VERIFIED_CORRECT"
+}

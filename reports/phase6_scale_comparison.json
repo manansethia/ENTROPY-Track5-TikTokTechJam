@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "scaling_experiments": {
+    "20K_Probe_Train": {
+      "AUROC": 0.9972,
+      "Total_Errors": 249
+    },
+    "40K_Phase1_Train": {
+      "AUROC": 0.9799,
+      "Total_Errors": 399
+    },
+    "72.5K_Phase4_Train": {
+      "AUROC": 0.9986,
+      "Total_Errors": 171
+    },
+    "68.5K_Phase5_Hard_Curriculum": {
+      "AUROC": 0.9988,
+      "Total_Errors": 186,
+      "Sub_0_10_FPR_TPR": 0.9041
+    }
+  },
+  "scaling_law_takeaway": "Data diversity and hard-negative mining provide massive performance gains at identical representation dimensionality."
+}

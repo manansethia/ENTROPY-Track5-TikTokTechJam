@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "calibrated_T": 1.208419,
+  "ECE": 0.0084,
+  "Brier": 0.0126,
+  "tail_calibration_verdict": "RELIABLE_FOR_MISSION_CRITICAL_DEPLOYMENT"
+}

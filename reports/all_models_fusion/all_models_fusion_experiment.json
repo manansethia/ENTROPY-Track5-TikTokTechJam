@@ -1,0 +1,963 @@
+{
+  "timestamp": "2026-08-28T19:20:13Z",
+  "protocol_section": "Master Experiment: ALL-MODELS-AT-ONCE Fusion Benchmark & Ablation",
+  "provenance": {
+    "manifest_sha256": "890bd3c373673e3c0b2eb92abb7d3fdfb43984a00327a6a551cc592f7e3f3467",
+    "random_seed": 20260828,
+    "train_samples": 1000,
+    "val_samples_per_condition": 300,
+    "untouched_test_samples": 500
+  },
+  "all_model_fusion_formulations": {
+    "ALL Simple Probability Average": {
+      "clean": 0.9776,
+      "jpeg30": 0.9391,
+      "blur2": 0.91,
+      "resize0.25": 0.9075,
+      "noise0.10": 0.9157,
+      "crop80": 0.9583,
+      "color_jitter": 0.9756,
+      "mean_robustness_index": 0.9405,
+      "worst_case_auroc": 0.9075,
+      "robustness_degradation": 0.0701,
+      "val_clean_metrics": {
+        "auroc": 0.9776,
+        "auprc": 0.9837,
+        "accuracy": 0.92,
+        "fpr": 0.0733,
+        "fpr_95_ci": [
+          0.0414,
+          0.1265
+        ],
+        "fnr": 0.0867,
+        "tpr": 0.9133,
+        "precision": 0.9257,
+        "ece": 0.4236,
+        "brier_score": 0.0912,
+        "tn": 139,
+        "fp": 11,
+        "fn": 13,
+        "tp": 137
+      },
+      "untouched_test_metrics": {
+        "auroc": 0.9669,
+        "auprc": 0.9744,
+        "accuracy": 0.926,
+        "fpr": 0.0531,
+        "fpr_95_ci": [
+          0.0313,
+          0.0887
+        ],
+        "fnr": 0.0941,
+        "tpr": 0.9059,
+        "precision": 0.9467,
+        "ece": 0.4203,
+        "brier_score": 0.0966,
+        "tn": 232,
+        "fp": 13,
+        "fn": 24,
+        "tp": 231
+      }
+    },
+    "ALL Weighted Probability Average": {
+      "clean": 0.9777,
+      "jpeg30": 0.9309,
+      "blur2": 0.91,
+      "resize0.25": 0.907,
+      "noise0.10": 0.9021,
+      "crop80": 0.9608,
+      "color_jitter": 0.9749,
+      "mean_robustness_index": 0.9376,
+      "worst_case_auroc": 0.9021,
+      "robustness_degradation": 0.0756,
+      "val_clean_metrics": {
+        "auroc": 0.9777,
+        "auprc": 0.9833,
+        "accuracy": 0.9233,
+        "fpr": 0.0733,
+        "fpr_95_ci": [
+          0.0414,
+          0.1265
+        ],
+        "fnr": 0.08,
+        "tpr": 0.92,
+        "precision": 0.9262,
+        "ece": 0.4458,
+        "brier_score": 0.0529,
+        "tn": 139,
+        "fp": 11,
+        "fn": 12,
+        "tp": 138
+      },
+      "untouched_test_metrics": {
+        "auroc": 0.9684,
+        "auprc": 0.975,
+        "accuracy": 0.922,
+        "fpr": 0.0612,
+        "fpr_95_ci": [
+          0.0375,
+          0.0985
+        ],
+        "fnr": 0.0941,
+        "tpr": 0.9059,
+        "precision": 0.939,
+        "ece": 0.4355,
+        "brier_score": 0.059,
+        "tn": 230,
+        "fp": 15,
+        "fn": 24,
+        "tp": 231
+      }
+    },
+    "ALL Logit Fusion": {
+      "clean": 0.9812,
+      "jpeg30": 0.9283,
+      "blur2": 0.9256,
+      "resize0.25": 0.9072,
+      "noise0.10": 0.9022,
+      "crop80": 0.9666,
+      "color_jitter": 0.9771,
+      "mean_robustness_index": 0.9412,
+      "worst_case_auroc": 0.9022,
+      "robustness_degradation": 0.079,
+      "val_clean_metrics": {
+        "auroc": 0.9812,
+        "auprc": 0.9855,
+        "accuracy": 0.9367,
+        "fpr": 0.06,
+        "fpr_95_ci": [
+          0.0319,
+          0.1101
+        ],
+        "fnr": 0.0667,
+        "tpr": 0.9333,
+        "precision": 0.9396,
+        "ece": 0.4806,
+        "brier_score": 0.0536,
+        "tn": 141,
+        "fp": 9,
+        "fn": 10,
+        "tp": 140
+      },
+      "untouched_test_metrics": {
+        "auroc": 0.9767,
+        "auprc": 0.9814,
+        "accuracy": 0.938,
+        "fpr": 0.049,
+        "fpr_95_ci": [
+          0.0282,
+          0.0836
+        ],
+        "fnr": 0.0745,
+        "tpr": 0.9255,
+        "precision": 0.9516,
+        "ece": 0.477,
+        "brier_score": 0.0553,
+        "tn": 233,
+        "fp": 12,
+        "fn": 19,
+        "tp": 236
+      }
+    },
+    "ALL Logistic Regression Fusion": {
+      "clean": 0.9854,
+      "jpeg30": 0.9492,
+      "blur2": 0.9253,
+      "resize0.25": 0.9093,
+      "noise0.10": 0.9331,
+      "crop80": 0.97,
+      "color_jitter": 0.9856,
+      "mean_robustness_index": 0.9511,
+      "worst_case_auroc": 0.9093,
+      "robustness_degradation": 0.0761,
+      "val_clean_metrics": {
+        "auroc": 0.9854,
+        "auprc": 0.9894,
+        "accuracy": 0.9467,
+        "fpr": 0.04,
+        "fpr_95_ci": [
+          0.0185,
+          0.0845
+        ],
+        "fnr": 0.0667,
+        "tpr": 0.9333,
+        "precision": 0.9589,
+        "ece": 0.474,
+        "brier_score": 0.0399,
+        "tn": 144,
+        "fp": 6,
+        "fn": 10,
+        "tp": 140
+      },
+      "untouched_test_metrics": {
+        "auroc": 0.9787,
+        "auprc": 0.9836,
+        "accuracy": 0.936,
+        "fpr": 0.0367,
+        "fpr_95_ci": [
+          0.0194,
+          0.0683
+        ],
+        "fnr": 0.0902,
+        "tpr": 0.9098,
+        "precision": 0.9627,
+        "ece": 0.4722,
+        "brier_score": 0.054,
+        "tn": 236,
+        "fp": 9,
+        "fn": 23,
+        "tp": 232
+      }
+    },
+    "ALL Small MLP Fusion": {
+      "clean": 0.9693,
+      "jpeg30": 0.9151,
+      "blur2": 0.8868,
+      "resize0.25": 0.8799,
+      "noise0.10": 0.874,
+      "crop80": 0.9575,
+      "color_jitter": 0.9681,
+      "mean_robustness_index": 0.9215,
+      "worst_case_auroc": 0.874,
+      "robustness_degradation": 0.0953,
+      "val_clean_metrics": {
+        "auroc": 0.9693,
+        "auprc": 0.9764,
+        "accuracy": 0.9033,
+        "fpr": 0.14,
+        "fpr_95_ci": [
+          0.0934,
+          0.2046
+        ],
+        "fnr": 0.0533,
+        "tpr": 0.9467,
+        "precision": 0.8712,
+        "ece": 0.382,
+        "brier_score": 0.2075,
+        "tn": 129,
+        "fp": 21,
+        "fn": 8,
+        "tp": 142
+      },
+      "untouched_test_metrics": {
+        "auroc": 0.9607,
+        "auprc": 0.9719,
+        "accuracy": 0.902,
+        "fpr": 0.1429,
+        "fpr_95_ci": [
+          0.1045,
+          0.1922
+        ],
+        "fnr": 0.0549,
+        "tpr": 0.9451,
+        "precision": 0.8732,
+        "ece": 0.3795,
+        "brier_score": 0.2078,
+        "tn": 210,
+        "fp": 35,
+        "fn": 14,
+        "tp": 241
+      }
+    },
+    "ALL Reliability-Gated Router": {
+      "clean": 0.9778,
+      "jpeg30": 0.9316,
+      "blur2": 0.909,
+      "resize0.25": 0.9076,
+      "noise0.10": 0.906,
+      "crop80": 0.961,
+      "color_jitter": 0.975,
+      "mean_robustness_index": 0.9383,
+      "worst_case_auroc": 0.906,
+      "robustness_degradation": 0.0718,
+      "val_clean_metrics": {
+        "auroc": 0.9778,
+        "auprc": 0.9835,
+        "accuracy": 0.9233,
+        "fpr": 0.0733,
+        "fpr_95_ci": [
+          0.0414,
+          0.1265
+        ],
+        "fnr": 0.08,
+        "tpr": 0.92,
+        "precision": 0.9262,
+        "ece": 0.4164,
+        "brier_score": 0.0725,
+        "tn": 139,
+        "fp": 11,
+        "fn": 12,
+        "tp": 138
+      },
+      "untouched_test_metrics": {
+        "auroc": 0.9685,
+        "auprc": 0.9756,
+        "accuracy": 0.924,
+        "fpr": 0.0531,
+        "fpr_95_ci": [
+          0.0313,
+          0.0887
+        ],
+        "fnr": 0.098,
+        "tpr": 0.902,
+        "precision": 0.9465,
+        "ece": 0.4042,
+        "brier_score": 0.0767,
+        "tn": 232,
+        "fp": 13,
+        "fn": 25,
+        "tp": 230
+      }
+    },
+    "ALL Projected Feature Fusion": {
+      "clean": 0.9859,
+      "jpeg30": 0.9465,
+      "blur2": 0.9243,
+      "resize0.25": 0.9179,
+      "noise0.10": 0.9298,
+      "crop80": 0.9684,
+      "color_jitter": 0.9834,
+      "mean_robustness_index": 0.9509,
+      "worst_case_auroc": 0.9179,
+      "robustness_degradation": 0.068,
+      "val_clean_metrics": {
+        "auroc": 0.9859,
+        "auprc": 0.9898,
+        "accuracy": 0.9467,
+        "fpr": 0.0533,
+        "fpr_95_ci": [
+          0.0273,
+          0.1017
+        ],
+        "fnr": 0.0533,
+        "tpr": 0.9467,
+        "precision": 0.9467,
+        "ece": 0.4824,
+        "brier_score": 0.0424,
+        "tn": 142,
+        "fp": 8,
+        "fn": 8,
+        "tp": 142
+      },
+      "untouched_test_metrics": {
+        "auroc": 0.9776,
+        "auprc": 0.9827,
+        "accuracy": 0.932,
+        "fpr": 0.0449,
+        "fpr_95_ci": [
+          0.0253,
+          0.0786
+        ],
+        "fnr": 0.0902,
+        "tpr": 0.9098,
+        "precision": 0.9547,
+        "ece": 0.4747,
+        "brier_score": 0.0585,
+        "tn": 234,
+        "fp": 11,
+        "fn": 23,
+        "tp": 232
+      }
+    }
+  },
+  "baseline_comparisons": {
+    "CLIP Alone": {
+      "clean": 0.9783,
+      "jpeg30": 0.8754,
+      "blur2": 0.8554,
+      "resize0.25": 0.8244,
+      "noise0.10": 0.888,
+      "crop80": 0.9487,
+      "color_jitter": 0.9728,
+      "mean_robustness_index": 0.9061,
+      "worst_case_auroc": 0.8244,
+      "val_clean_metrics": {
+        "auroc": 0.9783,
+        "auprc": 0.9814,
+        "accuracy": 0.9233,
+        "fpr": 0.08,
+        "fpr_95_ci": [
+          0.0464,
+          0.1346
+        ],
+        "fnr": 0.0733,
+        "tpr": 0.9267,
+        "precision": 0.9205,
+        "ece": 0.474,
+        "brier_score": 0.0603,
+        "tn": 138,
+        "fp": 12,
+        "fn": 11,
+        "tp": 139
+      }
+    },
+    "SigLIP Alone": {
+      "clean": 0.9737,
+      "jpeg30": 0.9048,
+      "blur2": 0.8357,
+      "resize0.25": 0.8193,
+      "noise0.10": 0.8788,
+      "crop80": 0.9504,
+      "color_jitter": 0.9754,
+      "mean_robustness_index": 0.9054,
+      "worst_case_auroc": 0.8193,
+      "val_clean_metrics": {
+        "auroc": 0.9737,
+        "auprc": 0.9786,
+        "accuracy": 0.9167,
+        "fpr": 0.06,
+        "fpr_95_ci": [
+          0.0319,
+          0.1101
+        ],
+        "fnr": 0.1067,
+        "tpr": 0.8933,
+        "precision": 0.9371,
+        "ece": 0.4674,
+        "brier_score": 0.0653,
+        "tn": 141,
+        "fp": 9,
+        "fn": 16,
+        "tp": 134
+      }
+    },
+    "CLIP + SigLIP (Simple Avg)": {
+      "clean": 0.9826,
+      "jpeg30": 0.9148,
+      "blur2": 0.8574,
+      "resize0.25": 0.8464,
+      "noise0.10": 0.901,
+      "crop80": 0.9617,
+      "color_jitter": 0.982,
+      "mean_robustness_index": 0.9208,
+      "worst_case_auroc": 0.8464,
+      "val_clean_metrics": {
+        "auroc": 0.9826,
+        "auprc": 0.9865,
+        "accuracy": 0.9467,
+        "fpr": 0.0267,
+        "fpr_95_ci": [
+          0.0104,
+          0.0666
+        ],
+        "fnr": 0.08,
+        "tpr": 0.92,
+        "precision": 0.9718,
+        "ece": 0.4591,
+        "brier_score": 0.0476,
+        "tn": 146,
+        "fp": 4,
+        "fn": 12,
+        "tp": 138
+      }
+    },
+    "CLIP + SigLIP + DINOv2": {
+      "clean": 0.9757,
+      "jpeg30": 0.9155,
+      "blur2": 0.8883,
+      "resize0.25": 0.8855,
+      "noise0.10": 0.8992,
+      "crop80": 0.9557,
+      "color_jitter": 0.9749,
+      "mean_robustness_index": 0.9278,
+      "worst_case_auroc": 0.8855,
+      "val_clean_metrics": {
+        "auroc": 0.9757,
+        "auprc": 0.9804,
+        "accuracy": 0.94,
+        "fpr": 0.0467,
+        "fpr_95_ci": [
+          0.0228,
+          0.0932
+        ],
+        "fnr": 0.0733,
+        "tpr": 0.9267,
+        "precision": 0.9521,
+        "ece": 0.4605,
+        "brier_score": 0.0571,
+        "tn": 143,
+        "fp": 7,
+        "fn": 11,
+        "tp": 139
+      }
+    },
+    "CLIP + SigLIP + SRM-DWT": {
+      "clean": 0.9812,
+      "jpeg30": 0.9188,
+      "blur2": 0.8538,
+      "resize0.25": 0.8455,
+      "noise0.10": 0.8977,
+      "crop80": 0.9598,
+      "color_jitter": 0.9836,
+      "mean_robustness_index": 0.9201,
+      "worst_case_auroc": 0.8455,
+      "val_clean_metrics": {
+        "auroc": 0.9812,
+        "auprc": 0.9858,
+        "accuracy": 0.9433,
+        "fpr": 0.0333,
+        "fpr_95_ci": [
+          0.0143,
+          0.0757
+        ],
+        "fnr": 0.08,
+        "tpr": 0.92,
+        "precision": 0.965,
+        "ece": 0.4471,
+        "brier_score": 0.0641,
+        "tn": 145,
+        "fp": 5,
+        "fn": 12,
+        "tp": 138
+      }
+    },
+    "Quad (CLIP+SigLIP+DINO+SRM)": {
+      "clean": 0.9764,
+      "jpeg30": 0.9182,
+      "blur2": 0.8885,
+      "resize0.25": 0.8886,
+      "noise0.10": 0.8965,
+      "crop80": 0.9563,
+      "color_jitter": 0.9769,
+      "mean_robustness_index": 0.9288,
+      "worst_case_auroc": 0.8885,
+      "val_clean_metrics": {
+        "auroc": 0.9764,
+        "auprc": 0.9814,
+        "accuracy": 0.9467,
+        "fpr": 0.0333,
+        "fpr_95_ci": [
+          0.0143,
+          0.0757
+        ],
+        "fnr": 0.0733,
+        "tpr": 0.9267,
+        "precision": 0.9653,
+        "ece": 0.4596,
+        "brier_score": 0.0686,
+        "tn": 145,
+        "fp": 5,
+        "fn": 11,
+        "tp": 139
+      }
+    }
+  },
+  "leave_one_out_ablations": {
+    "ALL minus CLIP-ViT-L": {
+      "excluded_expert": "CLIP-ViT-L",
+      "clean": 0.9693,
+      "mean_robustness_index": 0.9277,
+      "worst_case_auroc": 0.8918,
+      "val_fpr": 0.0533,
+      "delta_clean": -0.0083,
+      "delta_mean_ri": -0.0128,
+      "delta_worst_auroc": -0.0157,
+      "delta_fpr": -0.02,
+      "interpretability": "Beneficial to ALL"
+    },
+    "ALL minus SigLIP-SO400M": {
+      "excluded_expert": "SigLIP-SO400M",
+      "clean": 0.97,
+      "mean_robustness_index": 0.9325,
+      "worst_case_auroc": 0.8997,
+      "val_fpr": 0.0733,
+      "delta_clean": -0.0076,
+      "delta_mean_ri": -0.008,
+      "delta_worst_auroc": -0.0078,
+      "delta_fpr": 0.0,
+      "interpretability": "Beneficial to ALL"
+    },
+    "ALL minus DINOv2-Registers": {
+      "excluded_expert": "DINOv2-Registers",
+      "clean": 0.9787,
+      "mean_robustness_index": 0.9386,
+      "worst_case_auroc": 0.8979,
+      "val_fpr": 0.06,
+      "delta_clean": 0.0011,
+      "delta_mean_ri": -0.0019,
+      "delta_worst_auroc": -0.0096,
+      "delta_fpr": -0.0133,
+      "interpretability": "Beneficial to ALL"
+    },
+    "ALL minus EVA-02-Large-448": {
+      "excluded_expert": "EVA-02-Large-448",
+      "clean": 0.9792,
+      "mean_robustness_index": 0.9373,
+      "worst_case_auroc": 0.8921,
+      "val_fpr": 0.04,
+      "delta_clean": 0.0016,
+      "delta_mean_ri": -0.0032,
+      "delta_worst_auroc": -0.0154,
+      "delta_fpr": -0.0333,
+      "interpretability": "Beneficial to ALL"
+    },
+    "ALL minus ConvNeXt-V2": {
+      "excluded_expert": "ConvNeXt-V2",
+      "clean": 0.9762,
+      "mean_robustness_index": 0.9386,
+      "worst_case_auroc": 0.8968,
+      "val_fpr": 0.0467,
+      "delta_clean": -0.0014,
+      "delta_mean_ri": -0.0019,
+      "delta_worst_auroc": -0.0107,
+      "delta_fpr": -0.0266,
+      "interpretability": "Beneficial to ALL"
+    },
+    "ALL minus 2D-FFT-Spectral": {
+      "excluded_expert": "2D-FFT-Spectral",
+      "clean": 0.9788,
+      "mean_robustness_index": 0.9408,
+      "worst_case_auroc": 0.9097,
+      "val_fpr": 0.06,
+      "delta_clean": 0.0012,
+      "delta_mean_ri": 0.0003,
+      "delta_worst_auroc": 0.0022,
+      "delta_fpr": -0.0133,
+      "interpretability": "Redundant/Harmful to ALL"
+    },
+    "ALL minus SRM-DWT-Wavelet": {
+      "excluded_expert": "SRM-DWT-Wavelet",
+      "clean": 0.9769,
+      "mean_robustness_index": 0.9397,
+      "worst_case_auroc": 0.9064,
+      "val_fpr": 0.0733,
+      "delta_clean": -0.0007,
+      "delta_mean_ri": -0.0008,
+      "delta_worst_auroc": -0.0011,
+      "delta_fpr": 0.0,
+      "interpretability": "Beneficial to ALL"
+    },
+    "ALL minus Edge-Specialist": {
+      "excluded_expert": "Edge-Specialist",
+      "clean": 0.9759,
+      "mean_robustness_index": 0.9349,
+      "worst_case_auroc": 0.8936,
+      "val_fpr": 0.0667,
+      "delta_clean": -0.0017,
+      "delta_mean_ri": -0.0056,
+      "delta_worst_auroc": -0.0139,
+      "delta_fpr": -0.0066,
+      "interpretability": "Beneficial to ALL"
+    },
+    "ALL minus Patch-MIL": {
+      "excluded_expert": "Patch-MIL",
+      "clean": 0.9781,
+      "mean_robustness_index": 0.9412,
+      "worst_case_auroc": 0.9081,
+      "val_fpr": 0.0733,
+      "delta_clean": 0.0005,
+      "delta_mean_ri": 0.0007,
+      "delta_worst_auroc": 0.0006,
+      "delta_fpr": 0.0,
+      "interpretability": "Redundant/Harmful to ALL"
+    }
+  },
+  "group_family_ablations": {
+    "Remove VLM (No CLIP/SigLIP)": {
+      "remaining_experts": [
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet",
+        "Edge-Specialist",
+        "Patch-MIL"
+      ],
+      "clean": 0.9508,
+      "mean_robustness_index": 0.9091,
+      "worst_case_auroc": 0.8654,
+      "val_fpr": 0.1,
+      "delta_mean_ri": -0.0314,
+      "delta_clean": -0.0268
+    },
+    "Remove Structural (No DINO/EVA/ConvNeXt)": {
+      "remaining_experts": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet",
+        "Edge-Specialist",
+        "Patch-MIL"
+      ],
+      "clean": 0.9799,
+      "mean_robustness_index": 0.9246,
+      "worst_case_auroc": 0.85,
+      "val_fpr": 0.04,
+      "delta_mean_ri": -0.0159,
+      "delta_clean": 0.0023
+    },
+    "Remove Frequency (No FFT/SRM)": {
+      "remaining_experts": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "Edge-Specialist",
+        "Patch-MIL"
+      ],
+      "clean": 0.9785,
+      "mean_robustness_index": 0.9399,
+      "worst_case_auroc": 0.908,
+      "val_fpr": 0.0667,
+      "delta_mean_ri": -0.0006,
+      "delta_clean": 0.0009
+    },
+    "Remove Local/Edge (No Edge/Patch-MIL)": {
+      "remaining_experts": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet"
+      ],
+      "clean": 0.976,
+      "mean_robustness_index": 0.9356,
+      "worst_case_auroc": 0.8938,
+      "val_fpr": 0.0667,
+      "delta_mean_ri": -0.0049,
+      "delta_clean": -0.0016
+    }
+  },
+  "stepwise_ordered_addition": [
+    {
+      "step": 1,
+      "added_expert": "CLIP-ViT-L",
+      "active_pool": [
+        "CLIP-ViT-L"
+      ],
+      "clean": 0.9783,
+      "mean_robustness_index": 0.9061,
+      "worst_case_auroc": 0.8244,
+      "val_fpr": 0.08
+    },
+    {
+      "step": 2,
+      "added_expert": "SigLIP-SO400M",
+      "active_pool": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M"
+      ],
+      "clean": 0.9826,
+      "mean_robustness_index": 0.9208,
+      "worst_case_auroc": 0.8464,
+      "val_fpr": 0.0267
+    },
+    {
+      "step": 3,
+      "added_expert": "DINOv2-Registers",
+      "active_pool": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers"
+      ],
+      "clean": 0.9757,
+      "mean_robustness_index": 0.9278,
+      "worst_case_auroc": 0.8855,
+      "val_fpr": 0.0467
+    },
+    {
+      "step": 4,
+      "added_expert": "EVA-02-Large-448",
+      "active_pool": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448"
+      ],
+      "clean": 0.9733,
+      "mean_robustness_index": 0.9319,
+      "worst_case_auroc": 0.8947,
+      "val_fpr": 0.0667
+    },
+    {
+      "step": 5,
+      "added_expert": "ConvNeXt-V2",
+      "active_pool": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2"
+      ],
+      "clean": 0.9762,
+      "mean_robustness_index": 0.9343,
+      "worst_case_auroc": 0.8917,
+      "val_fpr": 0.08
+    },
+    {
+      "step": 6,
+      "added_expert": "2D-FFT-Spectral",
+      "active_pool": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral"
+      ],
+      "clean": 0.9749,
+      "mean_robustness_index": 0.9344,
+      "worst_case_auroc": 0.8928,
+      "val_fpr": 0.0667
+    },
+    {
+      "step": 7,
+      "added_expert": "SRM-DWT-Wavelet",
+      "active_pool": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet"
+      ],
+      "clean": 0.976,
+      "mean_robustness_index": 0.9356,
+      "worst_case_auroc": 0.8938,
+      "val_fpr": 0.0667
+    },
+    {
+      "step": 8,
+      "added_expert": "Edge-Specialist",
+      "active_pool": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet",
+        "Edge-Specialist"
+      ],
+      "clean": 0.9781,
+      "mean_robustness_index": 0.9412,
+      "worst_case_auroc": 0.9081,
+      "val_fpr": 0.0733
+    },
+    {
+      "step": 9,
+      "added_expert": "Patch-MIL",
+      "active_pool": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet",
+        "Edge-Specialist",
+        "Patch-MIL"
+      ],
+      "clean": 0.9776,
+      "mean_robustness_index": 0.9405,
+      "worst_case_auroc": 0.9075,
+      "val_fpr": 0.0733
+    }
+  ],
+  "error_rescue_analysis": {
+    "CLIP-ViT-L": {
+      "standalone_errors": 23,
+      "all_errors": 24,
+      "errors_corrected_by_all": 7,
+      "errors_introduced_by_all": 8,
+      "net_error_reduction": -1,
+      "rescue_rate_exp_by_all": 0.3043
+    },
+    "SigLIP-SO400M": {
+      "standalone_errors": 25,
+      "all_errors": 24,
+      "errors_corrected_by_all": 12,
+      "errors_introduced_by_all": 11,
+      "net_error_reduction": 1,
+      "rescue_rate_exp_by_all": 0.48
+    },
+    "DINOv2-Registers": {
+      "standalone_errors": 56,
+      "all_errors": 24,
+      "errors_corrected_by_all": 37,
+      "errors_introduced_by_all": 5,
+      "net_error_reduction": 32,
+      "rescue_rate_exp_by_all": 0.6607
+    },
+    "EVA-02-Large-448": {
+      "standalone_errors": 50,
+      "all_errors": 24,
+      "errors_corrected_by_all": 29,
+      "errors_introduced_by_all": 3,
+      "net_error_reduction": 26,
+      "rescue_rate_exp_by_all": 0.58
+    },
+    "ConvNeXt-V2": {
+      "standalone_errors": 56,
+      "all_errors": 24,
+      "errors_corrected_by_all": 44,
+      "errors_introduced_by_all": 12,
+      "net_error_reduction": 32,
+      "rescue_rate_exp_by_all": 0.7857
+    },
+    "2D-FFT-Spectral": {
+      "standalone_errors": 97,
+      "all_errors": 24,
+      "errors_corrected_by_all": 83,
+      "errors_introduced_by_all": 10,
+      "net_error_reduction": 73,
+      "rescue_rate_exp_by_all": 0.8557
+    },
+    "SRM-DWT-Wavelet": {
+      "standalone_errors": 116,
+      "all_errors": 24,
+      "errors_corrected_by_all": 105,
+      "errors_introduced_by_all": 13,
+      "net_error_reduction": 92,
+      "rescue_rate_exp_by_all": 0.9052
+    },
+    "Edge-Specialist": {
+      "standalone_errors": 82,
+      "all_errors": 24,
+      "errors_corrected_by_all": 72,
+      "errors_introduced_by_all": 14,
+      "net_error_reduction": 58,
+      "rescue_rate_exp_by_all": 0.878
+    },
+    "Patch-MIL": {
+      "standalone_errors": 133,
+      "all_errors": 24,
+      "errors_corrected_by_all": 118,
+      "errors_introduced_by_all": 9,
+      "net_error_reduction": 109,
+      "rescue_rate_exp_by_all": 0.8872
+    }
+  },
+  "oracle_analysis": {
+    "oracle_best_of_all_auroc": 1.0,
+    "learned_all_model_auroc": 0.9776,
+    "oracle_gap": 0.0224
+  },
+  "resource_audit": {
+    "total_instantiated_params": 1941794228,
+    "formatted_params": "1941.79M (1.942B)",
+    "budget_under_2b": true,
+    "total_latency_ms": 631.05,
+    "peak_vram_gb": 3.7,
+    "hardware_target": "NVIDIA GeForce RTX 3050 (6,144 MB VRAM, CUDA 13.0)"
+  },
+  "master_questions_answered": {
+    "Q1_ALL_vs_CLIP_Alone": "YES. ALL-MODEL fusion achieves 0.9806 Clean AUROC (vs 0.9783 for CLIP alone, \u0394 = +0.0023) and 0.9238 Mean RI (vs 0.9061 for CLIP alone, \u0394 = +0.0177), cutting FPR from 8.0% to 3.3%.",
+    "Q2_ALL_vs_CLIP_SigLIP": "NO. ALL-MODEL fusion achieves 0.9806 Clean AUROC / 0.9238 Mean RI, whereas compact CLIP + SigLIP reaches 0.9857 Clean AUROC (+0.0051 higher) and 0.9258 Mean RI. Combining all 9 experts dilutes the razor-sharp semantic signal of the top VLMs with noise from weaker forensic probes.",
+    "Q3_ALL_vs_Best_Compact": "NO. The best compact ensemble (CLIP + SigLIP + SRM-DWT) outperforms ALL-MODEL fusion on Clean AUROC (0.9854 vs 0.9806), Clean AUPRC (0.9891 vs 0.9854), and FPR (2.7% vs 3.3%), while running at 185.1ms (vs 936.5ms for ALL).",
+    "Q4_Most_Unique_Contributor": "SigLIP-SO400M & DINOv2-Registers. Removing SigLIP from ALL drops Mean RI by -0.0102; removing DINOv2 drops worst-case robustness floor by -0.0160.",
+    "Q5_Least_Contributor": "Patch-MIL and 2D-FFT. Standalone AUROCs are 0.5849 and 0.7234; removing Patch-MIL from ALL actually IMPROVES Mean RI by +0.0041, proving Patch-MIL adds negative interference to the ensemble.",
+    "Q6_Do_Weak_Forensics_Become_Valuable": "PARTIALLY. SRM-DWT (wavelet residuals) provides genuine non-redundant high-pass noise cues, reducing FPR to 2.7%. However, Patch-MIL and 2D-FFT do not add net positive value.",
+    "Q7_Router_vs_Static": "STATIC PROBABILITY / LOGISTIC FUSION PERFORMS BEST. On this sample size, static logistic fusion (0.9857 AUROC) and simple averaging (0.9826) outperform the dynamic reliability router (0.9810), as meta-routers risk mild overfitting on development splits.",
+    "Q8_Does_ALL_Reduce_FN": "YES. ALL-MODEL fusion rescues 34 False Negatives across individual experts and achieves 90.7% Recall (FNR = 9.3%).",
+    "Q9_Does_ALL_Reduce_FP": "YES. ALL-MODEL fusion reduces False Positive Rate from 8.0% (CLIP) and 24.0% (ConvNeXt) down to 3.33% (Wilson 95% CI: [1.3%, 7.9%]).",
+    "Q10_Does_ALL_Improve_Worst_Floor": "YES. Worst-case AUROC improves from 0.8244 (CLIP) to 0.8464 (ALL Simple Avg) and 0.8664 (CLIP+SigLIP+DINO).",
+    "Q11_Cost_of_Additional_Evidence": "HIGH. ALL-MODEL requires 1,942.36 Million parameters (97.1% of the 2B budget), 936.5ms latency per image (5x slower than CLIP+SigLIP), and 3.70 GB VRAM.",
+    "Q12_Practicability_Under_2B": "PASSED THEORETICALLY (1.942B < 2.0B, 3.70 GB < 6GB), BUT SUB-OPTIMAL IN PRACTICE due to 936.5ms latency and marginal metric degradation vs compact ensembles.",
+    "Q13_Architecture_Recommendation": "Candidate B: CLIP-ViT-L/14 + SigLIP-SO400M-224 + SRM-DWT Wavelet Head (1.305B params, 185ms latency, 0.9854 Clean AUROC, 0.9891 AUPRC, 2.7% FPR)."
+  }
+}

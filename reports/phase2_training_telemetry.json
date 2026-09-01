@@ -1,0 +1,9 @@
+{
+  "gpu_model": "NVIDIA GeForce RTX 3050 (6GB VRAM)",
+  "total_extraction_seconds": 15171.8,
+  "average_extraction_throughput_img_per_sec": 6.8,
+  "peak_vram_used_mib": 3515,
+  "host_ram_used_gb": 3.8,
+  "swap_used_gb": 0.55,
+  "head_training_time_seconds": 24.5
+}

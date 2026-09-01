@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-08-28T20:52:37Z",
+  "gate_status": "PASSED \u2014 HARDWARE TELEMETRY & I/O WITHIN BUDGET",
+  "benchmark_parameters": {
+    "samples_tested": 2000,
+    "batch_size": 64,
+    "dataloader_workers": 4,
+    "pin_memory": true,
+    "prefetch_factor": 2,
+    "persistent_workers": true,
+    "non_blocking_gpu_transfer": true
+  },
+  "performance_metrics": {
+    "elapsed_seconds": 23.37,
+    "throughput_images_per_sec": 85.57,
+    "peak_vram_mb": 36.75,
+    "peak_vram_gb": 0.04,
+    "host_ram_status": "STABLE (< 12.0 GB hot working buffer)",
+    "swap_delta_gb": 0.0,
+    "swap_stability": "ZERO SUSTAINED SWAP ACTIVITY"
+  },
+  "verdict": "Config C pipeline achieves 85.57 img/s with 0.00 GB swap impact and 36.75 MB VRAM."
+}

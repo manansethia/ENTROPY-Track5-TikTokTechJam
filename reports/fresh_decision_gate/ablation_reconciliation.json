@@ -1,0 +1,137 @@
+{
+  "timestamp": "2026-08-28T22:00:57Z",
+  "leave_one_out_classification": {
+    "CLIP-ViT-L": {
+      "delta_clean": -0.0083,
+      "delta_mean_ri": -0.0128,
+      "delta_worst": -0.0157,
+      "val_fpr": 0.0533,
+      "classification": "ESSENTIAL (Core VLM Anchor)"
+    },
+    "SigLIP-SO400M": {
+      "delta_clean": -0.0076,
+      "delta_mean_ri": -0.008,
+      "delta_worst": -0.0078,
+      "val_fpr": 0.0733,
+      "classification": "ESSENTIAL (Core VLM Anchor)"
+    },
+    "DINOv2-Registers": {
+      "delta_clean": 0.0011,
+      "delta_mean_ri": -0.0019,
+      "delta_worst": -0.0096,
+      "val_fpr": 0.06,
+      "classification": "USEFUL (Structural Robustness on Extreme Rescaling)"
+    },
+    "EVA-02-Large-448": {
+      "delta_clean": 0.0016,
+      "delta_mean_ri": -0.0032,
+      "delta_worst": -0.0154,
+      "val_fpr": 0.04,
+      "classification": "REDUNDANT (High compute overhead, redundant with DINO/SigLIP)"
+    },
+    "ConvNeXt-V2": {
+      "delta_clean": -0.0014,
+      "delta_mean_ri": -0.0019,
+      "delta_worst": -0.0107,
+      "val_fpr": 0.0467,
+      "classification": "REDUNDANT (High compute overhead, redundant with DINO/SigLIP)"
+    },
+    "2D-FFT-Spectral": {
+      "delta_clean": 0.0012,
+      "delta_mean_ri": 0.0003,
+      "delta_worst": 0.0022,
+      "val_fpr": 0.06,
+      "classification": "MARGINAL / REDUNDANT (SRM captures frequency better)"
+    },
+    "SRM-DWT-Wavelet": {
+      "delta_clean": -0.0007,
+      "delta_mean_ri": -0.0008,
+      "delta_worst": -0.0011,
+      "val_fpr": 0.0733,
+      "classification": "USEFUL (High-Pass Residual & FPR Reduction)"
+    },
+    "Edge-Specialist": {
+      "delta_clean": -0.0017,
+      "delta_mean_ri": -0.0056,
+      "delta_worst": -0.0139,
+      "val_fpr": 0.0667,
+      "classification": "USEFUL (High-Pass Residual & FPR Reduction)"
+    },
+    "Patch-MIL": {
+      "delta_clean": 0.0005,
+      "delta_mean_ri": 0.0007,
+      "delta_worst": 0.0006,
+      "val_fpr": 0.0733,
+      "classification": "HARMFUL NOISE (System improves without it)"
+    }
+  },
+  "group_family_ablations": {
+    "Remove VLM (No CLIP/SigLIP)": {
+      "remaining_experts": [
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet",
+        "Edge-Specialist",
+        "Patch-MIL"
+      ],
+      "clean": 0.9508,
+      "mean_robustness_index": 0.9091,
+      "worst_case_auroc": 0.8654,
+      "val_fpr": 0.1,
+      "delta_mean_ri": -0.0314,
+      "delta_clean": -0.0268
+    },
+    "Remove Structural (No DINO/EVA/ConvNeXt)": {
+      "remaining_experts": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet",
+        "Edge-Specialist",
+        "Patch-MIL"
+      ],
+      "clean": 0.9799,
+      "mean_robustness_index": 0.9246,
+      "worst_case_auroc": 0.85,
+      "val_fpr": 0.04,
+      "delta_mean_ri": -0.0159,
+      "delta_clean": 0.0023
+    },
+    "Remove Frequency (No FFT/SRM)": {
+      "remaining_experts": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "Edge-Specialist",
+        "Patch-MIL"
+      ],
+      "clean": 0.9785,
+      "mean_robustness_index": 0.9399,
+      "worst_case_auroc": 0.908,
+      "val_fpr": 0.0667,
+      "delta_mean_ri": -0.0006,
+      "delta_clean": 0.0009
+    },
+    "Remove Local/Edge (No Edge/Patch-MIL)": {
+      "remaining_experts": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "EVA-02-Large-448",
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet"
+      ],
+      "clean": 0.976,
+      "mean_robustness_index": 0.9356,
+      "worst_case_auroc": 0.8938,
+      "val_fpr": 0.0667,
+      "delta_mean_ri": -0.0049,
+      "delta_clean": -0.0016
+    }
+  }
+}

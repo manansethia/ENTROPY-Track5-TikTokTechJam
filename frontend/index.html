@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENTROPY — Image Authenticity Lab</title>
+  
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" href="/assets/entropy-cards-favicon.png">
+  <link rel="stylesheet" href="/style.css?v=20260901-5">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Saira+Semi+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Vendor Libraries -->
+  <script src="/vendor/three.min.js"></script>
+  <script src="/vendor/gsap.min.js"></script>
+  <script src="/vendor/Flip.min.js"></script>
+</head>
+<body>
+
+  <div class="experience" id="experience">
+    <!-- 3D PBR WebGL Scene Canvas -->
+    <canvas id="scene-canvas"></canvas>
+    
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="wordmark">
+        <span>ENTROPY — AIGC FORENSICS</span>
+        <small>IMAGE AUTHENTICITY LAB</small>
+      </div>
+
+      <nav class="site-nav">
+        <a href="#analyze" class="active" onclick="showSection('analyze')">ANALYZE</a>
+        <a href="#about" onclick="openDocModal('about')">ABOUT</a>
+        <a href="#tech" onclick="openDocModal('technology')">TECHNOLOGY</a>
+        <a href="#dataset" onclick="openDocModal('dataset')">DATASET</a>
+        <a href="#history" onclick="openDocModal('lineage')">MODEL HISTORY</a>
+        <a href="#releases" onclick="openDocModal('releases')">RELEASES</a>
+        <a href="#openforensics" onclick="openDocModal('openforensics')">OPEN FORENSICS</a>
+        <a href="#wiki" onclick="openDocModal('wiki')">WIKI</a>
+      </nav>
+
+      <div class="system-online" title="Backend analysis service status">
+        <i></i>
+        <span id="backend-status-text">ANALYSIS ENGINE</span>
+      </div>
+    </header>
+
+    <!-- Main Investigation Stage -->
+    <main class="stage" id="main-stage">
+      
+      <!-- Hero Header & Instrument Stack -->
+      <div class="hero-copy">
+        <p class="eyebrow">IMAGE AUTHENTICITY LAB</p>
+        <h1>IS YOUR IMAGE <em>AI OR NOT?</em></h1>
+        <p class="hero-summary">
+          Physical forensic workstation for authentic camera photographs, localized AI manipulations, and fully synthetic generative vision.
+        </p>
+      </div>
+
+
+      <!-- Physical Evidence Tray Station -->
+      <div class="evidence-tray-wrap" id="evidence-tray-wrap">
+        <div class="tray-shadow"></div>
+        <div class="evidence-tray" id="evidence-tray">
+          <div class="tray-corner corner-a"></div>
+          <div class="tray-corner corner-b"></div>
+          <div class="tray-corner corner-c"></div>
+          <div class="tray-corner corner-d"></div>
+          
+          <div class="scan-beam" id="scan-beam"></div>
+
+          <div class="tray-header">
+            <div>
+              <p class="eyebrow">PHYSICAL EVIDENCE TABLE</p>
+              <h2 id="tray-headline">DROP YOUR EVIDENCE</h2>
+            </div>
+            <div class="session-record">
+              <span>AF-SESSION #0942</span>
+              <small id="session-count">0 ITEMS STAGED</small>
+            </div>
+          </div>
+
+          <!-- Staged 3D Evidence Deck -->
+          <div class="evidence-deck" id="evidence-deck"></div>
+
+          <!-- Tray Action Controls -->
+          <div class="tray-actions">
+            <button class="button button-quiet" id="btn-select" onclick="triggerFileInput()">SELECT IMAGES</button>
+            <p>UP TO 100 IMAGES · 500 MB SESSION</p>
+            <button class="button button-ivory" id="analyze-button" onclick="runAnalysis()">ANALYZE DECK</button>
+          </div>
+
+          <input type="file" id="file-input" multiple accept="image/*" style="display:none" onchange="handleFilesSelected(event)">
+        </div>
+      </div>
+
+      <!-- Analysis Status Pipeline Stepper -->
+      <div class="analysis-status" id="analysis-status" style="display: none;">
+        <span class="eyebrow">PROCESSING</span>
+        <ol>
+          <li id="step-1" class="active">INGEST</li>
+          <li id="step-2">EXIF &amp; C2PA</li>
+          <li id="step-3">SRM &amp; 2D FFT</li>
+          <li id="step-4">TRIPLE-HYBRID EVAL</li>
+          <li id="step-5">VERDICT RECONCILIATION</li>
+        </ol>
+        <span id="status-timer">0.12s</span>
+      </div>
+
+      <!-- Classified Results 3-Deck Deal Section -->
+      <section class="classified-decks" id="classified-decks" style="display: none;">
+        <div class="classification-heading">
+          <p class="eyebrow">RECONCILED FORENSIC FINDINGS</p>
+          <h2>PHYSICAL EVIDENCE PILES</h2>
+        </div>
+
+        <div class="classification-piles">
+          
+          <!-- Pile 1: Authentic Photographs -->
+          <div class="result-pile real" id="pile-real" onclick="openTopCard('REAL')">
+            <div class="pile-label">
+              <div>
+                <h3>AUTHENTIC PHOTOGRAPHS</h3>
+                <p>PRNU &amp; OPTICAL GRAIN VERIFIED</p>
+              </div>
+              <em id="count-real">0</em>
+            </div>
+            <div class="pile-cards" id="cards-real"></div>
+          </div>
+
+          <!-- Pile 2: Partial AI Manipulations -->
+          <div class="result-pile partial" id="pile-partial" onclick="openTopCard('PARTIAL_AI')">
+            <div class="pile-label">
+              <div>
+                <h3>PARTIAL AI MANIPULATIONS</h3>
+                <p>LOCALIZED INPAINTING DETECTED</p>
+              </div>
+              <em id="count-partial">0</em>
+            </div>
+            <div class="pile-cards" id="cards-partial"></div>
+          </div>
+
+          <!-- Pile 3: Fully Synthetic Images -->
+          <div class="result-pile full" id="pile-full" onclick="openTopCard('FULL_AIGC')">
+            <div class="pile-label">
+              <div>
+                <h3>SYNTHETIC IMAGES</h3>
+                <p>GENERATIVE DIFFUSION SIGNATURES</p>
+              </div>
+              <em id="count-full">0</em>
+            </div>
+            <div class="pile-cards" id="cards-full"></div>
+          </div>
+
+        </div>
+
+        <p class="result-footnote">CLICK ANY EVIDENCE CARD TO LIFT IT INTO THE HIGH-RESOLUTION FORENSIC WORKBENCH</p>
+      </section>
+
+      <!-- Field Notes / Forensic Methodology -->
+      <section class="field-notes">
+        <p class="eyebrow">FORENSIC METHODOLOGY</p>
+        <h2>DECOUPLING SEMANTICS<br>FROM FREQUENCY NOISE</h2>
+        <p>
+          Modern generative pipelines leave subtle multi-scale artifacts. Our Triple-Hybrid Champion combines frozen semantic foundation representations (CLIP ViT-L/14 &amp; SigLIP SO400M) with high-order spatial residual filtering (5×5 SRM &amp; Haar Wavelets) to deliver robust detection across social media compression and localized inpainting.
+        </p>
+        <div class="method-chain">
+          <span>01 / DUAL-CLIP<small>Semantic coherence &amp; anatomy invariants</small></span>
+          <span>02 / SIGLIP-400M<small>Fine-grained multimodal consistency</small></span>
+          <span>03 / 5x5 SRM<small>Spatial-rich residual noise extraction</small></span>
+          <span>04 / HAAR WAVELET<small>High-frequency sub-band anomaly detection</small></span>
+          <span>05 / RELIABILITY GATE<small>Softmax entropy dynamic stream weighting</small></span>
+          <span>06 / CALIBRATION<small>Temperature T=1.523 for FPR &le; 0.1%</small></span>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="stage-footer">
+      <span class="footer-brand"><strong>ENTROPY — AIGC FORENSICS</strong><small>IMAGE AUTHENTICITY LAB · MANAN SETHIA</small></span>
+      <span class="footer-meta">© 2026 · MANAN SETHIA</span>
+      <span class="footer-runtime">FORENSIC ANALYSIS WORKSTATION</span>
+    </footer>
+  </div>
+
+  <!-- High-Resolution Forensic Inspection Workbench Modal -->
+  <div class="inspection" id="inspection">
+    <div class="inspection-backdrop"></div>
+    
+    <header class="inspection-header">
+      <button class="back-button" onclick="closeInspection()">
+        <span>&larr;</span> RETURN TO INVESTIGATION TABLE
+      </button>
+      <div class="inspection-id">
+        <span>EXHIBIT</span>
+        <strong id="inspect-case-id">AF-7C21</strong>
+        <span id="inspect-filename">canon_eos_r5.jpg</span>
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <div class="inspection-cycle" aria-label="Cycle through analyzed evidence">
+          <button class="button button-quiet" type="button" onclick="cycleInspection(-1)">PREVIOUS</button>
+          <button class="button button-quiet" type="button" onclick="cycleInspection(1)">NEXT</button>
+        </div>
+        <button class="button button-brass" onclick="exportDossier('JSON')">EXPORT JSON</button>
+        <button class="button button-quiet" onclick="exportDossier('PRINT')">PRINT DOSSIER</button>
+      </div>
+    </header>
+
+    <div class="inspection-workspace">
+      <!-- Left: Interactive Image Workbench Viewport -->
+      <div class="viewer-column">
+        <div class="viewer-topline">
+          <div class="view-controls">
+            <button id="mode-orig" class="active" onclick="setWorkbenchMode('ORIG')">ORIGINAL</button>
+            <button id="mode-heat" onclick="setWorkbenchMode('HEAT')">AI HEATMAP</button>
+            <button id="mode-srm" onclick="setWorkbenchMode('SRM')">SRM SUPPORTING DIAGNOSTIC</button>
+            <button id="mode-fft" onclick="setWorkbenchMode('FFT')">IMAGE FREQUENCY DIAGNOSTIC</button>
+          </div>
+
+          <div class="transform-controls" id="transform-controls">
+            <label>QUALITY <input id="transform-quality" type="range" min="10" max="100" value="85"></label>
+            <label>BLUR <input id="transform-blur" type="range" min="0" max="12" step="0.5" value="0"></label>
+            <label>CROP <input id="transform-crop" type="range" min="50" max="100" value="100"></label>
+            <button class="button button-quiet" type="button" onclick="applyPreviewTransform()">RUN TRANSFORMATION</button>
+          </div>
+
+          <div class="opacity-control" id="opacity-wrap">
+            <label for="heat-opacity">OVERLAY OPACITY</label>
+            <input type="range" id="heat-opacity" min="0" max="100" value="65" oninput="adjustHeatOpacity(this.value)">
+            <output id="opacity-out">65%</output>
+          </div>
+        </div>
+
+        <div class="image-workbench show-heatmap" id="workbench">
+          <img id="workbench-img" src="" alt="Evidence View">
+          <canvas id="workbench-overlay" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+          <div class="heatmap-field" id="workbench-heatmap"></div>
+          <div class="patch-grid" id="workbench-patches"></div>
+          <div class="suspicious-region" id="workbench-suspicious">
+            <span>ANOMALY AREA (4.2%)</span>
+            <b>&Delta; 0.892</b>
+          </div>
+          <div class="provenance-stamp" id="workbench-provenance">
+            <span>PROVENANCE ATTESTATION</span>
+            <strong id="prov-headline">C2PA MANIFEST VERIFIED</strong>
+            <small id="prov-body">Cryptographic hardware signature intact.</small>
+          </div>
+          <div class="patch-readout" id="workbench-readout">
+            PATCH [4, 5]: DIVERGENCE SCORE = 0.892<br>LOCALIZED SRM RESIDUAL ENERGY = 5.12
+          </div>
+        </div>
+
+        <!-- Forensic Replay Stepper -->
+        <div class="replay">
+          <span>FORENSIC REPLAY:</span>
+          <button id="step-ingest" class="active" onclick="replayStage('ingest')">01 INGEST</button>
+          <button id="step-global" onclick="replayStage('global')">02 GLOBAL VIT</button>
+          <button id="step-local" onclick="replayStage('local')">03 SRM DIAGNOSTIC</button>
+          <button id="step-prov" onclick="replayStage('prov')">04 PROVENANCE</button>
+          <button id="step-verdict" onclick="replayStage('verdict')">05 VERDICT</button>
+        </div>
+      </div>
+
+      <!-- Right: Detailed Evidence Dossier Panel -->
+      <aside class="evidence-panel">
+        
+        <!-- Section 1: Verdict Assessment -->
+        <section class="verdict-section">
+          <p class="panel-kicker">
+            VERDICT ASSESSMENT <span id="verdict-tier">HIGH CONFIDENCE</span>
+          </p>
+          <h2 id="inspect-verdict">AUTHENTIC PHOTOGRAPH</h2>
+          <p class="verdict-copy" id="inspect-desc">
+            Authentic camera capture with verified sensor noise profile.
+          </p>
+          
+          <div class="metric-row">
+            <div>
+              <dt>AI PROBABILITY</dt>
+              <dd id="metric-ai-prob">1.5%</dd>
+            </div>
+            <div>
+              <dt>AFFECTED AREA</dt>
+              <dd id="metric-affected">0.0%</dd>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Spatial & Spectral Signals (Stream C) -->
+        <section>
+          <p class="panel-kicker">SPECTRAL &amp; NOISE SIGNALS <span>STREAM C</span></p>
+          <div class="signal">
+            <span>2D FFT High-Freq Ratio</span>
+            <b id="val-fft">0.0412</b>
+            <i id="bar-fft" style="--value: 12%;"></i>
+          </div>
+          <div class="signal">
+            <span>5×5 SRM Residual Energy</span>
+            <b id="val-srm">1.8420</b>
+            <i id="bar-srm" style="--value: 24%;"></i>
+          </div>
+          <div class="signal">
+            <span>Laplacian Variance</span>
+            <b id="val-lap">142.5</b>
+            <i id="bar-lap" style="--value: 38%;"></i>
+          </div>
+          <div class="signal">
+            <span>Inconsistency Status</span>
+            <b id="val-inconst" style="color: var(--emerald);">CLEAN PASS</b>
+          </div>
+        </section>
+
+        <!-- Section 3: Model Consensus (Reliability Gate) -->
+        <section>
+          <p class="panel-kicker">MODEL CONSENSUS <span>GATE WEIGHTS</span></p>
+          <div class="consensus">
+            <span>CLIP-L</span>
+            <i id="bar-clip" style="--value: 38%;"></i>
+            <b id="val-clip">0.38</b>
+          </div>
+          <div class="consensus">
+            <span>SigLIP</span>
+            <i id="bar-siglip" style="--value: 42%;"></i>
+            <b id="val-siglip">0.42</b>
+          </div>
+          <div class="consensus">
+            <span>SRM-C</span>
+            <i id="bar-srm-gate" style="--value: 20%;"></i>
+            <b id="val-srm-gate">0.20</b>
+          </div>
+        </section>
+
+        <!-- Section 4: Hardware & Metadata (EXIF / C2PA) -->
+        <section>
+          <p class="panel-kicker">HARDWARE &amp; METADATA <span>EXIF / C2PA</span></p>
+          <dl class="record-list">
+            <div>
+              <dt>Camera Model</dt>
+              <dd id="meta-camera">Canon EOS R5</dd>
+            </div>
+            <div>
+              <dt>Lens Model</dt>
+              <dd id="meta-lens">RF 85mm f/1.2L USM</dd>
+            </div>
+            <div>
+              <dt>Exposure</dt>
+              <dd id="meta-exp">1/500s · f/1.4 · ISO 100</dd>
+            </div>
+            <div>
+              <dt>Dimensions</dt>
+              <dd id="meta-dim">6016 × 4016</dd>
+            </div>
+            <div>
+              <dt>C2PA Status</dt>
+              <dd id="meta-c2pa">NOT DETECTED</dd>
+            </div>
+            <div>
+              <dt>SHA-256</dt>
+              <dd id="meta-sha">7c21a4f89d3e...3140</dd>
+            </div>
+          </dl>
+        </section>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- Documentation Modal -->
+  <div class="inspection" id="doc-modal" style="z-index: 25;">
+    <div class="inspection-backdrop"></div>
+    <header class="inspection-header">
+      <button class="back-button" onclick="closeDocModal()">
+        <span>&larr;</span> RETURN TO WORKSTATION
+      </button>
+      <div class="inspection-id">
+        <span>ARCHIVAL SECTION</span>
+        <strong id="doc-modal-title">ABOUT</strong>
+      </div>
+      <div></div>
+    </header>
+    <div style="max-width: 860px; margin: 40px auto; padding: 0 24px; color: var(--ivory); font-family: var(--system); line-height: 1.6;" id="doc-modal-content">
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Main Application Logic -->
+  <script src="/app.js?v=20260901-5"></script>
+</body>
+</html>

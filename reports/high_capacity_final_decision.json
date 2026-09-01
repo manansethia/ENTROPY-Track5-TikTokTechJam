@@ -1,0 +1,37 @@
+{
+  "selected_architecture_tier": "A",
+  "decision_rationale": "Config A decisively selected as Champion: (1) Config A achieves superior Low-FPR detection (TPR @ FPR<=0.10% of 96.02% vs Config B's 91.52%, and AUROC 0.999441 vs 0.998494); (2) Config A operates within safe memory bounds (4,577 MB VRAM with 1,567 MB headroom), whereas Config B breached headroom limits (5,662 MB VRAM, 482 MB headroom) and Config C triggered CUDA OutOfMemoryError on 6.14 GB GPU.",
+  "trainable_parameters_m": 31.94,
+  "dev_auroc": 0.999441,
+  "dev_auprc": 0.999479,
+  "dev_tpr_at_0_10pct_fpr": 96.02,
+  "dev_tpr_at_0_01pct_fpr": 78.46,
+  "throughput_samples_per_sec": 22.35,
+  "peak_reserved_vram_mb": 4577.0,
+  "safe_vram_headroom_mb": 1567.0,
+  "winning_candidate_checkpoint": "/home/manan/aigc_robust_detection/checkpoints/high_capacity/candidate_config_A.pt",
+  "candidate_summary": {
+    "Config_A": {
+      "params_m": 31.94,
+      "auroc": 0.999441,
+      "tpr_at_0_10pct_fpr": 96.02,
+      "vram_mb": 4577.0,
+      "status": "CHAMPION_SELECTED"
+    },
+    "Config_B": {
+      "params_m": 60.9,
+      "auroc": 0.998494,
+      "tpr_at_0_10pct_fpr": 91.52,
+      "vram_mb": 5662.0,
+      "status": "REJECTED_QUALITY_AND_HEADROOM"
+    },
+    "Config_C": {
+      "params_m": 90.97,
+      "auroc": null,
+      "tpr_at_0_10pct_fpr": null,
+      "vram_mb": 6144.0,
+      "status": "REJECTED_OOM"
+    }
+  },
+  "completed_at": "2026-08-29T23:43:11Z"
+}

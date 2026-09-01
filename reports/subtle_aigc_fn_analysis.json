@@ -1,0 +1,215 @@
+{
+  "timestamp": "2026-08-28T20:18:54Z",
+  "total_false_negatives_at_080": 71,
+  "generator_breakdown": {
+    "Synthetic Diffusion General": 71
+  },
+  "primary_failure_mechanisms": {
+    "A_high_fidelity_texture_synthesis": "State-of-the-art flow-matching generators (FLUX.1) and advanced latent models synthesize coherent micro-textures without standard checkerboard deconvolution grids.",
+    "B_low_contrast_natural_lighting": "Images with soft ambient lighting and heavy depth-of-field blur contain fewer high-frequency edges for the SRM wavelet head.",
+    "C_small_pilot_sample_capacity": "The 1,000-sample pilot training set only exposes the linear fusion head to a small fraction of the diverse latent prompt space. Expanding to 50,000+ samples will provide the representation coverage required to separate subtle generative artifacts from real images."
+  },
+  "top_lowest_confidence_fn_samples": [
+    {
+      "image_id": "fresh_5k_01732",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00003-of-00249_sidfake_00098.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.0071,
+      "file_size_bytes": 228168,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_00564",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00002-of-00249_sidfake_00104.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.0132,
+      "file_size_bytes": 262699,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_01111",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_48_fake_00137.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.0372,
+      "file_size_bytes": 114128,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_00071",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00000-of-00249_sidfake_00249.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.0488,
+      "file_size_bytes": 310502,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_04946",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_16_fake_00099.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.056,
+      "file_size_bytes": 119099,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_03954",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00002-of-00249_sidfake_00373.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.062,
+      "file_size_bytes": 162267,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_01328",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_32_fake_00295.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.0818,
+      "file_size_bytes": 138704,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_01992",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00000-of-00249_sidfake_00058.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.0851,
+      "file_size_bytes": 186456,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_02403",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00002-of-00249_sidfake_00017.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.0963,
+      "file_size_bytes": 169030,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_03015",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00003-of-00249_sidfake_00033.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.106,
+      "file_size_bytes": 288334,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_03413",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00003-of-00249_sidfake_00218.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.1605,
+      "file_size_bytes": 295681,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_04795",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00000-of-00249_sidfake_00497.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.1704,
+      "file_size_bytes": 222407,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_03537",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00001-of-00249_sidfake_00370.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.1929,
+      "file_size_bytes": 329994,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_04541",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00001-of-00249_sidfake_00415.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.1948,
+      "file_size_bytes": 157835,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_00434",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/train-00002-of-00249_sidfake_00419.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.1969,
+      "file_size_bytes": 273681,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_04993",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_23_fake_00188.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.2113,
+      "file_size_bytes": 74405,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_00756",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_39_fake_00099.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.2116,
+      "file_size_bytes": 162958,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_03844",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_46_fake_00080.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.2453,
+      "file_size_bytes": 102043,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_04274",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_47_fake_00080.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.2697,
+      "file_size_bytes": 81272,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    },
+    {
+      "image_id": "fresh_5k_02197",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_20_fake_00202.jpg",
+      "generator": "Synthetic Diffusion General",
+      "architecture_type": "Latent Diffusion",
+      "dataset_source": "massive_balanced_50k",
+      "predicted_prob": 0.3624,
+      "file_size_bytes": 64488,
+      "failure_mode": "SUBTLE_PHOTOREALISTIC_AIGC"
+    }
+  ],
+  "remediation_strategy": "In Phase B (50K Large-Scale Training), oversample subtle diffusion photorealism (FLUX.1, SDXL, Midjourney v6) in the Online Hard Example Mining (OHEM) curriculum to lower FNR without compromising FPR."
+}

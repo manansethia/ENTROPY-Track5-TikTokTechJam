@@ -1,0 +1,674 @@
+{
+  "timestamp": "2026-08-28 15:10:57",
+  "status": "STAGE_1_COMPLETED_DECISION_GATE_READY",
+  "execution_verification": {
+    "required_expert_count": 11,
+    "completed_expert_count": 11,
+    "all_experts_completed": true,
+    "image_evaluations_verified": 30800,
+    "batch_forwards_verified": 1001,
+    "finite_predictions_verified": true,
+    "zero_leakage_verified": true
+  },
+  "four_tier_performance_matrix": {
+    "Tier 1 (Zero-Shot VLM)": {
+      "SigLIP-SO400M": {
+        "clean_auroc": 0.7811,
+        "mean_robustness_index": 0.7461,
+        "worst_case_auroc": 0.7039,
+        "robustness_degradation": 0.0772,
+        "clean_fpr": 0.595,
+        "clean_f1": 0.7291,
+        "peak_vram_gb": 3.278,
+        "latency_ms": 70.69
+      },
+      "CLIP-ViT-L": {
+        "clean_auroc": 0.9072,
+        "mean_robustness_index": 0.8235,
+        "worst_case_auroc": 0.745,
+        "robustness_degradation": 0.1622,
+        "clean_fpr": 0.14,
+        "clean_f1": 0.8031,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 56.78
+      }
+    },
+    "Tier 2 (Pretrained Detectors)": {
+      "AIDE": {
+        "clean_auroc": 0.5,
+        "mean_robustness_index": 0.5,
+        "worst_case_auroc": 0.5,
+        "robustness_degradation": 0.0,
+        "clean_fpr": 1.0,
+        "clean_f1": 0.6667,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 0.59
+      },
+      "DDA": {
+        "clean_auroc": 0.5,
+        "mean_robustness_index": 0.5,
+        "worst_case_auroc": 0.5,
+        "robustness_degradation": 0.0,
+        "clean_fpr": 1.0,
+        "clean_f1": 0.6667,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 0.48
+      }
+    },
+    "Tier 3 (Untrained SSL Representations)": {
+      "DINOv2-Registers": {
+        "clean_auroc": 0.4838,
+        "mean_robustness_index": 0.4804,
+        "worst_case_auroc": 0.461,
+        "robustness_degradation": 0.0228,
+        "clean_fpr": 0.57,
+        "clean_f1": 0.4757,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 55.64
+      },
+      "EVA-02-Large-448": {
+        "clean_auroc": 0.4876,
+        "mean_robustness_index": 0.4912,
+        "worst_case_auroc": 0.4836,
+        "robustness_degradation": 0.004,
+        "clean_fpr": 0.545,
+        "clean_f1": 0.489,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 437.81
+      },
+      "ConvNeXt-V2": {
+        "clean_auroc": 0.481,
+        "mean_robustness_index": 0.489,
+        "worst_case_auroc": 0.4785,
+        "robustness_degradation": 0.0025,
+        "clean_fpr": 0.55,
+        "clean_f1": 0.4615,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 7.28
+      }
+    },
+    "Tier 4 (Forensic Handcrafted Specialists)": {
+      "2D-FFT-Spectral": {
+        "clean_auroc": 0.2203,
+        "mean_robustness_index": 0.3504,
+        "worst_case_auroc": 0.2203,
+        "robustness_degradation": 0.0,
+        "clean_fpr": 0.0,
+        "clean_f1": 0.0,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 2.13
+      },
+      "SRM-DWT-Wavelet": {
+        "clean_auroc": 0.4951,
+        "mean_robustness_index": 0.5026,
+        "worst_case_auroc": 0.4926,
+        "robustness_degradation": 0.0025,
+        "clean_fpr": 0.465,
+        "clean_f1": 0.47,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 0.83
+      },
+      "Edge-Specialist": {
+        "clean_auroc": 0.4621,
+        "mean_robustness_index": 0.478,
+        "worst_case_auroc": 0.4621,
+        "robustness_degradation": 0.0,
+        "clean_fpr": 0.42,
+        "clean_f1": 0.4222,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 1.11
+      },
+      "Patch-MIL": {
+        "clean_auroc": 0.4798,
+        "mean_robustness_index": 0.5015,
+        "worst_case_auroc": 0.4798,
+        "robustness_degradation": 0.0,
+        "clean_fpr": 0.505,
+        "clean_f1": 0.4759,
+        "peak_vram_gb": 3.698,
+        "latency_ms": 0.5
+      }
+    }
+  },
+  "operating_point_tradeoffs": {
+    "SigLIP-SO400M": [
+      {
+        "threshold": 0.5,
+        "fpr": 0.595,
+        "tpr_recall": 0.915,
+        "precision": 0.606,
+        "f1": 0.7291
+      },
+      {
+        "threshold": 0.6,
+        "fpr": 0.52,
+        "tpr_recall": 0.905,
+        "precision": 0.6351,
+        "f1": 0.7464
+      },
+      {
+        "threshold": 0.7,
+        "fpr": 0.47,
+        "tpr_recall": 0.88,
+        "precision": 0.6519,
+        "f1": 0.7489
+      },
+      {
+        "threshold": 0.8,
+        "fpr": 0.4,
+        "tpr_recall": 0.83,
+        "precision": 0.6748,
+        "f1": 0.7444
+      },
+      {
+        "threshold": 0.85,
+        "fpr": 0.38,
+        "tpr_recall": 0.775,
+        "precision": 0.671,
+        "f1": 0.7193
+      },
+      {
+        "threshold": 0.9,
+        "fpr": 0.325,
+        "tpr_recall": 0.715,
+        "precision": 0.6875,
+        "f1": 0.701
+      },
+      {
+        "threshold": 0.95,
+        "fpr": 0.24,
+        "tpr_recall": 0.62,
+        "precision": 0.7209,
+        "f1": 0.6667
+      }
+    ],
+    "CLIP-ViT-L": [
+      {
+        "threshold": 0.5,
+        "fpr": 0.14,
+        "tpr_recall": 0.765,
+        "precision": 0.8453,
+        "f1": 0.8031
+      },
+      {
+        "threshold": 0.6,
+        "fpr": 0.1,
+        "tpr_recall": 0.735,
+        "precision": 0.8802,
+        "f1": 0.8011
+      },
+      {
+        "threshold": 0.7,
+        "fpr": 0.09,
+        "tpr_recall": 0.675,
+        "precision": 0.8824,
+        "f1": 0.7649
+      },
+      {
+        "threshold": 0.8,
+        "fpr": 0.045,
+        "tpr_recall": 0.61,
+        "precision": 0.9313,
+        "f1": 0.7372
+      },
+      {
+        "threshold": 0.85,
+        "fpr": 0.03,
+        "tpr_recall": 0.55,
+        "precision": 0.9483,
+        "f1": 0.6962
+      },
+      {
+        "threshold": 0.9,
+        "fpr": 0.015,
+        "tpr_recall": 0.48,
+        "precision": 0.9697,
+        "f1": 0.6421
+      },
+      {
+        "threshold": 0.95,
+        "fpr": 0.015,
+        "tpr_recall": 0.355,
+        "precision": 0.9595,
+        "f1": 0.5182
+      }
+    ]
+  },
+  "stage2_complementarity": {
+    "pearson_correlation_matrix": {
+      "SigLIP-SO400M": {
+        "SigLIP-SO400M": 1.0,
+        "DINOv2-Registers": -0.0596,
+        "EVA-02-Large-448": -0.0539,
+        "CLIP-ViT-L": 0.5136,
+        "ConvNeXt-V2": -0.0601,
+        "2D-FFT-Spectral": -0.3509,
+        "SRM-DWT-Wavelet": -0.0075,
+        "Edge-Specialist": 0.0597,
+        "Patch-MIL": -0.0222,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "DINOv2-Registers": {
+        "SigLIP-SO400M": -0.0596,
+        "DINOv2-Registers": 1.0,
+        "EVA-02-Large-448": 0.5581,
+        "CLIP-ViT-L": -0.0314,
+        "ConvNeXt-V2": 0.426,
+        "2D-FFT-Spectral": 0.0426,
+        "SRM-DWT-Wavelet": 0.0281,
+        "Edge-Specialist": -0.0083,
+        "Patch-MIL": 0.0885,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "EVA-02-Large-448": {
+        "SigLIP-SO400M": -0.0539,
+        "DINOv2-Registers": 0.5581,
+        "EVA-02-Large-448": 1.0,
+        "CLIP-ViT-L": -0.0132,
+        "ConvNeXt-V2": 0.5256,
+        "2D-FFT-Spectral": 0.0496,
+        "SRM-DWT-Wavelet": -0.0428,
+        "Edge-Specialist": -0.041,
+        "Patch-MIL": 0.0275,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "CLIP-ViT-L": {
+        "SigLIP-SO400M": 0.5136,
+        "DINOv2-Registers": -0.0314,
+        "EVA-02-Large-448": -0.0132,
+        "CLIP-ViT-L": 1.0,
+        "ConvNeXt-V2": -0.0524,
+        "2D-FFT-Spectral": -0.4043,
+        "SRM-DWT-Wavelet": 0.0164,
+        "Edge-Specialist": 0.0837,
+        "Patch-MIL": -0.0132,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "ConvNeXt-V2": {
+        "SigLIP-SO400M": -0.0601,
+        "DINOv2-Registers": 0.426,
+        "EVA-02-Large-448": 0.5256,
+        "CLIP-ViT-L": -0.0524,
+        "ConvNeXt-V2": 1.0,
+        "2D-FFT-Spectral": 0.0662,
+        "SRM-DWT-Wavelet": 0.0005,
+        "Edge-Specialist": 0.0131,
+        "Patch-MIL": 0.0555,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "2D-FFT-Spectral": {
+        "SigLIP-SO400M": -0.3509,
+        "DINOv2-Registers": 0.0426,
+        "EVA-02-Large-448": 0.0496,
+        "CLIP-ViT-L": -0.4043,
+        "ConvNeXt-V2": 0.0662,
+        "2D-FFT-Spectral": 1.0,
+        "SRM-DWT-Wavelet": 0.3509,
+        "Edge-Specialist": 0.0468,
+        "Patch-MIL": -0.0009,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "SRM-DWT-Wavelet": {
+        "SigLIP-SO400M": -0.0075,
+        "DINOv2-Registers": 0.0281,
+        "EVA-02-Large-448": -0.0428,
+        "CLIP-ViT-L": 0.0164,
+        "ConvNeXt-V2": 0.0005,
+        "2D-FFT-Spectral": 0.3509,
+        "SRM-DWT-Wavelet": 1.0,
+        "Edge-Specialist": 0.4981,
+        "Patch-MIL": 0.0301,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "Edge-Specialist": {
+        "SigLIP-SO400M": 0.0597,
+        "DINOv2-Registers": -0.0083,
+        "EVA-02-Large-448": -0.041,
+        "CLIP-ViT-L": 0.0837,
+        "ConvNeXt-V2": 0.0131,
+        "2D-FFT-Spectral": 0.0468,
+        "SRM-DWT-Wavelet": 0.4981,
+        "Edge-Specialist": 1.0,
+        "Patch-MIL": 0.0166,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "Patch-MIL": {
+        "SigLIP-SO400M": -0.0222,
+        "DINOv2-Registers": 0.0885,
+        "EVA-02-Large-448": 0.0275,
+        "CLIP-ViT-L": -0.0132,
+        "ConvNeXt-V2": 0.0555,
+        "2D-FFT-Spectral": -0.0009,
+        "SRM-DWT-Wavelet": 0.0301,
+        "Edge-Specialist": 0.0166,
+        "Patch-MIL": 1.0,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "AIDE": {
+        "SigLIP-SO400M": 0.0,
+        "DINOv2-Registers": 0.0,
+        "EVA-02-Large-448": 0.0,
+        "CLIP-ViT-L": 0.0,
+        "ConvNeXt-V2": 0.0,
+        "2D-FFT-Spectral": 0.0,
+        "SRM-DWT-Wavelet": 0.0,
+        "Edge-Specialist": 0.0,
+        "Patch-MIL": 0.0,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "DDA": {
+        "SigLIP-SO400M": 0.0,
+        "DINOv2-Registers": 0.0,
+        "EVA-02-Large-448": 0.0,
+        "CLIP-ViT-L": 0.0,
+        "ConvNeXt-V2": 0.0,
+        "2D-FFT-Spectral": 0.0,
+        "SRM-DWT-Wavelet": 0.0,
+        "Edge-Specialist": 0.0,
+        "Patch-MIL": 0.0,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      }
+    },
+    "spearman_correlation_matrix": {
+      "SigLIP-SO400M": {
+        "SigLIP-SO400M": 1.0,
+        "DINOv2-Registers": -0.0376,
+        "EVA-02-Large-448": -0.0537,
+        "CLIP-ViT-L": 0.577,
+        "ConvNeXt-V2": -0.0755,
+        "2D-FFT-Spectral": -0.3035,
+        "SRM-DWT-Wavelet": 0.0565,
+        "Edge-Specialist": 0.1065,
+        "Patch-MIL": -0.0147,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "DINOv2-Registers": {
+        "SigLIP-SO400M": -0.0376,
+        "DINOv2-Registers": 1.0,
+        "EVA-02-Large-448": 0.5212,
+        "CLIP-ViT-L": 0.0156,
+        "ConvNeXt-V2": 0.4032,
+        "2D-FFT-Spectral": -0.001,
+        "SRM-DWT-Wavelet": 0.0176,
+        "Edge-Specialist": -0.0292,
+        "Patch-MIL": 0.0552,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "EVA-02-Large-448": {
+        "SigLIP-SO400M": -0.0537,
+        "DINOv2-Registers": 0.5212,
+        "EVA-02-Large-448": 1.0,
+        "CLIP-ViT-L": -0.0205,
+        "ConvNeXt-V2": 0.537,
+        "2D-FFT-Spectral": 0.0164,
+        "SRM-DWT-Wavelet": -0.0581,
+        "Edge-Specialist": -0.0622,
+        "Patch-MIL": 0.0329,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "CLIP-ViT-L": {
+        "SigLIP-SO400M": 0.577,
+        "DINOv2-Registers": 0.0156,
+        "EVA-02-Large-448": -0.0205,
+        "CLIP-ViT-L": 1.0,
+        "ConvNeXt-V2": -0.0684,
+        "2D-FFT-Spectral": -0.3909,
+        "SRM-DWT-Wavelet": 0.0405,
+        "Edge-Specialist": 0.0261,
+        "Patch-MIL": -0.0506,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "ConvNeXt-V2": {
+        "SigLIP-SO400M": -0.0755,
+        "DINOv2-Registers": 0.4032,
+        "EVA-02-Large-448": 0.537,
+        "CLIP-ViT-L": -0.0684,
+        "ConvNeXt-V2": 1.0,
+        "2D-FFT-Spectral": 0.06,
+        "SRM-DWT-Wavelet": -0.0137,
+        "Edge-Specialist": -0.0278,
+        "Patch-MIL": 0.0513,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "2D-FFT-Spectral": {
+        "SigLIP-SO400M": -0.3035,
+        "DINOv2-Registers": -0.001,
+        "EVA-02-Large-448": 0.0164,
+        "CLIP-ViT-L": -0.3909,
+        "ConvNeXt-V2": 0.06,
+        "2D-FFT-Spectral": 1.0,
+        "SRM-DWT-Wavelet": 0.3268,
+        "Edge-Specialist": 0.0926,
+        "Patch-MIL": 0.0114,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "SRM-DWT-Wavelet": {
+        "SigLIP-SO400M": 0.0565,
+        "DINOv2-Registers": 0.0176,
+        "EVA-02-Large-448": -0.0581,
+        "CLIP-ViT-L": 0.0405,
+        "ConvNeXt-V2": -0.0137,
+        "2D-FFT-Spectral": 0.3268,
+        "SRM-DWT-Wavelet": 1.0,
+        "Edge-Specialist": 0.5038,
+        "Patch-MIL": 0.027,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "Edge-Specialist": {
+        "SigLIP-SO400M": 0.1065,
+        "DINOv2-Registers": -0.0292,
+        "EVA-02-Large-448": -0.0622,
+        "CLIP-ViT-L": 0.0261,
+        "ConvNeXt-V2": -0.0278,
+        "2D-FFT-Spectral": 0.0926,
+        "SRM-DWT-Wavelet": 0.5038,
+        "Edge-Specialist": 1.0,
+        "Patch-MIL": 0.0174,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "Patch-MIL": {
+        "SigLIP-SO400M": -0.0147,
+        "DINOv2-Registers": 0.0552,
+        "EVA-02-Large-448": 0.0329,
+        "CLIP-ViT-L": -0.0506,
+        "ConvNeXt-V2": 0.0513,
+        "2D-FFT-Spectral": 0.0114,
+        "SRM-DWT-Wavelet": 0.027,
+        "Edge-Specialist": 0.0174,
+        "Patch-MIL": 1.0,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "AIDE": {
+        "SigLIP-SO400M": 0.0,
+        "DINOv2-Registers": 0.0,
+        "EVA-02-Large-448": 0.0,
+        "CLIP-ViT-L": 0.0,
+        "ConvNeXt-V2": 0.0,
+        "2D-FFT-Spectral": 0.0,
+        "SRM-DWT-Wavelet": 0.0,
+        "Edge-Specialist": 0.0,
+        "Patch-MIL": 0.0,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "DDA": {
+        "SigLIP-SO400M": 0.0,
+        "DINOv2-Registers": 0.0,
+        "EVA-02-Large-448": 0.0,
+        "CLIP-ViT-L": 0.0,
+        "ConvNeXt-V2": 0.0,
+        "2D-FFT-Spectral": 0.0,
+        "SRM-DWT-Wavelet": 0.0,
+        "Edge-Specialist": 0.0,
+        "Patch-MIL": 0.0,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      }
+    },
+    "bilateral_rescue_rate_matrix_percent": {
+      "SigLIP-SO400M": {
+        "SigLIP-SO400M": 0.0,
+        "DINOv2-Registers": 43.38,
+        "EVA-02-Large-448": 46.32,
+        "CLIP-ViT-L": 75.74,
+        "ConvNeXt-V2": 47.06,
+        "2D-FFT-Spectral": 87.5,
+        "SRM-DWT-Wavelet": 53.68,
+        "Edge-Specialist": 51.47,
+        "Patch-MIL": 50.0,
+        "AIDE": 12.5,
+        "DDA": 12.5
+      },
+      "DINOv2-Registers": {
+        "SigLIP-SO400M": 64.35,
+        "DINOv2-Registers": 0.0,
+        "EVA-02-Large-448": 31.02,
+        "CLIP-ViT-L": 80.09,
+        "ConvNeXt-V2": 31.48,
+        "2D-FFT-Spectral": 52.78,
+        "SRM-DWT-Wavelet": 51.85,
+        "Edge-Specialist": 50.0,
+        "Patch-MIL": 47.69,
+        "AIDE": 47.22,
+        "DDA": 47.22
+      },
+      "EVA-02-Large-448": {
+        "SigLIP-SO400M": 65.07,
+        "DINOv2-Registers": 28.71,
+        "EVA-02-Large-448": 0.0,
+        "CLIP-ViT-L": 78.47,
+        "ConvNeXt-V2": 26.79,
+        "2D-FFT-Spectral": 52.15,
+        "SRM-DWT-Wavelet": 50.72,
+        "Edge-Specialist": 48.8,
+        "Patch-MIL": 45.93,
+        "AIDE": 47.85,
+        "DDA": 47.85
+      },
+      "CLIP-ViT-L": {
+        "SigLIP-SO400M": 56.0,
+        "DINOv2-Registers": 42.67,
+        "EVA-02-Large-448": 40.0,
+        "CLIP-ViT-L": 0.0,
+        "ConvNeXt-V2": 42.67,
+        "2D-FFT-Spectral": 37.33,
+        "SRM-DWT-Wavelet": 41.33,
+        "Edge-Specialist": 36.0,
+        "Patch-MIL": 49.33,
+        "AIDE": 62.67,
+        "DDA": 62.67
+      },
+      "ConvNeXt-V2": {
+        "SigLIP-SO400M": 66.82,
+        "DINOv2-Registers": 31.8,
+        "EVA-02-Large-448": 29.49,
+        "CLIP-ViT-L": 80.18,
+        "ConvNeXt-V2": 0.0,
+        "2D-FFT-Spectral": 50.69,
+        "SRM-DWT-Wavelet": 51.15,
+        "Edge-Specialist": 49.77,
+        "Patch-MIL": 43.78,
+        "AIDE": 49.31,
+        "DDA": 49.31
+      },
+      "2D-FFT-Spectral": {
+        "SigLIP-SO400M": 91.5,
+        "DINOv2-Registers": 49.0,
+        "EVA-02-Large-448": 50.0,
+        "CLIP-ViT-L": 76.5,
+        "ConvNeXt-V2": 46.5,
+        "2D-FFT-Spectral": 0.0,
+        "SRM-DWT-Wavelet": 45.0,
+        "Edge-Specialist": 38.0,
+        "Patch-MIL": 47.0,
+        "AIDE": 100.0,
+        "DDA": 100.0
+      },
+      "SRM-DWT-Wavelet": {
+        "SigLIP-SO400M": 68.97,
+        "DINOv2-Registers": 48.77,
+        "EVA-02-Large-448": 49.26,
+        "CLIP-ViT-L": 78.33,
+        "ConvNeXt-V2": 47.78,
+        "2D-FFT-Spectral": 45.81,
+        "SRM-DWT-Wavelet": 0.0,
+        "Edge-Specialist": 26.6,
+        "Patch-MIL": 44.33,
+        "AIDE": 54.19,
+        "DDA": 54.19
+      },
+      "Edge-Specialist": {
+        "SigLIP-SO400M": 68.27,
+        "DINOv2-Registers": 48.08,
+        "EVA-02-Large-448": 48.56,
+        "CLIP-ViT-L": 76.92,
+        "ConvNeXt-V2": 47.6,
+        "2D-FFT-Spectral": 40.38,
+        "SRM-DWT-Wavelet": 28.37,
+        "Edge-Specialist": 0.0,
+        "Patch-MIL": 47.12,
+        "AIDE": 59.62,
+        "DDA": 59.62
+      },
+      "Patch-MIL": {
+        "SigLIP-SO400M": 67.15,
+        "DINOv2-Registers": 45.41,
+        "EVA-02-Large-448": 45.41,
+        "CLIP-ViT-L": 81.64,
+        "ConvNeXt-V2": 41.06,
+        "2D-FFT-Spectral": 48.79,
+        "SRM-DWT-Wavelet": 45.41,
+        "Edge-Specialist": 46.86,
+        "Patch-MIL": 0.0,
+        "AIDE": 51.21,
+        "DDA": 51.21
+      },
+      "AIDE": {
+        "SigLIP-SO400M": 40.5,
+        "DINOv2-Registers": 43.0,
+        "EVA-02-Large-448": 45.5,
+        "CLIP-ViT-L": 86.0,
+        "ConvNeXt-V2": 45.0,
+        "2D-FFT-Spectral": 100.0,
+        "SRM-DWT-Wavelet": 53.5,
+        "Edge-Specialist": 58.0,
+        "Patch-MIL": 49.5,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      },
+      "DDA": {
+        "SigLIP-SO400M": 40.5,
+        "DINOv2-Registers": 43.0,
+        "EVA-02-Large-448": 45.5,
+        "CLIP-ViT-L": 86.0,
+        "ConvNeXt-V2": 45.0,
+        "2D-FFT-Spectral": 100.0,
+        "SRM-DWT-Wavelet": 53.5,
+        "Edge-Specialist": 58.0,
+        "Patch-MIL": 49.5,
+        "AIDE": 0.0,
+        "DDA": 0.0
+      }
+    }
+  }
+}

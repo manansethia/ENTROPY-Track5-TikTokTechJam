@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-08-29T06:57:13Z",
+  "status_verdicts": {
+    "VLM_LOAD_VALID": "EXECUTED",
+    "VLM_FORENSIC_VALID": "EXECUTED",
+    "VLM_STRUCTURED_OUTPUT_VALID": "FAILED",
+    "DINO_VALID": "EXECUTED",
+    "EDGE_VALID": "INVALID",
+    "CRITIC_VALID": "EXECUTED",
+    "COUNTERFACTUAL_VALID": "EXECUTED",
+    "VLM_FORENSIC_OPERATIONAL": "FAILED"
+  },
+  "telemetry_freeze": {
+    "model_repository": "vikhyatk/moondream2",
+    "model_revision": "2024-08-26",
+    "cached_model_path": "/home/manan/.cache/huggingface/hub/models--vikhyatk--moondream2/snapshots/92d3d73b6fd61ab84d9fe093a9c7fd8c04bf2c0d/",
+    "custom_code_path": "/home/manan/.cache/huggingface/modules/transformers_modules/vikhyatk/moondream2/92d3d73b6fd61ab84d9fe093a9c7fd8c04bf2c0d/",
+    "transformers_version": "5.16.1",
+    "pytorch_version": "2.13.0+cu130",
+    "cuda_version": "13.0",
+    "device": "cuda:0",
+    "vram_usage_mb": 3568.96
+  },
+  "edge_specialist_invalidation": {
+    "status": "INVALID",
+    "reason": "EdgeArtifactFeatureExtractor representation collapse (S_cos = 0.9999) caused by LayerNorm(256) and un-fine-tuned weights. Excluded permanently.",
+    "validated_alternative": "HANDCRAFTED_FORENSIC_FEATURES (Sobel gradient energy, Laplacian residual, 2D-FFT ratio, SRM)"
+  },
+  "dino_representation_audit": {
+    "status": "EXECUTED",
+    "checkpoint_sha256": "edccedab2c4e164e80833096de89a32a6e8d7365870499a066a61dbc8894b42b",
+    "output_embedding_dim": 1024,
+    "pairwise_cosine_similarity_range": [
+      -0.038,
+      0.1095
+    ],
+    "pairwise_euclidean_distance_range": [
+      30.67,
+      34.09
+    ],
+    "representation_diversity_verified": true
+  },
+  "vlm_line_oriented_smoke_test": {
+    "schema_tested": [
+      "EVIDENCE_TAG: <tag>",
+      "REGION: <region>",
+      "EXPLANATION: <explanation>",
+      "ALTERNATIVE: <alternative>",
+      "UNCERTAINTY: <Low/Medium/High>"
+    ],
+    "finding": "Moondream2 generates unstructured natural scene descriptions rather than adhering to line-oriented schema keys. Zero fabricated Python keyword mapping was applied.",
+    "parse_success": false
+  },
+  "critic_audit": {
+    "status": "EXECUTED",
+    "cases_evaluated": 4,
+    "CRITIC_INDEPENDENCE": "LIMITED (Same VLM Model in Fresh Context)"
+  },
+  "counterfactual_detector_audit": {
+    "status": "EXECUTED",
+    "architecture": "CLIP-ViT-L/14 + SigLIP-SO400M-224 + SRM -> Champion MLP Head",
+    "cases": [
+      {
+        "image_id": "REAL_SAMPLE_1_WIKIART",
+        "ground_truth": "REAL",
+        "original_p_aigc": 0.724739,
+        "masked_p_aigc": 0.719998,
+        "delta_p": -0.004741,
+        "spatial_counterfactual": "UNAVAILABLE"
+      },
+      {
+        "image_id": "AIGC_SAMPLE_1_QUALITY_PARADOX",
+        "ground_truth": "AIGC",
+        "original_p_aigc": 0.718321,
+        "masked_p_aigc": 0.716894,
+        "delta_p": -0.001427,
+        "spatial_counterfactual": "UNAVAILABLE"
+      }
+    ]
+  }
+}

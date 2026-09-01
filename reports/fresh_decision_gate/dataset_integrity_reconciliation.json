@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-08-28T22:00:57Z",
+  "master_manifest": {
+    "path": "manifests/fresh_5k_manifest.jsonl",
+    "sha256": "890bd3c373673e3c0b2eb92abb7d3fdfb43984a00327a6a551cc592f7e3f3467",
+    "total_samples": 5000,
+    "class_distribution": {
+      "real_label_0": 2497,
+      "fake_label_1": 2503
+    },
+    "split_allocation": {
+      "fresh_train_pool": 3500,
+      "fresh_val_pool": 1000,
+      "fresh_internal_test_pool": 500
+    },
+    "duplicate_sha256_count": 0,
+    "hash_overlaps": {
+      "train_val_overlap": 0,
+      "train_test_overlap": 0,
+      "val_test_overlap": 0
+    }
+  },
+  "sample_accounting_reconciliation": {
+    "master_pool_total": 5000,
+    "active_decision_gate_subset": {
+      "active_train_fitted": 1000,
+      "active_train_classes": {
+        "real": 500,
+        "fake": 500
+      },
+      "active_val_evaluated": 300,
+      "active_val_classes": {
+        "real": 150,
+        "fake": 150
+      },
+      "active_test_evaluated": 500,
+      "active_test_classes": {
+        "real": 245,
+        "fake": 255
+      },
+      "total_active_evaluated": 1800
+    },
+    "reserved_unprobed_pool": {
+      "reserved_train_for_large_scale": 2500,
+      "reserved_val_for_large_scale": 700,
+      "total_reserved": 3200
+    },
+    "quarantined_external_benchmarks": [
+      "Synthbuster (Zenodo)",
+      "AIGIBench (HorizonTEL)",
+      "Chameleon (Locked)",
+      "VCT2 (DeepFake Facial)",
+      "WildRF (In-the-Wild Forensic)",
+      "SynthWildX (Web-Scale Stress)",
+      "Hackathon_Validation_LOCKED"
+    ]
+  },
+  "generator_distribution": {
+    "Synthetic_General": 2503,
+    "Real_Authentic": 2497
+  },
+  "source_dataset_distribution": {
+    "massive_balanced_50k": 5000
+  },
+  "audit_verdict": "PASS \u2014 Zero Hash Collisions, Zero Split Overlap, Complete Data Isolation Verified."
+}

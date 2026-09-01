@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-08-29T09:46:20Z",
+  "phase": "PHASE_4_FINAL_TRAINING_AND_EVALUATION_COMPLETE",
+  "selected_architecture": "Cand_C_Structured_Dropout",
+  "expert_branches": "CLIP-ViT-L/14 (1024d) + SigLIP-SO400M-224 (1152d) + SRM-DWT (36d)",
+  "feature_dimension": 2212,
+  "head_architecture": "Structured Branch Dropout 2-Layer MLP (p=0.15)",
+  "trainable_parameters": 567297,
+  "training_sample_scale": 72509,
+  "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/phase4/phase4_champion_model.pt",
+  "checkpoint_sha256": "b53479d0aa7c4eb1f4af9e8f4d6a39fc53ac260fdea7b58b42bc68253de37b59",
+  "decision_gate_status": "PHASE_4_FROZEN_AND_AUTHORITATIVE",
+  "audit_correction_metadata": {
+    "previous_stale_value": "Cand_C_CLIP_SigLIP_Edge",
+    "corrected_value": "Cand_C_Structured_Dropout",
+    "correction_reason": "Reconciled stale preliminary micro-challenge artifact with definitive full-scale training run and verified checkpoint.",
+    "corrected_at": "2026-08-29T09:46:20Z",
+    "evidence_source": "checkpoints/phase4/phase4_champion_model.pt and reports/phase4_fullscale_architecture_bakeoff.json"
+  }
+}

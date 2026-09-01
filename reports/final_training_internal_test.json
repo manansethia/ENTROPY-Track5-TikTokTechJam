@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "model_architecture": "Final_Master_TriStream_StructuredDropout (2,212d)",
+  "checkpoint_sha256": "142cdebddbea54d1507448862d343f99a390f736a2a436d2c08fe5251a263f4a",
+  "sample_count": 10316,
+  "real_count": 4238,
+  "aigc_count": 6078,
+  "calibrated_T": 1.201789,
+  "metrics_at_tau_080": {
+    "AUROC": 0.9986,
+    "AUPRC": 0.9991,
+    "Brier": 0.0132,
+    "TP": 5934,
+    "TN": 4193,
+    "FP": 45,
+    "FN": 144,
+    "FPR": 0.010618,
+    "TPR": 0.976308,
+    "precision": 0.992474
+  },
+  "ultra_low_fpr_frontier": {
+    "FPR_le_1_00_pct": {
+      "tau": 0.766356,
+      "FP": 42,
+      "FPR": "0.9910%",
+      "TPR": "97.71%",
+      "precision": "99.30%"
+    },
+    "FPR_le_0_50_pct": {
+      "tau": 0.971936,
+      "FP": 21,
+      "FPR": "0.4955%",
+      "TPR": "95.94%",
+      "precision": "99.64%"
+    },
+    "FPR_le_0_10_pct": {
+      "tau": 0.999448,
+      "FP": 4,
+      "FPR": "0.0944%",
+      "TPR": "89.93%",
+      "precision": "99.93%"
+    },
+    "FPR_le_0_05_pct": {
+      "tau": 0.99995,
+      "FP": 2,
+      "FPR": "0.0472%",
+      "TPR": "82.86%",
+      "precision": "99.96%"
+    },
+    "FPR_le_0_01_pct": {
+      "tau": 0.999976,
+      "FP": 0,
+      "FPR": "0.0000%",
+      "TPR": "79.89%",
+      "precision": "100.00%",
+      "resolution_note": "N_real=4,238 (1 FP step is 0.02360%). 0 FP observed."
+    }
+  }
+}

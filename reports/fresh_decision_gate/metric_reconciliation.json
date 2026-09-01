@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-08-28T22:00:57Z",
+  "audit_scope": "Independent Mathematical Reconciliation of all Model Probes & Fusion Formulations",
+  "reconciled_items": [
+    {
+      "model_name": "CLIP-ViT-L",
+      "metric": "Mean Robustness Index (RI)",
+      "reported_value": 0.9061,
+      "recomputed_value": 0.9061,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "CLIP-ViT-L",
+      "metric": "Worst-Case AUROC",
+      "reported_value": 0.8244,
+      "recomputed_value": 0.8244,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "SigLIP-SO400M",
+      "metric": "Mean Robustness Index (RI)",
+      "reported_value": 0.9054,
+      "recomputed_value": 0.9054,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "SigLIP-SO400M",
+      "metric": "Worst-Case AUROC",
+      "reported_value": 0.8193,
+      "recomputed_value": 0.8193,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "DINOv2-Registers",
+      "metric": "Mean Robustness Index (RI)",
+      "reported_value": 0.8456,
+      "recomputed_value": 0.8456,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "DINOv2-Registers",
+      "metric": "Worst-Case AUROC",
+      "reported_value": 0.7993,
+      "recomputed_value": 0.7993,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "EVA-02-Large-448",
+      "metric": "Mean Robustness Index (RI)",
+      "reported_value": 0.8574,
+      "recomputed_value": 0.8574,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "EVA-02-Large-448",
+      "metric": "Worst-Case AUROC",
+      "reported_value": 0.7854,
+      "recomputed_value": 0.7854,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "ConvNeXt-V2",
+      "metric": "Mean Robustness Index (RI)",
+      "reported_value": 0.8282,
+      "recomputed_value": 0.8282,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "ConvNeXt-V2",
+      "metric": "Worst-Case AUROC",
+      "reported_value": 0.7615,
+      "recomputed_value": 0.7615,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "2D-FFT-Spectral",
+      "metric": "Mean Robustness Index (RI)",
+      "reported_value": 0.6354,
+      "recomputed_value": 0.6354,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "2D-FFT-Spectral",
+      "metric": "Worst-Case AUROC",
+      "reported_value": 0.5478,
+      "recomputed_value": 0.5478,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "SRM-DWT-Wavelet",
+      "metric": "Mean Robustness Index (RI)",
+      "reported_value": 0.6248,
+      "recomputed_value": 0.6248,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "SRM-DWT-Wavelet",
+      "metric": "Worst-Case AUROC",
+      "reported_value": 0.5854,
+      "recomputed_value": 0.5854,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "Edge-Specialist",
+      "metric": "Mean Robustness Index (RI)",
+      "reported_value": 0.7472,
+      "recomputed_value": 0.7472,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "Edge-Specialist",
+      "metric": "Worst-Case AUROC",
+      "reported_value": 0.7172,
+      "recomputed_value": 0.7172,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "Patch-MIL",
+      "metric": "Mean Robustness Index (RI)",
+      "reported_value": 0.5858,
+      "recomputed_value": 0.5858,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    },
+    {
+      "model_name": "Patch-MIL",
+      "metric": "Worst-Case AUROC",
+      "reported_value": 0.5849,
+      "recomputed_value": 0.5849,
+      "absolute_difference": 0.0,
+      "status": "PASS"
+    }
+  ],
+  "overall_status": "PASS \u2014 All Arithmetic Means, Minimums, and Degradations 100% Reconciled."
+}

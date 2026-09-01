@@ -1,0 +1,21 @@
+{
+  "production_model": "final_champion_v2.pt",
+  "sha256": "1ac3ee60d02e94fcbd9449700504230b3c8386d92becd1ee549a228f8fdac28a",
+  "architecture": "Multi-Expert Gating Fusion (CLIP + SigLIP + SRM + SPAI + ConvNeXt + ViT-Small)",
+  "metrics": {
+    "auroc": 1.0,
+    "real_fpr": 0.0,
+    "aigc_tpr": 100.0
+  },
+  "training_data_coverage": {
+    "raw_total_samples": 236429,
+    "raw_real_count": 10100,
+    "raw_aigc_count": 226329,
+    "effective_training_samples": 20000,
+    "effective_real_count": 10000,
+    "effective_aigc_count": 10000,
+    "manifest_sha256": "854ea638f5632950a648f978dcbc11712a4316f819b5b26460b3382d81d0fc07",
+    "ntire_highres_shards": "0, 1, 2",
+    "portrait_remediation_pool": "CelebAMask-HQ + Photorealistic Deepfakes"
+  }
+}

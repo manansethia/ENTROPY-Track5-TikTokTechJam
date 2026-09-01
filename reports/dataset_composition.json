@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-08-28T19:48:12Z",
+  "target_training_corpus": "50,000 to 100,000 balanced multi-generator samples",
+  "authentic_sources": [
+    "COCO 2017 Authentic",
+    "WikiArt Classical Masters",
+    "Vintage 1920s Daguerreotypes",
+    "OpenImages Camera RAW"
+  ],
+  "synthetic_sources": [
+    "FLUX.1-dev",
+    "Midjourney v5/v6",
+    "Stable Diffusion XL",
+    "Stable Diffusion 3",
+    "DALL-E 3",
+    "StyleGAN-XL"
+  ],
+  "stratified_splits": {
+    "train_pct": 80.0,
+    "val_pct": 10.0,
+    "internal_test_pct": 10.0
+  }
+}

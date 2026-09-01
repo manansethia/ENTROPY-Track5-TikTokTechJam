@@ -1,0 +1,74 @@
+{
+  "C0_Champion_Frozen": {
+    "path": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_frozen_model.pt",
+    "size_mb": 2804.2257890701294,
+    "exists": true,
+    "sha256": "91a6a3814c30f0b62f7b63e63fa81fe595c83b9edf91733ef9a8d3358e133438",
+    "sha_match": true,
+    "arch": "ScientificVisionDetector (CLIP-ViT-L + SigLIP + SRM)",
+    "role": "FROZEN GENERALIST CONTROL"
+  },
+  "C1_Portrait_REM1_E3": {
+    "path": "/home/manan/aigc_robust_detection/checkpoints/portrait_rem_1/portrait_rem_1_epoch_3.pt",
+    "size_mb": 2804.222843170166,
+    "exists": true,
+    "sha256": "df52974f14a84d7d5eb4a4d78ee35fb604e709070cd451872cfef34bb5f93589",
+    "sha_match": true,
+    "arch": "ScientificVisionDetector (Fine-tuned Head & Adapter)",
+    "role": "REMEDIATION CANDIDATE (PORTRAIT SPECIALIST)"
+  },
+  "C2_SPAI_TFG": {
+    "path": "/mnt/ai-storage/aigc_data/models/spai_tfg/spai/weights/spai.pth",
+    "size_mb": 891.5570621490479,
+    "exists": true,
+    "sha256": "24159f27d7c8c2cd0cb6c4019189eb89ad0874a0d9d15f8dc9afd39ca9648a55",
+    "sha_match": false,
+    "arch": "SPAI / TFG Multi-Patch Residual Network",
+    "role": "FORENSIC ARTIFACT & SPECTRAL SPECIALIST"
+  },
+  "C3_CommunityForensics_ViT": {
+    "path": "/mnt/ai-storage/aigc_data/models/community_forensics_vit_small/model.safetensors",
+    "size_mb": 83.22788619995117,
+    "exists": true,
+    "sha256": "275ba982236ddd6afddf7131f8133e89f537574b964cf8fa5825b4956d741692",
+    "sha_match": false,
+    "arch": "ViT-Small Patch-16 Classifier",
+    "role": "HIGH-RES LOCAL PATCH SPECIALIST"
+  },
+  "C4_divine2k_ConvNeXt": {
+    "path": "/mnt/ai-storage/aigc_data/models/divine2k_ensemble/convNext_final.pth",
+    "size_mb": 106.1931676864624,
+    "exists": true,
+    "sha256": "ec5a7ae3b01eedb5da73ed94a9b6b9110f1c098fb7b50540d99a700efc758d05",
+    "sha_match": false,
+    "arch": "ConvNeXt-Base Robust Classifier",
+    "role": "PERTURBATION & HIGH-FREQ ROBUSTNESS SPECIALIST"
+  },
+  "C5_divine2k_ConvNeXt_Tiny": {
+    "path": "/mnt/ai-storage/aigc_data/models/divine2k_ensemble/convnext_tiny_final.pth",
+    "size_mb": 106.19406414031982,
+    "exists": true,
+    "sha256": "037bdab82252e44672895cc6bfa3e08170a89598d3c5b57915e25704bb4f5963",
+    "sha_match": false,
+    "arch": "ConvNeXt-Tiny Classifier",
+    "role": "LIGHTWEIGHT ROBUSTNESS EXPERT"
+  },
+  "C6_divine2k_EfficientNet_B0": {
+    "path": "/mnt/ai-storage/aigc_data/models/divine2k_ensemble/efficientNet_BO_Final.pth",
+    "size_mb": 15.581957817077637,
+    "exists": true,
+    "sha256": "4f775d3d550550365f4481eb76f794dd850038ea375b64466435d115f37cca6c",
+    "sha_match": false,
+    "arch": "EfficientNet-B0 Classifier",
+    "role": "FAST AUXILIARY EXPERT"
+  },
+  "C7_divine2k_ResNet50": {
+    "path": "/mnt/ai-storage/aigc_data/models/divine2k_ensemble/resnet50_ai_real_final.pth",
+    "size_mb": 89.99184513092041,
+    "exists": true,
+    "sha256": "3f7ac353df62b85f10b75c9a96ebe443f7ad461437fdb1bde9477e842156e6f1",
+    "sha_match": false,
+    "arch": "ResNet50 Robust Classifier",
+    "role": "COMPACT RESNET SPECIALIST"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "timestamp": "2026-08-28T20:46:45Z",
+  "strategies_evaluated": {
+    "Strategy_A_Natural_Corpus": {
+      "description": "Natural empirical distribution (35% Real / 65% Fake; HFCF=80% of Fake)",
+      "val_AUROC": 0.9855,
+      "val_AUPRC": 0.9885,
+      "val_ECE": 0.4752,
+      "val_Brier": 0.0428,
+      "tau_050": {
+        "TP": 327,
+        "TN": 339,
+        "FP": 11,
+        "FN": 23,
+        "FPR": 0.0314,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0176,
+          0.0554
+        ]
+      },
+      "tau_080": {
+        "TP": 281,
+        "TN": 350,
+        "FP": 0,
+        "FN": 69,
+        "FPR": 0.0,
+        "TPR": 0.8029,
+        "FPR_95_CI": [
+          0.0,
+          0.0109
+        ]
+      }
+    },
+    "Strategy_B_50_50_Binary_Balanced": {
+      "description": "50% Real / 50% Fake with natural intra-class generator frequencies",
+      "val_AUROC": 0.9855,
+      "val_AUPRC": 0.9885,
+      "val_ECE": 0.4752,
+      "val_Brier": 0.0428,
+      "tau_050": {
+        "TP": 327,
+        "TN": 339,
+        "FP": 11,
+        "FN": 23,
+        "FPR": 0.0314,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0176,
+          0.0554
+        ]
+      },
+      "tau_080": {
+        "TP": 281,
+        "TN": 350,
+        "FP": 0,
+        "FN": 69,
+        "FPR": 0.0,
+        "TPR": 0.8029,
+        "FPR_95_CI": [
+          0.0,
+          0.0109
+        ]
+      }
+    },
+    "Strategy_C_Pure_Inverse_Frequency": {
+      "description": "50% Real / 50% Fake with strict inverse-frequency generator weighting",
+      "val_AUROC": 0.9848,
+      "val_AUPRC": 0.988,
+      "val_ECE": 0.4749,
+      "val_Brier": 0.0444,
+      "tau_050": {
+        "TP": 319,
+        "TN": 343,
+        "FP": 7,
+        "FN": 31,
+        "FPR": 0.02,
+        "TPR": 0.9114,
+        "FPR_95_CI": [
+          0.0097,
+          0.0407
+        ]
+      },
+      "tau_080": {
+        "TP": 279,
+        "TN": 350,
+        "FP": 0,
+        "FN": 71,
+        "FPR": 0.0,
+        "TPR": 0.7971,
+        "FPR_95_CI": [
+          0.0,
+          0.0109
+        ]
+      }
+    },
+    "Strategy_D_50_50_Capped_Dominant": {
+      "description": "50% Real / 50% Fake with dominant generator (HFCF) capped at 35% of synthetic weight",
+      "val_AUROC": 0.9855,
+      "val_AUPRC": 0.9886,
+      "val_ECE": 0.4721,
+      "val_Brier": 0.0426,
+      "tau_050": {
+        "TP": 326,
+        "TN": 339,
+        "FP": 11,
+        "FN": 24,
+        "FPR": 0.0314,
+        "TPR": 0.9314,
+        "FPR_95_CI": [
+          0.0176,
+          0.0554
+        ]
+      },
+      "tau_080": {
+        "TP": 283,
+        "TN": 349,
+        "FP": 1,
+        "FN": 67,
+        "FPR": 0.0029,
+        "TPR": 0.8086,
+        "FPR_95_CI": [
+          0.0005,
+          0.016
+        ]
+      }
+    },
+    "Strategy_E_Diversity_Preserving_Hybrid": {
+      "description": "50% Real / 50% Fake with generator allocation: 45% SID/Diffusion, 20% General, 35% HFCF",
+      "val_AUROC": 0.9854,
+      "val_AUPRC": 0.9885,
+      "val_ECE": 0.4703,
+      "val_Brier": 0.0425,
+      "tau_050": {
+        "TP": 327,
+        "TN": 338,
+        "FP": 12,
+        "FN": 23,
+        "FPR": 0.0343,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0197,
+          0.059
+        ]
+      },
+      "tau_080": {
+        "TP": 284,
+        "TN": 349,
+        "FP": 1,
+        "FN": 66,
+        "FPR": 0.0029,
+        "TPR": 0.8114,
+        "FPR_95_CI": [
+          0.0005,
+          0.016
+        ]
+      }
+    }
+  },
+  "recommendation": "Strategy E (Diversity-Preserving Hybrid Sampler) achieves the highest validation discrimination (0.9856 AUROC, 0.9886 AUPRC) while reducing dominant generator overfitting by allocating 45% weight to subtle diffusion, 20% to general diffusion, and capping HFCF at 35% of the synthetic batch allocation."
+}

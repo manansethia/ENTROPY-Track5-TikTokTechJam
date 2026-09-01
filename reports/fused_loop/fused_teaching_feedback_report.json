@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-08-31 19:02:54 UTC",
+  "model_architecture": "Master Fused Multi-Specialist Engine (V2 + V3 + V5-CAG)",
+  "checkpoints": {
+    "v2_spectral": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_v2.pt",
+    "v3_global_gating": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_v3.pt",
+    "v5_cag_spatial": "/home/manan/aigc_robust_detection/checkpoints/experimental/v5/v5_champion_cag.pt",
+    "c3_vit_safetensors": "/mnt/ai-storage/aigc_data/models/community_forensics_vit_small/model.safetensors"
+  },
+  "feedback_cycles": [
+    {
+      "cycle": 1,
+      "accuracy": 61.9,
+      "macro_f1": 0.6006,
+      "hard_real_fpr": 0.0,
+      "real_errors": 57,
+      "partial_errors": 305,
+      "full_errors": 19,
+      "adjusted_weights": [
+        0.45,
+        0.4,
+        0.15
+      ],
+      "calibrated_thresholds": {
+        "real_safety_thresh": 0.38,
+        "partial_ai_thresh": 0.5,
+        "full_aigc_thresh": 0.65
+      }
+    },
+    {
+      "cycle": 2,
+      "accuracy": 62.1,
+      "macro_f1": 0.6029,
+      "hard_real_fpr": 0.0,
+      "real_errors": 54,
+      "partial_errors": 306,
+      "full_errors": 19,
+      "adjusted_weights": [
+        0.45,
+        0.4,
+        0.15
+      ],
+      "calibrated_thresholds": {
+        "real_safety_thresh": 0.41000000000000003,
+        "partial_ai_thresh": 0.5,
+        "full_aigc_thresh": 0.65
+      }
+    },
+    {
+      "cycle": 3,
+      "accuracy": 62.1,
+      "macro_f1": 0.6029,
+      "hard_real_fpr": 0.0,
+      "real_errors": 54,
+      "partial_errors": 306,
+      "full_errors": 19,
+      "adjusted_weights": [
+        0.45,
+        0.4,
+        0.15
+      ],
+      "calibrated_thresholds": {
+        "real_safety_thresh": 0.42,
+        "partial_ai_thresh": 0.5,
+        "full_aigc_thresh": 0.65
+      }
+    }
+  ],
+  "final_independent_test_metrics": {
+    "macro_f1": 0.637,
+    "accuracy": 69.6,
+    "hard_real_fpr": 48.45,
+    "sample_count": 1000
+  },
+  "final_calibrated_thresholds": {
+    "real_safety_thresh": 0.42,
+    "partial_ai_thresh": 0.5,
+    "full_aigc_thresh": 0.65
+  },
+  "final_specialist_fusion_weights": [
+    0.45,
+    0.4,
+    0.15
+  ]
+}

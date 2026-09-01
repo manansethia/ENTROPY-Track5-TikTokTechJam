@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-08-29T00:51:16Z",
+  "manifest_path": "manifests/phase2_150k_manifest.jsonl",
+  "manifest_sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+  "total_samples": 103137,
+  "class_breakdown": {
+    "real_samples": 42369,
+    "real_percentage": "41.08%",
+    "aigc_samples": 60768,
+    "aigc_percentage": "58.92%"
+  },
+  "split_breakdown": {
+    "PHASE2_TRAIN": 82509,
+    "PHASE2_VAL": 10312,
+    "PHASE2_INTERNAL_TEST": 10316
+  },
+  "generator_distribution": {
+    "Synthetic_HighFrequency_CF": 29917,
+    "Authentic_WikiArt_FineArt": 24996,
+    "Synthetic_QualityParadox_ModernDiffusion": 24000,
+    "Synthetic_SID_Diffusion": 6851,
+    "Authentic_Real_General": 14380,
+    "Authentic_COCO": 2993
+  },
+  "dataset_source_distribution": {
+    "loose_synthetic_corpus": 36768,
+    "wikiart_fine_art": 24996,
+    "aigi_quality_paradox": 24000,
+    "loose_authentic_corpus": 17373
+  },
+  "split_hash_isolation": {
+    "train_val_hash_overlap": 0,
+    "train_test_hash_overlap": 0,
+    "val_test_hash_overlap": 0,
+    "quarantined_benchmark_overlap": 0,
+    "internal_test_status": "LOCKED & UNTOUCHED"
+  },
+  "audit_verdict": "PASSED \u2014 ZERO HASH OVERLAP & 100% QUARANTINE ISOLATION"
+}

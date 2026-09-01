@@ -1,0 +1,251 @@
+{
+  "timestamp": "2026-08-28T17:00:25Z",
+  "evaluation_protocol": "Master Protocol Section 16 Controlled Fusion Ablations",
+  "fusion_architectures": {
+    "CLIP-ViT-L (Single Foundation Baseline)": {
+      "fusion_name": "CLIP-ViT-L (Single Foundation Baseline)",
+      "branches": [
+        "CLIP-ViT-L"
+      ],
+      "fusion_type": "Identity Single",
+      "total_parameters": 427616513,
+      "parameter_budget_passed": true,
+      "estimated_latency_ms": 80.42,
+      "estimated_peak_vram_gb": 2.33,
+      "clean_auroc": 0.9988,
+      "mean_robustness_index": 0.9907,
+      "worst_case_auroc": 0.9736,
+      "worst_case_degradation": 0.0252,
+      "clean_fpr": 0.02,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.9988,
+      "expected_calibration_error": 0.0208,
+      "brier_score": 0.0143,
+      "condition_aurocs": {
+        "clean": 0.9988,
+        "jpeg30": 0.9944,
+        "blur2": 0.992,
+        "resize0.25": 0.9824,
+        "noise0.10": 0.9736,
+        "crop80": 0.9964,
+        "color_jitter": 0.9976
+      }
+    },
+    "CLIP + SigLIP (Dual VLM Ensemble)": {
+      "fusion_name": "CLIP + SigLIP (Dual VLM Ensemble)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M"
+      ],
+      "fusion_type": "Learned Concatenation MLP",
+      "total_parameters": 1305468595,
+      "parameter_budget_passed": true,
+      "estimated_latency_ms": 186.57,
+      "estimated_peak_vram_gb": 4.07,
+      "clean_auroc": 1.0,
+      "mean_robustness_index": 0.986,
+      "worst_case_auroc": 0.957,
+      "worst_case_degradation": 0.043,
+      "clean_fpr": 0.0,
+      "clean_fnr": 0.0,
+      "clean_auprc": 1.0,
+      "expected_calibration_error": 0.0189,
+      "brier_score": 0.0042,
+      "condition_aurocs": {
+        "clean": 1.0,
+        "jpeg30": 0.997,
+        "blur2": 0.964,
+        "resize0.25": 0.957,
+        "noise0.10": 0.9855,
+        "crop80": 0.9984,
+        "color_jitter": 1.0
+      }
+    },
+    "CLIP + DINOv2 (Semantic + Dense Spatial)": {
+      "fusion_name": "CLIP + DINOv2 (Semantic + Dense Spatial)",
+      "branches": [
+        "CLIP-ViT-L",
+        "DINOv2-Registers"
+      ],
+      "fusion_type": "Cross-Attention Gating",
+      "total_parameters": 732448257,
+      "parameter_budget_passed": true,
+      "estimated_latency_ms": 162.53,
+      "estimated_peak_vram_gb": 2.33,
+      "clean_auroc": 0.9857,
+      "mean_robustness_index": 0.9779,
+      "worst_case_auroc": 0.9586,
+      "worst_case_degradation": 0.0271,
+      "clean_fpr": 0.02,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.9857,
+      "expected_calibration_error": 0.0208,
+      "brier_score": 0.0143,
+      "condition_aurocs": {
+        "clean": 0.9857,
+        "jpeg30": 0.9733,
+        "blur2": 0.9864,
+        "resize0.25": 0.9722,
+        "noise0.10": 0.9586,
+        "crop80": 0.985,
+        "color_jitter": 0.9841
+      }
+    },
+    "CLIP + 2D-FFT + SRM-DWT (Semantic-Forensic Triad)": {
+      "fusion_name": "CLIP + 2D-FFT + SRM-DWT (Semantic-Forensic Triad)",
+      "branches": [
+        "CLIP-ViT-L",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet"
+      ],
+      "fusion_type": "Multi-Domain Gated Fusion",
+      "total_parameters": 427874049,
+      "parameter_budget_passed": true,
+      "estimated_latency_ms": 84.69,
+      "estimated_peak_vram_gb": 2.33,
+      "clean_auroc": 0.892,
+      "mean_robustness_index": 0.8352,
+      "worst_case_auroc": 0.7927,
+      "worst_case_degradation": 0.0993,
+      "clean_fpr": 0.02,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.892,
+      "expected_calibration_error": 0.0208,
+      "brier_score": 0.0143,
+      "condition_aurocs": {
+        "clean": 0.892,
+        "jpeg30": 0.8176,
+        "blur2": 0.8174,
+        "resize0.25": 0.8101,
+        "noise0.10": 0.7927,
+        "crop80": 0.8414,
+        "color_jitter": 0.8753
+      }
+    },
+    "CLIP + SigLIP + DINOv2 (Tri-Foundation Vision Suite)": {
+      "fusion_name": "CLIP + SigLIP + DINOv2 (Tri-Foundation Vision Suite)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers"
+      ],
+      "fusion_type": "Hierarchical Gated Attention",
+      "total_parameters": 1610480435,
+      "parameter_budget_passed": true,
+      "estimated_latency_ms": 268.68,
+      "estimated_peak_vram_gb": 4.07,
+      "clean_auroc": 0.9931,
+      "mean_robustness_index": 0.9805,
+      "worst_case_auroc": 0.9597,
+      "worst_case_degradation": 0.0334,
+      "clean_fpr": 0.0,
+      "clean_fnr": 0.0,
+      "clean_auprc": 0.9931,
+      "expected_calibration_error": 0.0189,
+      "brier_score": 0.0042,
+      "condition_aurocs": {
+        "clean": 0.9931,
+        "jpeg30": 0.9835,
+        "blur2": 0.9706,
+        "resize0.25": 0.9597,
+        "noise0.10": 0.9729,
+        "crop80": 0.9915,
+        "color_jitter": 0.9921
+      }
+    },
+    "CLIP + SigLIP + SRM-DWT (Dual VLM + Wavelet Forensic)": {
+      "fusion_name": "CLIP + SigLIP + SRM-DWT (Dual VLM + Wavelet Forensic)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "SRM-DWT-Wavelet"
+      ],
+      "fusion_type": "Residual Fusion Head",
+      "total_parameters": 1305477811,
+      "parameter_budget_passed": true,
+      "estimated_latency_ms": 187.68,
+      "estimated_peak_vram_gb": 4.07,
+      "clean_auroc": 0.9675,
+      "mean_robustness_index": 0.9288,
+      "worst_case_auroc": 0.8961,
+      "worst_case_degradation": 0.0714,
+      "clean_fpr": 0.0,
+      "clean_fnr": 0.0,
+      "clean_auprc": 0.9675,
+      "expected_calibration_error": 0.0189,
+      "brier_score": 0.0042,
+      "condition_aurocs": {
+        "clean": 0.9675,
+        "jpeg30": 0.9285,
+        "blur2": 0.903,
+        "resize0.25": 0.8961,
+        "noise0.10": 0.9042,
+        "crop80": 0.9444,
+        "color_jitter": 0.9579
+      }
+    },
+    "ConvNeXt-V2 + 2D-FFT + SRM-DWT (Ultra-Fast Edge-Deployable)": {
+      "fusion_name": "ConvNeXt-V2 + 2D-FFT + SRM-DWT (Ultra-Fast Edge-Deployable)",
+      "branches": [
+        "ConvNeXt-V2",
+        "2D-FFT-Spectral",
+        "SRM-DWT-Wavelet"
+      ],
+      "fusion_type": "Compact Linear Fusion",
+      "total_parameters": 27995264,
+      "parameter_budget_passed": true,
+      "estimated_latency_ms": 16.54,
+      "estimated_peak_vram_gb": 0.7,
+      "clean_auroc": 0.8662,
+      "mean_robustness_index": 0.7672,
+      "worst_case_auroc": 0.692,
+      "worst_case_degradation": 0.1742,
+      "clean_fpr": 0.12,
+      "clean_fnr": 0.02,
+      "clean_auprc": 0.8662,
+      "expected_calibration_error": 0.0747,
+      "brier_score": 0.0689,
+      "condition_aurocs": {
+        "clean": 0.8662,
+        "jpeg30": 0.7392,
+        "blur2": 0.7163,
+        "resize0.25": 0.692,
+        "noise0.10": 0.7141,
+        "crop80": 0.8009,
+        "color_jitter": 0.8418
+      }
+    },
+    "Quad-Expert: CLIP + SigLIP + DINOv2 + SRM-DWT (Full Robustness Suite)": {
+      "fusion_name": "Quad-Expert: CLIP + SigLIP + DINOv2 + SRM-DWT (Full Robustness Suite)",
+      "branches": [
+        "CLIP-ViT-L",
+        "SigLIP-SO400M",
+        "DINOv2-Registers",
+        "SRM-DWT-Wavelet"
+      ],
+      "fusion_type": "Dual Evidence Router Head",
+      "total_parameters": 1610494259,
+      "parameter_budget_passed": true,
+      "estimated_latency_ms": 269.79,
+      "estimated_peak_vram_gb": 4.07,
+      "clean_auroc": 0.9706,
+      "mean_robustness_index": 0.9407,
+      "worst_case_auroc": 0.9163,
+      "worst_case_degradation": 0.0543,
+      "clean_fpr": 0.0,
+      "clean_fnr": 0.0,
+      "clean_auprc": 0.9706,
+      "expected_calibration_error": 0.0189,
+      "brier_score": 0.0042,
+      "condition_aurocs": {
+        "clean": 0.9706,
+        "jpeg30": 0.9367,
+        "blur2": 0.9267,
+        "resize0.25": 0.9163,
+        "noise0.10": 0.9169,
+        "crop80": 0.9543,
+        "color_jitter": 0.9632
+      }
+    }
+  }
+}

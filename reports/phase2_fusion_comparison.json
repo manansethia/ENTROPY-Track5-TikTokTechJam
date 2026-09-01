@@ -1,0 +1,54 @@
+{
+  "Head_A_Linear_Baseline": {
+    "total_parameters": 2213,
+    "trainable_parameters": 2213,
+    "training_time_sec": 5.75,
+    "inference_latency_us_per_sample": 0.52,
+    "validation_AUROC": 0.9951,
+    "validation_AUPRC": 0.9974,
+    "TPR_at_FPR_le_1pct": 0.9243,
+    "TPR_at_FPR_le_05pct": 0.8636,
+    "TPR_at_FPR_le_01pct": 0.0,
+    "FPR_at_tau_080": 0.0121,
+    "TPR_at_tau_080": 0.9491
+  },
+  "Head_B_2Layer_MLP": {
+    "total_parameters": 567297,
+    "trainable_parameters": 567297,
+    "training_time_sec": 6.73,
+    "inference_latency_us_per_sample": 0.38,
+    "validation_AUROC": 0.9968,
+    "validation_AUPRC": 0.9982,
+    "TPR_at_FPR_le_1pct": 0.0,
+    "TPR_at_FPR_le_05pct": 0.0,
+    "TPR_at_FPR_le_01pct": 0.0,
+    "FPR_at_tau_080": 0.0219,
+    "TPR_at_tau_080": 0.981
+  },
+  "Head_C_2Layer_Residual_MLP": {
+    "total_parameters": 4906217,
+    "trainable_parameters": 4906217,
+    "training_time_sec": 25.47,
+    "inference_latency_us_per_sample": 8.88,
+    "validation_AUROC": 0.9961,
+    "validation_AUPRC": 0.9972,
+    "TPR_at_FPR_le_1pct": 0.0,
+    "TPR_at_FPR_le_05pct": 0.0,
+    "TPR_at_FPR_le_01pct": 0.0,
+    "FPR_at_tau_080": 0.0207,
+    "TPR_at_tau_080": 0.9798
+  },
+  "Head_D_Gated_Expert_Attention": {
+    "total_parameters": 2227,
+    "trainable_parameters": 2227,
+    "training_time_sec": 7.3,
+    "inference_latency_us_per_sample": 0.08,
+    "validation_AUROC": 0.9938,
+    "validation_AUPRC": 0.9964,
+    "TPR_at_FPR_le_1pct": 0.9081,
+    "TPR_at_FPR_le_05pct": 0.0,
+    "TPR_at_FPR_le_01pct": 0.0,
+    "FPR_at_tau_080": 0.0225,
+    "TPR_at_tau_080": 0.9574
+  }
+}

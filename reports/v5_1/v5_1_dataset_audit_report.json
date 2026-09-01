@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-08-31 18:30:51 UTC",
+  "total_active_samples": 24452,
+  "split_counts": {
+    "train": 20000,
+    "val": 1952,
+    "test": 2500
+  },
+  "manifest_sha256": {
+    "train": "8028f21b850339c97c844d026a61d0b120b4c5a7e01a36792255a450cbb41cb4",
+    "val": "4c2c275f7fc7aab4567228487196cca39871ca448c6a7d8c05df6a7b0d6c3fe3",
+    "test": "95ffc21540db9e2f45de21fdb57693c4e5a573caadcb7f59c137a9b9536067bb"
+  },
+  "leakage_audit_passed": true
+}

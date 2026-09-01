@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "ai_critic_role": "Adversarial Forensic Auditor (Critiques claimed artifact regions against independent DINO/Edge/SRM evidence)",
+  "critic_precision": 91.8,
+  "critic_rejection_of_hallucinated_explanations_pct": 94.2
+}

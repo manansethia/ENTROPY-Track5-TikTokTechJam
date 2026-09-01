@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "operating_threshold": 0.8,
+  "subgroup_fpr": {
+    "wikiart_fine_art": 0.0006,
+    "loose_authentic_corpus": 0.0185,
+    "coco_macro_captures": 0.038
+  }
+}

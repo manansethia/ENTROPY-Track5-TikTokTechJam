@@ -1,0 +1,163 @@
+{
+  "timestamp": "2026-08-29T06:57:13Z",
+  "status_verdicts": {
+    "MANIFEST_CONSTRUCTED": "EXECUTED",
+    "DEDUPLICATION_VERIFIED": "EXECUTED",
+    "SPLIT_DISJOINTNESS_VERIFIED": "EXECUTED",
+    "OOD_EXCLUSION_VERIFIED": "EXECUTED",
+    "TARGET_POPULATION_RECONCILIATION": "DEFICIT_CONFIRMED",
+    "FINAL_TRAINING_MANIFEST_VALID": "FAILED"
+  },
+  "canonical_manifest_metadata": {
+    "manifest_path": "/home/manan/aigc_robust_detection/manifests/final_284500_governed_manifest_v5.jsonl",
+    "manifest_sha256": "a1cd94157307f8d721bc9af166f2badc06387ea9da31193b23781e77ec488a11",
+    "total_rows_assembled": 167419,
+    "split_counts": {
+      "TRAIN": 146791,
+      "DEV": 9236,
+      "CALIBRATION": 1076,
+      "INTERNAL_TEST": 10316
+    },
+    "split_labels": {
+      "TRAIN": {
+        "REAL": 51198,
+        "AIGC": 95593
+      },
+      "DEV": {
+        "REAL": 4236,
+        "AIGC": 5000
+      },
+      "CALIBRATION": {
+        "REAL": 0,
+        "AIGC": 1076
+      },
+      "INTERNAL_TEST": {
+        "REAL": 4238,
+        "AIGC": 6078
+      }
+    },
+    "pairwise_intersections": {
+      "TRAIN_AND_DEV": 0,
+      "TRAIN_AND_CALIBRATION": 0,
+      "TRAIN_AND_INTERNAL_TEST": 0,
+      "DEV_AND_CALIBRATION": 0,
+      "DEV_AND_INTERNAL_TEST": 0,
+      "CALIBRATION_AND_INTERNAL_TEST": 0
+    },
+    "ood_contamination_count": 0
+  },
+  "governed_target_vs_assembled": {
+    "TRAIN": {
+      "target": 260184,
+      "assembled": 146791,
+      "deficit": -113393
+    },
+    "TRAIN_REAL": {
+      "target": 149000,
+      "assembled": 51198,
+      "deficit": -97802
+    },
+    "TRAIN_AIGC": {
+      "target": 111184,
+      "assembled": 95593,
+      "deficit": -15591
+    },
+    "DEV": {
+      "target": 10000,
+      "assembled": 9236,
+      "deficit": -764
+    },
+    "CALIBRATION": {
+      "target": 4000,
+      "assembled": 1076,
+      "deficit": -2924
+    },
+    "INTERNAL_TEST": {
+      "target": 10316,
+      "assembled": 10316,
+      "deficit": 0
+    },
+    "TOTAL_GOVERNED": {
+      "target": 284500,
+      "assembled": 167419,
+      "deficit": -117081
+    }
+  },
+  "intended_real_breakdown": {
+    "COCO": {
+      "target": 52000,
+      "available_unpacked": 24996,
+      "deficit": -27004
+    },
+    "WikiArt": {
+      "target": 41200,
+      "available_unpacked": 24996,
+      "deficit": -16204
+    },
+    "Web_Photography": {
+      "target": 25800,
+      "available_unpacked": 1206,
+      "deficit": -24594
+    },
+    "Archival": {
+      "target": 18000,
+      "available_unpacked": 0,
+      "deficit": -18000
+    },
+    "Hard_Macro_Bokeh": {
+      "target": 12000,
+      "available_unpacked": 0,
+      "deficit": -12000
+    }
+  },
+  "intended_aigc_breakdown": {
+    "Quality_Paradox": {
+      "target": 22400,
+      "available_unpacked": 24000,
+      "deficit": 0
+    },
+    "SDXL": {
+      "target": 19500,
+      "available_unpacked": 18497,
+      "deficit": -1003
+    },
+    "Midjourney": {
+      "target": 16800,
+      "available_unpacked": 15000,
+      "deficit": -1800
+    },
+    "FLUX_SD3": {
+      "target": 15200,
+      "available_unpacked": 12000,
+      "deficit": -3200
+    },
+    "SID": {
+      "target": 14100,
+      "available_unpacked": 14341,
+      "deficit": 0
+    },
+    "PixArt": {
+      "target": 10400,
+      "available_unpacked": 4000,
+      "deficit": -6400
+    },
+    "HFCF": {
+      "target": 7800,
+      "available_unpacked": 7800,
+      "deficit": 0
+    },
+    "Defactify": {
+      "target": 4984,
+      "available_unpacked": 4955,
+      "deficit": -29
+    }
+  },
+  "storage_raw_reserves": {
+    "parquet_hfcf_rows": 152621,
+    "defactify_parquet_rows": 96000,
+    "sid_parquet_rows": 43044,
+    "aigi_quality_paradox_rows": 24000,
+    "total_raw_reserve_rows": 483084
+  },
+  "operational_verdict": "CANNOT_PROCEED_TO_TRAINING_UNTIL_FULL_260184_POPULATION_IS_RECONSTRUCTED"
+}

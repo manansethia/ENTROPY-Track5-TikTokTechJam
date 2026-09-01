@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "domain_fpr": {
+    "wikiart_fine_art": 0.0006,
+    "loose_authentic_corpus": 0.0185,
+    "coco_macro_captures": 0.028
+  }
+}

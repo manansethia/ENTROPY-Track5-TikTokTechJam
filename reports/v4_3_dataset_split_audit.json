@@ -1,0 +1,32 @@
+{
+  "unique_base_images": 50621,
+  "total_dataset_records": 61614,
+  "split_breakdown": {
+    "train_count": 49270,
+    "val_count": 6165,
+    "test_count": 6179
+  },
+  "class_breakdown": {
+    "train": {
+      "REAL": 36907,
+      "PARTIAL_AIGC": 5181,
+      "FULL_AIGC": 7182
+    },
+    "val": {
+      "REAL": 4642,
+      "PARTIAL_AIGC": 641,
+      "FULL_AIGC": 882
+    },
+    "test": {
+      "REAL": 4556,
+      "PARTIAL_AIGC": 687,
+      "FULL_AIGC": 936
+    }
+  },
+  "leakage_audit": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "zero_leakage_passed": true
+  }
+}

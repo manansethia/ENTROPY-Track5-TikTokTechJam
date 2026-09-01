@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-08-29T10:31:51Z",
+  "total_approved_images": 284500,
+  "training_partition": {
+    "total": 260184,
+    "real_images": 149000,
+    "aigc_images": 111184,
+    "real_breakdown": {
+      "COCO_Authentic_Photography": 52000,
+      "WikiArt_Fine_Art": 41200,
+      "General_Web_Photography": 25800,
+      "Archival_Vintage_Photography": 18000,
+      "Hard_Mined_Bokeh_Macro": 12000
+    },
+    "aigc_breakdown": {
+      "QualityParadox_Photorealistic": 22400,
+      "SDXL_Base_Refiner": 19500,
+      "Midjourney_v5_v6": 16800,
+      "FLUX_SD3_FlowMatching": 15200,
+      "Synthetic_SID_LatentDiffusion": 14100,
+      "PixArt_alpha_sigma": 10400,
+      "HFCF_HighFrequencyArtifacts": 7800,
+      "Defactify_AIGC": 4984
+    }
+  },
+  "holdout_partitions": {
+    "FINAL_DEV": 10000,
+    "FINAL_CALIBRATION": 4000,
+    "LOCKED_INTERNAL_TEST": 10316
+  }
+}

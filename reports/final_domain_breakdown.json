@@ -1,0 +1,17 @@
+{
+  "COCO_Authentic_Photography": {
+    "Samples": 4236,
+    "FP_at_0.1%_FPR": 4,
+    "Empirical_FPR": 0.00094
+  },
+  "WikiArt_Fine_Art": {
+    "Samples": 4236,
+    "FP_at_0.1%_FPR": 3,
+    "Empirical_FPR": 0.00071
+  },
+  "Natural_SID_Photography": {
+    "Samples": 1528,
+    "FP_at_0.1%_FPR": 1,
+    "Empirical_FPR": 0.00065
+  }
+}

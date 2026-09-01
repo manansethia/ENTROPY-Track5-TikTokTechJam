@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-08-28T20:14:12Z",
+  "gate_status": "PASSED \u2014 ALL PRE-TRAINING VERIFICATION CRITERIA SATISFIED",
+  "frozen_pilot_diagnostics": {
+    "architecture": "Tri-Stream: CLIP-ViT-L/14 (1024) + SigLIP-SO400M-224 (1152) + SRM-DWT (36)",
+    "total_input_dim": 2212,
+    "total_instantiated_params": 1304981795,
+    "trainable_params": 2213,
+    "frozen_params": 1304979582,
+    "loss": "FP-Weighted BCE (lambda_FP = 2.0)"
+  },
+  "evaluation_summary": {
+    "700_reserved_validation": {
+      "AUROC": 0.9855,
+      "AUPRC": 0.9885,
+      "ECE": 0.4752,
+      "Brier": 0.0428,
+      "tau_080": {
+        "threshold": 0.8,
+        "counts": {
+          "TP": 281,
+          "TN": 350,
+          "FP": 0,
+          "FN": 69,
+          "total_samples": 700,
+          "actual_real": 350,
+          "actual_fake": 350
+        },
+        "rates": {
+          "FPR": 0.0,
+          "FPR_95_CI": [
+            0.0,
+            0.0109
+          ],
+          "TNR_specificity": 1.0,
+          "TPR_recall": 0.8029,
+          "FNR": 0.1971,
+          "FNR_95_CI": [
+            0.1588,
+            0.242
+          ],
+          "precision": 1.0,
+          "accuracy": 0.9014
+        }
+      }
+    },
+    "500_heldout_internal_test": {
+      "AUROC": 0.9627,
+      "AUPRC": 0.9738,
+      "ECE": 0.4367,
+      "Brier": 0.062,
+      "tau_080": {
+        "threshold": 0.8,
+        "counts": {
+          "TP": 206,
+          "TN": 241,
+          "FP": 4,
+          "FN": 49,
+          "total_samples": 500,
+          "actual_real": 245,
+          "actual_fake": 255
+        },
+        "rates": {
+          "FPR": 0.0163,
+          "FPR_95_CI": [
+            0.0064,
+            0.0412
+          ],
+          "TNR_specificity": 0.9837,
+          "TPR_recall": 0.8078,
+          "FNR": 0.1922,
+          "FNR_95_CI": [
+            0.1485,
+            0.2449
+          ],
+          "precision": 0.981,
+          "accuracy": 0.894
+        }
+      }
+    }
+  },
+  "hardware_and_io_readiness": {
+    "device": "NVIDIA GeForce RTX 3050 (6GB VRAM, CUDA 13.0)",
+    "io_pipeline": "Config C (NVMe + Asynchronous Pinned RAM Prefetch, 625 img/s)",
+    "swap_stability": "Zero sustained swap (0.52 GB static)",
+    "peak_vram_gb": 3.7
+  }
+}

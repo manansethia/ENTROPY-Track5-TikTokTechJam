@@ -1,0 +1,8 @@
+{
+  "report_id": "OOD_REMEDIATION_DATA_POLICY",
+  "base_corpus": "Manifest v6 (284,500 entries)",
+  "expanded_corpus": "Manifest Remediation v1 (305,500 entries)",
+  "balanced_batch_policy": "Equal representation across 12 AIGC generator families and 5 Real photography/art domains",
+  "invariant_augmentation_policy": "Aspect ratio resize, JPEG sweep (Q=40..95), Gaussian blur/sharpen, Color jitter",
+  "created_at": "2026-08-30T04:58:06Z"
+}

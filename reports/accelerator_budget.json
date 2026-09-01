@@ -1,0 +1,106 @@
+{
+  "project": "AIGC Robustness 50-Accelerator-Hour Parallel Sprint",
+  "limits": {
+    "max_gpu_hours": 30.0,
+    "max_tpu_hours": 20.0
+  },
+  "current_usage": {
+    "total_gpu_hours_used": 0.13,
+    "total_gpu_hours_projected": 22.0,
+    "total_tpu_hours_used": 0.0,
+    "total_tpu_hours_projected": 0.0,
+    "gpu_hours_remaining": 29.87,
+    "tpu_hours_remaining": 20.0
+  },
+  "allocations": [
+    {
+      "task_id": "GPU-TASK-1",
+      "task_name": "MAIN Remediation Training (PORTRAIT-REM-1)",
+      "target_machine": "Buildabot (Local RTX 3050 6GB)",
+      "allocated_gpu_hours": 8.0,
+      "used_gpu_hours": 0.0,
+      "status": "STAGING_DATA"
+    },
+    {
+      "task_id": "GPU-TASK-2",
+      "task_name": "Independent Remediation Candidate (Kaggle Candidate)",
+      "target_machine": "Kaggle Dual Tesla T4 (T4x2, 30GB VRAM)",
+      "allocated_gpu_hours": 5.0,
+      "used_gpu_hours": 0.0,
+      "status": "RUNNING",
+      "kernel_id": "doubleggunther/kaggle"
+    },
+    {
+      "task_id": "GPU-TASK-3",
+      "task_name": "Multi-Crop / Native-Resolution Ablation Experiment",
+      "target_machine": "Buildabot / Kaggle GPU",
+      "allocated_gpu_hours": 3.0,
+      "used_gpu_hours": 0.05,
+      "status": "COMPLETED"
+    },
+    {
+      "task_id": "GPU-TASK-4",
+      "task_name": "SPAI / TFG Any-Resolution Detector Benchmark",
+      "target_machine": "Buildabot Local GPU",
+      "allocated_gpu_hours": 2.0,
+      "used_gpu_hours": 0.04,
+      "status": "RUNNING"
+    },
+    {
+      "task_id": "GPU-TASK-5",
+      "task_name": "CommunityForensics ViT-Small (21.8M) Benchmark",
+      "target_machine": "Buildabot Local GPU",
+      "allocated_gpu_hours": 2.0,
+      "used_gpu_hours": 0.04,
+      "status": "RUNNING"
+    },
+    {
+      "task_id": "GPU-TASK-6",
+      "task_name": "High-Res Robustness Matrix Evaluation",
+      "target_machine": "Buildabot Local GPU",
+      "allocated_gpu_hours": 3.0,
+      "used_gpu_hours": 0.0,
+      "status": "QUEUED"
+    },
+    {
+      "task_id": "GPU-TASK-7",
+      "task_name": "Unseen-Generator Frontier Audit",
+      "target_machine": "Buildabot Local GPU",
+      "allocated_gpu_hours": 2.0,
+      "used_gpu_hours": 0.0,
+      "status": "QUEUED"
+    },
+    {
+      "task_id": "GPU-TASK-8",
+      "task_name": "Reserve & Continuation Budget for Champion",
+      "target_machine": "Buildabot Local GPU",
+      "allocated_gpu_hours": 5.0,
+      "used_gpu_hours": 0.0,
+      "status": "RESERVED"
+    }
+  ],
+  "history": [
+    {
+      "worker_id": "probe-p100-test",
+      "account": "DoubleGgunther",
+      "accelerator_type": "GPU",
+      "accelerator_model": "Tesla P100-PCIE-16GB",
+      "kernel_id": "doubleggunther/aigc-gpu-selftest",
+      "runtime_minutes": 2.5,
+      "gpu_hours": 0.04,
+      "task": "Environment probe & PyTorch sm_60 verification",
+      "result": "FAIL (Kaggle Python 3.12 image lacks sm_60 CUDA binaries)"
+    },
+    {
+      "worker_id": "buildabot-gpu-multicrop",
+      "accelerator_type": "GPU",
+      "accelerator_model": "NVIDIA GeForce RTX 3050 6GB",
+      "runtime_minutes": 2.8,
+      "gpu_hours": 0.05,
+      "task": "Multi-Crop vs Global-Resize Resolution Ablation Experiment",
+      "result": "SUCCESS (AUROC increased from 0.9254 to 0.9769 with Global+Local Fusion)"
+    }
+  ],
+  "kaggle_status": "ACTIVE_DUAL_T4_TRAINING",
+  "kaggle_decision_rationale": "Kaggle assigned Tesla P100 (sm_60) incompatible with PyTorch 2.10+; TPU torch-xla C++ ABI symbol mismatch on Python 3.12. Authoritative execution shifted 100% to Buildabot RTX 3050 GPU."
+}

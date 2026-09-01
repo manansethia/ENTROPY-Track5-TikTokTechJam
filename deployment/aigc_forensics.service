@@ -1,0 +1,15 @@
+[Unit]
+Description=AIGC Robust Forensic Detection API Service (Buildabot GPU)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/manan/aigc_robust_detection
+ExecStart=/usr/bin/bash /home/manan/aigc_robust_detection/deployment/run_server_buildabot.sh
+Restart=always
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

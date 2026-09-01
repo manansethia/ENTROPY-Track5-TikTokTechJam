@@ -1,0 +1,332 @@
+{
+  "timestamp": "2026-08-28T17:19:14Z",
+  "audit_objective": "Verify Oracle Best-of-Two Metric Definition, Calculation, and Polarity Alignment",
+  "root_cause_of_previous_anomaly": "Previous script executed before full probability arrays were cached, falling back to random numbers (~0.8320). Now resolved and verified on true cached prediction arrays.",
+  "all_pairs_mathematically_valid": true,
+  "oracle_audit_by_pair": {
+    "CLIP-ViT-L__vs__SigLIP-SO400M": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9988,
+        "expert_b": 1.0
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "CLIP-ViT-L__vs__DINOv2-Registers": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9988,
+        "expert_b": 0.9676
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "CLIP-ViT-L__vs__EVA-02-Large-448": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9988,
+        "expert_b": 0.9868
+      },
+      "oracle_auroc": 0.9996,
+      "mathematical_validity_check": true
+    },
+    "CLIP-ViT-L__vs__ConvNeXt-V2": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9988,
+        "expert_b": 0.9728
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "CLIP-ViT-L__vs__2D-FFT-Spectral": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9988,
+        "expert_b": 0.6944
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "CLIP-ViT-L__vs__SRM-DWT-Wavelet": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9988,
+        "expert_b": 0.8044
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "CLIP-ViT-L__vs__Edge-Specialist": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9988,
+        "expert_b": 0.776
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "CLIP-ViT-L__vs__Patch-MIL": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9988,
+        "expert_b": 0.638
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "SigLIP-SO400M__vs__DINOv2-Registers": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 1.0,
+        "expert_b": 0.9676
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "SigLIP-SO400M__vs__EVA-02-Large-448": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 1.0,
+        "expert_b": 0.9868
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "SigLIP-SO400M__vs__ConvNeXt-V2": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 1.0,
+        "expert_b": 0.9728
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "SigLIP-SO400M__vs__2D-FFT-Spectral": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 1.0,
+        "expert_b": 0.6944
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "SigLIP-SO400M__vs__SRM-DWT-Wavelet": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 1.0,
+        "expert_b": 0.8044
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "SigLIP-SO400M__vs__Edge-Specialist": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 1.0,
+        "expert_b": 0.776
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "SigLIP-SO400M__vs__Patch-MIL": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 1.0,
+        "expert_b": 0.638
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "DINOv2-Registers__vs__EVA-02-Large-448": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9676,
+        "expert_b": 0.9868
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "DINOv2-Registers__vs__ConvNeXt-V2": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9676,
+        "expert_b": 0.9728
+      },
+      "oracle_auroc": 0.9996,
+      "mathematical_validity_check": true
+    },
+    "DINOv2-Registers__vs__2D-FFT-Spectral": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9676,
+        "expert_b": 0.6944
+      },
+      "oracle_auroc": 0.9996,
+      "mathematical_validity_check": true
+    },
+    "DINOv2-Registers__vs__SRM-DWT-Wavelet": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9676,
+        "expert_b": 0.8044
+      },
+      "oracle_auroc": 0.9996,
+      "mathematical_validity_check": true
+    },
+    "DINOv2-Registers__vs__Edge-Specialist": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9676,
+        "expert_b": 0.776
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "DINOv2-Registers__vs__Patch-MIL": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9676,
+        "expert_b": 0.638
+      },
+      "oracle_auroc": 0.9988,
+      "mathematical_validity_check": true
+    },
+    "EVA-02-Large-448__vs__ConvNeXt-V2": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9868,
+        "expert_b": 0.9728
+      },
+      "oracle_auroc": 0.9992,
+      "mathematical_validity_check": true
+    },
+    "EVA-02-Large-448__vs__2D-FFT-Spectral": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9868,
+        "expert_b": 0.6944
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "EVA-02-Large-448__vs__SRM-DWT-Wavelet": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9868,
+        "expert_b": 0.8044
+      },
+      "oracle_auroc": 1.0,
+      "mathematical_validity_check": true
+    },
+    "EVA-02-Large-448__vs__Edge-Specialist": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9868,
+        "expert_b": 0.776
+      },
+      "oracle_auroc": 0.9988,
+      "mathematical_validity_check": true
+    },
+    "EVA-02-Large-448__vs__Patch-MIL": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9868,
+        "expert_b": 0.638
+      },
+      "oracle_auroc": 0.9984,
+      "mathematical_validity_check": true
+    },
+    "ConvNeXt-V2__vs__2D-FFT-Spectral": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9728,
+        "expert_b": 0.6944
+      },
+      "oracle_auroc": 0.9932,
+      "mathematical_validity_check": true
+    },
+    "ConvNeXt-V2__vs__SRM-DWT-Wavelet": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9728,
+        "expert_b": 0.8044
+      },
+      "oracle_auroc": 0.9968,
+      "mathematical_validity_check": true
+    },
+    "ConvNeXt-V2__vs__Edge-Specialist": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9728,
+        "expert_b": 0.776
+      },
+      "oracle_auroc": 0.9956,
+      "mathematical_validity_check": true
+    },
+    "ConvNeXt-V2__vs__Patch-MIL": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.9728,
+        "expert_b": 0.638
+      },
+      "oracle_auroc": 0.9952,
+      "mathematical_validity_check": true
+    },
+    "2D-FFT-Spectral__vs__SRM-DWT-Wavelet": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.6944,
+        "expert_b": 0.8044
+      },
+      "oracle_auroc": 0.9672,
+      "mathematical_validity_check": true
+    },
+    "2D-FFT-Spectral__vs__Edge-Specialist": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.6944,
+        "expert_b": 0.776
+      },
+      "oracle_auroc": 0.9564,
+      "mathematical_validity_check": true
+    },
+    "2D-FFT-Spectral__vs__Patch-MIL": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.6944,
+        "expert_b": 0.638
+      },
+      "oracle_auroc": 0.9636,
+      "mathematical_validity_check": true
+    },
+    "SRM-DWT-Wavelet__vs__Edge-Specialist": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.8044,
+        "expert_b": 0.776
+      },
+      "oracle_auroc": 0.9592,
+      "mathematical_validity_check": true
+    },
+    "SRM-DWT-Wavelet__vs__Patch-MIL": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.8044,
+        "expert_b": 0.638
+      },
+      "oracle_auroc": 0.9452,
+      "mathematical_validity_check": true
+    },
+    "Edge-Specialist__vs__Patch-MIL": {
+      "definition": "Oracle selects model probability closest to ground truth label per sample: max(p1, p2) for y=1, min(p1, p2) for y=0",
+      "constituent_aurocs": {
+        "expert_a": 0.776,
+        "expert_b": 0.638
+      },
+      "oracle_auroc": 0.9512,
+      "mathematical_validity_check": true
+    }
+  }
+}

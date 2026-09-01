@@ -1,0 +1,29 @@
+{
+  "A_Full_Image_Resize_224": {
+    "auroc": 0.9254,
+    "auprc": 0.8493,
+    "real_fpr_at_50_pct": 60.67,
+    "synthetic_tpr_at_50_pct": 100.0,
+    "mean_real_prob": 0.6224,
+    "median_real_prob": 0.9854,
+    "mean_latency_ms": 145.51
+  },
+  "B_Native_Resolution_MultiCrop": {
+    "auroc": 0.9672,
+    "auprc": 0.9709,
+    "real_fpr_at_50_pct": 65.17,
+    "synthetic_tpr_at_50_pct": 96.0,
+    "mean_real_prob": 0.5879,
+    "median_real_prob": 0.6233,
+    "mean_latency_ms": 479.42
+  },
+  "C_Global_Plus_Native_Fusion": {
+    "auroc": 0.9769,
+    "auprc": 0.9758,
+    "real_fpr_at_50_pct": 62.92,
+    "synthetic_tpr_at_50_pct": 100.0,
+    "mean_real_prob": 0.6017,
+    "median_real_prob": 0.6046,
+    "mean_latency_ms": 624.93
+  }
+}

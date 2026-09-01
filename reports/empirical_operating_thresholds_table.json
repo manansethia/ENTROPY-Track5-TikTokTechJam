@@ -1,0 +1,47 @@
+{
+  "TPR@FPR<=1.00%": {
+    "target_fpr": 0.01,
+    "threshold": 0.08024038374423981,
+    "max_allowed_fp": 20,
+    "actual_fp": 21,
+    "actual_fpr": 0.0105,
+    "actual_tp": 1989,
+    "tpr": 0.9945
+  },
+  "TPR@FPR<=0.50%": {
+    "target_fpr": 0.005,
+    "threshold": 0.5311769247055054,
+    "max_allowed_fp": 10,
+    "actual_fp": 11,
+    "actual_fpr": 0.0055,
+    "actual_tp": 1977,
+    "tpr": 0.9885
+  },
+  "TPR@FPR<=0.10%": {
+    "target_fpr": 0.001,
+    "threshold": 0.9486469626426697,
+    "max_allowed_fp": 2,
+    "actual_fp": 3,
+    "actual_fpr": 0.0015,
+    "actual_tp": 1946,
+    "tpr": 0.973
+  },
+  "TPR@FPR<=0.05%": {
+    "target_fpr": 0.0005,
+    "threshold": 0.9535952806472778,
+    "max_allowed_fp": 1,
+    "actual_fp": 2,
+    "actual_fpr": 0.001,
+    "actual_tp": 1945,
+    "tpr": 0.9725
+  },
+  "TPR@FPR<=0.01%": {
+    "target_fpr": 0.0001,
+    "threshold": 0.9860364661941529,
+    "max_allowed_fp": 0,
+    "actual_fp": 0,
+    "actual_fpr": 0.0,
+    "actual_tp": 1887,
+    "tpr": 0.9435
+  }
+}

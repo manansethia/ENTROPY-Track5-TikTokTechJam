@@ -1,0 +1,1007 @@
+{
+  "9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410.jpg": {
+    "verdict": "REAL",
+    "confidence": 0.6888,
+    "ai_probability": 0.3112,
+    "real_probability": 0.6888,
+    "partial_ai_probability": 0.6997,
+    "full_aigc_probability": 0.0044,
+    "affected_area_percentage": 0.0,
+    "max_patch_anomaly": 0.186,
+    "suspicious_regions_count": 0,
+    "suspicious_regions": [],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.0,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.0027,
+        "C1_Portrait_Remediation": 0.0256,
+        "C2_SPAI_MultiFreq_ViT": 0.5273,
+        "C3_CommunityForensics_ViT": 0.5045,
+        "C4_ConvNeXt_HighRes": 0.0001,
+        "C5_ConvNeXt_Tiny_divine2k": 0.0,
+        "C6_EfficientNet_B0": 0.0203,
+        "C7_ResNet50_Deep": 0.3661
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0122,
+        "C1": 0.0052,
+        "C2": 0.0176,
+        "C3": 0.0032,
+        "C4": 0.0355,
+        "C5": 0.9194,
+        "C6": 0.0042,
+        "C7": 0.0027
+      },
+      "V5_CAG_Spatial_Score": 0.7041,
+      "Specialist_Disagreement_Std": 0.2654
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": -5.9141,
+          "prob": 0.0027
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": -3.6383,
+          "prob": 0.0256
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.1093,
+          "prob": 0.5273
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.0181,
+          "prob": 0.5045
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": -8.8318,
+          "prob": 0.0001
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": -12.3577,
+          "prob": 0.0
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": -3.8758,
+          "prob": 0.0203
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": -0.5489,
+          "prob": 0.3661
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.0,
+          "routing_weights": {
+            "C0": 0.0122,
+            "C1": 0.0052,
+            "C2": 0.0176,
+            "C3": 0.0032,
+            "C4": 0.0355,
+            "C5": 0.9194,
+            "C6": 0.0042,
+            "C7": 0.0027
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.2959,
+          "v5_partial": 0.6997,
+          "v5_full": 0.0044,
+          "max_patch_anomaly": 0.186
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 9.356
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410_unified_heatmap.jpg"
+  },
+  "MV5BYjFjZTAxZTItYjhjZS00MzNkLTk0NDYtYWMxYTQxNTE3YTQxXkEyXkFqcGc@._V1_FMjpg_UX1000_-1126278359.jpg": {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.873,
+    "ai_probability": 0.873,
+    "real_probability": 0.127,
+    "partial_ai_probability": 0.086,
+    "full_aigc_probability": 0.8485,
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.8326,
+    "suspicious_regions_count": 2,
+    "suspicious_regions": [
+      {
+        "bbox": [
+          384,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.8326,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.5447,
+        "scale": 768
+      }
+    ],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.9854,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.9842,
+        "C1_Portrait_Remediation": 0.9963,
+        "C2_SPAI_MultiFreq_ViT": 0.3387,
+        "C3_CommunityForensics_ViT": 0.6289,
+        "C4_ConvNeXt_HighRes": 1.0,
+        "C5_ConvNeXt_Tiny_divine2k": 1.0,
+        "C6_EfficientNet_B0": 0.9852,
+        "C7_ResNet50_Deep": 0.6813
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0304,
+        "C1": 0.0219,
+        "C2": 0.4439,
+        "C3": 0.0186,
+        "C4": 0.3096,
+        "C5": 0.137,
+        "C6": 0.024,
+        "C7": 0.0146
+      },
+      "V5_CAG_Spatial_Score": 0.9345,
+      "Specialist_Disagreement_Std": 0.2297
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": 4.1328,
+          "prob": 0.9842
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 5.5928,
+          "prob": 0.9963
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.6692,
+          "prob": 0.3387
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.5275,
+          "prob": 0.6289
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 9.9885,
+          "prob": 1.0
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 12.2475,
+          "prob": 1.0
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": 4.1982,
+          "prob": 0.9852
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": 0.7597,
+          "prob": 0.6813
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.9854,
+          "routing_weights": {
+            "C0": 0.0304,
+            "C1": 0.0219,
+            "C2": 0.4439,
+            "C3": 0.0186,
+            "C4": 0.3096,
+            "C5": 0.137,
+            "C6": 0.024,
+            "C7": 0.0146
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.0655,
+          "v5_partial": 0.086,
+          "v5_full": 0.8485,
+          "max_patch_anomaly": 0.8326
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 7.539
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/MV5BYjFjZTAxZTItYjhjZS00MzNkLTk0NDYtYWMxYTQxNTE3YTQxXkEyXkFqcGc@._V1_FMjpg_UX1000_-1126278359_unified_heatmap.jpg"
+  },
+  "a00882da867d4293bc79642cc2e7509d-3842325504.jpg": {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.8623,
+    "ai_probability": 0.8623,
+    "real_probability": 0.1377,
+    "partial_ai_probability": 0.1854,
+    "full_aigc_probability": 0.7582,
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.9914,
+    "suspicious_regions_count": 7,
+    "suspicious_regions": [
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.931,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          768,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8574,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9511,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.7043,
+        "scale": 768
+      },
+      {
+        "bbox": [
+          576,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9914,
+        "scale": 768
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9712,
+        "scale": 1024
+      },
+      {
+        "bbox": [
+          768,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9598,
+        "scale": 1024
+      }
+    ],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.9585,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.0011,
+        "C1_Portrait_Remediation": 1.0,
+        "C2_SPAI_MultiFreq_ViT": 0.5794,
+        "C3_CommunityForensics_ViT": 0.3791,
+        "C4_ConvNeXt_HighRes": 0.9908,
+        "C5_ConvNeXt_Tiny_divine2k": 0.9905,
+        "C6_EfficientNet_B0": 0.9981,
+        "C7_ResNet50_Deep": 0.8682
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0182,
+        "C1": 0.0313,
+        "C2": 0.2305,
+        "C3": 0.0097,
+        "C4": 0.4937,
+        "C5": 0.1955,
+        "C6": 0.014,
+        "C7": 0.0071
+      },
+      "V5_CAG_Spatial_Score": 0.9436,
+      "Specialist_Disagreement_Std": 0.3197
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": -6.793,
+          "prob": 0.0011
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 11.0097,
+          "prob": 1.0
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.3203,
+          "prob": 0.5794
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.4932,
+          "prob": 0.3791
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 4.6817,
+          "prob": 0.9908
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 4.6416,
+          "prob": 0.9905
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": 6.2521,
+          "prob": 0.9981
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": 1.8847,
+          "prob": 0.8682
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.9585,
+          "routing_weights": {
+            "C0": 0.0182,
+            "C1": 0.0313,
+            "C2": 0.2305,
+            "C3": 0.0097,
+            "C4": 0.4937,
+            "C5": 0.1955,
+            "C6": 0.014,
+            "C7": 0.0071
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.0564,
+          "v5_partial": 0.1854,
+          "v5_full": 0.7582,
+          "max_patch_anomaly": 0.9914
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 7.559
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/a00882da867d4293bc79642cc2e7509d-3842325504_unified_heatmap.jpg"
+  },
+  "a8887a3acfa7159c298b2a6de446db77-1200536355.png": {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.9089,
+    "ai_probability": 0.8444,
+    "real_probability": 0.1556,
+    "partial_ai_probability": 0.077,
+    "full_aigc_probability": 0.9089,
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.9998,
+    "suspicious_regions_count": 15,
+    "suspicious_regions": [
+      {
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9998,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9531,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.999,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9969,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          768,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9685,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.998,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9955,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          768,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9514,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9979,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.915,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9995,
+        "scale": 768
+      },
+      {
+        "bbox": [
+          576,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9988,
+        "scale": 768
+      },
+      {
+        "bbox": [
+          0,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9996,
+        "scale": 768
+      },
+      {
+        "bbox": [
+          576,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9974,
+        "scale": 768
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9998,
+        "scale": 1024
+      }
+    ],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.8973,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.9999,
+        "C1_Portrait_Remediation": 0.9971,
+        "C2_SPAI_MultiFreq_ViT": 0.5047,
+        "C3_CommunityForensics_ViT": 0.3494,
+        "C4_ConvNeXt_HighRes": 0.9979,
+        "C5_ConvNeXt_Tiny_divine2k": 0.9999,
+        "C6_EfficientNet_B0": 0.9903,
+        "C7_ResNet50_Deep": 0.3374
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0502,
+        "C1": 0.0325,
+        "C2": 0.5839,
+        "C3": 0.0317,
+        "C4": 0.1962,
+        "C5": 0.0633,
+        "C6": 0.0179,
+        "C7": 0.0242
+      },
+      "V5_CAG_Spatial_Score": 0.9859,
+      "Specialist_Disagreement_Std": 0.2742
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": 9.2734,
+          "prob": 0.9999
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 5.8288,
+          "prob": 0.9971
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.0189,
+          "prob": 0.5047
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.6218,
+          "prob": 0.3494
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 6.1628,
+          "prob": 0.9979
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 8.9962,
+          "prob": 0.9999
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": 4.6306,
+          "prob": 0.9903
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": -0.6748,
+          "prob": 0.3374
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.8973,
+          "routing_weights": {
+            "C0": 0.0502,
+            "C1": 0.0325,
+            "C2": 0.5839,
+            "C3": 0.0317,
+            "C4": 0.1962,
+            "C5": 0.0633,
+            "C6": 0.0179,
+            "C7": 0.0242
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.0141,
+          "v5_partial": 0.077,
+          "v5_full": 0.9089,
+          "max_patch_anomaly": 0.9998
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 7.702
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/a8887a3acfa7159c298b2a6de446db77-1200536355_unified_heatmap.jpg"
+  },
+  "b44779d2e81fa740bee47b08eb23e4d0-4238713397.jpg": {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.7204,
+    "ai_probability": 0.7204,
+    "real_probability": 0.2796,
+    "partial_ai_probability": 0.5028,
+    "full_aigc_probability": 0.0003,
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.021,
+    "suspicious_regions_count": 0,
+    "suspicious_regions": [],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.939,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 1.0,
+        "C1_Portrait_Remediation": 0.9024,
+        "C2_SPAI_MultiFreq_ViT": 0.4389,
+        "C3_CommunityForensics_ViT": 0.4995,
+        "C4_ConvNeXt_HighRes": 0.9999,
+        "C5_ConvNeXt_Tiny_divine2k": 0.9999,
+        "C6_EfficientNet_B0": 0.9979,
+        "C7_ResNet50_Deep": 0.743
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0475,
+        "C1": 0.0297,
+        "C2": 0.5749,
+        "C3": 0.0322,
+        "C4": 0.1931,
+        "C5": 0.0802,
+        "C6": 0.0199,
+        "C7": 0.0226
+      },
+      "V5_CAG_Spatial_Score": 0.5031,
+      "Specialist_Disagreement_Std": 0.2304
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": 10.3516,
+          "prob": 1.0
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 2.2243,
+          "prob": 0.9024
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.2457,
+          "prob": 0.4389
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.0019,
+          "prob": 0.4995
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 9.3312,
+          "prob": 0.9999
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 9.725,
+          "prob": 0.9999
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": 6.15,
+          "prob": 0.9979
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": 1.0617,
+          "prob": 0.743
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.939,
+          "routing_weights": {
+            "C0": 0.0475,
+            "C1": 0.0297,
+            "C2": 0.5749,
+            "C3": 0.0322,
+            "C4": 0.1931,
+            "C5": 0.0802,
+            "C6": 0.0199,
+            "C7": 0.0226
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.4969,
+          "v5_partial": 0.5028,
+          "v5_full": 0.0003,
+          "max_patch_anomaly": 0.021
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 7.483
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/b44779d2e81fa740bee47b08eb23e4d0-4238713397_unified_heatmap.jpg"
+  },
+  "mia-khalifa-blowjob-675545-3390259016.jpg": {
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.7755,
+    "ai_probability": 0.3338,
+    "real_probability": 0.6662,
+    "partial_ai_probability": 0.7755,
+    "full_aigc_probability": 0.0018,
+    "affected_area_percentage": 0.0,
+    "max_patch_anomaly": 0.3058,
+    "suspicious_regions_count": 0,
+    "suspicious_regions": [],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.0011,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.0144,
+        "C1_Portrait_Remediation": 0.0735,
+        "C2_SPAI_MultiFreq_ViT": 0.5277,
+        "C3_CommunityForensics_ViT": 0.4976,
+        "C4_ConvNeXt_HighRes": 0.0,
+        "C5_ConvNeXt_Tiny_divine2k": 0.0012,
+        "C6_EfficientNet_B0": 0.0119,
+        "C7_ResNet50_Deep": 0.5775
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0261,
+        "C1": 0.0097,
+        "C2": 0.0361,
+        "C3": 0.005,
+        "C4": 0.263,
+        "C5": 0.6262,
+        "C6": 0.0297,
+        "C7": 0.0041
+      },
+      "V5_CAG_Spatial_Score": 0.7773,
+      "Specialist_Disagreement_Std": 0.2878
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": -4.2266,
+          "prob": 0.0144
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": -2.5345,
+          "prob": 0.0735
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.111,
+          "prob": 0.5277
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.0095,
+          "prob": 0.4976
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": -12.5987,
+          "prob": 0.0
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": -6.729,
+          "prob": 0.0012
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": -4.4206,
+          "prob": 0.0119
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": 0.3127,
+          "prob": 0.5775
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.0011,
+          "routing_weights": {
+            "C0": 0.0261,
+            "C1": 0.0097,
+            "C2": 0.0361,
+            "C3": 0.005,
+            "C4": 0.263,
+            "C5": 0.6262,
+            "C6": 0.0297,
+            "C7": 0.0041
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.2227,
+          "v5_partial": 0.7755,
+          "v5_full": 0.0018,
+          "max_patch_anomaly": 0.3058
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 7.329
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/mia-khalifa-blowjob-675545-3390259016_unified_heatmap.jpg"
+  }
+}

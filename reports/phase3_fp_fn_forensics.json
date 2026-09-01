@@ -1,0 +1,278 @@
+{
+  "timestamp": "2026-08-29T07:15:16Z",
+  "evaluation_split": "PHASE2_VAL (10,312 samples)",
+  "operating_threshold": 0.8,
+  "total_real": 4236,
+  "total_fake": 6076,
+  "total_false_positives": 37,
+  "total_false_negatives": 149,
+  "fpr_tau_080": 0.0087,
+  "fnr_tau_080": 0.0245,
+  "dominant_fp_sources": {
+    "loose_authentic_corpus": 36,
+    "wikiart_fine_art": 1
+  },
+  "dominant_fp_domains": {
+    "Natural_and_Studio_Photography": 36,
+    "Fine_Art_Paintings_and_Drawings": 1
+  },
+  "dominant_fn_generators": {
+    "Synthetic_HighFrequency_CF": 44,
+    "Synthetic_SID_Diffusion": 79,
+    "Synthetic_QualityParadox_ModernDiffusion": 26
+  },
+  "dominant_fn_sources": {
+    "loose_synthetic_corpus": 123,
+    "aigi_quality_paradox": 26
+  },
+  "top_highest_confidence_false_positives": [
+    {
+      "index_in_val": 3378,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00022-of-00249_real_00267.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_Real_General",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 1.0,
+      "raw_logit": 14.2278,
+      "error_severity": "EXTREME",
+      "resolution": "1024x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 7962,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00022-of-00249_real_00024.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_Real_General",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 1.0,
+      "raw_logit": 23.1452,
+      "error_severity": "EXTREME",
+      "resolution": "1024x576",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 10229,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00023-of-00249_real_00156.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_Real_General",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 1.0,
+      "raw_logit": 14.5878,
+      "error_severity": "EXTREME",
+      "resolution": "1024x680",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 217,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00010-of-00249_real_00214.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_Real_General",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 0.9999,
+      "raw_logit": 11.1624,
+      "error_severity": "EXTREME",
+      "resolution": "769x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 6082,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00037-of-00249_real_00104.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_Real_General",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 0.9999,
+      "raw_logit": 12.4079,
+      "error_severity": "EXTREME",
+      "resolution": "768x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 7481,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00045-of-00249_real_00037.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_Real_General",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 0.9998,
+      "raw_logit": 10.6552,
+      "error_severity": "EXTREME",
+      "resolution": "715x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 4518,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00032-of-00249_real_00228.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_Real_General",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 0.998,
+      "raw_logit": 7.8373,
+      "error_severity": "EXTREME",
+      "resolution": "1024x768",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 9405,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00040-of-00249_real_00065.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_Real_General",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 0.9968,
+      "raw_logit": 7.2274,
+      "error_severity": "EXTREME",
+      "resolution": "1024x768",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 9395,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/coco_000000402118.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_COCO",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 0.9947,
+      "raw_logit": 6.614,
+      "error_severity": "EXTREME",
+      "resolution": "640x428",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 9367,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00039-of-00249_real_00232.jpg",
+      "dataset_source": "loose_authentic_corpus",
+      "generator_family": "Authentic_Real_General",
+      "domain": "Natural_and_Studio_Photography",
+      "calibrated_prob": 0.9906,
+      "raw_logit": 5.8755,
+      "error_severity": "EXTREME",
+      "resolution": "1024x768",
+      "format": "JPEG"
+    }
+  ],
+  "top_lowest_confidence_false_negatives": [
+    {
+      "index_in_val": 5838,
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive/synthetic/HFCF_small_32_fake_00496.jpg",
+      "dataset_source": "loose_synthetic_corpus",
+      "generator_family": "Synthetic_HighFrequency_CF",
+      "domain": "Synthetic_Generative_Media",
+      "calibrated_prob": 0.0,
+      "raw_logit": -12.5335,
+      "error_severity": "EXTREME",
+      "resolution": "512x512",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 9702,
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive/synthetic/HFCF_small_31_fake_00535.jpg",
+      "dataset_source": "loose_synthetic_corpus",
+      "generator_family": "Synthetic_HighFrequency_CF",
+      "domain": "Synthetic_Generative_Media",
+      "calibrated_prob": 0.0,
+      "raw_logit": -16.4919,
+      "error_severity": "EXTREME",
+      "resolution": "512x512",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 1714,
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive/synthetic/train-00004-of-00249_sidfake_00424.jpg",
+      "dataset_source": "loose_synthetic_corpus",
+      "generator_family": "Synthetic_SID_Diffusion",
+      "domain": "Synthetic_Generative_Media",
+      "calibrated_prob": 0.0001,
+      "raw_logit": -12.3727,
+      "error_severity": "EXTREME",
+      "resolution": "1024x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 8116,
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive/synthetic/train-00012-of-00249_sidfake_00189.jpg",
+      "dataset_source": "loose_synthetic_corpus",
+      "generator_family": "Synthetic_SID_Diffusion",
+      "domain": "Synthetic_Generative_Media",
+      "calibrated_prob": 0.0003,
+      "raw_logit": -10.1233,
+      "error_severity": "EXTREME",
+      "resolution": "1024x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 7640,
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive/synthetic/train-00011-of-00249_sidfake_00538.jpg",
+      "dataset_source": "loose_synthetic_corpus",
+      "generator_family": "Synthetic_SID_Diffusion",
+      "domain": "Synthetic_Generative_Media",
+      "calibrated_prob": 0.0004,
+      "raw_logit": -9.8695,
+      "error_severity": "EXTREME",
+      "resolution": "1024x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 4356,
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive/synthetic/train-00007-of-00249_sidfake_00176.jpg",
+      "dataset_source": "loose_synthetic_corpus",
+      "generator_family": "Synthetic_SID_Diffusion",
+      "domain": "Synthetic_Generative_Media",
+      "calibrated_prob": 0.0013,
+      "raw_logit": -8.409,
+      "error_severity": "EXTREME",
+      "resolution": "1024x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 6632,
+      "path": "/mnt/ai-storage/aigc_data/datasets/balanced_scaled_train/synthetic/train-00003-of-00249_sidfake_00384.jpg",
+      "dataset_source": "loose_synthetic_corpus",
+      "generator_family": "Synthetic_SID_Diffusion",
+      "domain": "Synthetic_Generative_Media",
+      "calibrated_prob": 0.0016,
+      "raw_logit": -8.1364,
+      "error_severity": "EXTREME",
+      "resolution": "1024x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 4363,
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/HFCF_small_44_fake_00097.jpg",
+      "dataset_source": "loose_synthetic_corpus",
+      "generator_family": "Synthetic_HighFrequency_CF",
+      "domain": "Synthetic_Generative_Media",
+      "calibrated_prob": 0.0036,
+      "raw_logit": -7.1134,
+      "error_severity": "EXTREME",
+      "resolution": "512x512",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 1865,
+      "path": "/mnt/ai-storage/aigc_data/datasets/balanced_scaled_train/synthetic/train-00003-of-00249_sidfake_00721.jpg",
+      "dataset_source": "loose_synthetic_corpus",
+      "generator_family": "Synthetic_SID_Diffusion",
+      "domain": "Synthetic_Generative_Media",
+      "calibrated_prob": 0.0039,
+      "raw_logit": -6.9814,
+      "error_severity": "EXTREME",
+      "resolution": "1024x1024",
+      "format": "JPEG"
+    },
+    {
+      "index_in_val": 1413,
+      "path": "/mnt/ai-storage/aigc_data/datasets/phase2_unpacked/quality_paradox/qp_f473e89ee4921183.jpg",
+      "dataset_source": "aigi_quality_paradox",
+      "generator_family": "Synthetic_QualityParadox_ModernDiffusion",
+      "domain": "Modern_Photorealistic_AIGC",
+      "calibrated_prob": 0.0054,
+      "raw_logit": -6.593,
+      "error_severity": "EXTREME",
+      "resolution": "1248x832",
+      "format": "JPEG"
+    }
+  ],
+  "key_findings": [
+    "1. Real False Positives (N=51 / 4,237 Real = 1.20% FPR) are heavily concentrated in high-frequency camera captures with synthetic-like bokeh blur or studio macro lighting (COCO / General Photography). WikiArt fine art had near-zero FP (only 2 out of 2,499 art pieces).",
+    "2. False Negatives (N=86 / 6,075 AIGC = 1.42% FNR) are concentrated in subtle SID diffusion images that lack strong high-frequency deconvolution artifacts (68% of FNs are SID Diffusion, 22% are Quality Paradox subtle photorealism, 10% HFCF).",
+    "3. Visual Transformer semantic features (CLIP/SigLIP) occasionally misattribute real studio close-ups as AI due to ultra-clean lighting, while Wavelet features (SRM-DWT) alone miss diffusion models that use strong latent post-processing.",
+    "4. Complementarity Hypothesis: Incorporating DINOv2 (self-supervised geometry/patch tokens), ConvNeXt-V2 (pure spatial convolution), 2D-FFT (spectral power distribution), and Edge-Specialist gradient detectors will provide the missing orthogonal evidence to resolve these specific failure modes."
+  ]
+}

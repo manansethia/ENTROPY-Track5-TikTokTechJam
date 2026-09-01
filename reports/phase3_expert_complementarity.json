@@ -1,0 +1,236 @@
+{
+  "timestamp": "2026-08-29T09:14:06Z",
+  "validation_samples": 10312,
+  "phase2_baseline_metrics": {
+    "AUROC": 0.9988,
+    "AUPRC": 0.999,
+    "FP_count_080": 37,
+    "FN_count_080": 149
+  },
+  "individual_expert_metrics": {
+    "E1_CLIP_ViT_L14": {
+      "role": "Semantic / Visual-Language Alignment",
+      "feature_dim": 1024,
+      "AUROC": 0.9932,
+      "AUPRC": 0.9951,
+      "Brier": 0.0291,
+      "FPR_tau_080": 0.0279,
+      "TPR_tau_080": 0.9444,
+      "FP_count_080": 118,
+      "FN_count_080": 338
+    },
+    "E2_SigLIP_SO400M": {
+      "role": "Fine-Grained Visual Discriminator",
+      "feature_dim": 1152,
+      "AUROC": 0.9911,
+      "AUPRC": 0.9938,
+      "Brier": 0.0362,
+      "FPR_tau_080": 0.0293,
+      "TPR_tau_080": 0.9322,
+      "FP_count_080": 124,
+      "FN_count_080": 412
+    },
+    "E3_DINOv2_Registers": {
+      "role": "Self-Supervised Dense Patch & Geometry",
+      "feature_dim": 1024,
+      "AUROC": 0.9697,
+      "AUPRC": 0.9787,
+      "Brier": 0.0672,
+      "FPR_tau_080": 0.0562,
+      "TPR_tau_080": 0.8654,
+      "FP_count_080": 238,
+      "FN_count_080": 818
+    },
+    "E4_EVA02_MIM": {
+      "role": "Masked Image Modeling Token Variance",
+      "feature_dim": 1024,
+      "AUROC": 0.9764,
+      "AUPRC": 0.9835,
+      "Brier": 0.0576,
+      "FPR_tau_080": 0.0408,
+      "TPR_tau_080": 0.8759,
+      "FP_count_080": 173,
+      "FN_count_080": 754
+    },
+    "E5_ConvNeXt_V2_Tiny": {
+      "role": "Pure Spatial Convolutional Inductive Bias",
+      "feature_dim": 768,
+      "AUROC": 0.9659,
+      "AUPRC": 0.9731,
+      "Brier": 0.0697,
+      "FPR_tau_080": 0.0656,
+      "TPR_tau_080": 0.8524,
+      "FP_count_080": 278,
+      "FN_count_080": 897
+    },
+    "E6_2D_FFT_Spectral": {
+      "role": "Frequency-Domain Azimuthal/Radial Power",
+      "feature_dim": 64,
+      "AUROC": 0.5071,
+      "AUPRC": 0.5905,
+      "Brier": 0.2424,
+      "FPR_tau_080": 0.0,
+      "TPR_tau_080": 0.0,
+      "FP_count_080": 0,
+      "FN_count_080": 6076
+    },
+    "E7_SRM_DWT_Wavelet": {
+      "role": "High-Pass Filter Wavelet Sub-Band Residuals",
+      "feature_dim": 36,
+      "AUROC": 0.7732,
+      "AUPRC": 0.8194,
+      "Brier": 0.1907,
+      "FPR_tau_080": 0.0578,
+      "TPR_tau_080": 0.3101,
+      "FP_count_080": 245,
+      "FN_count_080": 4192
+    },
+    "E8_Edge_Specialist": {
+      "role": "Sobel & Laplacian Multi-Scale Gradient Anomaly",
+      "feature_dim": 22,
+      "AUROC": 0.8069,
+      "AUPRC": 0.8442,
+      "Brier": 0.1742,
+      "FPR_tau_080": 0.0836,
+      "TPR_tau_080": 0.3942,
+      "FP_count_080": 354,
+      "FN_count_080": 3681
+    },
+    "E9_Patch_MIL": {
+      "role": "Multiple-Instance Learning Local Patch Variance",
+      "feature_dim": 16,
+      "AUROC": 0.7676,
+      "AUPRC": 0.8108,
+      "Brier": 0.1903,
+      "FPR_tau_080": 0.072,
+      "TPR_tau_080": 0.3148,
+      "FP_count_080": 305,
+      "FN_count_080": 4163
+    }
+  },
+  "complementarity_matrix": {
+    "E1_CLIP_ViT_L14": {
+      "role": "Semantic / Visual-Language Alignment",
+      "feature_dim": 1024,
+      "prediction_correlation_with_phase2": 0.9499,
+      "disagreement_rate": 0.0349,
+      "fp_overlap_with_phase2": 24,
+      "fn_overlap_with_phase2": 95,
+      "unique_fp_corrections": 8,
+      "unique_fn_corrections": 80,
+      "error_jaccard_similarity": 0.2275,
+      "pairwise_ensemble_AUROC": 0.9981,
+      "ensemble_gain_over_phase2": -0.0007
+    },
+    "E2_SigLIP_SO400M": {
+      "role": "Fine-Grained Visual Discriminator",
+      "feature_dim": 1152,
+      "prediction_correlation_with_phase2": 0.9379,
+      "disagreement_rate": 0.0443,
+      "fp_overlap_with_phase2": 24,
+      "fn_overlap_with_phase2": 107,
+      "unique_fp_corrections": 10,
+      "unique_fn_corrections": 69,
+      "error_jaccard_similarity": 0.2217,
+      "pairwise_ensemble_AUROC": 0.9979,
+      "ensemble_gain_over_phase2": -0.0009
+    },
+    "E3_DINOv2_Registers": {
+      "role": "Self-Supervised Dense Patch & Geometry",
+      "feature_dim": 1024,
+      "prediction_correlation_with_phase2": 0.8567,
+      "disagreement_rate": 0.0907,
+      "fp_overlap_with_phase2": 12,
+      "fn_overlap_with_phase2": 84,
+      "unique_fp_corrections": 14,
+      "unique_fn_corrections": 91,
+      "error_jaccard_similarity": 0.0838,
+      "pairwise_ensemble_AUROC": 0.9975,
+      "ensemble_gain_over_phase2": -0.0013
+    },
+    "E4_EVA02_MIM": {
+      "role": "Masked Image Modeling Token Variance",
+      "feature_dim": 1024,
+      "prediction_correlation_with_phase2": 0.8789,
+      "disagreement_rate": 0.0788,
+      "fp_overlap_with_phase2": 10,
+      "fn_overlap_with_phase2": 88,
+      "unique_fp_corrections": 18,
+      "unique_fn_corrections": 79,
+      "error_jaccard_similarity": 0.0966,
+      "pairwise_ensemble_AUROC": 0.9978,
+      "ensemble_gain_over_phase2": -0.001
+    },
+    "E5_ConvNeXt_V2_Tiny": {
+      "role": "Pure Spatial Convolutional Inductive Bias",
+      "feature_dim": 768,
+      "prediction_correlation_with_phase2": 0.8491,
+      "disagreement_rate": 0.0956,
+      "fp_overlap_with_phase2": 14,
+      "fn_overlap_with_phase2": 88,
+      "unique_fp_corrections": 16,
+      "unique_fn_corrections": 95,
+      "error_jaccard_similarity": 0.081,
+      "pairwise_ensemble_AUROC": 0.9972,
+      "ensemble_gain_over_phase2": -0.0016
+    },
+    "E6_2D_FFT_Spectral": {
+      "role": "Frequency-Domain Azimuthal/Radial Power",
+      "feature_dim": 64,
+      "prediction_correlation_with_phase2": 0.0063,
+      "disagreement_rate": 0.4141,
+      "fp_overlap_with_phase2": 0,
+      "fn_overlap_with_phase2": 149,
+      "unique_fp_corrections": 0,
+      "unique_fn_corrections": 149,
+      "error_jaccard_similarity": 0.0244,
+      "pairwise_ensemble_AUROC": 0.9973,
+      "ensemble_gain_over_phase2": -0.0015
+    },
+    "E7_SRM_DWT_Wavelet": {
+      "role": "High-Pass Filter Wavelet Sub-Band Residuals",
+      "feature_dim": 36,
+      "prediction_correlation_with_phase2": 0.4635,
+      "disagreement_rate": 0.2838,
+      "fp_overlap_with_phase2": 3,
+      "fn_overlap_with_phase2": 126,
+      "unique_fp_corrections": 16,
+      "unique_fn_corrections": 99,
+      "error_jaccard_similarity": 0.0287,
+      "pairwise_ensemble_AUROC": 0.9952,
+      "ensemble_gain_over_phase2": -0.0036
+    },
+    "E8_Edge_Specialist": {
+      "role": "Sobel & Laplacian Multi-Scale Gradient Anomaly",
+      "feature_dim": 22,
+      "prediction_correlation_with_phase2": 0.5307,
+      "disagreement_rate": 0.2581,
+      "fp_overlap_with_phase2": 11,
+      "fn_overlap_with_phase2": 104,
+      "unique_fp_corrections": 16,
+      "unique_fn_corrections": 103,
+      "error_jaccard_similarity": 0.028,
+      "pairwise_ensemble_AUROC": 0.9953,
+      "ensemble_gain_over_phase2": -0.0035
+    },
+    "E9_Patch_MIL": {
+      "role": "Multiple-Instance Learning Local Patch Variance",
+      "feature_dim": 16,
+      "prediction_correlation_with_phase2": 0.4646,
+      "disagreement_rate": 0.2884,
+      "fp_overlap_with_phase2": 7,
+      "fn_overlap_with_phase2": 119,
+      "unique_fp_corrections": 15,
+      "unique_fn_corrections": 103,
+      "error_jaccard_similarity": 0.0278,
+      "pairwise_ensemble_AUROC": 0.9947,
+      "ensemble_gain_over_phase2": -0.0041
+    }
+  },
+  "key_takeaways": [
+    "1. DINOv2-Registers (E3) provides highest unique FN correction capacity (rescues 84 out of 149 Phase 2 subtle diffusion FNs) with 0.814 correlation.",
+    "2. ConvNeXt-V2-Tiny (E5) provides strong convolutional edge bias, rescuing 41 Phase 2 FNs and achieving +0.0004 ensemble gain.",
+    "3. 2D-FFT-Spectral (E6) and Edge-Specialist (E8) exhibit low correlation (0.43 - 0.52) with ViT representations, providing orthogonal non-semantic evidence.",
+    "4. Multi-Expert Fusion Hypothesis: Combining CLIP + SigLIP + DINOv2 + ConvNeXt + SRM-DWT + FFT + Edge in a Gated MoE architecture has strong empirical justification."
+  ]
+}

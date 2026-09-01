@@ -1,0 +1,80 @@
+{
+  "strict_2100_benchmark": {
+    "dataset": "Strict 2,100 Benchmark",
+    "sample_count": 1150,
+    "real_count": 100,
+    "aigc_count": 1050,
+    "c3_auc": 0.7758,
+    "c3_ap": 0.9751,
+    "c3_acc": 56.87,
+    "c3_fpr_50": 7.0,
+    "c3_tpr_50": 53.43,
+    "c3_tpr_at_1pct_fpr": 40.86,
+    "c3_brier": 0.3801,
+    "c3_prob_mean_real": 0.1011,
+    "c3_prob_mean_fake": 0.5429,
+    "confusion_matrix": [
+      [
+        93,
+        7
+      ],
+      [
+        489,
+        561
+      ]
+    ],
+    "eval_time_sec": 101.64
+  },
+  "highres_gigapixel_pool": {
+    "dataset": "High-Res Gigapixel Pool",
+    "sample_count": 220,
+    "real_count": 110,
+    "aigc_count": 110,
+    "c3_auc": 0.4368,
+    "c3_ap": 0.5428,
+    "c3_acc": 47.73,
+    "c3_fpr_50": 30.91,
+    "c3_tpr_50": 26.36,
+    "c3_tpr_at_1pct_fpr": 11.82,
+    "c3_brier": 0.4428,
+    "c3_prob_mean_real": 0.3235,
+    "c3_prob_mean_fake": 0.2867,
+    "confusion_matrix": [
+      [
+        76,
+        34
+      ],
+      [
+        81,
+        29
+      ]
+    ],
+    "eval_time_sec": 39.74
+  },
+  "v3_validation_pool_sample": {
+    "dataset": "V3 Validation Pool",
+    "sample_count": 2000,
+    "real_count": 1037,
+    "aigc_count": 963,
+    "c3_auc": 0.8837,
+    "c3_ap": 0.8978,
+    "c3_acc": 80.05,
+    "c3_fpr_50": 6.56,
+    "c3_tpr_50": 65.63,
+    "c3_tpr_at_1pct_fpr": 44.44,
+    "c3_brier": 0.1681,
+    "c3_prob_mean_real": 0.0836,
+    "c3_prob_mean_fake": 0.6592,
+    "confusion_matrix": [
+      [
+        969,
+        68
+      ],
+      [
+        331,
+        632
+      ]
+    ],
+    "eval_time_sec": 138.82
+  }
+}

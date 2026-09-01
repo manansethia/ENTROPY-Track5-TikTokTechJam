@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-08-28T20:14:12Z",
+  "generator_stratification": {
+    "Authentic_Real_General": {
+      "sample_count": 290,
+      "type": "AUTHENTIC_SOURCE",
+      "AUROC_vs_All_Fake": 0.9869,
+      "AUPRC_vs_All_Fake": 0.9912,
+      "tau_080_metrics": {
+        "FP": 0,
+        "TN": 290,
+        "FPR_FalseAlarmRate": 0.0,
+        "TNR_Specificity": 1.0
+      }
+    },
+    "Synthetic_Diffusion_General": {
+      "sample_count": 350,
+      "type": "SYNTHETIC_GENERATOR",
+      "AUROC_vs_All_Real": 0.9855,
+      "AUPRC_vs_All_Real": 0.9885,
+      "tau_080_metrics": {
+        "TP": 281,
+        "FN": 69,
+        "TPR_Recall": 0.8029,
+        "FNR_MissRate": 0.1971
+      }
+    },
+    "Authentic_COCO_Photo": {
+      "sample_count": 60,
+      "type": "AUTHENTIC_SOURCE",
+      "AUROC_vs_All_Fake": 0.9787,
+      "AUPRC_vs_All_Fake": 0.9964,
+      "tau_080_metrics": {
+        "FP": 0,
+        "TN": 60,
+        "FPR_FalseAlarmRate": 0.0,
+        "TNR_Specificity": 1.0
+      }
+    }
+  }
+}

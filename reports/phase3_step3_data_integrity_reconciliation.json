@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-08-29T07:22:33Z",
+  "manifest_path": "/home/manan/aigc_robust_detection/manifests/phase2_150k_manifest.jsonl",
+  "manifest_sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+  "audit_verdict": "PASSED \u2014 100% CRYPTOGRAPHIC ISOLATION & ZERO CONTAMINATION",
+  "partitions": {
+    "validation_split": {
+      "split_name": "PHASE2_VAL",
+      "total_images": 10312,
+      "real_images": 4236,
+      "real_percentage": "41.08%",
+      "aigc_images": 6076,
+      "aigc_percentage": "58.92%",
+      "source_distribution": {
+        "wikiart_fine_art": 2453,
+        "loose_synthetic_corpus": 3632,
+        "loose_authentic_corpus": 1783,
+        "aigi_quality_paradox": 2444
+      },
+      "generator_distribution": {
+        "Authentic_WikiArt_FineArt": 2453,
+        "Synthetic_HighFrequency_CF": 2982,
+        "Authentic_COCO": 311,
+        "Synthetic_QualityParadox_ModernDiffusion": 2444,
+        "Synthetic_SID_Diffusion": 650,
+        "Authentic_Real_General": 1472
+      },
+      "domain_distribution": {
+        "Fine_Art_Paintings_and_Drawings": 2453,
+        "Synthetic_Generative_Media": 3632,
+        "Natural_and_Studio_Photography": 1783,
+        "Modern_Photorealistic_AIGC": 2444
+      }
+    },
+    "probe_training_split": {
+      "split_name": "PHASE2_TRAIN (Subset)",
+      "total_images": 20000,
+      "real_images": 8158,
+      "real_percentage": "40.79%",
+      "aigc_images": 11842,
+      "aigc_percentage": "59.21%",
+      "source_distribution": {
+        "loose_synthetic_corpus": 7138,
+        "aigi_quality_paradox": 4704,
+        "loose_authentic_corpus": 3254,
+        "wikiart_fine_art": 4904
+      },
+      "generator_distribution": {
+        "Synthetic_HighFrequency_CF": 5824,
+        "Synthetic_QualityParadox_ModernDiffusion": 4704,
+        "Synthetic_SID_Diffusion": 1314,
+        "Authentic_Real_General": 2695,
+        "Authentic_WikiArt_FineArt": 4904,
+        "Authentic_COCO": 559
+      },
+      "domain_distribution": {
+        "Synthetic_Generative_Media": 7138,
+        "Modern_Photorealistic_AIGC": 4704,
+        "Natural_and_Studio_Photography": 3254,
+        "Fine_Art_Paintings_and_Drawings": 4904
+      }
+    },
+    "internal_test_split": {
+      "split_name": "PHASE2_INTERNAL_TEST",
+      "total_images": 10316,
+      "status": "LOCKED & 100% UNTOUCHED (Zero access during Phase 3 feature/probe tuning)"
+    }
+  },
+  "cryptographic_isolation_evidence": {
+    "probe_train_vs_validation_hash_overlap": 0,
+    "probe_train_vs_validation_path_overlap": 0,
+    "probe_train_vs_internal_test_hash_overlap": 0,
+    "validation_vs_internal_test_hash_overlap": 0,
+    "full_train_vs_internal_test_hash_overlap": 0,
+    "quarantined_ood_benchmark_count": 0
+  },
+  "procedural_guardrails": {
+    "normalization_source": "Strictly fitted on probe-training split only; validation set normalized using frozen training statistics.",
+    "probe_fitting_source": "Probes fitted exclusively on 20,000 probe-training samples.",
+    "validation_evaluation_role": "Validation set used strictly for evaluation, correlation, error forensics, and complementarity analysis.",
+    "calibration_role": "Calibration evaluated on dedicated validation sub-partition (no test set leakage).",
+    "internal_test_guardrail": "Internal test remains 100% isolated until final single-run frozen comparison.",
+    "external_ood_guardrail": "Synthbuster (9,000 images) and AIGIBench remain strictly locked until post-training evaluation."
+  }
+}

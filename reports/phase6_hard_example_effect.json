@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "coco_macro_fpr_reduction": "3.80% (Phase 4) -> 2.80% (Phase 5/6)",
+  "subtle_sid_diffusion_tpr_gain": "93.88% (Phase 2) -> 96.80% (Phase 5/6)",
+  "sub_0_10_pct_fpr_tpr_gain": "83.10% (Phase 4) -> 90.41% (Phase 5/6)"
+}

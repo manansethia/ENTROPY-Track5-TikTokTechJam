@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "mean_robustness_index": 0.9964,
+  "worst_condition": "BilinearResize_0.25x (AUROC=0.9918)",
+  "matrix": {
+    "Clean": {
+      "AUROC": 0.9986,
+      "AUPRC": 0.999,
+      "FPR_080": 0.0094,
+      "TPR_080": 0.976,
+      "RI": 1.0
+    },
+    "JPEG_Q90": {
+      "AUROC": 0.9975,
+      "AUPRC": 0.9982,
+      "FPR_080": 0.0102,
+      "TPR_080": 0.9735,
+      "RI": 0.9989
+    },
+    "JPEG_Q70": {
+      "AUROC": 0.9961,
+      "AUPRC": 0.997,
+      "FPR_080": 0.0118,
+      "TPR_080": 0.9705,
+      "RI": 0.9975
+    },
+    "JPEG_Q50": {
+      "AUROC": 0.9945,
+      "AUPRC": 0.9956,
+      "FPR_080": 0.0132,
+      "TPR_080": 0.9675,
+      "RI": 0.9959
+    },
+    "JPEG_Q30": {
+      "AUROC": 0.9925,
+      "AUPRC": 0.9939,
+      "FPR_080": 0.0155,
+      "TPR_080": 0.9625,
+      "RI": 0.9939
+    },
+    "GaussianBlur_sigma0.5": {
+      "AUROC": 0.9972,
+      "AUPRC": 0.9979,
+      "FPR_080": 0.0105,
+      "TPR_080": 0.972,
+      "RI": 0.9986
+    },
+    "GaussianBlur_sigma1.0": {
+      "AUROC": 0.9952,
+      "AUPRC": 0.9962,
+      "FPR_080": 0.0122,
+      "TPR_080": 0.969,
+      "RI": 0.9966
+    },
+    "GaussianBlur_sigma2.0": {
+      "AUROC": 0.9935,
+      "AUPRC": 0.9948,
+      "FPR_080": 0.0145,
+      "TPR_080": 0.964,
+      "RI": 0.9949
+    },
+    "BilinearResize_0.50x": {
+      "AUROC": 0.994,
+      "AUPRC": 0.9952,
+      "FPR_080": 0.0138,
+      "TPR_080": 0.967,
+      "RI": 0.9954
+    },
+    "BilinearResize_0.25x": {
+      "AUROC": 0.9918,
+      "AUPRC": 0.9932,
+      "FPR_080": 0.0168,
+      "TPR_080": 0.959,
+      "RI": 0.9932
+    },
+    "GaussianNoise_std0.02": {
+      "AUROC": 0.9965,
+      "AUPRC": 0.9974,
+      "FPR_080": 0.0112,
+      "TPR_080": 0.9715,
+      "RI": 0.9979
+    },
+    "GaussianNoise_std0.05": {
+      "AUROC": 0.9942,
+      "AUPRC": 0.9953,
+      "FPR_080": 0.0135,
+      "TPR_080": 0.967,
+      "RI": 0.9956
+    },
+    "GaussianNoise_std0.10": {
+      "AUROC": 0.9922,
+      "AUPRC": 0.9936,
+      "FPR_080": 0.016,
+      "TPR_080": 0.961,
+      "RI": 0.9936
+    },
+    "CenterCrop_80": {
+      "AUROC": 0.9962,
+      "AUPRC": 0.9971,
+      "FPR_080": 0.0115,
+      "TPR_080": 0.971,
+      "RI": 0.9976
+    },
+    "ColorJitter": {
+      "AUROC": 0.9968,
+      "AUPRC": 0.9976,
+      "FPR_080": 0.0108,
+      "TPR_080": 0.9725,
+      "RI": 0.9982
+    }
+  }
+}

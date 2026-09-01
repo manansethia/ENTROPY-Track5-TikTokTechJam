@@ -1,0 +1,56 @@
+{
+  "auroc": 0.9999539182386099,
+  "auprc": 0.9998034765584891,
+  "brier": 0.0030860915632651355,
+  "ece": 0.002878816042009111,
+  "total_samples": 10316,
+  "real_count": 4238,
+  "aigc_count": 6078,
+  "operating_points": {
+    "TPR@FPR<=1.00%": {
+      "target_fpr": 0.01,
+      "threshold": 0.013222821988165379,
+      "max_allowed_fp": 42,
+      "actual_fp": 43,
+      "actual_fpr": 0.010146295422369042,
+      "actual_tp": 6071,
+      "tpr": 0.9988483053636065
+    },
+    "TPR@FPR<=0.50%": {
+      "target_fpr": 0.005,
+      "threshold": 0.034618835896253586,
+      "max_allowed_fp": 21,
+      "actual_fp": 22,
+      "actual_fpr": 0.005191127890514393,
+      "actual_tp": 6062,
+      "tpr": 0.9973675551168147
+    },
+    "TPR@FPR<=0.10%": {
+      "target_fpr": 0.001,
+      "threshold": 0.9597620368003845,
+      "max_allowed_fp": 4,
+      "actual_fp": 5,
+      "actual_fpr": 0.0011798017932987258,
+      "actual_tp": 6033,
+      "tpr": 0.9925962487660415
+    },
+    "TPR@FPR<=0.05%": {
+      "target_fpr": 0.0005,
+      "threshold": 0.9799765348434448,
+      "max_allowed_fp": 2,
+      "actual_fp": 3,
+      "actual_fpr": 0.0007078810759792355,
+      "actual_tp": 6021,
+      "tpr": 0.9906219151036525
+    },
+    "TPR@FPR<=0.01%": {
+      "target_fpr": 0.0001,
+      "threshold": 0.996407376361847,
+      "max_allowed_fp": 0,
+      "actual_fp": 0,
+      "actual_fpr": 0.0,
+      "actual_tp": 5965,
+      "tpr": 0.9814083580125041
+    }
+  }
+}

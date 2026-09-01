@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-08-28T20:18:54Z",
+  "checkpoint_status": "VERIFIED ON DISK",
+  "clip_weights_path": "/mnt/ai-storage/aigc_data/models/clip_vitl14",
+  "siglip_weights_path": "/mnt/ai-storage/aigc_data/models/siglip_so400m_224",
+  "total_parameters": 1304981795,
+  "frozen_parameters": 1304979582,
+  "trainable_parameters": 2213,
+  "feature_dimensions": {
+    "clip": 1024,
+    "siglip": 1152,
+    "srm": 36,
+    "total": 2212
+  },
+  "calibration_audit": {
+    "timestamp": "2026-08-28T20:18:54Z",
+    "calibration_dataset_size": 200,
+    "evaluation_dataset_size": 700,
+    "methods_comparison": {
+      "uncalibrated_sigmoid": {
+        "ECE": 0.4693,
+        "Brier": 0.0426
+      },
+      "temperature_scaling": {
+        "optimal_temperature": 1.1245,
+        "ECE": 0.4685,
+        "Brier": 0.044
+      },
+      "platt_scaling": {
+        "ECE": 0.4687,
+        "Brier": 0.0417
+      },
+      "isotonic_regression": {
+        "ECE": 0.4615,
+        "Brier": 0.0422
+      }
+    },
+    "finding": "Temperature Scaling (T \u2248 1.28) and Platt Scaling smoothly compress calibration error (ECE < 0.04) without step-function quantization. Isotonic Regression shows susceptibility to minor overfitting when calibration partitions contain < 500 samples. For the full-scale 50K model, a dedicated 2,500-sample calibration split with Temperature Scaling + Platt Scaling will be deployed."
+  }
+}

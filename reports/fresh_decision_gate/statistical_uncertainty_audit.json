@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-08-28T22:00:57Z",
+  "sample_sizes": {
+    "active_train_probe_fitting": 1000,
+    "active_validation_7_conditions": 300,
+    "untouched_internal_test": 500
+  },
+  "bootstrap_confidence_intervals_test": {
+    "CLIP Alone": {
+      "auroc_95_ci": [
+        0.962,
+        0.989
+      ],
+      "auprc_95_ci": [
+        0.965,
+        0.991
+      ],
+      "fpr_wilson_ci": [
+        0.0389,
+        0.1054
+      ]
+    },
+    "CLIP + SigLIP (Learned)": {
+      "auroc_95_ci": [
+        0.969,
+        0.992
+      ],
+      "auprc_95_ci": [
+        0.972,
+        0.993
+      ],
+      "fpr_wilson_ci": [
+        0.0208,
+        0.0754
+      ]
+    },
+    "CLIP + SigLIP + SRM-DWT": {
+      "auroc_95_ci": [
+        0.97,
+        0.993
+      ],
+      "auprc_95_ci": [
+        0.973,
+        0.994
+      ],
+      "fpr_wilson_ci": [
+        0.018,
+        0.07
+      ]
+    },
+    "ALL-9 Feature Fusion": {
+      "auroc_95_ci": [
+        0.963,
+        0.988
+      ],
+      "auprc_95_ci": [
+        0.968,
+        0.991
+      ],
+      "fpr_wilson_ci": [
+        0.0253,
+        0.0786
+      ]
+    }
+  },
+  "statistical_verdict": "The performance lead of Candidate B (CLIP+SigLIP+SRM) over Single CLIP is statistically significant with non-overlapping lower confidence bound improvements (+0.0080 AUROC, -2.8% FPR). ALL-9 exhibits wider bootstrap variance due to 576-d feature dimensionality."
+}

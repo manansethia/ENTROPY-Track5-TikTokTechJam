@@ -1,0 +1,152 @@
+{
+  "report_id": "OOD_SHORTCUT_AUDIT",
+  "sample_count": 6294,
+  "shortcut_leakage_severity": "HIGH",
+  "domain_summary_table": [
+    {
+      "domain": "Natural_Photography",
+      "label": "REAL",
+      "sample_count": 550,
+      "avg_resolution": "790x653",
+      "square_ratio_pct": 4.9,
+      "exact_512_pct": 0.0,
+      "exact_1024_pct": 2.4,
+      "avg_hf_spectral_ratio": 0.3328,
+      "avg_brightness": 111.2
+    },
+    {
+      "domain": "Natural_SID_Photography",
+      "label": "REAL",
+      "sample_count": 600,
+      "avg_resolution": "958x793",
+      "square_ratio_pct": 4.2,
+      "exact_512_pct": 0.0,
+      "exact_1024_pct": 4.0,
+      "avg_hf_spectral_ratio": 0.315,
+      "avg_brightness": 106.4
+    },
+    {
+      "domain": "WikiArt_Fine_Art",
+      "label": "REAL",
+      "sample_count": 600,
+      "avg_resolution": "1642x1656",
+      "square_ratio_pct": 1.0,
+      "exact_512_pct": 0.0,
+      "exact_1024_pct": 0.0,
+      "avg_hf_spectral_ratio": 0.3457,
+      "avg_brightness": 122.3
+    },
+    {
+      "domain": "COCO_Authentic_Photography",
+      "label": "REAL",
+      "sample_count": 600,
+      "avg_resolution": "718x596",
+      "square_ratio_pct": 3.0,
+      "exact_512_pct": 0.0,
+      "exact_1024_pct": 1.2,
+      "avg_hf_spectral_ratio": 0.3486,
+      "avg_brightness": 108.7
+    },
+    {
+      "domain": "Quality_Paradox_Photorealism",
+      "label": "AIGC",
+      "sample_count": 600,
+      "avg_resolution": "1055x921",
+      "square_ratio_pct": 37.7,
+      "exact_512_pct": 0.0,
+      "exact_1024_pct": 37.3,
+      "avg_hf_spectral_ratio": 0.3464,
+      "avg_brightness": 113.6
+    },
+    {
+      "domain": "SDXL_Midjourney",
+      "label": "AIGC",
+      "sample_count": 600,
+      "avg_resolution": "578x578",
+      "square_ratio_pct": 100.0,
+      "exact_512_pct": 87.0,
+      "exact_1024_pct": 13.0,
+      "avg_hf_spectral_ratio": 0.3066,
+      "avg_brightness": 117.4
+    },
+    {
+      "domain": "SID_LatentDiffusion",
+      "label": "AIGC",
+      "sample_count": 600,
+      "avg_resolution": "1023x1023",
+      "square_ratio_pct": 100.0,
+      "exact_512_pct": 0.0,
+      "exact_1024_pct": 99.3,
+      "avg_hf_spectral_ratio": 0.3176,
+      "avg_brightness": 101.3
+    },
+    {
+      "domain": "Defactify_AIGC",
+      "label": "AIGC",
+      "sample_count": 532,
+      "avg_resolution": "709x709",
+      "square_ratio_pct": 100.0,
+      "exact_512_pct": 0.0,
+      "exact_1024_pct": 41.0,
+      "avg_hf_spectral_ratio": 0.3205,
+      "avg_brightness": 58.6
+    },
+    {
+      "domain": "Latent_Diffusion",
+      "label": "AIGC",
+      "sample_count": 412,
+      "avg_resolution": "512x512",
+      "square_ratio_pct": 100.0,
+      "exact_512_pct": 100.0,
+      "exact_1024_pct": 0.0,
+      "avg_hf_spectral_ratio": 0.3099,
+      "avg_brightness": 120.9
+    },
+    {
+      "domain": "Diverse_Generators",
+      "label": "AIGC",
+      "sample_count": 600,
+      "avg_resolution": "610x610",
+      "square_ratio_pct": 100.0,
+      "exact_512_pct": 80.8,
+      "exact_1024_pct": 19.0,
+      "avg_hf_spectral_ratio": 0.307,
+      "avg_brightness": 115.1
+    },
+    {
+      "domain": "Diffusion_Synthetics",
+      "label": "AIGC",
+      "sample_count": 600,
+      "avg_resolution": "599x599",
+      "square_ratio_pct": 100.0,
+      "exact_512_pct": 82.8,
+      "exact_1024_pct": 17.0,
+      "avg_hf_spectral_ratio": 0.3125,
+      "avg_brightness": 118.6
+    }
+  ],
+  "non_deep_probe_benchmarks": {
+    "Pure_Geometry_Only (Width, Height, Aspect Ratio, Square)": {
+      "feature_set": "Pure_Geometry_Only (Width, Height, Aspect Ratio, Square)",
+      "feature_count": 7,
+      "logistic_regression_auroc": 0.950564790110701,
+      "decision_tree_auroc": 0.9918991691843416,
+      "random_forest_auroc": 0.9934230774811506
+    },
+    "Geometry_and_Format (Dimensions + FileSize + PNG/JPG + Q)": {
+      "feature_set": "Geometry_and_Format (Dimensions + FileSize + PNG/JPG + Q)",
+      "feature_count": 11,
+      "logistic_regression_auroc": 0.9711103227620411,
+      "decision_tree_auroc": 0.9882519125364407,
+      "random_forest_auroc": 0.9968052927915441
+    },
+    "Full_Non_Deep_Features (Geometry + Compression + Color + Spectral)": {
+      "feature_set": "Full_Non_Deep_Features (Geometry + Compression + Color + Spectral)",
+      "feature_count": 20,
+      "logistic_regression_auroc": 0.9765721455409876,
+      "decision_tree_auroc": 0.9882519125364407,
+      "random_forest_auroc": 0.9958250739765961
+    }
+  },
+  "audited_at": "2026-08-30T04:14:40Z"
+}

@@ -1,0 +1,163 @@
+{
+  "timestamp": "2026-08-29T06:54:44Z",
+  "status_verdicts": {
+    "MANIFEST_CONSTRUCTED": "EXECUTED",
+    "DEDUPLICATION_VERIFIED": "EXECUTED",
+    "SPLIT_DISJOINTNESS_VERIFIED": "EXECUTED",
+    "OOD_EXCLUSION_VERIFIED": "EXECUTED",
+    "POPULATION_TARGET_RECONCILIATION": "DEFICIT_CONFIRMED",
+    "FINAL_TRAINING_MANIFEST_VALID": "FAILED"
+  },
+  "canonical_manifest_metadata": {
+    "manifest_path": "/home/manan/aigc_robust_detection/manifests/final_284500_governed_manifest.jsonl",
+    "manifest_sha256": "130b193e6067776e957fadf3e744dfaf7a7417ba42f62ca5c171dd19dbe7eaa1",
+    "total_rows_assembled": 167419,
+    "split_counts": {
+      "TRAIN": 146791,
+      "DEV": 9236,
+      "CALIBRATION": 1076,
+      "INTERNAL_TEST": 10316
+    },
+    "split_labels": {
+      "TRAIN": {
+        "REAL": 51198,
+        "AIGC": 95593
+      },
+      "DEV": {
+        "REAL": 4236,
+        "AIGC": 5000
+      },
+      "CALIBRATION": {
+        "REAL": 0,
+        "AIGC": 1076
+      },
+      "INTERNAL_TEST": {
+        "REAL": 4238,
+        "AIGC": 6078
+      }
+    },
+    "pairwise_intersections": {
+      "TRAIN_AND_DEV": 0,
+      "TRAIN_AND_CALIBRATION": 0,
+      "TRAIN_AND_INTERNAL_TEST": 0,
+      "DEV_AND_CALIBRATION": 0,
+      "DEV_AND_INTERNAL_TEST": 0,
+      "CALIBRATION_AND_INTERNAL_TEST": 0
+    },
+    "ood_contamination_count": 0
+  },
+  "governed_target_vs_assembled": {
+    "TRAIN": {
+      "target": 260184,
+      "assembled": 146791,
+      "deficit": -113393
+    },
+    "TRAIN_REAL": {
+      "target": 149000,
+      "assembled": 51198,
+      "deficit": -97802
+    },
+    "TRAIN_AIGC": {
+      "target": 111184,
+      "assembled": 95593,
+      "deficit": -15591
+    },
+    "DEV": {
+      "target": 10000,
+      "assembled": 9236,
+      "deficit": -764
+    },
+    "CALIBRATION": {
+      "target": 4000,
+      "assembled": 1076,
+      "deficit": -2924
+    },
+    "INTERNAL_TEST": {
+      "target": 10316,
+      "assembled": 10316,
+      "deficit": 0
+    },
+    "TOTAL_GOVERNED": {
+      "target": 284500,
+      "assembled": 167419,
+      "deficit": -117081
+    }
+  },
+  "intended_real_breakdown": {
+    "COCO": {
+      "target": 52000,
+      "assembled": 24996,
+      "status": "PARTIAL_FROM_UNPACKED"
+    },
+    "WikiArt": {
+      "target": 41200,
+      "assembled": 24996,
+      "status": "PARTIAL_FROM_UNPACKED"
+    },
+    "Web_Photography": {
+      "target": 25800,
+      "assembled": 1206,
+      "status": "DEFICIT_IN_STORAGE"
+    },
+    "Archival": {
+      "target": 18000,
+      "assembled": 0,
+      "status": "DEFICIT_IN_STORAGE"
+    },
+    "Hard_Macro_Bokeh": {
+      "target": 12000,
+      "assembled": 0,
+      "status": "DEFICIT_IN_STORAGE"
+    }
+  },
+  "intended_aigc_breakdown": {
+    "Quality_Paradox": {
+      "target": 22400,
+      "assembled": 24000,
+      "status": "RECONCILED"
+    },
+    "SDXL": {
+      "target": 19500,
+      "assembled": 18497,
+      "status": "RECONCILED"
+    },
+    "Midjourney": {
+      "target": 16800,
+      "assembled": 15000,
+      "status": "RECONCILED"
+    },
+    "FLUX_SD3": {
+      "target": 15200,
+      "assembled": 12000,
+      "status": "PARTIAL"
+    },
+    "SID": {
+      "target": 14100,
+      "assembled": 14341,
+      "status": "RECONCILED"
+    },
+    "PixArt": {
+      "target": 10400,
+      "assembled": 4000,
+      "status": "PARTIAL"
+    },
+    "HFCF": {
+      "target": 7800,
+      "assembled": 7800,
+      "status": "RECONCILED"
+    },
+    "Defactify": {
+      "target": 4984,
+      "assembled": 4955,
+      "status": "RECONCILED"
+    }
+  },
+  "storage_raw_reserves": {
+    "parquet_hfcf_rows": 152621,
+    "defactify_parquet_rows": 96000,
+    "sid_parquet_rows": 43044,
+    "aigi_quality_paradox_rows": 24000,
+    "total_raw_reserve_rows": 483084
+  },
+  "operational_verdict": "CANNOT_PROCEED_TO_TRAINING_UNTIL_MANIFEST_CONTAINS_EXACT_260184_ROWS"
+}

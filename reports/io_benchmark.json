@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-08-28T19:48:12Z",
+  "hardware_environment": {
+    "gpu": "NVIDIA GeForce RTX 3050 (6GB VRAM)",
+    "physical_ram_gb": 31.0,
+    "swap_available_gb": 23.0,
+    "nvme_available_gb": 397.0,
+    "hdd_mount": "/mnt/ai-storage"
+  },
+  "benchmark_summary": [
+    {
+      "configuration": "Config A: HDD -> RAM -> GPU (Direct HDD, num_workers=0)",
+      "images_per_sec": 183.38,
+      "batches_per_sec": 5.73,
+      "avg_batch_prep_ms": 157.91,
+      "avg_gpu_compute_ms": 16.58,
+      "avg_end_to_end_batch_ms": 174.5,
+      "gpu_idle_percentage": 90.5,
+      "ram_used_gb": 2.72,
+      "swap_used_gb": 0.52,
+      "swap_increase_gb": 0.0
+    },
+    {
+      "configuration": "Config B: NVMe -> RAM -> GPU (Direct NVMe, num_workers=0)",
+      "images_per_sec": 186.67,
+      "batches_per_sec": 5.83,
+      "avg_batch_prep_ms": 158.03,
+      "avg_gpu_compute_ms": 13.39,
+      "avg_end_to_end_batch_ms": 171.42,
+      "gpu_idle_percentage": 92.19,
+      "ram_used_gb": 2.76,
+      "swap_used_gb": 0.52,
+      "swap_increase_gb": 0.0
+    },
+    {
+      "configuration": "Config C: NVMe -> Asynchronous RAM Prefetch -> GPU (4 workers, pinned, prefetch=2)",
+      "images_per_sec": 624.88,
+      "batches_per_sec": 19.53,
+      "avg_batch_prep_ms": 37.71,
+      "avg_gpu_compute_ms": 13.5,
+      "avg_end_to_end_batch_ms": 51.21,
+      "gpu_idle_percentage": 73.64,
+      "ram_used_gb": 3.13,
+      "swap_used_gb": 0.52,
+      "swap_increase_gb": 0.0
+    }
+  ],
+  "speedup_nvme_async_vs_hdd": 3.41,
+  "selected_configuration": "Config C (NVMe + Asynchronous Pinned RAM Prefetch)",
+  "swap_stability_verdict": "STABLE: Zero sustained swap activity observed during all benchmarks."
+}

@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-08-29T10:12:54Z",
+  "hard_pools_evaluated": {
+    "hard_real_negative_pool": {
+      "categories": [
+        "COCO extreme macro",
+        "studio flash bokeh",
+        "fine-art oil canvas textures",
+        "high-frequency sensor grain"
+      ],
+      "baseline_phase4_fpr": 0.038,
+      "curriculum_phase6_phase7_fpr": 0.028,
+      "stage2_dino_verifier_fpr": 0.019,
+      "effective_fpr_suppression": "-50.0% relative False Positive reduction"
+    },
+    "hard_aigc_positive_pool": {
+      "categories": [
+        "Subtle SID latent diffusion",
+        "single-step diffusion",
+        "photorealistic Quality Paradox"
+      ],
+      "baseline_phase4_fnr": 0.0612,
+      "curriculum_phase6_phase7_fnr": 0.032,
+      "stage2_edge_verifier_fnr": 0.018,
+      "effective_recall_boost": "+70.6% relative False Negative reduction"
+    }
+  },
+  "curriculum_status": "VALIDATED_PERSISTENT_BENEFIT"
+}

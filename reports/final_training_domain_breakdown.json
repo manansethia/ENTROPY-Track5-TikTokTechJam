@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "domain_fpr": {
+    "COCO_Authentic_Photography": 0.0245,
+    "WikiArt_Fine_Art": 0.0004,
+    "General_Web_Photography": 0.0095,
+    "Archival_Vintage_Photography": 0.001,
+    "Hard_Mined_Bokeh_Macro": 0.0185
+  }
+}

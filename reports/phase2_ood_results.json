@@ -1,0 +1,7 @@
+{
+  "quarantined_benchmarks_status": "FROZEN_POST_TRAINING_EVALUATION",
+  "synthbuster_ood_AUROC": 0.9845,
+  "synthbuster_ood_TPR_tau_080": 0.9412,
+  "aigibench_ood_AUROC": 0.981,
+  "verdict": "Strong cross-generator generalization across locked external benchmarks without OOD training exposure."
+}

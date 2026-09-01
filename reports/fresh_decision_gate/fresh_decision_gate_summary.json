@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-08-28T18:23:59Z",
+  "status": "DECISION_GATE_HALTED_FOR_HUMAN_REVIEW",
+  "protocol_section": "Section 30 Decision-Gate Output Package",
+  "strongest_single_expert": "CLIP-ViT-L/14 (Mean RI: 0.9922, Worst: 0.9824, 89ms) / SigLIP-SO400M (Clean: 1.0000, 0% FPR)",
+  "strongest_fusion": "CLIP + SigLIP (Simple Probability Average: 1.0000 Clean, 0.9949 Mean RI, 0.0% FPR)",
+  "fresh_candidates_under_2b": [
+    "CLIP-ViT-L (Baseline)",
+    "CLIP + SigLIP (Simple Average)",
+    "CLIP + SigLIP (Weighted Average)",
+    "CLIP + SigLIP (Learned Logistic)",
+    "CLIP + DINOv2 (Cross-Attention)",
+    "CLIP + 2D-FFT + SRM-DWT (Triad)",
+    "CLIP + SigLIP + DINOv2 (Tri-Vision)",
+    "CLIP + SigLIP + SRM-DWT (Wavelet Residuals)",
+    "ConvNeXt-V2 + 2D-FFT + SRM-DWT (Edge)",
+    "Quad-Expert (CLIP+SigLIP+DINO+SRM)"
+  ],
+  "quarantined_artifacts_count": 17
+}

@@ -1,0 +1,93 @@
+{
+  "SigLIP-Base-224": {
+    "path": "/mnt/ai-storage/aigc_data/models/siglip_base_224",
+    "total_parameters": 203155970,
+    "trainable_parameters": 203155970,
+    "total_million": 203.16,
+    "status": "LOADED_VERIFIED"
+  },
+  "SigLIP-SO400M-224": {
+    "path": "/mnt/ai-storage/aigc_data/models/siglip_so400m_224",
+    "total_parameters": 877360306,
+    "trainable_parameters": 877360306,
+    "total_million": 877.36,
+    "status": "LOADED_VERIFIED"
+  },
+  "CLIP-ViT-L-14": {
+    "path": "/mnt/ai-storage/aigc_data/models/clip_vitl14",
+    "total_parameters": 427616513,
+    "trainable_parameters": 427616513,
+    "total_million": 427.62,
+    "status": "LOADED_VERIFIED"
+  },
+  "DINOv2-Large": {
+    "path": "/mnt/ai-storage/aigc_data/models/dinov2_large",
+    "total_parameters": 304368640,
+    "trainable_parameters": 304368640,
+    "total_million": 304.37,
+    "status": "LOADED_VERIFIED"
+  },
+  "DINOv2-Large-Registers": {
+    "path": "/mnt/ai-storage/aigc_data/models/dinov2_registers_large",
+    "total_parameters": 304372736,
+    "trainable_parameters": 304372736,
+    "total_million": 304.37,
+    "status": "LOADED_VERIFIED"
+  },
+  "ConvNeXt-V2-Tiny": {
+    "path": "/mnt/ai-storage/aigc_data/models/convnextv2_tiny",
+    "total_parameters": 27866496,
+    "trainable_parameters": 27866496,
+    "total_million": 27.87,
+    "status": "LOADED_VERIFIED"
+  },
+  "EVA-02-Large-448": {
+    "path": "/mnt/ai-storage/aigc_data/models/eva02_large_patch14_448",
+    "total_parameters": 304055232,
+    "trainable_parameters": 304055232,
+    "total_million": 304.06,
+    "status": "LOADED_VERIFIED"
+  },
+  "FFT-Spectral-Extractor": {
+    "total_parameters": 0,
+    "trainable_parameters": 0,
+    "total_million": 0.0,
+    "status": "INITIALIZED_VERIFIED"
+  },
+  "FFT-Energy-Classifier-Head": {
+    "total_parameters": 85634,
+    "trainable_parameters": 85634,
+    "total_million": 0.0856,
+    "status": "INITIALIZED_VERIFIED"
+  },
+  "Edge-Artifact-Extractor": {
+    "total_parameters": 128960,
+    "trainable_parameters": 128960,
+    "total_million": 0.129,
+    "status": "INITIALIZED_VERIFIED"
+  },
+  "Patch-MIL-Expert": {
+    "total_parameters": 788737,
+    "trainable_parameters": 788737,
+    "total_million": 0.7887,
+    "status": "INITIALIZED_VERIFIED"
+  },
+  "Dual-Evidence-Reliability-Router": {
+    "total_parameters": 1532936,
+    "trainable_parameters": 1532936,
+    "total_million": 1.5329,
+    "status": "INITIALIZED_VERIFIED"
+  },
+  "Wavelet-SRM-Residual-Block": {
+    "total_parameters": 0,
+    "trainable_parameters": 0,
+    "total_million": 0.0,
+    "status": "INITIALIZED_VERIFIED"
+  },
+  "ACTIVE_FOUNDATION_POOL_TOTAL": {
+    "total_parameters": 1639666684,
+    "total_billion": 1.6397,
+    "hard_cap_billion": 2.0,
+    "under_cap": true
+  }
+}

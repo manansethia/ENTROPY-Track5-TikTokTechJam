@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-08-29T07:35:44Z",
+  "manifest_version": "v6 (Final Governed Master Manifest)",
+  "manifest_path": "/home/manan/aigc_robust_detection/manifests/final_284500_governed_manifest_v6.jsonl",
+  "manifest_sha256": "8ec2b6916391a7e2122b0f4993c71d7a02eced0f3c6719a6b287bcb9a76070ec",
+  "total_rows": 268571,
+  "final_dataset_gate_status": "PASSED",
+  "partitions": {
+    "TRAIN": {
+      "total_rows": 244255,
+      "real_rows": 132102,
+      "aigc_rows": 112153,
+      "real_percentage": 54.08,
+      "aigc_percentage": 45.92,
+      "class_balance_status": "Near-balanced training corpus preserving all available unique approved REAL images (54.08% Real / 45.92% AIGC). Optimization utilizes class-aware sampling and asymmetric FP-aware loss weighting.",
+      "governance_status": "TRAIN_ELIGIBLE"
+    },
+    "DEV": {
+      "total_rows": 10000,
+      "real_rows": 5000,
+      "aigc_rows": 5000,
+      "class_balance_status": "50/50 class-balanced (5,000 Real / 5,000 AIGC)",
+      "governance_status": "DEV_ONLY"
+    },
+    "CALIBRATION": {
+      "total_rows": 4000,
+      "real_rows": 2000,
+      "aigc_rows": 2000,
+      "class_balance_status": "50/50 class-balanced (2,000 Real / 2,000 AIGC)",
+      "governance_status": "CALIBRATION_ONLY"
+    },
+    "INTERNAL_TEST": {
+      "total_rows": 10316,
+      "real_rows": 4238,
+      "aigc_rows": 6078,
+      "class_balance_status": "LOCKED; natural class distribution (4,238 Real / 6,078 AIGC)",
+      "governance_status": "LOCKED_TEST"
+    }
+  },
+  "split_isolation_verification": {
+    "TRAIN_AND_DEV": 0,
+    "TRAIN_AND_CALIBRATION": 0,
+    "TRAIN_AND_TEST": 0,
+    "DEV_AND_CALIBRATION": 0,
+    "DEV_AND_TEST": 0,
+    "CALIBRATION_AND_TEST": 0,
+    "all_intersections_zero": true
+  },
+  "ood_isolation_verification": {
+    "synthbuster_in_train": 0,
+    "aigibench_in_train": 0,
+    "coco_val2017_in_train": 0,
+    "chameleon_in_train": 0,
+    "vct2_in_train": 0,
+    "wildrf_in_train": 0,
+    "synthwildx_in_train": 0,
+    "ood_contamination_count": 0,
+    "ood_isolation_verified": true
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "image_path": "in_memory_image",
+  "prob_aigc": 0.9969601631164551,
+  "verdict": "SYNTHETIC AIGC",
+  "is_synthetic": true,
+  "spectral_metrics": {
+    "high_freq_energy_ratio": 0.26054972410202026,
+    "grid_peak_anomaly_score": 16.262224197387695,
+    "is_frequency_anomalous": true
+  },
+  "edge_metrics": {
+    "edge_anomaly_score": 0.5528725385665894
+  },
+  "top_anomalous_patches": [
+    {
+      "patch_idx": 16,
+      "bbox": [
+        73,
+        37,
+        110,
+        73
+      ],
+      "gradcam_score": 0.4683743417263031,
+      "attention_score": 0.5,
+      "frequency_score": 0.15444108406369061,
+      "edge_score": 0.07103978097438812,
+      "composite_risk": 0.33402719261182184,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 170,
+      "bbox": [
+        73,
+        439,
+        110,
+        475
+      ],
+      "gradcam_score": 0.41150882840156555,
+      "attention_score": 0.5,
+      "frequency_score": 0.166712913663941,
+      "edge_score": 0.07270859181880951,
+      "composite_risk": 0.31691239103709806,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 90,
+      "bbox": [
+        219,
+        219,
+        256,
+        256
+      ],
+      "gradcam_score": 0.3874403238296509,
+      "attention_score": 0.5,
+      "frequency_score": 0.14874635771121872,
+      "edge_score": 0.06683710217475891,
+      "composite_risk": 0.3037208053175733,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 30,
+      "bbox": [
+        73,
+        73,
+        110,
+        110
+      ],
+      "gradcam_score": 0.43323975801467896,
+      "attention_score": 0.5,
+      "frequency_score": 0.08478677964586183,
+      "edge_score": 0.03573077172040939,
+      "composite_risk": 0.30073742557839184,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 25,
+      "bbox": [
+        402,
+        37,
+        439,
+        73
+      ],
+      "gradcam_score": 0.34369102120399475,
+      "attention_score": 0.5,
+      "frequency_score": 0.16294082932392714,
+      "edge_score": 0.10765059292316437,
+      "composite_risk": 0.29941014187081644,
+      "primary_anomaly_category": "ViT Patch Focus"
+    }
+  ],
+  "model_gates": [
+    0.3791525661945343,
+    0.21062470972537994,
+    0.24672269821166992,
+    0.16350002586841583
+  ],
+  "dashboard_output_path": "reports/explainability/quad_hybrid_diffusion_diagnosis.jpg"
+}

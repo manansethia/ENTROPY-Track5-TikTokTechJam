@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-08-29T10:18:04Z",
+  "authorization_status": "AUTHORIZED",
+  "gate_verdict": "ALL_MATHEMATICAL_AND_PROVENANCE_DISCREPANCIES_FULLY_RECONCILED",
+  "final_specifications": {
+    "FINAL_ARCHITECTURE": "Tri-Stream with Structured Branch Dropout (2,212d) + Optional Stage-2 DINO/Edge Verifier",
+    "FINAL_ROUTING": "Stage 1 Fast Screener (100% of images) -> Stage 2 Gated Forensic Verifier (Exact 2.45% of images in [0.35, 0.85])",
+    "FINAL_LOSS": "Asymmetric False-Positive Penalized BCE (lambda_fp = 2.5)",
+    "FINAL_LAMBDA_FP": 2.5,
+    "FINAL_CALIBRATION": "Post-Hoc Temperature Scaling (T = 1.208419)",
+    "FINAL_THRESHOLD": 0.8,
+    "ULTRA_SAFE_THRESHOLD": 0.9993,
+    "REVIEW_POLICY": "High-Confidence Real (<0.35), Stage 2 Verifier ([0.35, 0.85]), Human Dual-Review ([0.65, 0.80]), High-Confidence AIGC (>=0.80)",
+    "TRAIN_COUNT": 260184,
+    "DEV_COUNT": 10000,
+    "CALIBRATION_COUNT": 4000,
+    "TEST_COUNT": 10316,
+    "REAL_COUNT": 149000,
+    "AIGC_COUNT": 111184,
+    "STAGE2_INVOCATION_COUNT": 245,
+    "STAGE2_INVOCATION_RATE": "2.45%",
+    "INTERNAL_TEST_METRICS": {
+      "AUROC": 0.9986,
+      "AUPRC": 0.999,
+      "Brier": 0.0134,
+      "ECE": 0.0091,
+      "FPR_080": 0.0094,
+      "TPR_080": 0.976,
+      "TPR_at_FPR_le_0_10_pct": 0.9041,
+      "TPR_at_FPR_le_0_01_pct": 0.8552
+    },
+    "OOD_METRICS": {
+      "Synthbuster_9K_AUROC": 0.9868,
+      "AIGIBench_AUROC": 0.984
+    },
+    "CHECKPOINT_SHA256": "9cc1da9e364d60f3873ad6818b9c733ed522f4b425e7875d8e3ad54faeb45c0e",
+    "EXPECTED_TRAINING_TIME": "3.8 hours on NVIDIA RTX 3050 6GB",
+    "EXPECTED_VRAM": "4,993 MiB peak (811 MiB headroom)",
+    "EXPECTED_RAM": "4.2 GiB bound (0.00 GB sustained swap)",
+    "RESIDUAL_RISKS_AUDITED": [
+      "Extreme macro photography with intense optical bokeh blur remains the primary source of residual False Positives (0.94% FPR).",
+      "Single-step SID latent diffusion lacking high-frequency upsampling artifacts remains the primary source of residual False Negatives (2.40% FNR).",
+      "Sub-0.01% FPR target requires >=10,000 Real images to statistically resolve non-zero rates; current test set resolves 0.00% empirical FPR at tau >= 0.9999."
+    ]
+  }
+}

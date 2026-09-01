@@ -1,0 +1,7 @@
+{
+  "method": "Temperature Scaling",
+  "temperature_T": 0.8668205738067627,
+  "raw_validation_ece": 0.3912,
+  "calibrated_validation_ece": 0.3841,
+  "validation_brier_score": 0.075
+}

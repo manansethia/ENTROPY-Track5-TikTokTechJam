@@ -1,0 +1,93 @@
+{
+  "system_name": "Definitive Unified Master AIGC Forensic Detection SYSTEM",
+  "total_aggregate_parameters": 1878241609,
+  "total_aggregate_parameters_human": "1.878 Billion Parameters",
+  "execution_strategy": "Sequential GPU Inference on cuda:0 with Automatic Memory Release",
+  "hardware_target": "NVIDIA GeForce RTX 3050 (5,803 MiB VRAM)",
+  "models": [
+    {
+      "subsystem": "V2_Spectral_HighPass",
+      "model_name": "AIDE High-Pass Frequency (HPF) Deep Neural Network",
+      "checkpoint_path": "/mnt/ai-storage/aigc_data/models/aide_finetuned/checkpoint42.pth",
+      "parameters": 897832732,
+      "role": "Deep frequency-domain / high-pass spectral artifact detection"
+    },
+    {
+      "subsystem": "V3_Specialist_Ensemble",
+      "model_name": "C0: Triple-Hybrid Champion Anchor (CLIP-ViT-L/14 + SigLIP-SO400M + SRM Wavelet)",
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_frozen_model.pt",
+      "parameters": 734968253,
+      "role": "Global multi-modal visual and semantic foundation anchor"
+    },
+    {
+      "subsystem": "V3_Specialist_Ensemble",
+      "model_name": "C1: Portrait Remediation ConvNeXt-Tiny",
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/specialists/c5_convnext_tiny_epoch_3.pt",
+      "parameters": 27820897,
+      "role": "Facial skin tone and human portrait false-alarm neutralization"
+    },
+    {
+      "subsystem": "V3_Specialist_Ensemble",
+      "model_name": "C2: SPAI Multi-Frequency ViT",
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/specialists_v3/c2_spai_vit_best.pt",
+      "parameters": 21811969,
+      "role": "Multi-frequency synthetic texture and generative noise detection"
+    },
+    {
+      "subsystem": "V3_Specialist_Ensemble",
+      "model_name": "C3: CommunityForensics ViT-Small (384x384)",
+      "checkpoint_path": "/mnt/ai-storage/aigc_data/models/community_forensics_vit_small/model.safetensors",
+      "parameters": 21811969,
+      "role": "SOTA community benchmark transformer artifact detection"
+    },
+    {
+      "subsystem": "V3_Specialist_Ensemble",
+      "model_name": "C4: ConvNeXt-Base High-Resolution Master",
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/specialists_v3/c4_convnext_base_best.pt",
+      "parameters": 87566401,
+      "role": "High-resolution convolutional micro-texture analysis"
+    },
+    {
+      "subsystem": "V3_Specialist_Ensemble",
+      "model_name": "C5: divine2k ConvNeXt-Tiny Classifier",
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/specialists_v3/c5_convnext_tiny_best.pt",
+      "parameters": 27820897,
+      "role": "Broad general synthetic generator classification"
+    },
+    {
+      "subsystem": "V3_Specialist_Ensemble",
+      "model_name": "C6: EfficientNet-B0 Fast Specialist",
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/specialists_v3/c6_efficientnet_b0_best.pt",
+      "parameters": 4008829,
+      "role": "Lightweight boundary and edge artifact detection"
+    },
+    {
+      "subsystem": "V3_Specialist_Ensemble",
+      "model_name": "C7: ResNet-50 Deep Specialist",
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/specialists_v3/c7_resnet50_best.pt",
+      "parameters": 23510081,
+      "role": "Residual network baseline for deep GAN and diffusion synthesis"
+    },
+    {
+      "subsystem": "V3_Specialist_Ensemble",
+      "model_name": "V3 Learned 8-Expert Gating Network",
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_v3.pt",
+      "parameters": 1224,
+      "role": "Learned dynamic routing across C0–C7 specialist logits (Temperature: 1.15)"
+    },
+    {
+      "subsystem": "V5_Spatial_Engine",
+      "model_name": "V5-CAG Multi-Scale Spatial Engine & SegHead",
+      "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/experimental/v5/v5_champion_cag.pt",
+      "parameters": 31088357,
+      "role": "512px/768px/1024px hierarchical patch attention, bounding boxes, and continuous 64x64 mask"
+    },
+    {
+      "subsystem": "Provenance_Engine",
+      "model_name": "Decoupled Provenance & Metadata Subsystem",
+      "checkpoint_path": "scripts/v5/v5_provenance_engine.py",
+      "parameters": 0,
+      "role": "EXIF, XMP, IPTC, C2PA Content Credentials, and AI software signature audit"
+    }
+  ]
+}

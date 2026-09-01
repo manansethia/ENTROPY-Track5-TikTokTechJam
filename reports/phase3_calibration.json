@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-08-29T09:19:00Z",
+  "champion_id": "B_CLIP_SigLIP_mlp2",
+  "method": "Post-Hoc Temperature Scaling on Dedicated Validation Split",
+  "optimal_temperature_T": 1.2497,
+  "ECE_before_calibration": 0.0385,
+  "ECE_after_calibration": 0.016,
+  "Brier_score": 0.0191
+}

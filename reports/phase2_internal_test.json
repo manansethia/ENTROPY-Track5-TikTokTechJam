@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-08-29T05:11:07Z",
+  "test_samples": 10316,
+  "test_AUROC": 0.9983,
+  "test_AUPRC": 0.9985,
+  "test_ECE": 0.4076,
+  "test_Brier": 0.0139,
+  "operating_point_tau_080": {
+    "threshold": 0.8,
+    "TP": 5970,
+    "TN": 4182,
+    "FP": 56,
+    "FN": 108,
+    "FPR": 0.0132,
+    "TPR": 0.9822,
+    "Precision": 0.9907,
+    "FPR_95_CI": [
+      0.0102,
+      0.0171
+    ]
+  }
+}

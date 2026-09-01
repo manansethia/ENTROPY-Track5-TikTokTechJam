@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "comparison": {
+    "Cand_C_Structured_Dropout": {
+      "AUROC": 0.999,
+      "AUPRC": 0.9993,
+      "Brier": 0.0108,
+      "FPR_tau_080": 0.0097,
+      "FNR_tau_080": 0.0178,
+      "TPR_tau_080": 0.9822,
+      "FP_count_080": 24,
+      "FN_count_080": 63,
+      "total_errors_080": 87
+    },
+    "Cand_A_CLIP_SigLIP": {
+      "AUROC": 0.9989,
+      "AUPRC": 0.9992,
+      "Brier": 0.0123,
+      "FPR_tau_080": 0.0134,
+      "FNR_tau_080": 0.0164,
+      "TPR_tau_080": 0.9836,
+      "FP_count_080": 33,
+      "FN_count_080": 58,
+      "total_errors_080": 91
+    },
+    "Cand_B_CLIP_SigLIP_SRM": {
+      "AUROC": 0.9989,
+      "AUPRC": 0.9992,
+      "Brier": 0.0122,
+      "FPR_tau_080": 0.0138,
+      "FNR_tau_080": 0.0172,
+      "TPR_tau_080": 0.9828,
+      "FP_count_080": 34,
+      "FN_count_080": 61,
+      "total_errors_080": 95
+    },
+    "Cand_D_Conditional_Residual": {
+      "AUROC": 0.9985,
+      "AUPRC": 0.999,
+      "Brier": 0.0143,
+      "FPR_tau_080": 0.0142,
+      "FNR_tau_080": 0.0192,
+      "TPR_tau_080": 0.9808,
+      "FP_count_080": 35,
+      "FN_count_080": 68,
+      "total_errors_080": 103
+    }
+  },
+  "verdict": "Champion Cand_C_Structured_Dropout confirmed on pristine holdout."
+}

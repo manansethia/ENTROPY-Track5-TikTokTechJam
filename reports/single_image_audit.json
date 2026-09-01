@@ -1,0 +1,114 @@
+{
+  "image_name": "people_working_test.avif",
+  "dimensions": {
+    "width": 740,
+    "height": 493,
+    "megapixels": 0.36
+  },
+  "provenance": {
+    "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+    "c2pa": {
+      "c2pa_status": "NOT_DETECTED",
+      "manifest_detected": false,
+      "signature_markers": []
+    },
+    "camera": {
+      "make": null,
+      "model": null,
+      "datetime_original": null
+    },
+    "software": null,
+    "format": "AVIF",
+    "dimensions": {
+      "width": 740,
+      "height": 493
+    },
+    "exif_tag_count": 0
+  },
+  "v5_cag_spatial": {
+    "verdict": "REAL",
+    "confidence": 0.5126,
+    "ai_probability": 0.4874,
+    "class_probabilities": {
+      "REAL": 0.5126,
+      "PARTIAL_AIGC": 0.4873,
+      "FULL_AIGC": 0.0001
+    },
+    "affected_area_percentage": 0.0,
+    "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/people_working_test_v5_heatmap.jpg",
+    "suspicious_regions": [],
+    "patch_evidence": [
+      {
+        "patch_id": 0,
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.0045,
+        "attention_weight": 0.6993
+      },
+      {
+        "patch_id": 1,
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.0173,
+        "attention_weight": 0.2594
+      },
+      {
+        "patch_id": 2,
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "scale": 1024,
+        "ai_probability": 0.0398,
+        "attention_weight": 0.0413
+      }
+    ],
+    "provenance": {
+      "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+      "c2pa": {
+        "c2pa_status": "NOT_DETECTED",
+        "manifest_detected": false,
+        "signature_markers": []
+      },
+      "camera": {
+        "make": null,
+        "model": null,
+        "datetime_original": null
+      },
+      "software": null,
+      "format": "AVIF",
+      "dimensions": {
+        "width": 740,
+        "height": 493
+      },
+      "exif_tag_count": 0
+    },
+    "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /home/manan/aigc_robust_detection/test_inputs/people_working_test.avif\n  Resolution: 740 x 493 (0.36 Megapixels)\n  Inference Time: 1974.6 ms\n\n  FORENSIC VERDICT: REAL (Confidence: 51.26%)\n    - Real Probability        : 51.26%\n    - Partial-AIGC Probability: 48.73%\n    - Full-AIGC Probability   : 0.01%\n    - Aggregate AI Probability: 48.74%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 0.00%\n    - Suspicious Regions Count: 0\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/people_working_test_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+    "inference_time_ms": 1974.6
+  },
+  "master_fused": {
+    "verdict": "REVIEW_REQUIRED",
+    "confidence": 0.5,
+    "fused_ai_probability": 0.407,
+    "specialist_scores": {
+      "v5_real": 0.5126,
+      "v5_partial": 0.4873,
+      "v5_full": 0.0001,
+      "max_patch_anomaly": 0.0398,
+      "mean_patch_anomaly": 0.0205
+    },
+    "affected_area_percentage": 0.0
+  }
+}

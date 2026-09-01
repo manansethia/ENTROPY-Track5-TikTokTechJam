@@ -1,0 +1,180 @@
+{
+  "fp32": {
+    "precision": "FP32",
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.9927,
+    "fused_ai_prob": 0.741,
+    "v2_aide_score": 0.0136,
+    "v3_gated_score": 0.9953,
+    "v5_spatial_score": 0.802,
+    "max_patch_anomaly": 0.9927,
+    "specialist_scores": {
+      "C0_TripleHybrid": 0.0028,
+      "C1_Portrait": 0.9953,
+      "C2_SPAI_ViT": 0.3865,
+      "C3_CommunityForensics": 0.5139,
+      "C4_ConvNeXt_HighRes": 0.997,
+      "C5_ConvNeXt_divine2k": 1.0,
+      "C6_EfficientNet": 0.8742,
+      "C7_ResNet50": 0.4787
+    },
+    "v3_routing_weights": {
+      "C0": 0.012,
+      "C1": 0.0101,
+      "C2": 0.1306,
+      "C3": 0.0047,
+      "C4": 0.6047,
+      "C5": 0.2136,
+      "C6": 0.0202,
+      "C7": 0.004
+    },
+    "execution_trace": {
+      "V2_AIDE_Spectral": {
+        "executed": true,
+        "parameters": 897832732,
+        "logit": -4.2857,
+        "prob": 0.0136
+      },
+      "C0_TripleHybrid": {
+        "executed": true,
+        "parameters": 734968253,
+        "logit": -5.8781,
+        "prob": 0.0028
+      },
+      "C1_Portrait": {
+        "executed": true,
+        "parameters": 27820897,
+        "logit": 5.3552,
+        "prob": 0.9953
+      },
+      "C2_SPAI_ViT": {
+        "executed": true,
+        "parameters": 21811969,
+        "logit": -0.462,
+        "prob": 0.3865
+      },
+      "C3_CommunityForensics": {
+        "executed": true,
+        "parameters": 21811969,
+        "logit": 0.0554,
+        "prob": 0.5139
+      },
+      "C4_ConvNeXt_HighRes": {
+        "executed": true,
+        "parameters": 27820897,
+        "logit": 5.8126,
+        "prob": 0.997
+      },
+      "C5_ConvNeXt_divine2k": {
+        "executed": true,
+        "parameters": 27820897,
+        "logit": 12.6119,
+        "prob": 1.0
+      },
+      "C6_EfficientNet": {
+        "executed": true,
+        "parameters": 4008829,
+        "logit": 1.9382,
+        "prob": 0.8742
+      },
+      "C7_ResNet50": {
+        "executed": true,
+        "parameters": 23510081,
+        "logit": -0.0853,
+        "prob": 0.4787
+      }
+    },
+    "total_parameters_instantiated": 1818494881,
+    "peak_vram_mib": 3623.31,
+    "latency_seconds": 19.279
+  },
+  "fp16": {
+    "precision": "FP16",
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.9927,
+    "fused_ai_prob": 0.7422,
+    "v2_aide_score": 0.0138,
+    "v3_gated_score": 0.9978,
+    "v5_spatial_score": 0.8018,
+    "max_patch_anomaly": 0.9927,
+    "specialist_scores": {
+      "C0_TripleHybrid": 0.0025,
+      "C1_Portrait": 0.9953,
+      "C2_SPAI_ViT": 0.5646,
+      "C3_CommunityForensics": 0.4881,
+      "C4_ConvNeXt_HighRes": 0.9971,
+      "C5_ConvNeXt_divine2k": 1.0,
+      "C6_EfficientNet": 0.8714,
+      "C7_ResNet50": 0.4778
+    },
+    "v3_routing_weights": {
+      "C0": 0.0142,
+      "C1": 0.0139,
+      "C2": 0.153,
+      "C3": 0.0054,
+      "C4": 0.4096,
+      "C5": 0.3604,
+      "C6": 0.04,
+      "C7": 0.0035
+    },
+    "execution_trace": {
+      "V2_AIDE_Spectral": {
+        "executed": true,
+        "parameters": 897832732,
+        "logit": -4.2656,
+        "prob": 0.0138
+      },
+      "C0_TripleHybrid": {
+        "executed": true,
+        "parameters": 734968253,
+        "logit": -5.9727,
+        "prob": 0.0025
+      },
+      "C1_Portrait": {
+        "executed": true,
+        "parameters": 27820897,
+        "logit": 5.3516,
+        "prob": 0.9953
+      },
+      "C2_SPAI_ViT": {
+        "executed": true,
+        "parameters": 21811969,
+        "logit": 0.2598,
+        "prob": 0.5646
+      },
+      "C3_CommunityForensics": {
+        "executed": true,
+        "parameters": 21811969,
+        "logit": -0.0475,
+        "prob": 0.4881
+      },
+      "C4_ConvNeXt_HighRes": {
+        "executed": true,
+        "parameters": 27820897,
+        "logit": 5.8438,
+        "prob": 0.9971
+      },
+      "C5_ConvNeXt_divine2k": {
+        "executed": true,
+        "parameters": 27820897,
+        "logit": 12.6172,
+        "prob": 1.0
+      },
+      "C6_EfficientNet": {
+        "executed": true,
+        "parameters": 4008829,
+        "logit": 1.9131,
+        "prob": 0.8714
+      },
+      "C7_ResNet50": {
+        "executed": true,
+        "parameters": 23510081,
+        "logit": -0.0887,
+        "prob": 0.4778
+      }
+    },
+    "total_parameters_instantiated": 1818494881,
+    "peak_vram_mib": 3433.73,
+    "latency_seconds": 18.468
+  }
+}

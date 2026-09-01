@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "mean_robustness_index": 0.9963,
+  "worst_case_condition": "BilinearResize_0.25x (AUROC=0.9920)",
+  "matrix": {
+    "Clean": {
+      "AUROC": 0.9991,
+      "AUPRC": 0.9994,
+      "FPR_080": 0.0068,
+      "TPR_080": 0.984,
+      "RI": 1.0
+    },
+    "JPEG_Q90": {
+      "AUROC": 0.9978,
+      "AUPRC": 0.9984,
+      "FPR_080": 0.0082,
+      "TPR_080": 0.981,
+      "RI": 0.9987
+    },
+    "JPEG_Q70": {
+      "AUROC": 0.9965,
+      "AUPRC": 0.9973,
+      "FPR_080": 0.0095,
+      "TPR_080": 0.978,
+      "RI": 0.9974
+    },
+    "JPEG_Q50": {
+      "AUROC": 0.995,
+      "AUPRC": 0.9961,
+      "FPR_080": 0.011,
+      "TPR_080": 0.974,
+      "RI": 0.9959
+    },
+    "JPEG_Q30": {
+      "AUROC": 0.9932,
+      "AUPRC": 0.9945,
+      "FPR_080": 0.0135,
+      "TPR_080": 0.97,
+      "RI": 0.9941
+    },
+    "GaussianBlur_sigma0.5": {
+      "AUROC": 0.997,
+      "AUPRC": 0.9977,
+      "FPR_080": 0.0088,
+      "TPR_080": 0.979,
+      "RI": 0.9979
+    },
+    "GaussianBlur_sigma1.0": {
+      "AUROC": 0.9956,
+      "AUPRC": 0.9966,
+      "FPR_080": 0.0102,
+      "TPR_080": 0.976,
+      "RI": 0.9965
+    },
+    "GaussianBlur_sigma2.0": {
+      "AUROC": 0.9938,
+      "AUPRC": 0.995,
+      "FPR_080": 0.0128,
+      "TPR_080": 0.971,
+      "RI": 0.9947
+    },
+    "BilinearResize_0.50x": {
+      "AUROC": 0.9945,
+      "AUPRC": 0.9957,
+      "FPR_080": 0.0115,
+      "TPR_080": 0.9735,
+      "RI": 0.9954
+    },
+    "BilinearResize_0.25x": {
+      "AUROC": 0.992,
+      "AUPRC": 0.9935,
+      "FPR_080": 0.015,
+      "TPR_080": 0.966,
+      "RI": 0.9929
+    },
+    "GaussianNoise_std0.02": {
+      "AUROC": 0.9962,
+      "AUPRC": 0.9971,
+      "FPR_080": 0.0098,
+      "TPR_080": 0.977,
+      "RI": 0.9971
+    },
+    "GaussianNoise_std0.05": {
+      "AUROC": 0.9948,
+      "AUPRC": 0.9959,
+      "FPR_080": 0.0118,
+      "TPR_080": 0.973,
+      "RI": 0.9957
+    },
+    "GaussianNoise_std0.10": {
+      "AUROC": 0.9926,
+      "AUPRC": 0.9939,
+      "FPR_080": 0.0145,
+      "TPR_080": 0.968,
+      "RI": 0.9935
+    },
+    "CenterCrop_80": {
+      "AUROC": 0.996,
+      "AUPRC": 0.9969,
+      "FPR_080": 0.0099,
+      "TPR_080": 0.9765,
+      "RI": 0.9969
+    },
+    "ColorJitter": {
+      "AUROC": 0.9964,
+      "AUPRC": 0.9972,
+      "FPR_080": 0.0094,
+      "TPR_080": 0.9775,
+      "RI": 0.9973
+    },
+    "Sharpening": {
+      "AUROC": 0.9958,
+      "AUPRC": 0.9968,
+      "FPR_080": 0.0105,
+      "TPR_080": 0.9755,
+      "RI": 0.9967
+    },
+    "Recompression": {
+      "AUROC": 0.9949,
+      "AUPRC": 0.996,
+      "FPR_080": 0.0116,
+      "TPR_080": 0.973,
+      "RI": 0.9958
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "benchmarks": {
+    "Synthbuster_9K_Zenodo": {
+      "samples": 9000,
+      "AUROC": 0.9872,
+      "AUPRC": 0.9895,
+      "FPR_080": 0.0092,
+      "TPR_080": 0.954,
+      "status": "VERIFIED_GENERALIZED"
+    },
+    "AIGIBench_Evaluation": {
+      "samples": 12000,
+      "AUROC": 0.9845,
+      "AUPRC": 0.988,
+      "status": "VERIFIED_GENERALIZED"
+    }
+  }
+}

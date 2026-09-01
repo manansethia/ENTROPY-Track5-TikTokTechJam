@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "bounded_reward_structure": {
+    "correct_class_plus_supported_evidence": "+1.0 reward",
+    "correct_class_plus_unsupported_evidence": "0.0 neutral",
+    "wrong_class": "-2.5 heavy penalty",
+    "confident_fabricated_evidence": "-5.0 severe penalty"
+  },
+  "stability_status": "CONVERGED_WITHOUT_CLASSIFICATION_DEGRADATION"
+}

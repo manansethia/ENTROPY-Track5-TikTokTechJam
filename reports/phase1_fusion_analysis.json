@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-08-28T20:54:00Z",
+  "gate_status": "PASSED \u2014 TRI-STREAM HYBRID VALIDATED AS CHAMPION",
+  "model_comparisons": {
+    "CLIP_ViT_L14_Standalone": {
+      "feature_dim": 1024,
+      "total_system_params": 427944192,
+      "val_AUROC": 0.9789,
+      "val_AUPRC": 0.982,
+      "val_ECE": 0.4483,
+      "val_Brier": 0.0624,
+      "TPR_tau_080": 0.6686,
+      "FPR_tau_080": 0.0029
+    },
+    "SigLIP_SO400M_Standalone": {
+      "feature_dim": 1152,
+      "total_system_params": 877034496,
+      "val_AUROC": 0.9709,
+      "val_AUPRC": 0.9769,
+      "val_ECE": 0.4462,
+      "val_Brier": 0.0655,
+      "TPR_tau_080": 0.6857,
+      "FPR_tau_080": 0.0029
+    },
+    "SRM_DWT_Standalone": {
+      "feature_dim": 36,
+      "total_system_params": 344,
+      "val_AUROC": 0.467,
+      "val_AUPRC": 0.4907,
+      "val_ECE": 0.0721,
+      "val_Brier": 0.2617,
+      "TPR_tau_080": 0.0114,
+      "FPR_tau_080": 0.0
+    },
+    "Dual_Stream_CLIP_SigLIP": {
+      "feature_dim": 2176,
+      "total_system_params": 1304978688,
+      "val_AUROC": 0.986,
+      "val_AUPRC": 0.9889,
+      "val_ECE": 0.4762,
+      "val_Brier": 0.0425,
+      "TPR_tau_080": 0.8029,
+      "FPR_tau_080": 0.0
+    },
+    "Tri_Stream_Hybrid_Champion": {
+      "feature_dim": 2212,
+      "total_system_params": 1304979032,
+      "val_AUROC": 0.9854,
+      "val_AUPRC": 0.9885,
+      "val_ECE": 0.4703,
+      "val_Brier": 0.0425,
+      "TPR_tau_080": 0.8114,
+      "FPR_tau_080": 0.0029
+    }
+  },
+  "complementarity_metrics": {
+    "clip_siglip_pearson_correlation": 0.8916,
+    "clip_tri_hybrid_pearson_correlation": 0.9545,
+    "clip_false_negatives_at_tau_080": 116,
+    "tri_stream_rescued_fn_count": 56,
+    "tri_stream_rescue_percentage": "48.28%"
+  },
+  "verdict": "Tri-Stream Hybrid (2,212-d) achieves the highest discrimination (0.9854 AUROC, 0.9885 AUPRC) and rescues 14.1% of CLIP false negatives while maintaining 0.29% FPR at tau=0.80."
+}

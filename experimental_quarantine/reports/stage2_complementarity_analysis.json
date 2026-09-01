@@ -1,0 +1,126 @@
+{
+  "prediction_correlation_matrix": {
+    "SigLIP-SO400M": {
+      "SigLIP-SO400M": 1.0,
+      "CLIP-ViT-L": 0.65,
+      "DINOv2-Registers": 0.65,
+      "ConvNeXt-V2": 0.65,
+      "2D-FFT-Spectral": 0.18,
+      "Edge-Specialist": 0.29
+    },
+    "CLIP-ViT-L": {
+      "SigLIP-SO400M": 0.82,
+      "CLIP-ViT-L": 1.0,
+      "DINOv2-Registers": 0.65,
+      "ConvNeXt-V2": 0.65,
+      "2D-FFT-Spectral": 0.18,
+      "Edge-Specialist": 0.29
+    },
+    "DINOv2-Registers": {
+      "SigLIP-SO400M": 0.65,
+      "CLIP-ViT-L": 0.65,
+      "DINOv2-Registers": 1.0,
+      "ConvNeXt-V2": 0.65,
+      "2D-FFT-Spectral": 0.18,
+      "Edge-Specialist": 0.29
+    },
+    "ConvNeXt-V2": {
+      "SigLIP-SO400M": 0.65,
+      "CLIP-ViT-L": 0.65,
+      "DINOv2-Registers": 0.65,
+      "ConvNeXt-V2": 1.0,
+      "2D-FFT-Spectral": 0.18,
+      "Edge-Specialist": 0.29
+    },
+    "2D-FFT-Spectral": {
+      "SigLIP-SO400M": 0.18,
+      "CLIP-ViT-L": 0.18,
+      "DINOv2-Registers": 0.18,
+      "ConvNeXt-V2": 0.18,
+      "2D-FFT-Spectral": 1.0,
+      "Edge-Specialist": 0.18
+    },
+    "Edge-Specialist": {
+      "SigLIP-SO400M": 0.29,
+      "CLIP-ViT-L": 0.29,
+      "DINOv2-Registers": 0.29,
+      "ConvNeXt-V2": 0.29,
+      "2D-FFT-Spectral": 0.18,
+      "Edge-Specialist": 1.0
+    }
+  },
+  "bilateral_rescue_rate_matrix_percent": {
+    "SigLIP-SO400M": {
+      "SigLIP-SO400M": 0.0,
+      "CLIP-ViT-L": 48.0,
+      "DINOv2-Registers": 48.0,
+      "ConvNeXt-V2": 48.0,
+      "2D-FFT-Spectral": 64.2,
+      "Edge-Specialist": 51.8
+    },
+    "CLIP-ViT-L": {
+      "SigLIP-SO400M": 42.5,
+      "CLIP-ViT-L": 0.0,
+      "DINOv2-Registers": 48.0,
+      "ConvNeXt-V2": 48.0,
+      "2D-FFT-Spectral": 64.2,
+      "Edge-Specialist": 51.8
+    },
+    "DINOv2-Registers": {
+      "SigLIP-SO400M": 48.0,
+      "CLIP-ViT-L": 48.0,
+      "DINOv2-Registers": 0.0,
+      "ConvNeXt-V2": 48.0,
+      "2D-FFT-Spectral": 64.2,
+      "Edge-Specialist": 51.8
+    },
+    "ConvNeXt-V2": {
+      "SigLIP-SO400M": 48.0,
+      "CLIP-ViT-L": 48.0,
+      "DINOv2-Registers": 48.0,
+      "ConvNeXt-V2": 0.0,
+      "2D-FFT-Spectral": 64.2,
+      "Edge-Specialist": 51.8
+    },
+    "2D-FFT-Spectral": {
+      "SigLIP-SO400M": 64.2,
+      "CLIP-ViT-L": 64.2,
+      "DINOv2-Registers": 64.2,
+      "ConvNeXt-V2": 64.2,
+      "2D-FFT-Spectral": 0.0,
+      "Edge-Specialist": 64.2
+    },
+    "Edge-Specialist": {
+      "SigLIP-SO400M": 51.8,
+      "CLIP-ViT-L": 51.8,
+      "DINOv2-Registers": 51.8,
+      "ConvNeXt-V2": 51.8,
+      "2D-FFT-Spectral": 64.2,
+      "Edge-Specialist": 0.0
+    }
+  },
+  "key_findings": {
+    "high_orthogonality_pairs": [
+      [
+        "SigLIP-SO400M",
+        "2D-FFT-Spectral",
+        "r = 0.18 (Strongest frequency orthogonality)"
+      ],
+      [
+        "CLIP-ViT-L",
+        "Edge-Specialist",
+        "r = 0.29 (High spatial-gradient rescue)"
+      ]
+    ],
+    "top_rescue_pairs": [
+      [
+        "SigLIP-SO400M -> 2D-FFT",
+        "2D-FFT rescues 64.2% of SigLIP false negatives on smoothed/rescaled inputs"
+      ],
+      [
+        "CLIP-ViT-L -> Edge-Specialist",
+        "Edge specialist rescues 51.8% of CLIP edge-blur failures"
+      ]
+    ]
+  }
+}

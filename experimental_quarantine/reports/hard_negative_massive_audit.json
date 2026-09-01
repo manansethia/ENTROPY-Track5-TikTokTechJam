@@ -1,0 +1,8 @@
+{
+  "total_hard_negatives": 250,
+  "false_positive_count": 20,
+  "false_positive_rate_percent": 8.0,
+  "mean_synthetic_probability": 0.13190658818930387,
+  "p95_synthetic_probability": 0.6496160894632322,
+  "guardrail_status": "INVESTIGATE"
+}

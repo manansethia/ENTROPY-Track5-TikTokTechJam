@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-08-28T22:00:57Z",
+  "protocol": "Fitted strictly on FRESH_TRAIN (N=1000), evaluated on FRESH_VAL and FRESH_INTERNAL_TEST.",
+  "candidate_calibrations": {
+    "CLIP-ViT-L Alone": {
+      "raw_ece": 0.474,
+      "platt_scaled_ece": 0.474,
+      "isotonic_ece": 0.0524,
+      "raw_brier": 0.0603,
+      "test_brier": 0.0551
+    },
+    "CLIP + SigLIP (Learned Logistic)": {
+      "raw_ece": 0.4729,
+      "platt_scaled_ece": 0.4729,
+      "isotonic_ece": 0.041,
+      "raw_brier": 0.0412,
+      "test_brier": 0.054
+    },
+    "CLIP + SigLIP + SRM-DWT": {
+      "raw_ece": 0.4708,
+      "platt_scaled_ece": 0.4708,
+      "isotonic_ece": 0.0385,
+      "raw_brier": 0.0411,
+      "test_brier": 0.0538
+    },
+    "ALL Logistic Regression": {
+      "raw_ece": 0.474,
+      "platt_scaled_ece": 0.474,
+      "isotonic_ece": 0.0392,
+      "raw_brier": 0.0399,
+      "test_brier": 0.054
+    }
+  },
+  "conclusion": "Isotonic calibration successfully compresses ECE from ~0.47 down to 0.0385-0.0410 without changing sample rank order or AUROC."
+}

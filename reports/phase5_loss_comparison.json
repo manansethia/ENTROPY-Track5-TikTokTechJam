@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "tested_lambda_fp": [
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    4.0
+  ],
+  "optimal_lambda_fp": 2.5,
+  "rationale": "lambda_fp = 2.5 maximizes TPR at the sub-0.5% FPR constraint without over-suppressing subtle diffusion recall."
+}

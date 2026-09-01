@@ -1,0 +1,54 @@
+{
+  "report_id": "REAL_HIGHRES_PORTRAIT_POOL_INVENTORY",
+  "total_authentic_images": 4128,
+  "total_storage_gb": 0.865,
+  "resolution_distribution": {
+    "under_1mp": 0,
+    "1_to_2mp": 4006,
+    "2_to_4mp": 109,
+    "4_to_8mp": 4,
+    "8_to_16mp_4k": 4,
+    "greater_than_16mp": 5,
+    "pct_greater_than_4mp": 0.31
+  },
+  "aspect_ratio_distribution": {
+    "portrait_aspect_ratio_count": 23,
+    "portrait_aspect_ratio_pct": 0.56,
+    "landscape_aspect_ratio_count": 102,
+    "landscape_aspect_ratio_pct": 2.47,
+    "square_aspect_ratio_count": 4003,
+    "square_aspect_ratio_pct": 96.97
+  },
+  "source_breakdown": {
+    "CelebA_HQ_Studio_Portraits": {
+      "count": 4000,
+      "pct_of_pool": 96.9
+    },
+    "ETH_Zurich_DIV2K_2K_HR": {
+      "count": 100,
+      "pct_of_pool": 2.42
+    },
+    "Wikimedia_Commons_HighRes": {
+      "count": 28,
+      "pct_of_pool": 0.68
+    }
+  },
+  "category_breakdown": {
+    "real_portrait": 1004,
+    "real_studio": 1001,
+    "real_headshot": 1002,
+    "real_retouched": 1007,
+    "real_dslr": 106,
+    "real_highres": 1,
+    "real_mirrorless": 1,
+    "real_bokeh": 5,
+    "real_color_graded": 1
+  },
+  "storage_safety": {
+    "free_disk_gb": 418.7,
+    "total_disk_gb": 915.82,
+    "disk_used_pct": 54.3,
+    "ram_used_pct": 12.9,
+    "swap_used_mb": 0.0
+  }
+}

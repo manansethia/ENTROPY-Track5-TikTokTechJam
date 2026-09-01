@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-29T00:28:27Z",
+  "status": "IMMUTABLE_FROZEN_BASELINE",
+  "phase1_baseline_metrics": {
+    "val_AUROC": 0.9811,
+    "val_AUPRC": 0.991,
+    "test_AUROC": 0.9799,
+    "test_AUPRC": 0.9901,
+    "test_FPR_tau_080": 0.0017,
+    "test_TPR_tau_080": 0.6763,
+    "dominant_weakness": "Subtle SID diffusion false negatives (39.13% recall at tau=0.80)"
+  },
+  "artifact_hashes": {
+    "reports/phase1_threshold_analysis.json": "c0a68a4cae54f976b9c4ed48926c7bb704465b20e0125420768183164d215e8c",
+    "reports/phase1_calibration_report.json": "1f6b19cec06e3d9f16f877d3549f273e1c522f02a8b96daf3dd269daefa08510",
+    "reports/phase1_generator_breakdown.json": "b9007bc25ecdce7506a924f0245b13476412020fd2b6f3cff6db33821adf7231",
+    "reports/phase1_authentic_domain_breakdown.json": "facfc0b4a3432fe85dbb835f52f43357ef3d1dbcc79d5752588c75cb5eb55a43",
+    "checkpoints/phase1_tri_hybrid_best_auroc.pt": "601e3a9adbd46e3c1cbbd56588e10acc8e4db90f268b460a59e4ce6164b8872b",
+    "manifests/phase1_50k_manifest.jsonl": "a642c22c1758a68b7a0950e50846b2343c74c41932c664b4c825b63dac989b47"
+  }
+}

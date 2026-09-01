@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-08-28T20:23:15Z",
+  "protocol_section": "Sample Accounting & Decision-Gate Subset Reconciliation",
+  "master_manifest_counts": {
+    "total_samples": 5000,
+    "fresh_train_pool": 3500,
+    "fresh_val_pool": 1000,
+    "fresh_internal_test_pool": 500
+  },
+  "active_decision_gate_counts": {
+    "train_probe_fit_samples": 1000,
+    "train_real_count": 500,
+    "train_fake_count": 500,
+    "val_eval_samples_per_condition": 300,
+    "val_real_count": 150,
+    "val_fake_count": 150,
+    "total_val_evaluations_across_7_conditions": 2100,
+    "total_forward_passes_per_expert": 3100
+  },
+  "deterministic_sampling_seed": 20260828,
+  "rationale_and_status": {
+    "1_engineering_rationale": "1,000 Train / 300 Val was selected as an active subset to balance rapid sequential forward passes across 11 backbones and 7 transformations on the RTX 3050 6GB GPU, while providing >3.3x larger statistical power than the initial 300/100 Stage-1 subset.",
+    "2_reserved_samples": "The remaining 2,500 FRESH_TRAIN and 700 FRESH_VAL samples in manifests/fresh_5k_manifest.jsonl remain untouched and reserved for large-scale training manifests and final validation once architecture selection is completed.",
+    "3_implementation_status": "This subsetting was an engineering runtime decision for the decision gate. All reported metrics explicitly state actual sample counts (1,000 Train, 300 Val / condition)."
+  },
+  "active_subset_manifest_file": "manifests/fresh_decision_gate_active_subset.jsonl"
+}

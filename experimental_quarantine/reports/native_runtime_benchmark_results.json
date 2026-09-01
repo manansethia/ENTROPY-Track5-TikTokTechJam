@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-08-28T11:34:27Z",
+  "system_info": {
+    "node": "buildabot",
+    "os": "Linux",
+    "release": "7.1.3-201.fc44.x86_64",
+    "arch": "x86_64",
+    "cpu_cores": 12,
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 3050"
+  },
+  "precision_benchmarks": [
+    {
+      "engine": "PyTorch (CPU)",
+      "precision": "FP32",
+      "device": "cpu",
+      "mean_latency_ms": 77.89,
+      "p50_latency_ms": 76.69,
+      "p95_latency_ms": 115.57,
+      "p99_latency_ms": 122.74,
+      "throughput_fps": 12.8,
+      "ram_mb": 1.64,
+      "vram_mb": 0.0
+    },
+    {
+      "engine": "PyTorch (CUDA)",
+      "precision": "FP32",
+      "device": "cuda",
+      "mean_latency_ms": 7.75,
+      "p50_latency_ms": 7.66,
+      "p95_latency_ms": 8.28,
+      "p99_latency_ms": 8.81,
+      "throughput_fps": 129.1,
+      "ram_mb": 0.09,
+      "vram_mb": 126.31
+    },
+    {
+      "engine": "ONNX Runtime (Multi-Core CPU)",
+      "precision": "FP32",
+      "model_path": "native_engine/models_onnx/aether_student_fp32.onnx",
+      "model_size_mb": 1.11,
+      "active_provider": "CPUExecutionProvider",
+      "mean_latency_ms": 226.55,
+      "p50_latency_ms": 223.62,
+      "p95_latency_ms": 289.18,
+      "p99_latency_ms": 346.36,
+      "throughput_fps": 4.4
+    }
+  ],
+  "batch_scaling": [
+    {
+      "batch_size": 1,
+      "total_batch_latency_ms": 633.64,
+      "latency_per_image_ms": 633.64,
+      "throughput_fps": 1.6,
+      "hardware_provider": "CPUExecutionProvider"
+    },
+    {
+      "batch_size": 2,
+      "total_batch_latency_ms": 1507.5,
+      "latency_per_image_ms": 753.75,
+      "throughput_fps": 1.3,
+      "hardware_provider": "CPUExecutionProvider"
+    },
+    {
+      "batch_size": 4,
+      "total_batch_latency_ms": 2846.35,
+      "latency_per_image_ms": 711.59,
+      "throughput_fps": 1.4,
+      "hardware_provider": "CPUExecutionProvider"
+    },
+    {
+      "batch_size": 8,
+      "total_batch_latency_ms": 7422.71,
+      "latency_per_image_ms": 927.84,
+      "throughput_fps": 1.1,
+      "hardware_provider": "CPUExecutionProvider"
+    },
+    {
+      "batch_size": 16,
+      "total_batch_latency_ms": 9965.13,
+      "latency_per_image_ms": 622.82,
+      "throughput_fps": 1.6,
+      "hardware_provider": "CPUExecutionProvider"
+    },
+    {
+      "batch_size": 32,
+      "total_batch_latency_ms": 17302.94,
+      "latency_per_image_ms": 540.72,
+      "throughput_fps": 1.8,
+      "hardware_provider": "CPUExecutionProvider"
+    },
+    {
+      "batch_size": 64,
+      "total_batch_latency_ms": 13754.61,
+      "latency_per_image_ms": 214.92,
+      "throughput_fps": 4.7,
+      "hardware_provider": "CPUExecutionProvider"
+    }
+  ],
+  "pipeline_breakdown": {
+    "1_image_decode_ms": 11.54,
+    "2_tensor_preprocess_ms": 8.4,
+    "3_neural_inference_ms": 214.91,
+    "4_srm_laplacian_ms": 4.23,
+    "5_vit_anomaly_heatmap_ms": 0.33,
+    "6_bayesian_prior_shift_ms": 0.03,
+    "total_end_to_end_ms": 239.44,
+    "end_to_end_fps": 4.2
+  }
+}

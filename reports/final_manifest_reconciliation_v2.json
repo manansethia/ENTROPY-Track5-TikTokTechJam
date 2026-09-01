@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-08-29T06:47:15Z",
+  "status_verdicts": {
+    "CURRENT_MANIFEST_AUDITED": "EXECUTED",
+    "CURRENT_MANIFEST_DISJOINT": "EXECUTED",
+    "OOD_EXCLUSION_VALID": "EXECUTED",
+    "FINAL_TRAINING_MANIFEST_VALID": "FAILED"
+  },
+  "active_audited_manifest": {
+    "path": "/home/manan/aigc_robust_detection/manifests/phase2_150k_manifest.jsonl",
+    "sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+    "total_rows_computed": 103137,
+    "split_counts_computed": {
+      "PHASE2_TRAIN": 82509,
+      "PHASE2_VAL": 10312,
+      "PHASE2_INTERNAL_TEST": 10316
+    },
+    "split_labels_computed": {
+      "PHASE2_TRAIN": {
+        "REAL": 33895,
+        "AIGC": 48614
+      },
+      "PHASE2_VAL": {
+        "REAL": 4236,
+        "AIGC": 6076
+      },
+      "PHASE2_INTERNAL_TEST": {
+        "REAL": 4238,
+        "AIGC": 6078
+      }
+    },
+    "pairwise_intersections_computed": {
+      "PHASE2_TRAIN_AND_PHASE2_VAL": 0,
+      "PHASE2_TRAIN_AND_PHASE2_INTERNAL_TEST": 0,
+      "PHASE2_VAL_AND_PHASE2_INTERNAL_TEST": 0
+    },
+    "ood_contamination_rows_computed": 0
+  },
+  "target_governed_population": {
+    "TRAIN": 260184,
+    "TRAIN_REAL": 149000,
+    "TRAIN_AIGC": 111184,
+    "DEV": 10000,
+    "CALIBRATION": 4000,
+    "LOCKED_INTERNAL_TEST": 10316,
+    "TOTAL_GOVERNED": 284500
+  },
+  "population_deficit_analysis": {
+    "current_train_rows": 82509,
+    "target_train_rows": 260184,
+    "train_deficit": -177675,
+    "real_deficit": -115105,
+    "aigc_deficit": -62570,
+    "verdict": "POPULATION_DEFICIT_UNRESOLVED_CANNOT_PROCEED_TO_TRAINING"
+  },
+  "available_storage_reserves": {
+    "parquet_hfcf_rows": 152621,
+    "defactify_rows": 96000,
+    "sid_parquet_rows": 43044,
+    "aigi_quality_paradox_rows": 24000,
+    "unpacked_image_files_total": 177242
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "timestamp": "2026-08-28T20:46:41Z",
+  "total_storage_root": "/mnt/ai-storage/aigc_data/datasets",
+  "total_estimated_corpus_size_gb": 379.9,
+  "datasets": {
+    "aigi_quality_paradox": {
+      "format": "Parquet Shards",
+      "file_count": 15,
+      "total_samples": 24000,
+      "schema_fields": [
+        "generator",
+        "uid",
+        "bytes",
+        "path",
+        "original_prompt",
+        "positive_prompt",
+        "negative_prompt",
+        "num_inference_steps"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Modern multi-generator AIGC (FLUX.1, SDXL, SD3, PixArt)"
+    },
+    "aigibench_eval": {
+      "format": "Extracted Images",
+      "file_count": 0,
+      "total_samples": 0,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "QUARANTINED_EXTERNAL_BENCHMARK (LOCKED)",
+      "primary_content": "General photographic/synthetic imagery"
+    },
+    "archival_photography_negatives": {
+      "format": "Extracted Images",
+      "file_count": 0,
+      "total_samples": 0,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "General photographic/synthetic imagery"
+    },
+    "artbench_hard_negatives": {
+      "format": "Extracted Images",
+      "file_count": 0,
+      "total_samples": 0,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "General photographic/synthetic imagery"
+    },
+    "balanced_scaled_train": {
+      "format": "Extracted Images",
+      "file_count": 11713,
+      "total_samples": 11713,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Extracted balanced real/synthetic pool"
+    },
+    "cf_slice": {
+      "format": "Extracted Images",
+      "file_count": 5986,
+      "total_samples": 5986,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "General photographic/synthetic imagery"
+    },
+    "cifake": {
+      "format": "Extracted Images",
+      "file_count": 0,
+      "total_samples": 0,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "General photographic/synthetic imagery"
+    },
+    "defactify": {
+      "format": "Parquet Shards",
+      "file_count": 17,
+      "total_samples": 96000,
+      "schema_fields": [
+        "Caption",
+        "bytes",
+        "path",
+        "Label_A",
+        "Label_B"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Social-media image forensic captures"
+    },
+    "flux_sd3_genimagepp": {
+      "format": "Extracted Images",
+      "file_count": 0,
+      "total_samples": 0,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "General photographic/synthetic imagery"
+    },
+    "genimage": {
+      "format": "Extracted Images",
+      "file_count": 0,
+      "total_samples": 0,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "General photographic/synthetic imagery"
+    },
+    "genimage_parquet": {
+      "format": "Extracted Images",
+      "file_count": 0,
+      "total_samples": 0,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Multi-generator benchmark collection"
+    },
+    "massive_balanced_50k": {
+      "format": "Extracted Images",
+      "file_count": 34746,
+      "total_samples": 34746,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Extracted balanced real/synthetic pool"
+    },
+    "parquet": {
+      "format": "Parquet Shards",
+      "file_count": 51,
+      "total_samples": 152621,
+      "schema_fields": [
+        "image_name",
+        "format",
+        "element",
+        "mode",
+        "image_data",
+        "model_name",
+        "nsfw_flag",
+        "prompt"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Multi-generator benchmark collection"
+    },
+    "scaled_45k": {
+      "format": "Extracted Images",
+      "file_count": 11569,
+      "total_samples": 11569,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Extracted balanced real/synthetic pool"
+    },
+    "scaled_massive": {
+      "format": "Extracted Images",
+      "file_count": 45409,
+      "total_samples": 45409,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Extracted balanced real/synthetic pool"
+    },
+    "scaled_train": {
+      "format": "Extracted Images",
+      "file_count": 9000,
+      "total_samples": 9000,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Extracted balanced real/synthetic pool"
+    },
+    "sid_parquet": {
+      "format": "Parquet Shards",
+      "file_count": 51,
+      "total_samples": 43044,
+      "schema_fields": [
+        "img_id",
+        "bytes",
+        "path",
+        "bytes",
+        "path",
+        "width",
+        "height",
+        "label"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "In-the-wild latent diffusion generations"
+    },
+    "synthbuster": {
+      "format": "Extracted Images",
+      "file_count": 9000,
+      "total_samples": 9000,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "QUARANTINED_EXTERNAL_BENCHMARK (LOCKED)",
+      "primary_content": "General photographic/synthetic imagery"
+    },
+    "vintage_archival_photos": {
+      "format": "Extracted Images",
+      "file_count": 0,
+      "total_samples": 0,
+      "schema_fields": [
+        "raw_image_file"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "General photographic/synthetic imagery"
+    },
+    "wikiart_hard_negatives": {
+      "format": "Parquet Shards",
+      "file_count": 72,
+      "total_samples": 81444,
+      "schema_fields": [
+        "bytes",
+        "path",
+        "artist",
+        "genre",
+        "style"
+      ],
+      "quarantine_status": "APPROVED_TRAINING_CORPUS",
+      "primary_content": "Authentic fine-art masterpieces (paintings, oil/canvas)"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-08-28T22:54:17Z",
+  "test_samples": 5000,
+  "test_AUROC": 0.9799,
+  "test_AUPRC": 0.9901,
+  "test_ECE": 0.3842,
+  "test_Brier": 0.077,
+  "operating_point_tau_080": {
+    "threshold": 0.8,
+    "TP": 2206,
+    "TN": 1735,
+    "FP": 3,
+    "FN": 1056,
+    "FPR": 0.0017,
+    "TPR": 0.6763,
+    "Precision": 0.9986,
+    "FPR_95_CI": [
+      0.0006,
+      0.0051
+    ]
+  },
+  "verdict": "Frozen Phase 1 model achieves 0.9799 AUROC on untouched internal test set with FPR = 0.17% at tau=0.80."
+}

@@ -1,0 +1,97 @@
+{
+  "model_name": "ScientificVisionDetector-ConfigA",
+  "champion_origin": "REM-A_Epoch3",
+  "architecture": {
+    "backbones": [
+      "CLIP-ViT-L/14",
+      "SigLIP-SO400M-14"
+    ],
+    "fusion": "BottleneckFusionHead (2212 -> 512 -> 128 -> 1)",
+    "evidence": "ForensicEvidenceHead (512 -> 128 -> 36)",
+    "wavelet_srm": "GPU-Wavelet SRM Residual Block"
+  },
+  "parameter_counts": {
+    "total_parameters": 735038561,
+    "trainable_parameters": 32013809,
+    "frozen_parameters": 703024752
+  },
+  "parameter_hash": "813f243557810e64c85c8ad4519a3bc2e1b23d8545d1d493ff34fb5cff94e3ae",
+  "calibration": {
+    "temperature": 1.5230212761606914,
+    "calibration_split_size": 4000,
+    "nll_optimized": true
+  },
+  "operating_thresholds": {
+    "FPR<=1.00%": {
+      "target_fpr": 0.01,
+      "achieved_fpr": 0.01,
+      "empirical_tpr": 0.9924,
+      "calibrated_threshold": 0.7260404825210571
+    },
+    "FPR<=0.50%": {
+      "target_fpr": 0.005,
+      "achieved_fpr": 0.0048,
+      "empirical_tpr": 0.989,
+      "calibrated_threshold": 0.9312365055084229
+    },
+    "FPR<=0.10%": {
+      "target_fpr": 0.001,
+      "achieved_fpr": 0.001,
+      "empirical_tpr": 0.9782,
+      "calibrated_threshold": 0.9843991994857788
+    },
+    "FPR<=0.05%": {
+      "target_fpr": 0.0005,
+      "achieved_fpr": 0.0004,
+      "empirical_tpr": 0.9652,
+      "calibrated_threshold": 0.9906008243560791
+    },
+    "FPR<=0.01%": {
+      "target_fpr": 0.0001,
+      "achieved_fpr": 0.0,
+      "empirical_tpr": 0.925,
+      "calibrated_threshold": 0.9943506717681885
+    }
+  },
+  "metrics_summary": {
+    "dev_accuracy": 0.991,
+    "dev_auroc": 0.9995106,
+    "dev_auprc": 0.9995473030455717,
+    "dev_fp": 56,
+    "dev_fn": 34,
+    "tpr_at_01_fpr": 0.9782,
+    "tpr_at_001_fpr": 0.925
+  },
+  "frozen_timestamp": "2026-08-30 16:20:57 UTC",
+  "file_sha256": "91a6a3814c30f0b62f7b63e63fa81fe595c83b9edf91733ef9a8d3358e133438",
+  "checkpoint_file": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_frozen_model.pt",
+  "provenance_and_metric_audit": {
+    "earlier_preliminary_dev_eval": {
+      "split_size": "Phase 6 Preliminary Subset",
+      "dev_accuracy": 0.9921,
+      "dev_fp": 29,
+      "dev_fn": 50,
+      "tpr_at_01_fpr": 0.9852,
+      "worst_family_sid_tpr": 0.9494
+    },
+    "final_authoritative_dev_eval": {
+      "split_size": 10000,
+      "dev_accuracy": 0.991,
+      "dev_fp": 56,
+      "dev_fn": 34,
+      "dev_auroc": 0.999511,
+      "dev_auprc": 0.999547,
+      "tpr_at_01_fpr": 0.9782,
+      "tpr_at_001_fpr": 0.925,
+      "worst_family_sid_tpr": 0.9599,
+      "edge_case_accuracy": 1.0
+    },
+    "provenance_verification": {
+      "frozen_model_sha256": "91a6a3814c30f0b62f7b63e63fa81fe595c83b9edf91733ef9a8d3358e133438",
+      "source_checkpoint_sha256": "b1d9ad41aecca908be0d2238a1f8f7940d118d7c599864313ca8c56a6b309eca",
+      "trainable_parameter_hash": "813f243557810e64c85c8ad4519a3bc2e1b23d8545d1d493ff34fb5cff94e3ae",
+      "parameter_bitwise_identical": true,
+      "reproducible_cause": "Dataset manifest finalization in Phase 7 expanded the held-out DEV split to 10,000 distinct images, shifting the empirical operating points from preliminary 99.21% (79 errors) to final authoritative 99.10% (90 errors) with AUROC 0.999511."
+    }
+  }
+}

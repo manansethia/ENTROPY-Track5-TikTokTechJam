@@ -1,0 +1,172 @@
+{
+  "config_a": {
+    "tier": "A",
+    "trainable_parameters_m": 31.94,
+    "quality_budget_optimizer_steps": 500,
+    "stage2_duration_seconds": 1073.5,
+    "candidate_checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/high_capacity/candidate_config_A.pt",
+    "dev_auroc": 0.999441,
+    "dev_auprc": 0.999479,
+    "dev_brier": 0.006931,
+    "dev_ece": 0.006597,
+    "low_fpr_operating_points": {
+      "FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.040238,
+        "max_allowed_fp": 50,
+        "actual_fp": 50,
+        "actual_fpr": 0.01,
+        "actual_tp": 4964,
+        "actual_fn": 36,
+        "actual_tpr": 0.9928,
+        "tpr_pct": 99.28
+      },
+      "FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.769254,
+        "max_allowed_fp": 25,
+        "actual_fp": 25,
+        "actual_fpr": 0.005,
+        "actual_tp": 4946,
+        "actual_fn": 54,
+        "actual_tpr": 0.9892,
+        "tpr_pct": 98.92
+      },
+      "FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.998096,
+        "max_allowed_fp": 5,
+        "actual_fp": 5,
+        "actual_fpr": 0.001,
+        "actual_tp": 4801,
+        "actual_fn": 199,
+        "actual_tpr": 0.9602,
+        "tpr_pct": 96.02
+      },
+      "FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.999785,
+        "max_allowed_fp": 2,
+        "actual_fp": 2,
+        "actual_fpr": 0.0004,
+        "actual_tp": 4210,
+        "actual_fn": 790,
+        "actual_tpr": 0.842,
+        "tpr_pct": 84.2
+      },
+      "FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.999863,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 3923,
+        "actual_fn": 1077,
+        "actual_tpr": 0.7846,
+        "tpr_pct": 78.46
+      }
+    },
+    "initial_param_hash": "pre_train_hash",
+    "final_param_hash": "d2b82bbdc2ee47df271d74849d9bc050b046d33e5b8700b34fe45161c24cf279",
+    "parameter_delta_proven": true,
+    "is_safe": true,
+    "status": "EVALUATED"
+  },
+  "config_b": {
+    "tier": "B",
+    "trainable_parameters_m": 60.9,
+    "quality_budget_optimizer_steps": 500,
+    "stage2_duration_seconds": 1133.2,
+    "candidate_checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/high_capacity/candidate_config_B.pt",
+    "dev_auroc": 0.998494,
+    "dev_auprc": 0.998634,
+    "dev_brier": 0.024624,
+    "dev_ece": 0.02709,
+    "low_fpr_operating_points": {
+      "FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.023331,
+        "max_allowed_fp": 50,
+        "actual_fp": 50,
+        "actual_fpr": 0.01,
+        "actual_tp": 4897,
+        "actual_fn": 103,
+        "actual_tpr": 0.9794,
+        "tpr_pct": 97.94
+      },
+      "FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.052619,
+        "max_allowed_fp": 25,
+        "actual_fp": 24,
+        "actual_fpr": 0.0048,
+        "actual_tp": 4836,
+        "actual_fn": 164,
+        "actual_tpr": 0.9672,
+        "tpr_pct": 96.72
+      },
+      "FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.91383,
+        "max_allowed_fp": 5,
+        "actual_fp": 5,
+        "actual_fpr": 0.001,
+        "actual_tp": 4576,
+        "actual_fn": 424,
+        "actual_tpr": 0.9152,
+        "tpr_pct": 91.52
+      },
+      "FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.984811,
+        "max_allowed_fp": 2,
+        "actual_fp": 2,
+        "actual_fpr": 0.0004,
+        "actual_tp": 4296,
+        "actual_fn": 704,
+        "actual_tpr": 0.8592,
+        "tpr_pct": 85.92
+      },
+      "FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.996816,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 3918,
+        "actual_fn": 1082,
+        "actual_tpr": 0.7836,
+        "tpr_pct": 78.36
+      }
+    },
+    "initial_param_hash": "pre_train_hash",
+    "final_param_hash": "f44eafa7f2ad7dbfa462d81f6a0364755a47187b371d6a494b5e648ce0f7c4f8",
+    "parameter_delta_proven": true,
+    "is_safe": false,
+    "status": "REJECTED_MEMORY_HEADROOM"
+  },
+  "config_c": {
+    "tier": "C",
+    "trainable_parameters_m": 90.97,
+    "quality_budget_optimizer_steps": 0,
+    "stage2_duration_seconds": 0.0,
+    "candidate_checkpoint_path": "N/A (OOM)",
+    "dev_auroc": 0.0,
+    "dev_auprc": 0.0,
+    "dev_brier": 0.0,
+    "dev_ece": 0.0,
+    "low_fpr_operating_points": {
+      "FPR<=0.10%": {
+        "tpr_pct": 0.0,
+        "actual_fp": 0
+      },
+      "FPR<=0.01%": {
+        "tpr_pct": 0.0,
+        "actual_fp": 0
+      }
+    },
+    "is_safe": false,
+    "status": "REJECTED_OOM"
+  },
+  "manifest_sha256": "8ec2b6916391a7e2122b0f4993c71d7a02eced0f3c6719a6b287bcb9a76070ec"
+}

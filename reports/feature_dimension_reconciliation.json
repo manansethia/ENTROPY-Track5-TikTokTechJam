@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-08-28T20:18:53Z",
+  "clip_vit_l14": {
+    "transformer_hidden_dim": 1024,
+    "vision_pooler_output_dim": 1024,
+    "text_projected_embedding_dim": 768,
+    "used_representation": "vision_pooler_output (1024-d uncompressed visual representation)",
+    "explanation": "CLIP-ViT-L/14 backbone natively outputs 1024-d visual features from its transformer layer. The 768-d dimension refers to the linear projection layer used for multi-modal text-image alignment. Using the 1024-d vision pooler preserves raw visual synthesis artifacts without text-projection bottleneck compression."
+  },
+  "siglip_so400m_224": {
+    "transformer_hidden_dim": 1152,
+    "vision_pooler_output_dim": 1152,
+    "used_representation": "vision_pooler_output (1152-d rich semantic visual representation)"
+  },
+  "srm_dwt_wavelet": {
+    "subbands_count": 9,
+    "statistics_per_subband": 4,
+    "feature_dim": 36,
+    "formula": "4 moments (mean, std, min, max) x 9 sub-bands (LH, HL, HH x 3 RGB channels) = 36-d"
+  },
+  "concatenated_feature_tensor": {
+    "shape": [
+      1,
+      2212
+    ],
+    "total_input_dimension": 2212,
+    "breakdown": "1024 (CLIP) + 1152 (SigLIP) + 36 (SRM-DWT) = 2212 features"
+  },
+  "model_parameters": {
+    "clip_vitl14_params": 427616513,
+    "siglip_so400m_params": 877360306,
+    "srm_params": 0,
+    "fusion_head_params": 2213,
+    "total_system_params": 1304979032,
+    "total_trainable_params": 2213,
+    "param_budget_limit": 2000000000,
+    "budget_compliance": "PASSED (< 2.0B limit)"
+  }
+}

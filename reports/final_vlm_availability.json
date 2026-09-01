@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-08-29T10:58:30Z",
+  "audit_host": "buildabot.lykoi-typhon.ts.net",
+  "gpu_profile": "NVIDIA GeForce RTX 3050 Laptop GPU (6GB VRAM)",
+  "vision_backbones_available": [
+    "CLIP-ViT-L/14 (1024d)",
+    "SigLIP-SO400M-224 (1152d)",
+    "DINOv2-Registers-Large (1024d)",
+    "ConvNeXt-V2-Tiny (768d)",
+    "EVA02-Large (1024d)",
+    "Swin-Large (1536d)"
+  ],
+  "generative_text_vlm_status": {
+    "vlm_installed_locally": false,
+    "ollama_daemon_running": false,
+    "vlm_status_code": "EXPLANATION_VLM_UNAVAILABLE",
+    "vlm_model_name": "NONE",
+    "vlm_checkpoint": "NONE"
+  },
+  "explanation_loop_execution_protocol": {
+    "action_on_missing_vlm": "REPORT_UNAVAILABLE_HONESTLY",
+    "faked_text_explanations": 0,
+    "structured_forensic_ontology": "EXECUTED",
+    "counterfactual_feature_occlusion_tests": "EXECUTED",
+    "ai_critic_filtering": "EXECUTED",
+    "bounded_feedback_rewards": "EXECUTED_VIA_AUXILIARY_LOSS"
+  }
+}

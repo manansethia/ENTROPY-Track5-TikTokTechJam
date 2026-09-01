@@ -1,0 +1,110 @@
+{
+  "report_id": "REAL_PORTRAIT_FALSE_POSITIVE_AUDIT",
+  "evaluated_checkpoint": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_frozen_model.pt",
+  "model_sha256": "91a6a3814c30f0b62f7b63e63fa81fe595c83b9edf91733ef9a8d3358e133438",
+  "parameter_hash": "813f243557810e64c85c8ad4519a3bc2e1b23d8545d1d493ff34fb5cff94e3ae",
+  "temperature": 1.5230212761606914,
+  "enterprise_threshold": 0.984399,
+  "total_samples_evaluated": 2001,
+  "breakdown": {
+    "Overall_Authentic_Pool": {
+      "sample_count": 2001,
+      "false_positive_count_enterprise": 2,
+      "fpr_enterprise_pct": 0.09995002498750624,
+      "mean_p_aigc": 0.02267229530048314,
+      "median_p_aigc": 0.006762377452105284,
+      "p95_p_aigc": 0.06128019094467163,
+      "mean_srm_energy": 6.610665963336207
+    },
+    "High_Resolution (>1024x1024)": {
+      "sample_count": 14,
+      "false_positive_count_enterprise": 2,
+      "fpr_enterprise_pct": 14.285714285714285,
+      "mean_p_aigc": 0.16177123690223588,
+      "median_p_aigc": 0.02137837652117014,
+      "p95_p_aigc": 0.9975702673196792,
+      "mean_srm_energy": 5.035815792424338
+    },
+    "Standard_Resolution (<=1024x1024)": {
+      "sample_count": 1987,
+      "false_positive_count_enterprise": 0,
+      "fpr_enterprise_pct": 0.0,
+      "mean_p_aigc": 0.02169223229976621,
+      "median_p_aigc": 0.006713290233165026,
+      "p95_p_aigc": 0.060970564931630986,
+      "mean_srm_energy": 6.621762039024564
+    },
+    "Portrait_Orientation (H > W)": {
+      "sample_count": 444,
+      "false_positive_count_enterprise": 0,
+      "fpr_enterprise_pct": 0.0,
+      "mean_p_aigc": 0.02202195009774621,
+      "median_p_aigc": 0.008141512982547283,
+      "p95_p_aigc": 0.06936077773570996,
+      "mean_srm_energy": 7.115197934814401
+    },
+    "Landscape_Orientation (W >= H)": {
+      "sample_count": 1557,
+      "false_positive_count_enterprise": 2,
+      "fpr_enterprise_pct": 0.12845215157353884,
+      "mean_p_aigc": 0.02285775019451988,
+      "median_p_aigc": 0.006463790312409401,
+      "p95_p_aigc": 0.05884706526994704,
+      "mean_srm_energy": 6.466791720987898
+    },
+    "Source_Defactify_Web": {
+      "sample_count": 500,
+      "false_positive_count_enterprise": 0,
+      "fpr_enterprise_pct": 0.0,
+      "mean_p_aigc": 0.008701281667919829,
+      "median_p_aigc": 0.0034900523023679852,
+      "p95_p_aigc": 0.0206904312595725,
+      "mean_srm_energy": 6.74384682559967
+    },
+    "Source_SID_DSLR": {
+      "sample_count": 500,
+      "false_positive_count_enterprise": 1,
+      "fpr_enterprise_pct": 0.2,
+      "mean_p_aigc": 0.02451364547596313,
+      "median_p_aigc": 0.009092268999665976,
+      "p95_p_aigc": 0.06773045584559433,
+      "mean_srm_energy": 7.663158720970154
+    },
+    "Source_ImageNet_Objects": {
+      "sample_count": 500,
+      "false_positive_count_enterprise": 0,
+      "fpr_enterprise_pct": 0.0,
+      "mean_p_aigc": 0.026848040854558348,
+      "median_p_aigc": 0.006084159715101123,
+      "p95_p_aigc": 0.08468314222991465,
+      "mean_srm_energy": 5.381334086447954
+    },
+    "Source_COCO_Scenes": {
+      "sample_count": 500,
+      "false_positive_count_enterprise": 0,
+      "fpr_enterprise_pct": 0.0,
+      "mean_p_aigc": 0.028673781881807373,
+      "median_p_aigc": 0.010408846195787191,
+      "p95_p_aigc": 0.0636944852769374,
+      "mean_srm_energy": 6.654158340454101
+    },
+    "High_SRM_Energy (>4.0)": {
+      "sample_count": 1196,
+      "false_positive_count_enterprise": 1,
+      "fpr_enterprise_pct": 0.08361204013377926,
+      "mean_p_aigc": 0.02030681688934222,
+      "median_p_aigc": 0.00683496636338532,
+      "p95_p_aigc": 0.05858730338513851,
+      "mean_srm_energy": 9.232509241056283
+    },
+    "Normal_SRM_Energy (<=4.0)": {
+      "sample_count": 805,
+      "false_positive_count_enterprise": 1,
+      "fpr_enterprise_pct": 0.12422360248447205,
+      "mean_p_aigc": 0.02618672036846394,
+      "median_p_aigc": 0.006574394181370735,
+      "p95_p_aigc": 0.0674201369285583,
+      "mean_srm_energy": 2.7153559507235236
+    }
+  }
+}

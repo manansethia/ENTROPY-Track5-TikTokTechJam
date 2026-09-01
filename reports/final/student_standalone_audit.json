@@ -1,0 +1,386 @@
+{
+  "FP16": {
+    "9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410.jpg": {
+      "verdict": "REAL",
+      "confidence": 0.6704,
+      "probabilities": {
+        "real": 0.6704,
+        "partial_ai": 0.3179,
+        "full_aigc": 0.0117
+      },
+      "ai_probability": 0.3296,
+      "affected_area_percentage": 0.0,
+      "suspicious_regions_count": 0,
+      "suspicious_regions": [],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410_distilled_fp16_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "FP16",
+        "device": "cuda:0",
+        "single_image_latency_ms": 328.94
+      }
+    },
+    "4women.webp": {
+      "verdict": "PARTIAL_AIGC",
+      "confidence": 0.6567,
+      "probabilities": {
+        "real": 0.2117,
+        "partial_ai": 0.6567,
+        "full_aigc": 0.1315
+      },
+      "ai_probability": 0.7883,
+      "affected_area_percentage": 57.46,
+      "suspicious_regions_count": 2,
+      "suspicious_regions": [
+        {
+          "box_2d": [
+            1840,
+            1136,
+            3072,
+            3551
+          ],
+          "confidence": 0.6077,
+          "label": "Manipulated_AIGC_Region"
+        },
+        {
+          "box_2d": [
+            0,
+            0,
+            1777,
+            4096
+          ],
+          "confidence": 0.6243,
+          "label": "Manipulated_AIGC_Region"
+        }
+      ],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/4women_distilled_fp16_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "FP16",
+        "device": "cuda:0",
+        "single_image_latency_ms": 323.47
+      }
+    },
+    "a8887a3acfa7159c298b2a6de446db77-1200536355.png": {
+      "verdict": "PARTIAL_AIGC",
+      "confidence": 0.4561,
+      "probabilities": {
+        "real": 0.4265,
+        "partial_ai": 0.4561,
+        "full_aigc": 0.1174
+      },
+      "ai_probability": 0.5735,
+      "affected_area_percentage": 36.84,
+      "suspicious_regions_count": 2,
+      "suspicious_regions": [
+        {
+          "box_2d": [
+            1289,
+            0,
+            1582,
+            91
+          ],
+          "confidence": 0.5096,
+          "label": "Manipulated_AIGC_Region"
+        },
+        {
+          "box_2d": [
+            321,
+            131,
+            1728,
+            1166
+          ],
+          "confidence": 0.5134,
+          "label": "Manipulated_AIGC_Region"
+        }
+      ],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/a8887a3acfa7159c298b2a6de446db77-1200536355_distilled_fp16_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "FP16",
+        "device": "cuda:0",
+        "single_image_latency_ms": 59.37
+      }
+    },
+    "mia-khalifa-blowjob-675545-3390259016.jpg": {
+      "verdict": "REAL",
+      "confidence": 0.6104,
+      "probabilities": {
+        "real": 0.6104,
+        "partial_ai": 0.3611,
+        "full_aigc": 0.0287
+      },
+      "ai_probability": 0.3896,
+      "affected_area_percentage": 0.0,
+      "suspicious_regions_count": 0,
+      "suspicious_regions": [],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/mia-khalifa-blowjob-675545-3390259016_distilled_fp16_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "FP16",
+        "device": "cuda:0",
+        "single_image_latency_ms": 34.22
+      }
+    }
+  },
+  "INT8": {
+    "9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410.jpg": {
+      "verdict": "REAL",
+      "confidence": 0.6597,
+      "probabilities": {
+        "real": 0.6597,
+        "partial_ai": 0.3281,
+        "full_aigc": 0.0121
+      },
+      "ai_probability": 0.3403,
+      "affected_area_percentage": 0.0,
+      "suspicious_regions_count": 0,
+      "suspicious_regions": [],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410_distilled_int8_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "INT8",
+        "device": "cuda:0",
+        "single_image_latency_ms": 11.42
+      }
+    },
+    "4women.webp": {
+      "verdict": "PARTIAL_AIGC",
+      "confidence": 0.6602,
+      "probabilities": {
+        "real": 0.2072,
+        "partial_ai": 0.6602,
+        "full_aigc": 0.1327
+      },
+      "ai_probability": 0.7928,
+      "affected_area_percentage": 57.56,
+      "suspicious_regions_count": 2,
+      "suspicious_regions": [
+        {
+          "box_2d": [
+            1826,
+            1107,
+            3072,
+            3564
+          ],
+          "confidence": 0.6075,
+          "label": "Manipulated_AIGC_Region"
+        },
+        {
+          "box_2d": [
+            0,
+            0,
+            1768,
+            4096
+          ],
+          "confidence": 0.6271,
+          "label": "Manipulated_AIGC_Region"
+        }
+      ],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/4women_distilled_int8_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "INT8",
+        "device": "cuda:0",
+        "single_image_latency_ms": 315.67
+      }
+    },
+    "a8887a3acfa7159c298b2a6de446db77-1200536355.png": {
+      "verdict": "PARTIAL_AIGC",
+      "confidence": 0.46,
+      "probabilities": {
+        "real": 0.4224,
+        "partial_ai": 0.46,
+        "full_aigc": 0.1176
+      },
+      "ai_probability": 0.5776,
+      "affected_area_percentage": 38.2,
+      "suspicious_regions_count": 2,
+      "suspicious_regions": [
+        {
+          "box_2d": [
+            1644,
+            0,
+            1728,
+            67
+          ],
+          "confidence": 0.5013,
+          "label": "Manipulated_AIGC_Region"
+        },
+        {
+          "box_2d": [
+            320,
+            0,
+            1728,
+            1166
+          ],
+          "confidence": 0.4961,
+          "label": "Manipulated_AIGC_Region"
+        }
+      ],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/a8887a3acfa7159c298b2a6de446db77-1200536355_distilled_int8_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "INT8",
+        "device": "cuda:0",
+        "single_image_latency_ms": 57.76
+      }
+    },
+    "mia-khalifa-blowjob-675545-3390259016.jpg": {
+      "verdict": "REAL",
+      "confidence": 0.6089,
+      "probabilities": {
+        "real": 0.6089,
+        "partial_ai": 0.3623,
+        "full_aigc": 0.0287
+      },
+      "ai_probability": 0.3911,
+      "affected_area_percentage": 0.0,
+      "suspicious_regions_count": 0,
+      "suspicious_regions": [],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/mia-khalifa-blowjob-675545-3390259016_distilled_int8_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "INT8",
+        "device": "cuda:0",
+        "single_image_latency_ms": 34.28
+      }
+    }
+  },
+  "FP32": {
+    "9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410.jpg": {
+      "verdict": "REAL",
+      "confidence": 0.6703,
+      "probabilities": {
+        "real": 0.6703,
+        "partial_ai": 0.3179,
+        "full_aigc": 0.0118
+      },
+      "ai_probability": 0.3297,
+      "affected_area_percentage": 0.0,
+      "suspicious_regions_count": 0,
+      "suspicious_regions": [],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/9872345-mia-khalifa-big-tit-brunette-loves-hard-cock-133-3883013410_distilled_fp32_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "FP32",
+        "device": "cuda:0",
+        "single_image_latency_ms": 38.67
+      }
+    },
+    "4women.webp": {
+      "verdict": "PARTIAL_AIGC",
+      "confidence": 0.6567,
+      "probabilities": {
+        "real": 0.2117,
+        "partial_ai": 0.6567,
+        "full_aigc": 0.1315
+      },
+      "ai_probability": 0.7883,
+      "affected_area_percentage": 57.47,
+      "suspicious_regions_count": 2,
+      "suspicious_regions": [
+        {
+          "box_2d": [
+            1840,
+            1136,
+            3072,
+            3551
+          ],
+          "confidence": 0.6079,
+          "label": "Manipulated_AIGC_Region"
+        },
+        {
+          "box_2d": [
+            0,
+            0,
+            1778,
+            4096
+          ],
+          "confidence": 0.6241,
+          "label": "Manipulated_AIGC_Region"
+        }
+      ],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/4women_distilled_fp32_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "FP32",
+        "device": "cuda:0",
+        "single_image_latency_ms": 326.75
+      }
+    },
+    "a8887a3acfa7159c298b2a6de446db77-1200536355.png": {
+      "verdict": "PARTIAL_AIGC",
+      "confidence": 0.456,
+      "probabilities": {
+        "real": 0.4264,
+        "partial_ai": 0.456,
+        "full_aigc": 0.1176
+      },
+      "ai_probability": 0.5736,
+      "affected_area_percentage": 36.87,
+      "suspicious_regions_count": 2,
+      "suspicious_regions": [
+        {
+          "box_2d": [
+            1288,
+            0,
+            1582,
+            91
+          ],
+          "confidence": 0.5095,
+          "label": "Manipulated_AIGC_Region"
+        },
+        {
+          "box_2d": [
+            321,
+            131,
+            1728,
+            1166
+          ],
+          "confidence": 0.5136,
+          "label": "Manipulated_AIGC_Region"
+        }
+      ],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/a8887a3acfa7159c298b2a6de446db77-1200536355_distilled_fp32_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "FP32",
+        "device": "cuda:0",
+        "single_image_latency_ms": 58.67
+      }
+    },
+    "mia-khalifa-blowjob-675545-3390259016.jpg": {
+      "verdict": "REAL",
+      "confidence": 0.6102,
+      "probabilities": {
+        "real": 0.6102,
+        "partial_ai": 0.3612,
+        "full_aigc": 0.0286
+      },
+      "ai_probability": 0.3898,
+      "affected_area_percentage": 0.0,
+      "suspicious_regions_count": 0,
+      "suspicious_regions": [],
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/mia-khalifa-blowjob-675545-3390259016_distilled_fp32_heatmap.jpg",
+      "runtime_telemetry": {
+        "architecture": "SingleStudentForensicModel",
+        "total_parameters": 4668324,
+        "precision": "FP32",
+        "device": "cuda:0",
+        "single_image_latency_ms": 39.84
+      }
+    }
+  }
+}

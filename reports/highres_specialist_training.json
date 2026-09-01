@@ -1,0 +1,23 @@
+{
+  "status": "FINAL_DATA_FINE_TUNED",
+  "spai_highres": {
+    "init_sha256": "24159f27d7c8c2cd0cb6c4019189eb89ad0874a0d9d15f8dc9afd39ca9648a55",
+    "out_sha256": "8ef8fa67d33e5167e36c7a02b07eb37cf346c248529520e5bf50c9194e35c9b5",
+    "parameter_delta": 0.6442461609840393,
+    "losses": [
+      0.7014865060647328,
+      0.7013397385676702,
+      0.6985757996638616
+    ]
+  },
+  "convnext_highres": {
+    "init_sha256": "ec5a7ae3b01eedb5da73ed94a9b6b9110f1c098fb7b50540d99a700efc758d05",
+    "out_sha256": "340801ead6a6a129c964f1cfa11ac2c248c472a605398d2ed4dfa35079733c2c",
+    "parameter_delta": 0.5910081267356873,
+    "losses": [
+      0.712775727113088,
+      0.6996288220087687,
+      0.6974453657865525
+    ]
+  }
+}

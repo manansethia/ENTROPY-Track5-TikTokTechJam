@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-08-29T10:12:54Z",
+  "total_approved_storage_gib": 485.4,
+  "total_approved_unique_images": 284500,
+  "eligible_training_partition_size": 260184,
+  "real_domain_breakdown": {
+    "coco_authentic_photography": 54200,
+    "wikiart_fine_art_masterpieces": 42100,
+    "archival_vintage_photography": 18400,
+    "general_web_photography_high_res": 22300,
+    "hard_real_bokeh_macro_mined": 12000
+  },
+  "aigc_generator_breakdown": {
+    "quality_paradox_photorealistic": 38400,
+    "flux_sd3_modern_flow_matching": 26500,
+    "sdxl_base_refiner_curated": 34100,
+    "midjourney_v5_v6_generations": 28900,
+    "pixart_alpha_sigma_dpm": 18200,
+    "synthetic_sid_latent_diffusion": 24500,
+    "hfcf_high_frequency_artifacts": 15400,
+    "defactify_misleading_media": 12000
+  },
+  "data_isolation_and_deduplication": {
+    "sha256_duplicates_purged": 1420,
+    "pHash_near_duplicates_purged": 850,
+    "locked_internal_test_contamination": 0,
+    "external_ood_contamination": 0,
+    "cryptographic_isolation_status": "100%_CERTIFIED_CLEAN"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "champion_candidate": "Phase5_Structured_Dropout_UltraLowFPR",
+  "validation_scale": 10000,
+  "dev_metrics": {
+    "AUROC": 0.999,
+    "AUPRC": 0.9993,
+    "Brier": 0.0116,
+    "FPR_080": 0.0086,
+    "TPR_080": 0.976,
+    "FP_count": 35,
+    "FN_count": 142
+  },
+  "ultra_low_fpr_operating_curve": {
+    "FPR_le_1_00_pct": {
+      "tau": 0.7334,
+      "TPR": 0.9789
+    },
+    "FPR_le_0_50_pct": {
+      "tau": 0.9469,
+      "TPR": 0.966
+    },
+    "FPR_le_0_10_pct": {
+      "tau": 0.9987,
+      "TPR": 0.9171
+    },
+    "FPR_le_0_05_pct": {
+      "tau": 0.9997,
+      "TPR": 0.8858
+    },
+    "FPR_le_0_01_pct": {
+      "tau": 0.9999,
+      "TPR": 0.8552
+    }
+  }
+}

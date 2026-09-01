@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-08-28T19:35:31Z",
+  "champion_architecture": "Tri-Stream: CLIP-ViT-L/14 + SigLIP-SO400M-224 + SRM-DWT Wavelet",
+  "models": {
+    "CLIP-ViT-L/14": {
+      "checkpoint_path": "/mnt/ai-storage/aigc_data/models/clip_vitl14",
+      "total_parameters": 427616513,
+      "frozen_parameters": 427616513,
+      "trainable_parameters": 0,
+      "feature_dimension": 768,
+      "input_resolution": "224x224",
+      "normalization": "LAION-2B standard (mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711])"
+    },
+    "SigLIP-SO400M-224": {
+      "checkpoint_path": "/mnt/ai-storage/aigc_data/models/siglip_so400m_224",
+      "total_parameters": 877360306,
+      "frozen_parameters": 877360306,
+      "trainable_parameters": 0,
+      "feature_dimension": 1152,
+      "input_resolution": "224x224",
+      "normalization": "WebLI standard (mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])"
+    },
+    "SRM-DWT-Wavelet": {
+      "checkpoint_path": "models/srm_filters.py",
+      "total_parameters": 0,
+      "frozen_parameters": 0,
+      "trainable_parameters": 0,
+      "feature_dimension": 36,
+      "input_resolution": "256x256 bilinear resize",
+      "normalization": "Input normalized to [0, 1]; 4 summary stats per sub-band channel"
+    },
+    "Fusion-Head": {
+      "type": "L2-Regularized Logistic Feature Regression",
+      "input_dimension": 1956,
+      "total_parameters": 1957,
+      "trainable_parameters": 1957,
+      "frozen_parameters": 0
+    }
+  },
+  "parameter_totals": {
+    "total_instantiated_parameters": 1304978776,
+    "total_frozen_parameters": 1304976819,
+    "total_trainable_parameters": 1957,
+    "formatted_total": "1304.98M (1.305B)",
+    "under_2b_budget": true
+  },
+  "loss_formulation_audit": {
+    "type": "Weighted Binary Cross-Entropy with False Positive Regularization",
+    "mathematical_formula": "L = - (1/N) * sum_i [ lambda_FP * (1 - y_i) * log(1 - sigma(z_i)) + y_i * log(sigma(z_i)) ] + (alpha/2) * ||W||_2^2",
+    "lambda_FP": 2.0,
+    "differentiability_proof": "The loss is strictly differentiable with respect to model logits z_i: dL/dz_i = sigma(z_i) - y_i + (lambda_FP - 1) * (1 - y_i) * sigma(z_i), smoothly scaling the penalizing gradient on authentic samples without hard threshold step functions.",
+    "label_polarity": "0 = Authentic / Real, 1 = Synthetic / AIGC"
+  },
+  "hardware_target": {
+    "device": "NVIDIA GeForce RTX 3050 (6,144 MB VRAM, CUDA 13.0)",
+    "peak_vram_gb": 3.7,
+    "vram_headroom_gb": 2.444,
+    "under_6gb_limit": true
+  }
+}

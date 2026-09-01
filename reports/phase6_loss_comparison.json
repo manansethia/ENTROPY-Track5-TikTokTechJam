@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "loss_comparison": {
+    "lambda_fp_2.0": {
+      "FPR_080": 0.0099,
+      "TPR_080": 0.9788,
+      "TPR_at_FPR_0_10": 0.831
+    },
+    "lambda_fp_2.5": {
+      "FPR_080": 0.0094,
+      "TPR_080": 0.976,
+      "TPR_at_FPR_0_10": 0.9041
+    },
+    "lambda_fp_3.0": {
+      "FPR_080": 0.0082,
+      "TPR_080": 0.969,
+      "TPR_at_FPR_0_10": 0.912
+    }
+  },
+  "selected_optimal_loss": "lambda_fp = 2.5 achieves the highest Pareto balance between sub-1.0% operational FPR and >90% recall at FPR<=0.10%."
+}

@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-08-29T09:19:00Z",
+  "champion_id": "B_CLIP_SigLIP_mlp2",
+  "calibrated_temperature": 1.2497,
+  "operating_curves": {
+    "tau_0.50": {
+      "tau": 0.5,
+      "FPR": 0.0198,
+      "FNR": 0.0225,
+      "TPR": 0.9775,
+      "TNR": 0.9802,
+      "FP_count": 84,
+      "FN_count": 137
+    },
+    "tau_0.60": {
+      "tau": 0.6,
+      "FPR": 0.0191,
+      "FNR": 0.0244,
+      "TPR": 0.9756,
+      "TNR": 0.9809,
+      "FP_count": 81,
+      "FN_count": 148
+    },
+    "tau_0.70": {
+      "tau": 0.7,
+      "FPR": 0.0177,
+      "FNR": 0.0267,
+      "TPR": 0.9733,
+      "TNR": 0.9823,
+      "FP_count": 75,
+      "FN_count": 162
+    },
+    "tau_0.75": {
+      "tau": 0.75,
+      "FPR": 0.0163,
+      "FNR": 0.0283,
+      "TPR": 0.9717,
+      "TNR": 0.9837,
+      "FP_count": 69,
+      "FN_count": 172
+    },
+    "tau_0.80": {
+      "tau": 0.8,
+      "FPR": 0.0156,
+      "FNR": 0.0301,
+      "TPR": 0.9699,
+      "TNR": 0.9844,
+      "FP_count": 66,
+      "FN_count": 183
+    },
+    "tau_0.85": {
+      "tau": 0.85,
+      "FPR": 0.0149,
+      "FNR": 0.0337,
+      "TPR": 0.9663,
+      "TNR": 0.9851,
+      "FP_count": 63,
+      "FN_count": 205
+    },
+    "tau_0.90": {
+      "tau": 0.9,
+      "FPR": 0.0137,
+      "FNR": 0.0362,
+      "TPR": 0.9638,
+      "TNR": 0.9863,
+      "FP_count": 58,
+      "FN_count": 220
+    },
+    "tau_0.95": {
+      "tau": 0.95,
+      "FPR": 0.0118,
+      "FNR": 0.0418,
+      "TPR": 0.9582,
+      "TNR": 0.9882,
+      "FP_count": 50,
+      "FN_count": 254
+    },
+    "tau_0.97": {
+      "tau": 0.97,
+      "FPR": 0.0106,
+      "FNR": 0.0472,
+      "TPR": 0.9528,
+      "TNR": 0.9894,
+      "FP_count": 45,
+      "FN_count": 287
+    },
+    "tau_0.98": {
+      "tau": 0.98,
+      "FPR": 0.0099,
+      "FNR": 0.0507,
+      "TPR": 0.9493,
+      "TNR": 0.9901,
+      "FP_count": 42,
+      "FN_count": 308
+    },
+    "tau_0.99": {
+      "tau": 0.99,
+      "FPR": 0.008,
+      "FNR": 0.0566,
+      "TPR": 0.9434,
+      "TNR": 0.992,
+      "FP_count": 34,
+      "FN_count": 344
+    }
+  }
+}

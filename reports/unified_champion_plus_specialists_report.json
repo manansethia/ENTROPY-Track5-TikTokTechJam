@@ -1,0 +1,24 @@
+{
+  "status": "UNIFIED_SYSTEM_VERIFIED",
+  "champion_anchor": {
+    "checkpoint": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_frozen_model.pt",
+    "sha256": "91a6a3814c30f0b62f7b63e63fa81fe595c83b9edf91733ef9a8d3358e133438"
+  },
+  "metrics": {
+    "auroc": 1.0,
+    "ap": 1.0,
+    "real_fpr_050": 0.0,
+    "aigc_tpr_050": 100.0
+  },
+  "temperature": 1.15,
+  "models": [
+    "C0_Champion_Triple_Hybrid",
+    "C1_Portrait_REM1_E3",
+    "C2_SPAI_HighRes",
+    "C3_CommunityForensics_ViT",
+    "C4_ConvNeXt_HighRes",
+    "C5_ConvNeXt_Tiny",
+    "C6_EfficientNet_B0",
+    "C7_ResNet50"
+  ]
+}

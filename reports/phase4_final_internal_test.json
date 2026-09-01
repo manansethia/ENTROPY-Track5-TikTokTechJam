@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "model_champion": "Cand_C_Structured_Dropout",
+  "feature_dim": 2212,
+  "test_samples": 10316,
+  "real_samples": 4238,
+  "aigc_samples": 6078,
+  "calibrated_T": 1.208418607711792,
+  "operating_threshold": 0.8,
+  "metrics": {
+    "AUROC": 0.9986,
+    "AUPRC": 0.9991,
+    "Brier": 0.0126,
+    "ECE": 0.0084,
+    "FPR": 0.0099,
+    "FNR": 0.0212,
+    "TPR": 0.9788,
+    "TNR": 0.9901,
+    "TP": 5949,
+    "TN": 4196,
+    "FP": 42,
+    "FN": 129
+  }
+}

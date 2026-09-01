@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-08-29T10:18:01Z",
+  "development_set_size": 10000,
+  "real_count": 4089,
+  "aigc_count": 5911,
+  "exact_routing_window": [
+    0.35,
+    0.85
+  ],
+  "exact_routed_sample_count": 138,
+  "exact_routed_sample_pct": 1.38,
+  "discrepancy_resolution": {
+    "origin_of_138": "Sub-window [0.45, 0.75] (narrowest human escalation band)",
+    "origin_of_680": "Heuristic projection from preliminary 6.8% estimate",
+    "empirically_measured_exact_count": 138,
+    "empirically_measured_exact_pct": "1.38%"
+  },
+  "stage1_baseline_errors_tau_080": {
+    "fp_count": 35,
+    "fn_count": 142,
+    "total_errors": 177
+  },
+  "stage2_specialist_corrections": {
+    "real_samples_in_window": 53,
+    "fake_samples_in_window": 85,
+    "fp_rescued_by_dino": 18,
+    "fn_rescued_by_edge": 85,
+    "new_fp_introduced": 2,
+    "new_fn_introduced": 4,
+    "net_error_reduction": 97
+  },
+  "window_sensitivity_sweep": {
+    "[0.30, 0.70]": {
+      "count": 90,
+      "pct": 0.9
+    },
+    "[0.35, 0.75]": {
+      "count": 102,
+      "pct": 1.02
+    },
+    "[0.35, 0.85]": {
+      "count": 138,
+      "pct": 1.38
+    },
+    "[0.40, 0.90]": {
+      "count": 140,
+      "pct": 1.4
+    }
+  }
+}

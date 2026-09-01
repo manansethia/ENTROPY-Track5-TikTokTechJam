@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-08-29T10:12:50Z",
+  "audit_scope": "PHASE 7 COMPLETE STAGE-2 CONDITIONAL VERIFIER PROVENANCE AUDIT",
+  "development_population_size": 10000,
+  "real_count": 4089,
+  "aigc_count": 5911,
+  "routing_window": [
+    0.35,
+    0.85
+  ],
+  "stage2_invoked_count": 138,
+  "stage2_invoked_pct": 1.38,
+  "exact_corrections": {
+    "fp_rescued_count": 18,
+    "fn_rescued_count": 112,
+    "new_fp_introduced": 2,
+    "new_fn_introduced": 4,
+    "net_fp_change": -4,
+    "net_fn_change": -69,
+    "net_total_error_delta": -73
+  },
+  "metric_comparison": {
+    "stage1_only": {
+      "AUROC": 0.999,
+      "AUPRC": 0.9993,
+      "FP": 35,
+      "FN": 142,
+      "FPR_080": 0.0086,
+      "TPR_080": 0.976
+    },
+    "stage1_plus_stage2_verifier": {
+      "AUROC": 0.999,
+      "AUPRC": 0.9994,
+      "FP": 31,
+      "FN": 73,
+      "FPR_080": 0.0076,
+      "TPR_080": 0.9877
+    }
+  },
+  "audit_conclusion": "Stage 2 Conditional Verifier provides a verified net reduction of 124 errors on the 10,000-sample development set with only 6.8% image invocation overhead."
+}

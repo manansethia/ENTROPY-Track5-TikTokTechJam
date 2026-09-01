@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "training_duration_seconds": 16.96,
+  "training_samples_per_second": 141397.0,
+  "epochs_completed": 35,
+  "peak_vram_mib": 4993,
+  "vram_headroom_mib": 811,
+  "host_ram_used_gib": 3.8,
+  "sustained_swap_delta_gb": 0.0,
+  "history": [
+    {
+      "epoch": 5,
+      "loss": 0.06646,
+      "lr": 0.001901
+    },
+    {
+      "epoch": 10,
+      "loss": 0.04658,
+      "lr": 0.001625
+    },
+    {
+      "epoch": 15,
+      "loss": 0.03783,
+      "lr": 0.001226
+    },
+    {
+      "epoch": 20,
+      "loss": 0.0309,
+      "lr": 0.000784
+    },
+    {
+      "epoch": 25,
+      "loss": 0.02768,
+      "lr": 0.000385
+    },
+    {
+      "epoch": 30,
+      "loss": 0.02422,
+      "lr": 0.000109
+    },
+    {
+      "epoch": 35,
+      "loss": 0.02628,
+      "lr": 1e-05
+    }
+  ]
+}

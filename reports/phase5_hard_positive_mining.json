@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-29T09:58:40Z",
+  "hard_aigc_pool_size": 5000,
+  "dominant_generators": {
+    "Synthetic_SID_Diffusion": 2284,
+    "Synthetic_QualityParadox_ModernDiffusion": 959,
+    "Synthetic_HighFrequency_CF": 1757
+  },
+  "dominant_failure_modes": "Subtle latent SID diffusion lacking upsampler grid artifacts and photorealistic Quality Paradox generations."
+}

@@ -1,0 +1,15 @@
+{
+  "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/final_training/base_epoch3_clean/base_model_epoch3.pt",
+  "checkpoint_sha256": "bcded8a67acd853cc80bc63be6788b3a3b6bfbe1400f68cdea5d915a8be304d8",
+  "checkpoint_file_size_mb": 2803.94,
+  "epoch": 3,
+  "global_step": 13995,
+  "total_raw_images_read": 732765,
+  "manifest_sha256": "8ec2b6916391a7e2122b0f4993c71d7a02eced0f3c6719a6b287bcb9a76070ec",
+  "parameter_hash": "5f69f6c3bc4b02ea1912c4f22c6fb066237885920991a3446bad3b3e4aafaa1b",
+  "nan_count": 0,
+  "inf_count": 0,
+  "all_finite_verified": true,
+  "reload_test_passed": true,
+  "completed_at": "2026-08-29T22:09:56Z"
+}

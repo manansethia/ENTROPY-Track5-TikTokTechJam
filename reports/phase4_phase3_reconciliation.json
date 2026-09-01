@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-08-29T09:30:14Z",
+  "audit_verdict": "PHASE_3_RECONCILED_AND_EXPLAINED",
+  "validation_population": {
+    "split_name": "PHASE2_VAL",
+    "total_samples": 10312,
+    "real_samples": 4236,
+    "fake_samples": 6076,
+    "operating_threshold": 0.8
+  },
+  "exact_comparison_table": {
+    "phase2_frozen_champion_82k": {
+      "training_sample_size": 82509,
+      "feature_dim": 2212,
+      "architecture": "Tri-Stream 2-Layer MLP (CLIP-ViT-L/14 + SigLIP-SO400M + SRM-DWT)",
+      "AUROC": 0.9987,
+      "AUPRC": 0.999,
+      "Brier": 0.012,
+      "calibrated_T": 1.2622,
+      "TP": 5927,
+      "TN": 4199,
+      "FP": 37,
+      "FN": 149,
+      "FPR_080": 0.0087,
+      "FNR_080": 0.0245,
+      "TPR_080": 0.9755,
+      "total_errors_080": 186
+    },
+    "phase3_candidate_b_clip_siglip_20k": {
+      "training_sample_size": 20000,
+      "feature_dim": 2176,
+      "architecture": "Dual-Stream 2-Layer MLP (CLIP-ViT-L/14 + SigLIP-SO400M)",
+      "AUROC": 0.9972,
+      "AUPRC": 0.998,
+      "Brier": 0.0191,
+      "calibrated_T": 1.2497,
+      "TP": 5893,
+      "TN": 4170,
+      "FP": 66,
+      "FN": 183,
+      "FPR_080": 0.0156,
+      "FNR_080": 0.0301,
+      "TPR_080": 0.9699,
+      "total_errors_080": 249,
+      "delta_errors_vs_phase2_82k": 63
+    },
+    "phase3_candidate_a_baseline_20k": {
+      "training_sample_size": 20000,
+      "feature_dim": 2212,
+      "architecture": "Tri-Stream 2-Layer MLP (CLIP + SigLIP + SRM)",
+      "AUROC": 0.9973,
+      "AUPRC": 0.9981,
+      "FP": 72,
+      "FN": 191,
+      "total_errors_080": 263,
+      "delta_errors_vs_phase2_82k": 77
+    },
+    "phase3_candidate_g_all9_20k": {
+      "training_sample_size": 20000,
+      "feature_dim": 5130,
+      "architecture": "All-9 Experts 2-Layer MLP",
+      "AUROC": 0.9965,
+      "AUPRC": 0.9976,
+      "FP": 73,
+      "FN": 189,
+      "total_errors_080": 262,
+      "delta_errors_vs_phase2_82k": 76
+    }
+  },
+  "reconciliation_of_narrative_contradictions": {
+    "contradiction_A_B_C_error_count": "In Phase 3, the script computed total_error_reduction = p2_total_errors (186) - total_errors (249) = -63. The markdown string template rendered '-63 fewer errors', creating the false impression of an error reduction. In truth, Candidate B (trained on 20K samples) had 249 errors, which is +63 MORE errors (+33.9% increase) than the fully-trained 82.5K Phase 2 baseline (186 errors).",
+    "contradiction_D_all_experts_claim": "The statement 'all experts beat Phase 2 = YES' was erroneous. Under the 20K probe sweep, All-9 Experts (5,130-d) reached 0.9965 AUROC and 262 errors, which is strictly WORSE than the frozen Phase 2 baseline (0.9988 AUROC, 186 errors). Naive concatenation causes high-dimensional gradient dilution.",
+    "contradiction_E_F_champion_naming": "The probe sweep ranking identified B_CLIP_SigLIP_mlp2 as Rank 1 within the 20K probe challenge, but the narrative discussion referred to Gated MoE / All-Stream MoE as the long-term conceptual ideal. In reality, neither Gated MoE nor All-9 concatenation surpassed the 2-branch or 3-branch MLP on the held-out validation set under equivalent training budgets.",
+    "apples_to_apples_takeaway": "When compared under the EXACT SAME 20,000 training sample regime: Candidate B (2176d) had 249 errors, Candidate A Baseline (2212d) had 263 errors, Candidate G All-9 (5130d) had 262 errors. More importantly, scaling training data from 20K to 82.5K reduces Tri-Stream errors from 263 down to 186 (-29.3% error drop). Data scale and sampling quality remain the primary driver of performance."
+  },
+  "phase4_architectural_takeaways": [
+    "1. Semantic Core (CLIP-ViT-L/14 + SigLIP-SO400M) provides 98%+ of total discriminative power.",
+    "2. Forensic / Structural Specialists (SRM-DWT, Edge-Specialist, DINOv2) provide complementary error rescue (Edge rescues 103 FNs, DINO rescues 14 FPs), but should be integrated via lightweight, gated or residual connections rather than massive 5,130-d concatenation.",
+    "3. 2D-FFT and Patch-MIL are noisy and redundant, adding dimensionality without unique error reduction.",
+    "4. Phase 4 must evaluate lightweight conditional gating (Semantic Core + Auxiliary Residuals) on fresh data."
+  ]
+}

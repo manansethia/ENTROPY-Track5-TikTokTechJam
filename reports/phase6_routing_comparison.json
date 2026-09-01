@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "uncertainty_window_sweep": {
+    "[0.30, 0.70]": {
+      "window_range": [
+        0.3,
+        0.7
+      ],
+      "stage2_invocation_rate_pct": 4.2,
+      "fp_rescued_count": 12,
+      "fn_rescued_count": 74,
+      "average_latency_ms": 212.35,
+      "verdict": "ACCEPTABLE"
+    },
+    "[0.35, 0.75]": {
+      "window_range": [
+        0.35,
+        0.75
+      ],
+      "stage2_invocation_rate_pct": 5.1,
+      "fp_rescued_count": 15,
+      "fn_rescued_count": 88,
+      "average_latency_ms": 213.19,
+      "verdict": "ACCEPTABLE"
+    },
+    "[0.35, 0.85]": {
+      "window_range": [
+        0.35,
+        0.85
+      ],
+      "stage2_invocation_rate_pct": 6.8,
+      "fp_rescued_count": 18,
+      "fn_rescued_count": 112,
+      "average_latency_ms": 214.76,
+      "verdict": "OPTIMAL_EFFICIENCY_PARETO"
+    },
+    "[0.40, 0.90]": {
+      "window_range": [
+        0.4,
+        0.9
+      ],
+      "stage2_invocation_rate_pct": 8.9,
+      "fp_rescued_count": 21,
+      "fn_rescued_count": 124,
+      "average_latency_ms": 216.7,
+      "verdict": "ACCEPTABLE"
+    }
+  },
+  "recommended_window": [
+    0.35,
+    0.85
+  ]
+}

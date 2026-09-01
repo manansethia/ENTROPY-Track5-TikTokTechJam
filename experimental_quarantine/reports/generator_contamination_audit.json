@@ -1,0 +1,114 @@
+[
+  {
+    "generator": "SD 1.4",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "SD 1.5",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "SD 2.1",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "SDXL 1.0",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "SD 3.5",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "FLUX.1-dev",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "Midjourney v5",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "Midjourney v6",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "DALL-E 2",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "DALL-E 3",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "Adobe Firefly",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "Google Imagen",
+    "dataset": "genimage_plus",
+    "split_role": "TRAIN",
+    "sample_count": 3,
+    "used_in_training": "YES",
+    "zero_shot_eligible": "NO"
+  },
+  {
+    "generator": "StyleGAN-XL",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  },
+  {
+    "generator": "PixArt-alpha",
+    "dataset": "None (External Benchmark Only)",
+    "split_role": "EXTERNAL_EVAL",
+    "sample_count": 0,
+    "used_in_training": "NO",
+    "zero_shot_eligible": "YES"
+  }
+]

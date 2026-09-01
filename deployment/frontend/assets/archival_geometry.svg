@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="100%" height="100%" opacity="0.18">
+  <defs>
+    <radialGradient id="ringGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#b8972e" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dotGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.75" fill="#f4ebd0" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#dotGrid)"/>
+
+  <!-- Center Forensic Concentric Circles behind Roulette -->
+  <g transform="translate(720, 320)">
+    <!-- Outer measurement ring -->
+    <circle r="420" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="4 8" opacity="0.4"/>
+    <circle r="380" fill="none" stroke="#f4ebd0" stroke-width="0.75" opacity="0.3"/>
+    <circle r="340" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="1 5" opacity="0.5"/>
+    <circle r="300" fill="none" stroke="#f4ebd0" stroke-width="0.5" opacity="0.3"/>
+    <circle r="260" fill="none" stroke="#d4af37" stroke-width="0.75" stroke-dasharray="12 4" opacity="0.4"/>
+    <circle r="220" fill="none" stroke="#f4ebd0" stroke-width="1" opacity="0.35"/>
+    
+    <!-- Crosshairs & Angle Marks -->
+    <line x1="-460" y1="0" x2="460" y2="0" stroke="#f4ebd0" stroke-width="0.75" stroke-dasharray="6 6" opacity="0.35"/>
+    <line x1="0" y1="-380" x2="0" y2="380" stroke="#f4ebd0" stroke-width="0.75" stroke-dasharray="6 6" opacity="0.35"/>
+    <line x1="-320" y1="-320" x2="320" y2="320" stroke="#d4af37" stroke-width="0.5" opacity="0.25"/>
+    <line x1="-320" y1="320" x2="320" y2="-320" stroke="#d4af37" stroke-width="0.5" opacity="0.25"/>
+
+    <!-- Perimeter Ticks -->
+    <g opacity="0.45" stroke="#f4ebd0" stroke-width="1">
+      <line x1="0" y1="-420" x2="0" y2="-432"/>
+      <line x1="0" y1="420" x2="0" y2="432"/>
+      <line x1="-420" y1="0" x2="-432" y2="0"/>
+      <line x1="420" y1="0" x2="432" y2="0"/>
+      <line x1="-297" y1="-297" x2="-305" y2="-305"/>
+      <line x1="297" y1="-297" x2="305" y2="-305"/>
+      <line x1="-297" y1="297" x2="-305" y2="297"/>
+      <line x1="297" y1="297" x2="305" y2="305"/>
+    </g>
+
+    <!-- Archival Coordinates Text -->
+    <text x="350" y="-360" font-family="'JetBrains Mono', monospace" font-size="9" fill="#d4af37" opacity="0.6" letter-spacing="2">LAT 52.5200° N / LON 13.4050° E</text>
+    <text x="-440" y="370" font-family="'JetBrains Mono', monospace" font-size="9" fill="#f4ebd0" opacity="0.5" letter-spacing="1.5">FORENSIC SPECTRAL REF 0x7F2A4C</text>
+  </g>
+
+  <!-- Side Technical Diagram Fragments -->
+  <g transform="translate(100, 180)" opacity="0.35">
+    <rect x="0" y="0" width="140" height="90" fill="none" stroke="#d4af37" stroke-width="0.75"/>
+    <line x1="0" y1="30" x2="140" y2="30" stroke="#d4af37" stroke-width="0.5"/>
+    <line x1="40" y1="0" x2="40" y2="90" stroke="#d4af37" stroke-width="0.5"/>
+    <text x="10" y="20" font-family="'JetBrains Mono', monospace" font-size="8" fill="#f4ebd0">SEC: 01-A</text>
+    <text x="50" y="55" font-family="'JetBrains Mono', monospace" font-size="7" fill="#d4af37">WAVELET: 9-CH</text>
+    <text x="50" y="75" font-family="'JetBrains Mono', monospace" font-size="7" fill="#f4ebd0">HAAR: LH|HL|HH</text>
+  </g>
+
+  <g transform="translate(1200, 180)" opacity="0.35">
+    <rect x="0" y="0" width="140" height="90" fill="none" stroke="#d4af37" stroke-width="0.75"/>
+    <circle cx="70" cy="45" r="30" fill="none" stroke="#f4ebd0" stroke-width="0.5" stroke-dasharray="3 3"/>
+    <text x="10" y="20" font-family="'JetBrains Mono', monospace" font-size="8" fill="#f4ebd0">SEC: 02-B</text>
+    <text x="45" y="80" font-family="'JetBrains Mono', monospace" font-size="7" fill="#d4af37">SIGLIP+CLIP</text>
+  </g>
+</svg>

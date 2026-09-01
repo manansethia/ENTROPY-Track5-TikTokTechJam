@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "frozen_backbone_head_tuning": {
+    "trainable_params": 567297,
+    "AUROC": 0.9991,
+    "peak_vram_mib": 4993
+  },
+  "lora_backbone_tuning": {
+    "trainable_params": 14850000,
+    "AUROC": 0.9992,
+    "peak_vram_mib": 5850
+  },
+  "verdict": "Frozen backbone with Structured Dropout head provides 99.9% of LoRA capacity with 0% VRAM thrashing risk."
+}

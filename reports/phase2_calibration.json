@@ -1,0 +1,7 @@
+{
+  "temperature_T": 1.2621546983718872,
+  "validation_ECE_pre_calibration": 0.0185,
+  "validation_ECE_post_calibration": 0.0092,
+  "calibration_split_size": 5156,
+  "status": "CALIBRATED_WITH_TEMPERATURE_SCALING"
+}

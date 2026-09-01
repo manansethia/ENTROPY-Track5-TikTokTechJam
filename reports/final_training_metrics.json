@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-08-29T10:59:54Z",
+  "model_checkpoint": "final_production_champion.pt",
+  "checkpoint_sha256": "2b020958d3326d6ef786ac6bf620fbf1ca469b3736b9b19b0a535172d630628f",
+  "total_test_samples": 10316,
+  "real_samples": 4238,
+  "aigc_samples": 6078,
+  "calibrated_T": 1.251154,
+  "metrics_at_tau_080": {
+    "AUROC": 0.9985,
+    "AUPRC": 0.9989,
+    "Brier": 0.0135,
+    "TP": 5967,
+    "TN": 4183,
+    "FP": 55,
+    "FN": 111,
+    "FPR": 0.012978,
+    "TPR": 0.981737,
+    "precision": 0.990867
+  },
+  "ultra_low_fpr_frontier": {
+    "FPR_le_1_00_pct": {
+      "target_constraint": "FPR <= 1.00%",
+      "max_fp_allowed": 42,
+      "empirical_fp": 42,
+      "empirical_fpr": 0.00991,
+      "empirical_fpr_pct": "0.9910%",
+      "empirical_tp": 5928,
+      "empirical_fn": 150,
+      "empirical_tn": 4196,
+      "empirical_tpr": 0.975321,
+      "empirical_tpr_pct": "97.53%",
+      "precision": 0.992965,
+      "selected_tau": 0.948324
+    },
+    "FPR_le_0_50_pct": {
+      "target_constraint": "FPR <= 0.50%",
+      "max_fp_allowed": 21,
+      "empirical_fp": 21,
+      "empirical_fpr": 0.004955,
+      "empirical_fpr_pct": "0.4955%",
+      "empirical_tp": 5849,
+      "empirical_fn": 229,
+      "empirical_tn": 4217,
+      "empirical_tpr": 0.962323,
+      "empirical_tpr_pct": "96.23%",
+      "precision": 0.996422,
+      "selected_tau": 0.993978
+    },
+    "FPR_le_0_10_pct": {
+      "target_constraint": "FPR <= 0.10%",
+      "max_fp_allowed": 4,
+      "empirical_fp": 4,
+      "empirical_fpr": 0.000944,
+      "empirical_fpr_pct": "0.0944%",
+      "empirical_tp": 5437,
+      "empirical_fn": 641,
+      "empirical_tn": 4234,
+      "empirical_tpr": 0.894538,
+      "empirical_tpr_pct": "89.45%",
+      "precision": 0.999265,
+      "selected_tau": 0.999985
+    },
+    "FPR_le_0_05_pct": {
+      "target_constraint": "FPR <= 0.05%",
+      "max_fp_allowed": 2,
+      "empirical_fp": 2,
+      "empirical_fpr": 0.000472,
+      "empirical_fpr_pct": "0.0472%",
+      "empirical_tp": 4947,
+      "empirical_fn": 1131,
+      "empirical_tn": 4236,
+      "empirical_tpr": 0.813919,
+      "empirical_tpr_pct": "81.39%",
+      "precision": 0.999596,
+      "selected_tau": 1.0
+    },
+    "FPR_le_0_01_pct": {
+      "target_constraint": "FPR <= 0.01%",
+      "max_fp_allowed": 0,
+      "empirical_fp": 0,
+      "empirical_fpr": 0.0,
+      "empirical_fpr_pct": "0.0000%",
+      "empirical_tp": 0,
+      "empirical_fn": 6078,
+      "empirical_tn": 4238,
+      "empirical_tpr": 0.0,
+      "empirical_tpr_pct": "0.00%",
+      "precision": 1.0,
+      "selected_tau": 1.00001
+    }
+  }
+}

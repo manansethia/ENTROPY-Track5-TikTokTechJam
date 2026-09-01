@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-08-28T22:00:57Z",
+  "generators_represented": {
+    "Midjourney_v5_v6": {
+      "samples_in_master": 850,
+      "real_or_fake": "Fake",
+      "difficulty": "Hard (Texture-level realism)"
+    },
+    "FLUX.1_dev_schnell": {
+      "samples_in_master": 620,
+      "real_or_fake": "Fake",
+      "difficulty": "Extreme (High-frequency details)"
+    },
+    "Stable_Diffusion_XL": {
+      "samples_in_master": 740,
+      "real_or_fake": "Fake",
+      "difficulty": "Moderate"
+    },
+    "Stable_Diffusion_1.5_2.1": {
+      "samples_in_master": 550,
+      "real_or_fake": "Fake",
+      "difficulty": "Standard"
+    },
+    "DALL-E_3": {
+      "samples_in_master": 480,
+      "real_or_fake": "Fake",
+      "difficulty": "Moderate-Hard"
+    },
+    "StyleGAN_Face_Family": {
+      "samples_in_master": 320,
+      "real_or_fake": "Fake",
+      "difficulty": "Standard (Grid artifacts)"
+    }
+  },
+  "real_sources_represented": {
+    "COCO_Authentic_Photos": {
+      "samples": 1100,
+      "domain": "Everyday Natural Photography"
+    },
+    "WikiArt_FineArt_Paintings": {
+      "samples": 450,
+      "domain": "Human Classical Artistry"
+    },
+    "Vintage_1920s_Historical": {
+      "samples": 350,
+      "domain": "Archival Daguerreotype Film"
+    },
+    "OpenImages_Camera_RAW": {
+      "samples": 540,
+      "domain": "Uncompressed Digital Sensors"
+    }
+  },
+  "confounding_risk_assessment": {
+    "semantic_shortcut_risk": "LOW (Symmetric domain pairing enforced across paintings, vintage, and modern photos)",
+    "generator_monopoly_risk": "ZERO (No single generator comprises >25% of synthetic class)",
+    "camera_sensor_diversity": "HIGH (Includes both archival film grain and Bayer pattern sensors)"
+  }
+}

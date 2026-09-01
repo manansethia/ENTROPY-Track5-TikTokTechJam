@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-08-28T22:00:57Z",
+  "evaluated_architecture": "Candidate B: CLIP + SigLIP + SRM-DWT",
+  "test_split_size": 500,
+  "threshold_operating_curve": [
+    {
+      "tau": 0.5,
+      "fpr": 0.0367,
+      "fpr_ci": [
+        0.018,
+        0.07
+      ],
+      "fnr": 0.0745,
+      "tpr": 0.9255,
+      "precision": 0.9633,
+      "accuracy": 0.944,
+      "mode": "BALANCED"
+    },
+    {
+      "tau": 0.6,
+      "fpr": 0.0245,
+      "fpr_ci": [
+        0.01,
+        0.054
+      ],
+      "fnr": 0.0902,
+      "tpr": 0.9098,
+      "precision": 0.9748,
+      "accuracy": 0.942,
+      "mode": "MODERATE_PRECISION"
+    },
+    {
+      "tau": 0.7,
+      "fpr": 0.0163,
+      "fpr_ci": [
+        0.005,
+        0.043
+      ],
+      "fnr": 0.1098,
+      "tpr": 0.8902,
+      "precision": 0.9827,
+      "accuracy": 0.936,
+      "mode": "HIGH_PRECISION"
+    },
+    {
+      "tau": 0.8,
+      "fpr": 0.0082,
+      "fpr_ci": [
+        0.0015,
+        0.031
+      ],
+      "fnr": 0.1333,
+      "tpr": 0.8667,
+      "precision": 0.991,
+      "accuracy": 0.928,
+      "mode": "LOW_FALSE_POSITIVE_MODE"
+    },
+    {
+      "tau": 0.85,
+      "fpr": 0.0041,
+      "fpr_ci": [
+        0.0005,
+        0.024
+      ],
+      "fnr": 0.1608,
+      "tpr": 0.8392,
+      "precision": 0.9953,
+      "accuracy": 0.916,
+      "mode": "ULTRA_LOW_FPR_MODE"
+    },
+    {
+      "tau": 0.9,
+      "fpr": 0.0,
+      "fpr_ci": [
+        0.0,
+        0.016
+      ],
+      "fnr": 0.1961,
+      "tpr": 0.8039,
+      "precision": 1.0,
+      "accuracy": 0.9,
+      "mode": "ZERO_FP_TARGET"
+    },
+    {
+      "tau": 0.95,
+      "fpr": 0.0,
+      "fpr_ci": [
+        0.0,
+        0.016
+      ],
+      "fnr": 0.2588,
+      "tpr": 0.7412,
+      "precision": 1.0,
+      "accuracy": 0.868,
+      "mode": "HIGH_CONFIDENCE_FORENSIC"
+    }
+  ]
+}

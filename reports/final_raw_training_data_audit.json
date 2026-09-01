@@ -1,0 +1,81 @@
+{
+  "timestamp": "2026-08-29T10:58:30Z",
+  "audit_status": "RUN_INVALIDATED",
+  "reason": "DATA_GOVERNANCE_VIOLATION_OOD_CONTAMINATION",
+  "invalidated_session": {
+    "experiment_namespace": "live_raw_session",
+    "process_pid": 909089,
+    "status": "TERMINATED_AND_INVALIDATED",
+    "preservation_status": "PRESERVED_ALL_LOGS_AND_CHECKPOINTS",
+    "log_file": "logs/raw_image_training.log",
+    "checkpoint_dir": "checkpoints/live_raw_session/"
+  },
+  "sources_accessed_during_directory_scan": [
+    {
+      "source_directory": "massive_balanced_50k",
+      "image_count": 34746,
+      "label": "AIGC",
+      "status": "APPROVED_TRAINING_CORPUS",
+      "locked_ood": false
+    },
+    {
+      "source_directory": "balanced_scaled_train",
+      "image_count": 11713,
+      "label": "AIGC",
+      "status": "APPROVED_TRAINING_CORPUS",
+      "locked_ood": false
+    },
+    {
+      "source_directory": "scaled_massive",
+      "image_count": 45409,
+      "label": "AIGC",
+      "status": "APPROVED_TRAINING_CORPUS",
+      "locked_ood": false
+    },
+    {
+      "source_directory": "phase2_unpacked",
+      "image_count": 48996,
+      "label": "AIGC",
+      "status": "APPROVED_TRAINING_CORPUS",
+      "locked_ood": false
+    },
+    {
+      "source_directory": "scaled_45k",
+      "image_count": 11569,
+      "label": "AIGC",
+      "status": "APPROVED_TRAINING_CORPUS",
+      "locked_ood": false
+    },
+    {
+      "source_directory": "cf_slice",
+      "image_count": 5986,
+      "label": "REAL",
+      "status": "APPROVED_TRAINING_CORPUS",
+      "locked_ood": false
+    },
+    {
+      "source_directory": "scaled_train",
+      "image_count": 9000,
+      "label": "AIGC",
+      "status": "APPROVED_TRAINING_CORPUS",
+      "locked_ood": false
+    },
+    {
+      "source_directory": "synthbuster",
+      "image_count": 9000,
+      "label": "AIGC",
+      "status": "VIOLATION_LOCKED_EXTERNAL_OOD_BENCHMARK",
+      "locked_ood": true
+    }
+  ],
+  "ood_contamination_summary": {
+    "synthbuster_accessed": true,
+    "synthbuster_images_contaminated": 9000,
+    "aigibench_accessed": false,
+    "chameleon_accessed": false,
+    "vct2_accessed": false,
+    "wildrf_accessed": false,
+    "synthwildx_accessed": false
+  },
+  "remediation_action": "Enforce strict manifest-only data loading from manifests/final_raw_training_manifest.jsonl with zero directory crawling."
+}

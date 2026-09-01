@@ -1,0 +1,450 @@
+{
+  "clean": {
+    "auroc": 0.9992719883518136,
+    "auprc": 0.9973425524875095,
+    "brier": 0.005932898460458386,
+    "ece": 0.00676256805669982,
+    "total_samples": 1000,
+    "real_count": 502,
+    "aigc_count": 498,
+    "operating_points": {
+      "TPR@FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.050368066877126694,
+        "max_allowed_fp": 5,
+        "actual_fp": 6,
+        "actual_fpr": 0.01195219123505976,
+        "actual_tp": 495,
+        "tpr": 0.9939759036144579
+      },
+      "TPR@FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.11771314591169357,
+        "max_allowed_fp": 2,
+        "actual_fp": 3,
+        "actual_fpr": 0.00597609561752988,
+        "actual_tp": 493,
+        "tpr": 0.9899598393574297
+      },
+      "TPR@FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.3885498212108612,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 491,
+        "tpr": 0.9859437751004017
+      },
+      "TPR@FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.3885498212108612,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 491,
+        "tpr": 0.9859437751004017
+      },
+      "TPR@FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.3885498212108612,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 491,
+        "tpr": 0.9859437751004017
+      }
+    }
+  },
+  "jpeg_50": {
+    "auroc": 0.9973279572473159,
+    "auprc": 0.9954994743353437,
+    "brier": 0.018156458315418605,
+    "ece": 0.01571180897642629,
+    "total_samples": 1000,
+    "real_count": 502,
+    "aigc_count": 498,
+    "operating_points": {
+      "TPR@FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.12194482237100601,
+        "max_allowed_fp": 5,
+        "actual_fp": 6,
+        "actual_fpr": 0.01195219123505976,
+        "actual_tp": 488,
+        "tpr": 0.9799196787148594
+      },
+      "TPR@FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.9534059166908264,
+        "max_allowed_fp": 2,
+        "actual_fp": 3,
+        "actual_fpr": 0.00597609561752988,
+        "actual_tp": 461,
+        "tpr": 0.9257028112449799
+      },
+      "TPR@FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.9866207109222412,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 418,
+        "tpr": 0.8393574297188755
+      },
+      "TPR@FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.9866207109222412,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 418,
+        "tpr": 0.8393574297188755
+      },
+      "TPR@FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.9866207109222412,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 418,
+        "tpr": 0.8393574297188755
+      }
+    }
+  },
+  "gaussian_blur": {
+    "auroc": 0.9975439607033713,
+    "auprc": 0.9957433017993689,
+    "brier": 0.01865398960569146,
+    "ece": 0.014574955046817165,
+    "total_samples": 1000,
+    "real_count": 502,
+    "aigc_count": 498,
+    "operating_points": {
+      "TPR@FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.8173972368240356,
+        "max_allowed_fp": 5,
+        "actual_fp": 6,
+        "actual_fpr": 0.01195219123505976,
+        "actual_tp": 481,
+        "tpr": 0.9658634538152611
+      },
+      "TPR@FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.9093848466873169,
+        "max_allowed_fp": 2,
+        "actual_fp": 3,
+        "actual_fpr": 0.00597609561752988,
+        "actual_tp": 474,
+        "tpr": 0.9518072289156626
+      },
+      "TPR@FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.9877511130104065,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 449,
+        "tpr": 0.9016064257028112
+      },
+      "TPR@FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.9877511130104065,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 449,
+        "tpr": 0.9016064257028112
+      },
+      "TPR@FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.9877511130104065,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 449,
+        "tpr": 0.9016064257028112
+      }
+    }
+  },
+  "resize_0.5x": {
+    "auroc": 0.9976919630714092,
+    "auprc": 0.9958621047440382,
+    "brier": 0.019318725294671556,
+    "ece": 0.014264988303475515,
+    "total_samples": 1000,
+    "real_count": 502,
+    "aigc_count": 498,
+    "operating_points": {
+      "TPR@FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.8480224013328552,
+        "max_allowed_fp": 5,
+        "actual_fp": 6,
+        "actual_fpr": 0.01195219123505976,
+        "actual_tp": 480,
+        "tpr": 0.963855421686747
+      },
+      "TPR@FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.9475980401039124,
+        "max_allowed_fp": 2,
+        "actual_fp": 3,
+        "actual_fpr": 0.00597609561752988,
+        "actual_tp": 474,
+        "tpr": 0.9518072289156626
+      },
+      "TPR@FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.9811076389083863,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 462,
+        "tpr": 0.927710843373494
+      },
+      "TPR@FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.9811076389083863,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 462,
+        "tpr": 0.927710843373494
+      },
+      "TPR@FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.9811076389083863,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 462,
+        "tpr": 0.927710843373494
+      }
+    }
+  },
+  "noise": {
+    "auroc": 0.9865917854685674,
+    "auprc": 0.9860832209302441,
+    "brier": 0.07441862854818666,
+    "ece": 0.08349895534676034,
+    "total_samples": 1000,
+    "real_count": 502,
+    "aigc_count": 498,
+    "operating_points": {
+      "TPR@FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.26216280460357666,
+        "max_allowed_fp": 5,
+        "actual_fp": 6,
+        "actual_fpr": 0.01195219123505976,
+        "actual_tp": 422,
+        "tpr": 0.8473895582329317
+      },
+      "TPR@FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.38242027163505554,
+        "max_allowed_fp": 2,
+        "actual_fp": 3,
+        "actual_fpr": 0.00597609561752988,
+        "actual_tp": 419,
+        "tpr": 0.8413654618473896
+      },
+      "TPR@FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.7421255574951172,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 408,
+        "tpr": 0.8192771084337349
+      },
+      "TPR@FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.7421255574951172,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 408,
+        "tpr": 0.8192771084337349
+      },
+      "TPR@FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.7421255574951172,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 408,
+        "tpr": 0.8192771084337349
+      }
+    }
+  },
+  "crop_85": {
+    "auroc": 0.9977639642234276,
+    "auprc": 0.9959127057240516,
+    "brier": 0.01626549002194625,
+    "ece": 0.012257444676710243,
+    "total_samples": 1000,
+    "real_count": 502,
+    "aigc_count": 498,
+    "operating_points": {
+      "TPR@FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.8648504018783569,
+        "max_allowed_fp": 5,
+        "actual_fp": 6,
+        "actual_fpr": 0.01195219123505976,
+        "actual_tp": 480,
+        "tpr": 0.963855421686747
+      },
+      "TPR@FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.9584134817123413,
+        "max_allowed_fp": 2,
+        "actual_fp": 3,
+        "actual_fpr": 0.00597609561752988,
+        "actual_tp": 469,
+        "tpr": 0.9417670682730924
+      },
+      "TPR@FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.9851109252700806,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 459,
+        "tpr": 0.9216867469879518
+      },
+      "TPR@FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.9851109252700806,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 459,
+        "tpr": 0.9216867469879518
+      },
+      "TPR@FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.9851109252700806,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 459,
+        "tpr": 0.9216867469879518
+      }
+    }
+  },
+  "color_jitter": {
+    "auroc": 0.9978999663994625,
+    "auprc": 0.9961606247587234,
+    "brier": 0.015417070472108248,
+    "ece": 0.01228258858446494,
+    "total_samples": 1000,
+    "real_count": 502,
+    "aigc_count": 498,
+    "operating_points": {
+      "TPR@FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.3885488212108612,
+        "max_allowed_fp": 5,
+        "actual_fp": 6,
+        "actual_fpr": 0.01195219123505976,
+        "actual_tp": 486,
+        "tpr": 0.9759036144578314
+      },
+      "TPR@FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.9182079434394836,
+        "max_allowed_fp": 2,
+        "actual_fp": 3,
+        "actual_fpr": 0.00597609561752988,
+        "actual_tp": 481,
+        "tpr": 0.9658634538152611
+      },
+      "TPR@FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.9627868996391297,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 470,
+        "tpr": 0.9437751004016064
+      },
+      "TPR@FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.9627868996391297,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 470,
+        "tpr": 0.9437751004016064
+      },
+      "TPR@FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.9627868996391297,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 470,
+        "tpr": 0.9437751004016064
+      }
+    }
+  },
+  "sharpen": {
+    "auroc": 0.9995199923198771,
+    "auprc": 0.9975443831136046,
+    "brier": 0.00484853149722275,
+    "ece": 0.005927436680183747,
+    "total_samples": 1000,
+    "real_count": 502,
+    "aigc_count": 498,
+    "operating_points": {
+      "TPR@FPR<=1.00%": {
+        "target_fpr": 0.01,
+        "threshold": 0.09230644255876541,
+        "max_allowed_fp": 5,
+        "actual_fp": 6,
+        "actual_fpr": 0.01195219123505976,
+        "actual_tp": 495,
+        "tpr": 0.9939759036144579
+      },
+      "TPR@FPR<=0.50%": {
+        "target_fpr": 0.005,
+        "threshold": 0.1303158700466156,
+        "max_allowed_fp": 2,
+        "actual_fp": 3,
+        "actual_fpr": 0.00597609561752988,
+        "actual_tp": 494,
+        "tpr": 0.9919678714859438
+      },
+      "TPR@FPR<=0.10%": {
+        "target_fpr": 0.001,
+        "threshold": 0.7527880535850525,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 492,
+        "tpr": 0.9879518072289156
+      },
+      "TPR@FPR<=0.05%": {
+        "target_fpr": 0.0005,
+        "threshold": 0.7527880535850525,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 492,
+        "tpr": 0.9879518072289156
+      },
+      "TPR@FPR<=0.01%": {
+        "target_fpr": 0.0001,
+        "threshold": 0.7527880535850525,
+        "max_allowed_fp": 0,
+        "actual_fp": 0,
+        "actual_fpr": 0.0,
+        "actual_tp": 492,
+        "tpr": 0.9879518072289156
+      }
+    }
+  }
+}

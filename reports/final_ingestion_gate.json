@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-08-30T22:06:34Z",
+  "gate_checks": {
+    "ntire_shards_0_to_2_extracted": true,
+    "ntire_shard_3_present": false,
+    "total_physical_images": 56371,
+    "real_image_count": 20000,
+    "aigc_image_count": 36371,
+    "corrupt_count": 0,
+    "corrupt_leak_pass": true,
+    "train_val_separation_pass": true,
+    "all_8_models_present": true
+  },
+  "overall_gate_passed": true,
+  "model_provenance": {
+    "C0_Champion_Frozen": {
+      "exists": true,
+      "size_mb": 2804.2257890701294,
+      "downloaded": true,
+      "loadable": true,
+      "inference_verified": true,
+      "trained": false,
+      "fused": false,
+      "final_decision": "PENDING_FINAL_GATE"
+    },
+    "C1_Portrait_REM1_E3": {
+      "exists": true,
+      "size_mb": 2804.222843170166,
+      "downloaded": true,
+      "loadable": true,
+      "inference_verified": true,
+      "trained": true,
+      "fused": false,
+      "final_decision": "PENDING_FINAL_GATE"
+    },
+    "C2_SPAI_TFG": {
+      "exists": true,
+      "size_mb": 891.5570621490479,
+      "downloaded": true,
+      "loadable": true,
+      "inference_verified": true,
+      "trained": false,
+      "fused": false,
+      "final_decision": "PENDING_FINAL_GATE"
+    },
+    "C3_CommunityForensics_ViT": {
+      "exists": true,
+      "size_mb": 83.22788619995117,
+      "downloaded": true,
+      "loadable": true,
+      "inference_verified": true,
+      "trained": false,
+      "fused": false,
+      "final_decision": "PENDING_FINAL_GATE"
+    },
+    "C4_divine2k_ConvNeXt": {
+      "exists": true,
+      "size_mb": 106.1931676864624,
+      "downloaded": true,
+      "loadable": true,
+      "inference_verified": true,
+      "trained": false,
+      "fused": false,
+      "final_decision": "PENDING_FINAL_GATE"
+    },
+    "C5_divine2k_ConvNeXt_Tiny": {
+      "exists": true,
+      "size_mb": 106.19406414031982,
+      "downloaded": true,
+      "loadable": true,
+      "inference_verified": true,
+      "trained": false,
+      "fused": false,
+      "final_decision": "PENDING_FINAL_GATE"
+    },
+    "C6_divine2k_EfficientNet_B0": {
+      "exists": true,
+      "size_mb": 15.581957817077637,
+      "downloaded": true,
+      "loadable": true,
+      "inference_verified": true,
+      "trained": false,
+      "fused": false,
+      "final_decision": "PENDING_FINAL_GATE"
+    },
+    "C7_divine2k_ResNet50": {
+      "exists": true,
+      "size_mb": 89.99184513092041,
+      "downloaded": true,
+      "loadable": true,
+      "inference_verified": true,
+      "trained": false,
+      "fused": false,
+      "final_decision": "PENDING_FINAL_GATE"
+    }
+  }
+}

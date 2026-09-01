@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "auxiliary_loss_weight_lambda_e": 0.1,
+  "auxiliary_localization_lambda_l": 0.05,
+  "primary_classification_priority": "STRICT_GROUND_TRUTH_PRIORITY (Explanation never overrides true class label)"
+}

@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-08-29T05:11:07Z",
+  "baseline_clean_AUROC": 0.9988,
+  "perturbation_evaluations": {
+    "clean": {
+      "AUROC": 0.9988,
+      "relative_delta": "0.00%"
+    },
+    "jpeg_compression_q70": {
+      "AUROC": 0.9953,
+      "relative_delta": "-0.35%"
+    },
+    "jpeg_compression_q50": {
+      "AUROC": 0.991,
+      "relative_delta": "-0.78%"
+    },
+    "gaussian_blur_sigma1": {
+      "AUROC": 0.9936,
+      "relative_delta": "-0.52%"
+    },
+    "gaussian_noise_sigma005": {
+      "AUROC": 0.9899,
+      "relative_delta": "-0.89%"
+    },
+    "downscale_05x": {
+      "AUROC": 0.9924,
+      "relative_delta": "-0.64%"
+    },
+    "color_jitter": {
+      "AUROC": 0.9947,
+      "relative_delta": "-0.41%"
+    }
+  },
+  "robustness_index": 0.9934,
+  "verdict": "Robustness Index RI >= 0.99 under common web and compression transformations."
+}

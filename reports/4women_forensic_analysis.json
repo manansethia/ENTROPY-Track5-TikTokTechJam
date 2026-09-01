@@ -1,0 +1,188 @@
+{
+  "source_image": "4women.webp",
+  "dimensions": {
+    "width": 4096,
+    "height": 3072,
+    "megapixels": 12.58
+  },
+  "full_collage_analysis": {
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.9976,
+    "ai_probability": 0.9028,
+    "class_probabilities": {
+      "REAL": 0.0972,
+      "PARTIAL_AIGC": 0.2982,
+      "FULL_AIGC": 0.6046
+    },
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.9976,
+    "suspicious_regions_count": 11,
+    "suspicious_regions": [
+      {
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8894,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8467,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          768,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.6378,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          1152,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.7942,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          1536,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.5245,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.8593,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9757,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          1152,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.7414,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          1536,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.8776,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9973,
+        "scale": 768
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9976,
+        "scale": 1024
+      }
+    ],
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/4women_heatmap.jpg"
+  },
+  "quadrant_breakdown": {
+    "Top-Left (Bucket Hat Woman)": {
+      "verdict": "PARTIAL_AIGC",
+      "confidence": 0.6313,
+      "class_probabilities": {
+        "REAL": 0.0839,
+        "PARTIAL_AIGC": 0.577,
+        "FULL_AIGC": 0.3391
+      },
+      "max_patch_anomaly": 0.6313,
+      "affected_area": 13.53,
+      "suspicious_count": 4,
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/top-left_heatmap.jpg"
+    },
+    "Top-Right (Sunglasses Woman)": {
+      "verdict": "REAL",
+      "confidence": 0.8493,
+      "class_probabilities": {
+        "REAL": 0.26,
+        "PARTIAL_AIGC": 0.7066,
+        "FULL_AIGC": 0.0334
+      },
+      "max_patch_anomaly": 0.1507,
+      "affected_area": 0.0,
+      "suspicious_count": 0,
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/top-right_heatmap.jpg"
+    },
+    "Bottom-Left (Glasses Smile Woman)": {
+      "verdict": "PARTIAL_AIGC",
+      "confidence": 0.6361,
+      "class_probabilities": {
+        "REAL": 0.1542,
+        "PARTIAL_AIGC": 0.6161,
+        "FULL_AIGC": 0.2297
+      },
+      "max_patch_anomaly": 0.6361,
+      "affected_area": 4.71,
+      "suspicious_count": 2,
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/bottom-left_heatmap.jpg"
+    },
+    "Bottom-Right (Brooklyn Bridge Woman)": {
+      "verdict": "PARTIAL_AIGC",
+      "confidence": 0.7041,
+      "class_probabilities": {
+        "REAL": 0.147,
+        "PARTIAL_AIGC": 0.7041,
+        "FULL_AIGC": 0.1489
+      },
+      "max_patch_anomaly": 0.2137,
+      "affected_area": 0.73,
+      "suspicious_count": 0,
+      "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/bottom-right_heatmap.jpg"
+    }
+  }
+}

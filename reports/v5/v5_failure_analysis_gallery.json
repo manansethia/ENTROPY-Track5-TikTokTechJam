@@ -1,0 +1,4846 @@
+[
+  {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.7454,
+    "ai_probability": 0.9379,
+    "class_probabilities": {
+      "REAL": 0.0621,
+      "PARTIAL_AIGC": 0.1925,
+      "FULL_AIGC": 0.7454
+    },
+    "affected_area_percentage": 87.81,
+    "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/whats-the-most-realistic-ai-photo-generator-online-v0-lav1uhmvubre1_spatial_heatmap_v5_heatmap.jpg",
+    "suspicious_regions": [
+      {
+        "bbox": [
+          768,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9203,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.8709,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.8027,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.6571,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.5809,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9897,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.5452,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9704,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9359,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      }
+    ],
+    "patch_evidence": [
+      {
+        "patch_id": 0,
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.0711,
+        "attention_weight": 0.0001
+      },
+      {
+        "patch_id": 1,
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.3104,
+        "attention_weight": 0.002
+      },
+      {
+        "patch_id": 2,
+        "bbox": [
+          768,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9203,
+        "attention_weight": 0.1262
+      },
+      {
+        "patch_id": 3,
+        "bbox": [
+          0,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.1266,
+        "attention_weight": 0.0021
+      },
+      {
+        "patch_id": 4,
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.4864,
+        "attention_weight": 0.019
+      },
+      {
+        "patch_id": 5,
+        "bbox": [
+          768,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.8709,
+        "attention_weight": 0.1479
+      },
+      {
+        "patch_id": 6,
+        "bbox": [
+          0,
+          768,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.8027,
+        "attention_weight": 0.1369
+      },
+      {
+        "patch_id": 7,
+        "bbox": [
+          384,
+          768,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.6571,
+        "attention_weight": 0.0951
+      },
+      {
+        "patch_id": 8,
+        "bbox": [
+          768,
+          768,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.4779,
+        "attention_weight": 0.134
+      },
+      {
+        "patch_id": 9,
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.5809,
+        "attention_weight": 0.0
+      },
+      {
+        "patch_id": 10,
+        "bbox": [
+          576,
+          0,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.9897,
+        "attention_weight": 0.0213
+      },
+      {
+        "patch_id": 11,
+        "bbox": [
+          0,
+          576,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.5452,
+        "attention_weight": 0.0046
+      },
+      {
+        "patch_id": 12,
+        "bbox": [
+          576,
+          576,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.9704,
+        "attention_weight": 0.3107
+      },
+      {
+        "patch_id": 13,
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "scale": 1024,
+        "ai_probability": 0.9359,
+        "attention_weight": 0.0
+      }
+    ],
+    "provenance": {
+      "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+      "c2pa": {
+        "c2pa_status": "NOT_DETECTED",
+        "manifest_detected": false,
+        "signature_markers": []
+      },
+      "camera": {
+        "make": null,
+        "model": null,
+        "datetime_original": null
+      },
+      "software": null,
+      "format": "JPEG",
+      "dimensions": {
+        "width": 1408,
+        "height": 1408
+      },
+      "exif_tag_count": 0
+    },
+    "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /home/manan/aigc_robust_detection/reports/v4_heatmaps/whats-the-most-realistic-ai-photo-generator-online-v0-lav1uhmvubre1_spatial_heatmap.jpg\n  Resolution: 1408 x 1408 (1.98 Megapixels)\n  Inference Time: 131.5 ms\n\n  FORENSIC VERDICT: FULL_AIGC (Confidence: 74.54%)\n    - Real Probability        : 6.21%\n    - Partial-AIGC Probability: 19.25%\n    - Full-AIGC Probability   : 74.54%\n    - Aggregate AI Probability: 93.79%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 87.81%\n    - Suspicious Regions Count: 9\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/whats-the-most-realistic-ai-photo-generator-online-v0-lav1uhmvubre1_spatial_heatmap_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+    "inference_time_ms": 131.5
+  },
+  {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.9056,
+    "ai_probability": 0.9759,
+    "class_probabilities": {
+      "REAL": 0.0241,
+      "PARTIAL_AIGC": 0.0703,
+      "FULL_AIGC": 0.9056
+    },
+    "affected_area_percentage": 96.62,
+    "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/real_ultra_highres_0016_6016x4016_spatial_heatmap_v5_heatmap.jpg",
+    "suspicious_regions": [
+      {
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.996,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9957,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9919,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9927,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9928,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.978,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9844,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9683,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.945,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9476,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9631,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4224,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9612,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9664,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4992,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9301,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5376,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9442,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9966,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9913,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9938,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9908,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9901,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9817,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.982,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9762,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9753,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.966,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9418,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4224,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9643,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9746,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4992,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.961,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5376,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9752,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9972,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9959,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9949,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9899,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9804,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9823,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9636,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9437,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9374,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9429,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9346,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4224,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9509,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9577,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4992,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9214,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5376,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.908,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9958,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.995,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9901,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9769,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9765,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9811,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9716,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9727,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9681,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.958,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9651,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4224,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9589,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9703,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4992,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9668,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5376,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9485,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9942,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9928,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9909,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9935,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9773,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9361,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9732,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9752,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9712,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9535,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.974,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4224,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9574,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9679,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4992,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9731,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5376,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.968,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9688,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9599,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.957,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9109,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.8668,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9119,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9428,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9594,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.935,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9482,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.8532,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4224,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9286,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9324,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4992,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9371,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5376,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9189,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.528,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.5902,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.6615,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.5466,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.6398,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.648,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.6471,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.6677,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.7326,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.5541,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.8555,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4992,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.8583,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5376,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.9137,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.9588,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.8728,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.8615,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.8377,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.6922,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.6699,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.5391,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4224,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.5607,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4992,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.5169,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5376,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.533,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.9033,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.8522,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.8027,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.8315,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.6416,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.7148,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.7742,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.7589,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.6507,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.6076,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.6549,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5376,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.5595,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.8061,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.9148,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.8488,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.7726,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.6296,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.6567,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.861,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2688,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.8909,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.6676,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.562,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.778,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4224,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.7496,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.7077,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9987,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9973,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9974,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9924,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9919,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2880,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9866,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9782,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4032,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9775,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9848,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5184,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9524,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.998,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9981,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9956,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9911,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9907,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2880,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9777,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.968,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4032,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9739,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9844,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5184,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9684,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9975,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9965,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9935,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.989,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9903,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2880,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9844,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9815,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4032,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9715,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9722,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5184,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9662,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9868,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9819,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9448,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9578,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9688,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2880,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9394,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9387,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4032,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9409,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9614,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5184,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9499,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.9889,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.9699,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.9503,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.9476,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.8321,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2880,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.888,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.8156,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4032,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.8456,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.9352,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5184,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.8939,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9811,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9779,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9648,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9524,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9489,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2880,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.8891,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3456,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9084,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4032,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9056,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.813,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          5184,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.6934,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9992,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9987,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9976,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9957,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.994,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9916,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9912,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.9986,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.9984,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.9967,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.9947,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.9945,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.9891,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.9888,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9936,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9888,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9856,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9936,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9838,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9674,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9775,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.9943,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.9878,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.9834,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.98,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3072,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.9517,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          3840,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.9474,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          4608,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.9649,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      }
+    ],
+    "patch_evidence": [
+      {
+        "patch_id": 0,
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.996,
+        "attention_weight": 0.0033
+      },
+      {
+        "patch_id": 1,
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9957,
+        "attention_weight": 0.0037
+      },
+      {
+        "patch_id": 2,
+        "bbox": [
+          768,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9919,
+        "attention_weight": 0.0045
+      },
+      {
+        "patch_id": 3,
+        "bbox": [
+          1152,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9927,
+        "attention_weight": 0.0043
+      },
+      {
+        "patch_id": 4,
+        "bbox": [
+          1536,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9928,
+        "attention_weight": 0.0044
+      },
+      {
+        "patch_id": 5,
+        "bbox": [
+          1920,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.978,
+        "attention_weight": 0.0036
+      },
+      {
+        "patch_id": 6,
+        "bbox": [
+          2304,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9844,
+        "attention_weight": 0.0038
+      },
+      {
+        "patch_id": 7,
+        "bbox": [
+          2688,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9683,
+        "attention_weight": 0.0038
+      },
+      {
+        "patch_id": 8,
+        "bbox": [
+          3072,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.945,
+        "attention_weight": 0.0037
+      },
+      {
+        "patch_id": 9,
+        "bbox": [
+          3456,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9476,
+        "attention_weight": 0.0036
+      },
+      {
+        "patch_id": 10,
+        "bbox": [
+          3840,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9631,
+        "attention_weight": 0.004
+      },
+      {
+        "patch_id": 11,
+        "bbox": [
+          4224,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9612,
+        "attention_weight": 0.0044
+      },
+      {
+        "patch_id": 12,
+        "bbox": [
+          4608,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9664,
+        "attention_weight": 0.0046
+      },
+      {
+        "patch_id": 13,
+        "bbox": [
+          4992,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9301,
+        "attention_weight": 0.0037
+      },
+      {
+        "patch_id": 14,
+        "bbox": [
+          5376,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9442,
+        "attention_weight": 0.0039
+      }
+    ],
+    "provenance": {
+      "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+      "c2pa": {
+        "c2pa_status": "NOT_DETECTED",
+        "manifest_detected": false,
+        "signature_markers": []
+      },
+      "camera": {
+        "make": null,
+        "model": null,
+        "datetime_original": null
+      },
+      "software": null,
+      "format": "JPEG",
+      "dimensions": {
+        "width": 6016,
+        "height": 4016
+      },
+      "exif_tag_count": 0
+    },
+    "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /home/manan/aigc_robust_detection/reports/v4_heatmaps/real_ultra_highres_0016_6016x4016_spatial_heatmap.jpg\n  Resolution: 6016 x 4016 (24.16 Megapixels)\n  Inference Time: 1893.1 ms\n\n  FORENSIC VERDICT: FULL_AIGC (Confidence: 90.56%)\n    - Real Probability        : 2.41%\n    - Partial-AIGC Probability: 7.03%\n    - Full-AIGC Probability   : 90.56%\n    - Aggregate AI Probability: 97.59%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 96.62%\n    - Suspicious Regions Count: 226\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/real_ultra_highres_0016_6016x4016_spatial_heatmap_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+    "inference_time_ms": 1893.1
+  },
+  {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.9701,
+    "ai_probability": 0.9959,
+    "class_probabilities": {
+      "REAL": 0.0041,
+      "PARTIAL_AIGC": 0.0258,
+      "FULL_AIGC": 0.9701
+    },
+    "affected_area_percentage": 85.33,
+    "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/lake-landscape-photo-m_spatial_heatmap_v5_heatmap.jpg",
+    "suspicious_regions": [
+      {
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9997,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9995,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9962,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9873,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      }
+    ],
+    "patch_evidence": [
+      {
+        "patch_id": 0,
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9997,
+        "attention_weight": 0.0375
+      },
+      {
+        "patch_id": 1,
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9995,
+        "attention_weight": 0.96
+      },
+      {
+        "patch_id": 2,
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.9962,
+        "attention_weight": 0.0022
+      },
+      {
+        "patch_id": 3,
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "scale": 1024,
+        "ai_probability": 0.9873,
+        "attention_weight": 0.0003
+      }
+    ],
+    "provenance": {
+      "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+      "c2pa": {
+        "c2pa_status": "NOT_DETECTED",
+        "manifest_detected": false,
+        "signature_markers": []
+      },
+      "camera": {
+        "make": null,
+        "model": null,
+        "datetime_original": null
+      },
+      "software": null,
+      "format": "JPEG",
+      "dimensions": {
+        "width": 1200,
+        "height": 674
+      },
+      "exif_tag_count": 0
+    },
+    "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /home/manan/aigc_robust_detection/reports/v4_heatmaps/lake-landscape-photo-m_spatial_heatmap.jpg\n  Resolution: 1200 x 674 (0.81 Megapixels)\n  Inference Time: 46.3 ms\n\n  FORENSIC VERDICT: FULL_AIGC (Confidence: 97.01%)\n    - Real Probability        : 0.41%\n    - Partial-AIGC Probability: 2.58%\n    - Full-AIGC Probability   : 97.01%\n    - Aggregate AI Probability: 99.59%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 85.33%\n    - Suspicious Regions Count: 4\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/lake-landscape-photo-m_spatial_heatmap_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+    "inference_time_ms": 46.3
+  },
+  {
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.6178,
+    "ai_probability": 0.6659,
+    "class_probabilities": {
+      "REAL": 0.3341,
+      "PARTIAL_AIGC": 0.6178,
+      "FULL_AIGC": 0.0482
+    },
+    "affected_area_percentage": 0.0,
+    "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/d3b177be-gp0su1gn2_medium-res-1200px-1024x683_spatial_heatmap_v5_heatmap.jpg",
+    "suspicious_regions": [],
+    "patch_evidence": [
+      {
+        "patch_id": 0,
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.0035,
+        "attention_weight": 0.0127
+      },
+      {
+        "patch_id": 1,
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.0255,
+        "attention_weight": 0.9811
+      },
+      {
+        "patch_id": 2,
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.0066,
+        "attention_weight": 0.0038
+      },
+      {
+        "patch_id": 3,
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "scale": 1024,
+        "ai_probability": 0.0073,
+        "attention_weight": 0.0024
+      }
+    ],
+    "provenance": {
+      "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+      "c2pa": {
+        "c2pa_status": "NOT_DETECTED",
+        "manifest_detected": false,
+        "signature_markers": []
+      },
+      "camera": {
+        "make": null,
+        "model": null,
+        "datetime_original": null
+      },
+      "software": null,
+      "format": "JPEG",
+      "dimensions": {
+        "width": 1024,
+        "height": 683
+      },
+      "exif_tag_count": 0
+    },
+    "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /home/manan/aigc_robust_detection/reports/v4_heatmaps/d3b177be-gp0su1gn2_medium-res-1200px-1024x683_spatial_heatmap.jpg\n  Resolution: 1024 x 683 (0.70 Megapixels)\n  Inference Time: 45.1 ms\n\n  FORENSIC VERDICT: PARTIAL_AIGC (Confidence: 61.78%)\n    - Real Probability        : 33.41%\n    - Partial-AIGC Probability: 61.78%\n    - Full-AIGC Probability   : 4.82%\n    - Aggregate AI Probability: 66.59%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 0.00%\n    - Suspicious Regions Count: 0\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/d3b177be-gp0su1gn2_medium-res-1200px-1024x683_spatial_heatmap_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+    "inference_time_ms": 45.1
+  },
+  {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.9018,
+    "ai_probability": 0.9768,
+    "class_probabilities": {
+      "REAL": 0.0232,
+      "PARTIAL_AIGC": 0.0749,
+      "FULL_AIGC": 0.9018
+    },
+    "affected_area_percentage": 85.43,
+    "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/aigc_ultra_highres_0001_3024x4032_spatial_heatmap_v5_heatmap.jpg",
+    "suspicious_regions": [
+      {
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9938,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9871,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.995,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9898,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9802,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8935,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.835,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9987,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9963,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9943,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9814,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9644,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.8591,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9337,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9864,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.994,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9846,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9393,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.9719,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.8923,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          768,
+          512,
+          512
+        ],
+        "probability": 0.896,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9964,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9966,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9453,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9251,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.7969,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.9492,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          1152,
+          512,
+          512
+        ],
+        "probability": 0.939,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9771,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9927,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9756,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.9482,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.8162,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.8896,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          1536,
+          512,
+          512
+        ],
+        "probability": 0.6883,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9492,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9835,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.8684,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.7499,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.8708,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.8867,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          1920,
+          512,
+          512
+        ],
+        "probability": 0.9308,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.9232,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.9599,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.9287,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.8816,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.8797,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.9211,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          2304,
+          512,
+          512
+        ],
+        "probability": 0.8882,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.7749,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.7157,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.7974,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.5654,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.6766,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.673,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          2688,
+          512,
+          512
+        ],
+        "probability": 0.7334,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.7544,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.515,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.5554,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.9127,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          2304,
+          3072,
+          512,
+          512
+        ],
+        "probability": 0.6648,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1920,
+          3456,
+          512,
+          512
+        ],
+        "probability": 0.6551,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9992,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9992,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9974,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9934,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9962,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9985,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9963,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          576,
+          768,
+          768
+        ],
+        "probability": 0.9858,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9988,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9953,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9839,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          1152,
+          768,
+          768
+        ],
+        "probability": 0.9889,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9979,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9926,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9609,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          1728,
+          768,
+          768
+        ],
+        "probability": 0.9917,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.9797,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.9825,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.9356,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          2304,
+          768,
+          768
+        ],
+        "probability": 0.9727,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9319,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          576,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9301,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1152,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9276,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1728,
+          2880,
+          768,
+          768
+        ],
+        "probability": 0.9602,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9995,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9981,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9962,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.9996,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.9981,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          768,
+          1024,
+          1024
+        ],
+        "probability": 0.996,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9986,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9961,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          1536,
+          1024,
+          1024
+        ],
+        "probability": 0.9961,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.9886,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          768,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.9642,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          1536,
+          2304,
+          1024,
+          1024
+        ],
+        "probability": 0.9779,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      }
+    ],
+    "patch_evidence": [
+      {
+        "patch_id": 0,
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9938,
+        "attention_weight": 0.0111
+      },
+      {
+        "patch_id": 1,
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9871,
+        "attention_weight": 0.0149
+      },
+      {
+        "patch_id": 2,
+        "bbox": [
+          768,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.995,
+        "attention_weight": 0.0137
+      },
+      {
+        "patch_id": 3,
+        "bbox": [
+          1152,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9898,
+        "attention_weight": 0.0138
+      },
+      {
+        "patch_id": 4,
+        "bbox": [
+          1536,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9802,
+        "attention_weight": 0.0137
+      },
+      {
+        "patch_id": 5,
+        "bbox": [
+          1920,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.8935,
+        "attention_weight": 0.0131
+      },
+      {
+        "patch_id": 6,
+        "bbox": [
+          2304,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.835,
+        "attention_weight": 0.0092
+      },
+      {
+        "patch_id": 7,
+        "bbox": [
+          0,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9987,
+        "attention_weight": 0.0098
+      },
+      {
+        "patch_id": 8,
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9963,
+        "attention_weight": 0.0123
+      },
+      {
+        "patch_id": 9,
+        "bbox": [
+          768,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9943,
+        "attention_weight": 0.0129
+      },
+      {
+        "patch_id": 10,
+        "bbox": [
+          1152,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9814,
+        "attention_weight": 0.0133
+      },
+      {
+        "patch_id": 11,
+        "bbox": [
+          1536,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9644,
+        "attention_weight": 0.0112
+      },
+      {
+        "patch_id": 12,
+        "bbox": [
+          1920,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.8591,
+        "attention_weight": 0.0091
+      },
+      {
+        "patch_id": 13,
+        "bbox": [
+          2304,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9337,
+        "attention_weight": 0.009
+      },
+      {
+        "patch_id": 14,
+        "bbox": [
+          0,
+          768,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9864,
+        "attention_weight": 0.0125
+      }
+    ],
+    "provenance": {
+      "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+      "c2pa": {
+        "c2pa_status": "NOT_DETECTED",
+        "manifest_detected": false,
+        "signature_markers": []
+      },
+      "camera": {
+        "make": null,
+        "model": null,
+        "datetime_original": null
+      },
+      "software": null,
+      "format": "JPEG",
+      "dimensions": {
+        "width": 3024,
+        "height": 4032
+      },
+      "exif_tag_count": 0
+    },
+    "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /home/manan/aigc_robust_detection/reports/v4_heatmaps/aigc_ultra_highres_0001_3024x4032_spatial_heatmap.jpg\n  Resolution: 3024 x 4032 (12.19 Megapixels)\n  Inference Time: 879.1 ms\n\n  FORENSIC VERDICT: FULL_AIGC (Confidence: 90.18%)\n    - Real Probability        : 2.32%\n    - Partial-AIGC Probability: 7.49%\n    - Full-AIGC Probability   : 90.18%\n    - Aggregate AI Probability: 97.68%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 85.43%\n    - Suspicious Regions Count: 98\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/aigc_ultra_highres_0001_3024x4032_spatial_heatmap_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+    "inference_time_ms": 879.1
+  },
+  {
+    "verdict": "REAL",
+    "confidence": 0.5234,
+    "ai_probability": 0.4766,
+    "class_probabilities": {
+      "REAL": 0.5234,
+      "PARTIAL_AIGC": 0.4765,
+      "FULL_AIGC": 0.0001
+    },
+    "affected_area_percentage": 0.0,
+    "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_008613_v5_heatmap.jpg",
+    "suspicious_regions": [],
+    "patch_evidence": [
+      {
+        "patch_id": 0,
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.2229,
+        "attention_weight": 0.8678
+      },
+      {
+        "patch_id": 1,
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.0301,
+        "attention_weight": 0.0261
+      },
+      {
+        "patch_id": 2,
+        "bbox": [
+          0,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.2063,
+        "attention_weight": 0.0831
+      },
+      {
+        "patch_id": 3,
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.0157,
+        "attention_weight": 0.0096
+      },
+      {
+        "patch_id": 4,
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.145,
+        "attention_weight": 0.0106
+      },
+      {
+        "patch_id": 5,
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "scale": 1024,
+        "ai_probability": 0.1467,
+        "attention_weight": 0.0029
+      }
+    ],
+    "provenance": {
+      "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+      "c2pa": {
+        "c2pa_status": "NOT_DETECTED",
+        "manifest_detected": false,
+        "signature_markers": []
+      },
+      "camera": {
+        "make": null,
+        "model": null,
+        "datetime_original": null
+      },
+      "software": null,
+      "format": "JPEG",
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "exif_tag_count": 0
+    },
+    "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /mnt/ai-storage/aigc_data/datasets/v4_3_large_partial_ai_corpus/images/partial_ai_008613.jpg\n  Resolution: 1024 x 1024 (1.05 Megapixels)\n  Inference Time: 67.0 ms\n\n  FORENSIC VERDICT: REAL (Confidence: 52.34%)\n    - Real Probability        : 52.34%\n    - Partial-AIGC Probability: 47.65%\n    - Full-AIGC Probability   : 0.01%\n    - Aggregate AI Probability: 47.66%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 0.00%\n    - Suspicious Regions Count: 0\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_008613_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+    "inference_time_ms": 67.0
+  },
+  {
+    "verdict": "REAL",
+    "confidence": 0.5586,
+    "ai_probability": 0.4414,
+    "class_probabilities": {
+      "REAL": 0.5586,
+      "PARTIAL_AIGC": 0.4404,
+      "FULL_AIGC": 0.0009
+    },
+    "affected_area_percentage": 0.0,
+    "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_006990_v5_heatmap.jpg",
+    "suspicious_regions": [],
+    "patch_evidence": [
+      {
+        "patch_id": 0,
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.0281,
+        "attention_weight": 0.0329
+      },
+      {
+        "patch_id": 1,
+        "bbox": [
+          0,
+          384,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.2942,
+        "attention_weight": 0.9546
+      },
+      {
+        "patch_id": 2,
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.0567,
+        "attention_weight": 0.0074
+      },
+      {
+        "patch_id": 3,
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "scale": 1024,
+        "ai_probability": 0.1038,
+        "attention_weight": 0.0051
+      }
+    ],
+    "provenance": {
+      "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+      "c2pa": {
+        "c2pa_status": "NOT_DETECTED",
+        "manifest_detected": false,
+        "signature_markers": []
+      },
+      "camera": {
+        "make": null,
+        "model": null,
+        "datetime_original": null
+      },
+      "software": null,
+      "format": "JPEG",
+      "dimensions": {
+        "width": 683,
+        "height": 1024
+      },
+      "exif_tag_count": 0
+    },
+    "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /mnt/ai-storage/aigc_data/datasets/v4_3_large_partial_ai_corpus/images/partial_ai_006990.jpg\n  Resolution: 683 x 1024 (0.70 Megapixels)\n  Inference Time: 107.4 ms\n\n  FORENSIC VERDICT: REAL (Confidence: 55.86%)\n    - Real Probability        : 55.86%\n    - Partial-AIGC Probability: 44.04%\n    - Full-AIGC Probability   : 0.09%\n    - Aggregate AI Probability: 44.14%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 0.00%\n    - Suspicious Regions Count: 0\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_006990_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+    "inference_time_ms": 107.4
+  },
+  {
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.8763,
+    "ai_probability": 0.8765,
+    "class_probabilities": {
+      "REAL": 0.1235,
+      "PARTIAL_AIGC": 0.8763,
+      "FULL_AIGC": 0.0002
+    },
+    "affected_area_percentage": 100.0,
+    "localization_heatmap_path": "/home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_002562_v5_heatmap.jpg",
+    "suspicious_regions": [
+      {
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8339,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.9531,
+        "scale": 512,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.8561,
+        "scale": 768,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.8704,
+        "scale": 1024,
+        "evidence_type": "localized_synthetic_frequency_or_diffusion_anomaly"
+      }
+    ],
+    "patch_evidence": [
+      {
+        "patch_id": 0,
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.8339,
+        "attention_weight": 0.2583
+      },
+      {
+        "patch_id": 1,
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "scale": 512,
+        "ai_probability": 0.9531,
+        "attention_weight": 0.6483
+      },
+      {
+        "patch_id": 2,
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "scale": 768,
+        "ai_probability": 0.8561,
+        "attention_weight": 0.0729
+      },
+      {
+        "patch_id": 3,
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "scale": 1024,
+        "ai_probability": 0.8704,
+        "attention_weight": 0.0205
+      }
+    ],
+    "provenance": {
+      "provenance_verdict": "METADATA_STRIPPED_OR_ABSENT",
+      "c2pa": {
+        "c2pa_status": "NOT_DETECTED",
+        "manifest_detected": false,
+        "signature_markers": []
+      },
+      "camera": {
+        "make": null,
+        "model": null,
+        "datetime_original": null
+      },
+      "software": null,
+      "format": "JPEG",
+      "dimensions": {
+        "width": 1024,
+        "height": 685
+      },
+      "exif_tag_count": 0
+    },
+    "forensic_report": "========================================================================================\n  AIGC FORENSICS V5 EVIDENCE REPORT\n========================================================================================\n  Image File: /mnt/ai-storage/aigc_data/datasets/v4_3_large_partial_ai_corpus/images/partial_ai_002562.jpg\n  Resolution: 1024 x 685 (0.70 Megapixels)\n  Inference Time: 46.7 ms\n\n  FORENSIC VERDICT: PARTIAL_AIGC (Confidence: 87.63%)\n    - Real Probability        : 12.35%\n    - Partial-AIGC Probability: 87.63%\n    - Full-AIGC Probability   : 0.02%\n    - Aggregate AI Probability: 87.65%\n\n  SPATIAL LOCALIZATION FINDINGS:\n    - Estimated Affected Area : 100.00%\n    - Suspicious Regions Count: 4\n    - Heatmap Artifact Saved  : /home/manan/aigc_robust_detection/reports/v5/heatmaps/partial_ai_002562_v5_heatmap.jpg\n\n  PROVENANCE & METADATA AUDIT:\n    - Provenance Verdict      : METADATA_STRIPPED_OR_ABSENT\n    - C2PA Content Credentials: NOT_DETECTED\n    - Camera Make / Model     : None None\n    - Software / Editor       : None\n========================================================================================",
+    "inference_time_ms": 46.7
+  }
+]

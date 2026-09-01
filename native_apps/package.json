@@ -1,0 +1,49 @@
+{
+  "name": "aether-forensics-native",
+  "version": "4.5.0",
+  "description": "AetherForensics — Native Cross-Platform Deepfake & AIGC Detection Studio (macOS, Windows, Linux, Android, iOS)",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "cap:sync": "cap sync",
+    "cap:open:android": "cap open android",
+    "cap:open:ios": "cap open ios"
+  },
+  "keywords": ["forensics", "aigc", "deepfake", "tiktok", "native"],
+  "author": "Antigravity Research",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/cli": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/ios": "^6.1.2"
+  },
+  "devDependencies": {
+    "electron": "^31.3.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.tiktok.aetherforensics",
+    "productName": "AetherForensics",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": ["dmg", "zip"]
+    },
+    "win": {
+      "target": ["nsis", "portable"]
+    },
+    "linux": {
+      "target": ["AppImage", "deb"]
+    },
+    "files": [
+      "desktop/**/*",
+      "../app/static/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  }
+}

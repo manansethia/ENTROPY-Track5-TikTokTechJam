@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-08-28T20:18:54Z",
+  "total_approved_storage_pool_gb": 379.9,
+  "available_nvme_cache_gb": 397.0,
+  "target_training_corpus_size": 50000,
+  "partition_strategy": {
+    "TRAIN": {
+      "sample_count": 40000,
+      "proportion": "80.0%"
+    },
+    "VAL_DEV": {
+      "sample_count": 5000,
+      "proportion": "10.0%"
+    },
+    "CALIBRATION": {
+      "sample_count": 2500,
+      "proportion": "5.0% (sub-split of Val)"
+    },
+    "INTERNAL_TEST": {
+      "sample_count": 5000,
+      "proportion": "10.0%"
+    }
+  },
+  "target_class_composition": {
+    "AUTHENTIC_REAL": {
+      "sample_count": 25000,
+      "sources": [
+        {
+          "dataset": "massive_balanced_50k/real (COCO/SA-1B)",
+          "samples": 12500
+        },
+        {
+          "dataset": "wikiart_hard_negatives (Oil/Canvas/Watercolor)",
+          "samples": 7500
+        },
+        {
+          "dataset": "scaled_massive/real (High-Res Photos)",
+          "samples": 3000
+        },
+        {
+          "dataset": "defactify/real (Social Media)",
+          "samples": 2000
+        }
+      ]
+    },
+    "SYNTHETIC_AIGC": {
+      "sample_count": 25000,
+      "sources": [
+        {
+          "generator": "FLUX.1-dev / SD3 (Quality Paradox & Flux pool)",
+          "samples": 7500
+        },
+        {
+          "generator": "Midjourney v5/v6 (Parquet archives & 50k pool)",
+          "samples": 7500
+        },
+        {
+          "generator": "Stable Diffusion XL & SD 1.5",
+          "samples": 5000
+        },
+        {
+          "generator": "DALL-E 3 & GLIDE",
+          "samples": 2500
+        },
+        {
+          "generator": "GAN Family (StyleGAN3, BigGAN, ProGAN)",
+          "samples": 2500
+        }
+      ]
+    }
+  },
+  "strict_quarantine_rules": {
+    "locked_external_benchmarks": [
+      "Synthbuster (Zenodo, 25 GB)",
+      "AIGIBench (HorizonTEL, 171 GB)",
+      "Chameleon (Locked Test, 10 GB)",
+      "VCT2 (Video/Frame Test)",
+      "WildRF (In-the-Wild Real vs Fake)",
+      "SynthWildX (Web Stress Test)"
+    ],
+    "quarantine_guarantee": "Zero access during manifest generation, feature extraction, normalization fitting, loss optimization, calibration, or threshold selection."
+  }
+}

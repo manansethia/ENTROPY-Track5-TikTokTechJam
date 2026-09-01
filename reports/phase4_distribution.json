@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-29T09:30:51Z",
+  "distribution_profile": {
+    "wikiart_fine_art": 24996,
+    "loose_authentic_corpus": 17373,
+    "synthetic_modern_diffusion": 24000,
+    "synthetic_high_frequency": 29917,
+    "synthetic_sid_diffusion": 6851
+  }
+}

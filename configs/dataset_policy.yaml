@@ -1,0 +1,120 @@
+# Comprehensive Machine-Readable Dataset Split & Leakage Policy
+# Classifies every dataset into explicit roles:
+# - TRAIN: Permitted for training and hard-negative mining
+# - DEVELOPMENT: Permitted for local architecture ablation and hyperparameter tuning
+# - EXTERNAL_EVAL: Strictly forbidden from training; reserved for zero-shot OOD evaluation
+# - UNAVAILABLE: External datasets requiring gated access / pending investigation
+
+version: "2.0"
+
+datasets:
+  # =========================================================================
+  # 1. LOCKED BENCHMARKS & EXTERNAL OUT-OF-DISTRIBUTION EVALUATION SUITES
+  # =========================================================================
+  validation_LOCKED:
+    role: "EXTERNAL_EVAL"
+    train: forbidden
+    validation: allowed
+    test: allowed
+    description: "Official hackathon evaluation benchmark - strictly isolated from training"
+
+  aigibench_eval:
+    role: "EXTERNAL_EVAL"
+    train: forbidden
+    validation: forbidden
+    test: allowed
+    description: "HorizonTEL 25-generator zero-shot generalization test suite (237 GB / eval subsets)"
+
+  synthbuster:
+    role: "EXTERNAL_EVAL"
+    train: forbidden
+    validation: forbidden
+    test: allowed
+    description: "Zenodo 12.4 GB 9-generator evaluation benchmark (DALL-E 2/3, Firefly, Midjourney v5, SDXL)"
+
+  chameleon:
+    role: "EXTERNAL_EVAL"
+    train: forbidden
+    validation: forbidden
+    test: allowed
+    description: "AIDE adversarial hard AI benchmark (requires author academic request; non-blocking)"
+
+  vct2:
+    role: "EXTERNAL_EVAL"
+    train: forbidden
+    validation: forbidden
+    test: allowed
+    description: "ACL 166k realistic text-to-image generalization benchmark (external test only)"
+
+  synthwildx:
+    role: "EXTERNAL_EVAL"
+    train: forbidden
+    validation: forbidden
+    test: allowed
+    description: "In-the-wild unseen generative test suite"
+
+  wildrf:
+    role: "EXTERNAL_EVAL"
+    train: forbidden
+    validation: forbidden
+    test: allowed
+    description: "Real-world social media forensics evaluation suite"
+
+  # =========================================================================
+  # 2. PERMITTED TRAINING & HARD-NEGATIVE DEVELOPMENT REPOSITORIES
+  # =========================================================================
+  genimage_plus:
+    role: "TRAIN"
+    train: allowed
+    validation: allowed
+    test: allowed
+    description: "193 GB modern generators (FLUX.1-dev, SD3.5, SDXL, Midjourney)"
+
+  defactify:
+    role: "TRAIN"
+    train: allowed
+    validation: allowed
+    test: allowed
+    description: "14 GB Midjourney v6 and DALL-E 3 paired data"
+
+  sid_parquet:
+    role: "TRAIN"
+    train: allowed
+    validation: allowed
+    test: allowed
+    description: "129 GB real/synthetic parquet streams"
+
+  wikiart_hard_negatives:
+    role: "TRAIN"
+    train: allowed
+    validation: allowed
+    test: allowed
+    description: "25 GB (85,000 authentic oil paintings) for anti-shortcut semantic balance"
+
+  artbench_hard_negatives:
+    role: "TRAIN"
+    train: allowed
+    validation: allowed
+    test: allowed
+    description: "6 GB authentic art movements for anti-shortcut semantic balance"
+
+  vintage_archival_photos:
+    role: "TRAIN"
+    train: allowed
+    validation: allowed
+    test: allowed
+    description: "8 GB 19th/20th century authentic analog film scans"
+
+  aigi_quality_paradox:
+    role: "TRAIN"
+    train: allowed
+    validation: allowed
+    test: allowed
+    description: "7.5 GB high-quality hard diffusion pairs with prompt/aesthetic metadata"
+
+  drct_2m_selective:
+    role: "TRAIN"
+    train: allowed
+    validation: allowed
+    test: allowed
+    description: "ModelScope diffusion-reconstruction hard samples (staged/selective ingestion)"

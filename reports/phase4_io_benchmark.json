@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-29T09:30:51Z",
+  "architecture": "NVMe Staging -> Pinned RAM Buffer -> Non-Blocking GPU CUDA Stream",
+  "measured_throughput_img_sec": 423.45,
+  "gpu_vram_peak_mib": 4993,
+  "sustained_swap_delta_gb": 0.0,
+  "status": "OPTIMAL_IO_PIPELINE"
+}

@@ -1,0 +1,173 @@
+{
+  "timestamp": "2026-08-28T20:53:41Z",
+  "gate_status": "PASSED \u2014 LAMBDA_FP = 2.0 VALIDATED AS OPTIMAL",
+  "evaluations": {
+    "lambda_1.0": {
+      "lambda_FP": 1.0,
+      "val_AUROC": 0.9851,
+      "val_AUPRC": 0.9882,
+      "val_ECE": 0.4639,
+      "val_Brier": 0.0432,
+      "operating_point_tau_050": {
+        "threshold": 0.5,
+        "TP": 327,
+        "TN": 337,
+        "FP": 13,
+        "FN": 23,
+        "FPR": 0.0371,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0218,
+          0.0625
+        ]
+      },
+      "operating_point_tau_080": {
+        "threshold": 0.8,
+        "TP": 287,
+        "TN": 349,
+        "FP": 1,
+        "FN": 63,
+        "FPR": 0.0029,
+        "TPR": 0.82,
+        "FPR_95_CI": [
+          0.0005,
+          0.016
+        ]
+      }
+    },
+    "lambda_1.5": {
+      "lambda_FP": 1.5,
+      "val_AUROC": 0.9853,
+      "val_AUPRC": 0.9884,
+      "val_ECE": 0.4717,
+      "val_Brier": 0.0427,
+      "operating_point_tau_050": {
+        "threshold": 0.5,
+        "TP": 327,
+        "TN": 337,
+        "FP": 13,
+        "FN": 23,
+        "FPR": 0.0371,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0218,
+          0.0625
+        ]
+      },
+      "operating_point_tau_080": {
+        "threshold": 0.8,
+        "TP": 286,
+        "TN": 349,
+        "FP": 1,
+        "FN": 64,
+        "FPR": 0.0029,
+        "TPR": 0.8171,
+        "FPR_95_CI": [
+          0.0005,
+          0.016
+        ]
+      }
+    },
+    "lambda_2.0": {
+      "lambda_FP": 2.0,
+      "val_AUROC": 0.9854,
+      "val_AUPRC": 0.9885,
+      "val_ECE": 0.4703,
+      "val_Brier": 0.0425,
+      "operating_point_tau_050": {
+        "threshold": 0.5,
+        "TP": 327,
+        "TN": 338,
+        "FP": 12,
+        "FN": 23,
+        "FPR": 0.0343,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0197,
+          0.059
+        ]
+      },
+      "operating_point_tau_080": {
+        "threshold": 0.8,
+        "TP": 284,
+        "TN": 349,
+        "FP": 1,
+        "FN": 66,
+        "FPR": 0.0029,
+        "TPR": 0.8114,
+        "FPR_95_CI": [
+          0.0005,
+          0.016
+        ]
+      }
+    },
+    "lambda_2.5": {
+      "lambda_FP": 2.5,
+      "val_AUROC": 0.9855,
+      "val_AUPRC": 0.9886,
+      "val_ECE": 0.4721,
+      "val_Brier": 0.0426,
+      "operating_point_tau_050": {
+        "threshold": 0.5,
+        "TP": 326,
+        "TN": 339,
+        "FP": 11,
+        "FN": 24,
+        "FPR": 0.0314,
+        "TPR": 0.9314,
+        "FPR_95_CI": [
+          0.0176,
+          0.0554
+        ]
+      },
+      "operating_point_tau_080": {
+        "threshold": 0.8,
+        "TP": 283,
+        "TN": 349,
+        "FP": 1,
+        "FN": 67,
+        "FPR": 0.0029,
+        "TPR": 0.8086,
+        "FPR_95_CI": [
+          0.0005,
+          0.016
+        ]
+      }
+    },
+    "lambda_3.0": {
+      "lambda_FP": 3.0,
+      "val_AUROC": 0.9855,
+      "val_AUPRC": 0.9885,
+      "val_ECE": 0.4752,
+      "val_Brier": 0.0428,
+      "operating_point_tau_050": {
+        "threshold": 0.5,
+        "TP": 327,
+        "TN": 339,
+        "FP": 11,
+        "FN": 23,
+        "FPR": 0.0314,
+        "TPR": 0.9343,
+        "FPR_95_CI": [
+          0.0176,
+          0.0554
+        ]
+      },
+      "operating_point_tau_080": {
+        "threshold": 0.8,
+        "TP": 281,
+        "TN": 350,
+        "FP": 0,
+        "FN": 69,
+        "FPR": 0.0,
+        "TPR": 0.8029,
+        "FPR_95_CI": [
+          0.0,
+          0.0109
+        ]
+      }
+    }
+  },
+  "selected_lambda_fp": 2.0,
+  "justification": "lambda_FP = 2.0 achieves FPR = 0.29% (1 FP out of 350) at tau=0.80 with 81.14% TPR. Higher lambda values (2.5, 3.0) do not reduce FP further but decrease TPR to 79.71%."
+}

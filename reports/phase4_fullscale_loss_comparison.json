@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "lambda_fp_2.0_performance": {
+    "AUROC": 0.999,
+    "AUPRC": 0.9993,
+    "Brier": 0.0108,
+    "FPR_tau_080": 0.0097,
+    "FNR_tau_080": 0.0178,
+    "TPR_tau_080": 0.9822,
+    "FP_count_080": 24,
+    "FN_count_080": 63,
+    "total_errors_080": 87
+  },
+  "status": "OPTIMAL_ASYMMETRIC_PENALTY"
+}

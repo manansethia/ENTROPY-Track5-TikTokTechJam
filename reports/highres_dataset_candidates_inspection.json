@@ -1,0 +1,97 @@
+{
+  "NTIRE_2026_Robust_Train": {
+    "repo_id": "deepfakesMSU/NTIRE-RobustAIGenDetection-train",
+    "designated_role": "TRAIN",
+    "description": "NTIRE 2026 Robust AI-Generated Image Detection training pool (277K images, cropping/compression robust).",
+    "downloads": 2030,
+    "likes": 7,
+    "total_files": 9,
+    "representative_files": [
+      ".gitattributes",
+      "README.md",
+      "assets/header_NTIRE.jpg",
+      "shard_0.zip",
+      "shard_1.zip",
+      "shard_2.zip",
+      "shard_3.zip",
+      "shard_4.zip"
+    ],
+    "card_summary": "---\ntask_categories:\n- image-classification\nlanguage:\n- en\ntags:\n- image\n- image_generation\npretty_name: Training set for NTIRE 2026 Robust AI-Generated Image Detection in the Wild\nsize_categories:\n- 100K<n<1M\n---\n\n\n# Training set for NTIRE 2026 Robust AI-Generated Image Detection in the Wild\n\n![assets/header_NTIRE.jpg](assets/header_NTIRE.jpg)\n\n[Robust AI-Generated Image Detection in the Wild Challenge](https://www.codabench.org/competitions/12761/) is organized as a part of the New Trends in I"
+  },
+  "HiRes_50K_Benchmark": {
+    "repo_id": "Mu437/HiRes-50K",
+    "designated_role": "EVALUATION_ONLY",
+    "description": "50,568 images from <1K to >10K resolution, up to 64MP. Strictly for evaluation.",
+    "downloads": 60,
+    "likes": 1,
+    "total_files": 10,
+    "representative_files": [
+      ".gitattributes",
+      "README.md",
+      "W_0900.zip",
+      "W_1200.zip",
+      "W_1500.zip",
+      "W_2000.zip",
+      "W_2500.zip",
+      "W_3000.zip"
+    ],
+    "card_summary": "---\nlicense: cc-by-nc-4.0\n---\n# HiRes-50K Dataset\n\n**HiRes-50K** is a **cross-domain evaluation-only dataset** designed to assess the **generalization capability of AI-generated image (AIGI) detection models** and their performance on **high-resolution, high-fidelity images**.  This dataset is not intended for model training and should only be used for evaluation purposes.\n\n\n## Dataset Overview\n\nHiRes-50K consists of **50,568 images**, covering long-edge resolutions from below 1K to over 10K pix"
+  },
+  "AIGC_Detection_Benchmark": {
+    "repo_id": "TheKernel01/AIGC-Detection-Benchmark",
+    "designated_role": "TRAIN_OR_EVAL",
+    "description": "Multi-generator benchmark (DALL-E 2, Midjourney, ADM, BigGAN, StyleGAN, ProGAN).",
+    "downloads": 1322,
+    "likes": 0,
+    "total_files": 62,
+    "representative_files": [
+      ".gitattributes",
+      "README.md",
+      "data/test-00000-of-00060.parquet",
+      "data/test-00001-of-00060.parquet",
+      "data/test-00002-of-00060.parquet",
+      "data/test-00003-of-00060.parquet",
+      "data/test-00004-of-00060.parquet",
+      "data/test-00005-of-00060.parquet"
+    ],
+    "card_summary": "---\nconfigs:\n- config_name: default\n  data_files:\n  - split: test\n    path: data/test-*\ndataset_info:\n  features:\n  - name: image\n    dtype: image\n  - name: label\n    dtype:\n      class_label:\n        names:\n          '0': real\n          '1': fake\n  - name: generator\n    dtype:\n      class_label:\n        names:\n          '0': Real\n          '1': ADM\n          '2': BigGAN\n          '3': CycleGAN\n          '4': DALLE2\n          '5': GauGAN\n          '6': GLIDE\n          '7': Midjourney\n          '"
+  },
+  "AIGI_Quality_Paradox": {
+    "repo_id": "Coxy7/AIGI-Detection-Quality-Paradox",
+    "designated_role": "HARD_AIGC_TRAIN",
+    "description": "24K realistic AIGC images focused on high-quality generator realism.",
+    "downloads": 321,
+    "likes": 6,
+    "total_files": 19,
+    "representative_files": [
+      ".gitattributes",
+      "README.md",
+      "data/fake-00000-of-00015.parquet",
+      "data/fake-00001-of-00015.parquet",
+      "data/fake-00002-of-00015.parquet",
+      "data/fake-00003-of-00015.parquet",
+      "data/fake-00004-of-00015.parquet",
+      "data/fake-00005-of-00015.parquet"
+    ],
+    "card_summary": "---\nlicense: cc-by-4.0\ndataset_info:\n  features:\n  - name: generator\n    dtype: string\n  - name: uid\n    dtype: string\n  - name: image\n    dtype: image\n  - name: original_prompt\n    dtype: string\n  - name: positive_prompt\n    dtype: string\n  - name: negative_prompt\n    dtype: string\n  - name: num_inference_steps\n    dtype: float64\n  - name: guidance_scale\n    dtype: float64\n  - name: seed\n    dtype: int64\n  - name: scheduler\n    dtype: string\n  - name: height\n    dtype: int64\n  - name: width\n   "
+  },
+  "MLLM_Generated_Dataset": {
+    "repo_id": "zr-zhang/MLLM-Generated-Image-Detection-Dataset",
+    "designated_role": "MLLM_EVAL_TRAIN",
+    "description": "2026 benchmark for GPT Image2 and Nano Banana2 texture/structure/hybrid cases.",
+    "downloads": 2995,
+    "likes": 1,
+    "total_files": 4358,
+    "representative_files": [
+      ".gitattributes",
+      "README.md",
+      "images/Preprocessing/Hybrid Images/GPT-Image2-fake/1.jpg",
+      "images/Preprocessing/Hybrid Images/GPT-Image2-fake/10.jpg",
+      "images/Preprocessing/Hybrid Images/GPT-Image2-fake/100.jpg",
+      "images/Preprocessing/Hybrid Images/GPT-Image2-fake/101.jpg",
+      "images/Preprocessing/Hybrid Images/GPT-Image2-fake/102.jpg",
+      "images/Preprocessing/Hybrid Images/GPT-Image2-fake/103.jpg"
+    ],
+    "card_summary": "---\nlicense: apache-2.0\ntask_categories:\n- image-classification\ntags:\n- AIGC-detection\n- image-forensics\n- MLLM-Generated\npretty_name: MLLM-Generated Image Dataset\n---\n\n# MLLM-Generated Image Dataset\n\nThis dataset contains real and AI-generated image samples organized for binary MLLM-generated image detection.\n\n[Paper](https://huggingface.co/papers/2608.01258) | [Code](https://github.com/xbrainnet/SAP-DSP)\n\n## Dataset Summary\n\nWe construct an MLLM-generated image detection benchmark from GPT Ima"
+  }
+}

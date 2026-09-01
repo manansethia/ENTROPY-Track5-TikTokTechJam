@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "cocktail_matrix": {
+    "A_TriStream_Structured_Dropout": {
+      "branches": "CLIP + SigLIP + SRM (2,212d)",
+      "params": 567297,
+      "val_auroc": 0.999,
+      "val_auprc": 0.9993,
+      "val_fpr_080": 0.0086,
+      "val_tpr_080": 0.976,
+      "tpr_at_fpr_0_10": 0.9171,
+      "latency_ms": 208.48,
+      "recommendation": "CHAMPION_MONOLITHIC_BACKBONE"
+    },
+    "B_TriStream_Conditional_DINO_Edge": {
+      "branches": "Tri-Stream Trunk + Gated DINO/Edge Verifier (3,258d)",
+      "params": 743425,
+      "val_auroc": 0.9992,
+      "val_auprc": 0.9995,
+      "val_fpr_080": 0.0074,
+      "val_tpr_080": 0.9795,
+      "tpr_at_fpr_0_10": 0.932,
+      "latency_ms": 214.76,
+      "recommendation": "CHAMPION_TWO_STAGE_VERIFIER"
+    },
+    "C_TriStream_Conditional_DINO_Edge_ConvNeXt": {
+      "branches": "Tri-Stream Trunk + DINO/Edge/ConvNeXt Verifier (4,026d)",
+      "params": 982145,
+      "val_auroc": 0.9991,
+      "val_auprc": 0.9994,
+      "val_fpr_080": 0.0079,
+      "val_tpr_080": 0.9788,
+      "tpr_at_fpr_0_10": 0.925,
+      "latency_ms": 238.5,
+      "recommendation": "SUBOPTIMAL_OVERHEAD"
+    },
+    "G_All_9_Experts_Full_Control": {
+      "branches": "All 9 Forensic Experts (5,130d)",
+      "params": 1314305,
+      "val_auroc": 0.9966,
+      "val_auprc": 0.9977,
+      "val_fpr_080": 0.0182,
+      "val_tpr_080": 0.9684,
+      "tpr_at_fpr_0_10": 0.812,
+      "latency_ms": 485.2,
+      "recommendation": "REJECTED (High-dimensional gradient dilution & excessive latency)"
+    }
+  },
+  "scientific_takeaway": "Tri-Stream Structured Dropout (2,212d) with optional Stage-2 DINO/Edge verifier achieves peak Pareto accuracy while maintaining <215 ms raw image latency."
+}

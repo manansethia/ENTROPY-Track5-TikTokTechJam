@@ -1,0 +1,112 @@
+{
+  "wikiart_fine_art": {
+    "source": "wikiart_hard_negatives",
+    "file_count": 72,
+    "total_images": 81504,
+    "format": "parquet",
+    "class": "REAL",
+    "category": "Hard-Negative Fine Art / Paintings / Sketches",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 31.42
+  },
+  "aigi_quality_paradox_modern_aigc": {
+    "source": "aigi_quality_paradox",
+    "file_count": 15,
+    "total_images": 24000,
+    "format": "parquet",
+    "class": "AIGC",
+    "generators": [
+      "FLUX.1",
+      "SDXL",
+      "SD3",
+      "PixArt-alpha",
+      "Midjourney-v6",
+      "DALL-E 3"
+    ],
+    "category": "Modern Subtle Photorealistic Diffusion",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 6.95
+  },
+  "sid_diffusion_parquets": {
+    "source": "sid_parquet",
+    "file_count": 51,
+    "total_images": 43044,
+    "format": "parquet",
+    "class": "AIGC / MIXED",
+    "category": "Diverse Diffusion Benchmarking Corpus",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 23.43
+  },
+  "defactify_corpus": {
+    "source": "defactify",
+    "file_count": 0,
+    "total_images": 0,
+    "format": "parquet",
+    "class": "REAL / AIGC MIXED",
+    "category": "Fact-Checking & Misinformation Benchmark",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 0.0
+  },
+  "massive_balanced_50k": {
+    "source": "massive_balanced_50k",
+    "file_count": 34746,
+    "total_images": 34746,
+    "format": "image_files",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 5.61
+  },
+  "scaled_massive": {
+    "source": "scaled_massive",
+    "file_count": 45409,
+    "total_images": 45409,
+    "format": "image_files",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 6.04
+  },
+  "balanced_scaled_train": {
+    "source": "balanced_scaled_train",
+    "file_count": 11713,
+    "total_images": 11713,
+    "format": "image_files",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 1.84
+  },
+  "scaled_45k": {
+    "source": "scaled_45k",
+    "file_count": 11569,
+    "total_images": 11569,
+    "format": "image_files",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 1.26
+  },
+  "scaled_train": {
+    "source": "scaled_train",
+    "file_count": 9000,
+    "total_images": 9000,
+    "format": "image_files",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 0.86
+  },
+  "cf_slice": {
+    "source": "cf_slice",
+    "file_count": 5986,
+    "total_images": 5986,
+    "format": "image_files",
+    "status": "APPROVED_FOR_TRAINING",
+    "size_gb": 0.74
+  },
+  "synthbuster_quarantined": {
+    "source": "synthbuster",
+    "file_count": 9000,
+    "total_images": 9000,
+    "format": "png_files",
+    "status": "LOCKED_EXTERNAL_OOD_BENCHMARK_ONLY",
+    "size_gb": 12.64
+  },
+  "aigibench_eval_quarantined": {
+    "source": "aigibench_eval",
+    "format": "tar_archives",
+    "status": "LOCKED_EXTERNAL_OOD_BENCHMARK_ONLY",
+    "size_gb": 170.45
+  }
+}

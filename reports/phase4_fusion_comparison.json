@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-29T09:31:25Z",
+  "naive_concatenation_vs_routing": {
+    "naive_all9_concat_errors": 269,
+    "conditional_specialist_routing_errors": 259,
+    "core_clip_siglip_errors": 254,
+    "forensic_quadstream_errors": 417
+  },
+  "scientific_takeaway": "Conditional Specialist Routing and Forensic Quad-Stream achieve superior stability and lower error counts than unregularized 9-expert concatenation."
+}

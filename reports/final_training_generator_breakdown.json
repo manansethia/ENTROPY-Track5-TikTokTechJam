@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "generator_tpr": {
+    "QualityParadox_Photorealistic": 0.9952,
+    "SDXL_Base_Refiner": 0.9948,
+    "Midjourney_v5_v6": 0.9935,
+    "FLUX_SD3_FlowMatching": 0.994,
+    "Synthetic_SID_LatentDiffusion": 0.9685,
+    "PixArt_alpha_sigma": 0.9928,
+    "HFCF_HighFrequencyArtifacts": 0.9955,
+    "Defactify_AIGC": 0.991
+  }
+}

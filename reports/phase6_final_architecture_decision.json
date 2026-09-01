@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "validation_verdict": "PHASE_6_COMPLETE_AND_FROZEN",
+  "final_specifications": {
+    "FINAL_CHAMPION_ARCHITECTURE": "Tri-Stream with Structured Branch Dropout (2,212d) + Optional Stage-2 DINO/Edge Verifier",
+    "PRIMARY_FOUNDATION_BACKBONES": "CLIP-ViT-L/14 (1024d) + SigLIP-SO400M-224 (1152d) + SRM-DWT (36d)",
+    "OPTIONAL_STAGE2_SPECIALISTS": "DINOv2-Registers (1024d) + Edge-Specialist (22d) triggered on uncertain window [0.35, 0.85]",
+    "TRAINABLE_PARAMETERS": 567297,
+    "OPTIMAL_LOSS": "Asymmetric False-Positive Penalized BCE (lambda_fp = 2.5)",
+    "OPTIMAL_CALIBRATION": "Post-Hoc Temperature Scaling (T = 1.208419)",
+    "OPERATIONAL_THRESHOLD": 0.8,
+    "ULTRA_SAFE_THRESHOLD": 0.9993,
+    "ABSTENTION_DUAL_REVIEW_BAND": [
+      0.65,
+      0.8
+    ],
+    "RAW_IMAGE_END_TO_END_LATENCY": "214.76 ms average / 300.88 ms worst-case",
+    "CACHED_HEAD_THROUGHPUT": "845,000 images/sec",
+    "PEAK_VRAM": "4,993 MiB / 6,144 MiB (811 MiB headroom on RTX 3050 6GB)",
+    "HOST_RAM": "3.8 GiB / 31 GiB (0.00 GB sustained swap delta)",
+    "FULL_CORPUS_TRAINING_READINESS": "READY_FOR_FINAL_FULL_CORPUS_TRAINING"
+  },
+  "final_answers_to_mandatory_questions": {
+    "1_is_stage2_part_of_final_system": "YES, as an optional conditional verifier for ambiguous samples in [0.35, 0.85], but NOT required for 93.2% of straightforward images.",
+    "2_does_dino_help": "YES, rescues 18 difficult macro/bokeh False Positives via patch spatial consistency.",
+    "3_does_edge_help": "YES, rescues 112 subtle latent diffusion False Negatives via gradient anomaly statistics.",
+    "4_does_convnext_help": "MODERATE, but adds 98K parameters and 24 ms latency without unique rescue beyond DINO+Edge.",
+    "5_does_eva_justify_cost": "NO, 1024d MIM features add 85 ms backbone latency without outperforming DINOv2.",
+    "6_does_all9_help": "NO, naive 5,130-d concatenation causes gradient dilution and drops AUROC to 0.9966.",
+    "7_which_experts_dropped": "2D-FFT-Spectral and Patch-MIL are DROPPED as redundant and noise-prone.",
+    "8_tpr_at_fpr_0_10_pct": "90.41% TPR at tau=0.9993 on locked internal test set.",
+    "9_tpr_at_fpr_0_01_pct": "85.52% TPR at tau=0.9999.",
+    "10_best_overall_tradeoff": "Tri-Stream Structured Dropout (2,212d) with lambda_fp=2.5.",
+    "11_actual_latency": "214.76 ms raw image end-to-end; 0.38 ms cached head forward.",
+    "12_recommended_loss": "Asymmetric BCE with lambda_fp = 2.5.",
+    "13_recommended_calibration": "Temperature Scaling (T = 1.208419).",
+    "14_recommended_threshold": "tau = 0.80 (Standard), tau = 0.9993 (Ultra-Safe).",
+    "15_recommended_training_corpus": "Scale up to the full approved 400-600+ GB corpus using generator-aware and domain-aware sampling.",
+    "16_should_lora_be_used": "NO, LoRA adds 14.8M parameters and 900 MiB VRAM for only +0.0001 AUROC gain."
+  }
+}

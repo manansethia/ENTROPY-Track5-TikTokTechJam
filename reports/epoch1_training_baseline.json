@@ -1,0 +1,20 @@
+{
+  "epoch": 1,
+  "total_training_samples": 244255,
+  "epoch1_duration_seconds": 13656.86,
+  "epoch1_duration_hours": 3.79,
+  "average_loss": 0.45181,
+  "optimizer_steps": 3817,
+  "hardware": {
+    "cpu": "12th Gen Intel Core i5-12400F (6 physical cores, 12 logical threads)",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU (6,144 MiB VRAM, Ampere CC 8.6)",
+    "ram_gb": 31.17,
+    "storage": "NVMe SSD (476 GB)"
+  },
+  "baseline_throughput_samples_per_sec": 17.88,
+  "baseline_peak_vram_mb": 3661.2,
+  "parameter_hashes": {
+    "initial": "c6abc86155fb150a0e03fcfebb9b9aeb42c0458b4f0e92d3d2ddad173db79025",
+    "epoch1_checkpoint": "a6dbc938bcef3918a02c524310d7a5b3992d9f71295b3109a259cbb105e1974d"
+  }
+}

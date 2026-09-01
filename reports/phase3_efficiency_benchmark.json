@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-29T09:19:00Z",
+  "champion_id": "B_CLIP_SigLIP_mlp2",
+  "feature_dim": 2176,
+  "trainable_parameters": 558081,
+  "peak_vram_mb": 218.9,
+  "inference_speed_img_sec": 937454.5,
+  "preprocessing_pipeline": "Asynchronous NVMe Prefetch with Non-Blocking GPU Transfer",
+  "sustained_swap_delta_gb": 0.0
+}

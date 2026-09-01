@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-08-29T09:39:40Z",
+  "manifest_file": "/home/manan/aigc_robust_detection/manifests/phase2_150k_manifest.jsonl",
+  "manifest_sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+  "total_records": 103137,
+  "partitions": {
+    "FINAL_TRAIN": 72509,
+    "FINAL_DEV": 6000,
+    "FINAL_CALIBRATION": 4000,
+    "LOCKED_INTERNAL_TEST": 10316
+  }
+}

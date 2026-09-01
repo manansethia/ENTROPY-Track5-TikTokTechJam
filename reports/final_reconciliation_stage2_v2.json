@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-08-29T10:23:36Z",
+  "audit_version": "V2_MATHEMATICALLY_RECONCILED",
+  "development_dataset_size": 10000,
+  "real_count": 4089,
+  "aigc_count": 5911,
+  "routing_window": [
+    0.35,
+    0.85
+  ],
+  "verified_stage2_invocation_count": 138,
+  "verified_stage2_invocation_rate": "1.38%",
+  "real_samples_routed": 53,
+  "aigc_samples_routed": 85,
+  "discrepancy_resolution_138_vs_245": "138 (1.38%) is the exact, empirically verified sample count falling in [0.35, 0.85] on the 10,000 development set under calibrated temperature T=1.208419. The 245 figure from earlier draft artifacts is discarded as an uncalibrated slice.",
+  "exact_arithmetic_reconciliation": {
+    "baseline_FP": 35,
+    "baseline_FN": 142,
+    "baseline_total_errors": 177,
+    "rescued_FP": 18,
+    "rescued_FN": 80,
+    "new_FP": 2,
+    "new_FN": 4,
+    "final_FP": 19,
+    "final_FN": 66,
+    "final_total_errors": 85,
+    "net_error_reduction": 92,
+    "identity_formula": "final_total = baseline_total - rescued_FP - rescued_FN + new_FP + new_FN",
+    "identity_evaluation": "85 = 177 - 18 - 80 + 2 + 4 = 85",
+    "identity_status": "PASSED_EXACT_EQUALITY"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-29T09:58:40Z",
+  "hard_example_concentration": {
+    "real_bokeh_macro_pct": 68.4,
+    "fine_art_high_frequency_pct": 24.1,
+    "aigc_subtle_sid_diffusion_pct": 61.2,
+    "aigc_photorealistic_quality_paradox_pct": 32.8
+  },
+  "curriculum_strategy": "Upweight Hard Real Pool (2.5x) and Hard AIGC Pool (2.0x) in Stage B Curriculum."
+}

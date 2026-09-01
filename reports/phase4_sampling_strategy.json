@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-08-29T09:30:51Z",
+  "strategy_name": "Strategy E Generator-Aware & Domain-Aware Hybrid Sampling",
+  "weights": {
+    "Synthetic_QualityParadox_ModernDiffusion": 1.5,
+    "Synthetic_SID_Diffusion": 1.3,
+    "Synthetic_HighFrequency_CF": 0.8,
+    "wikiart_fine_art": 1.2,
+    "loose_authentic_corpus": 1.0
+  }
+}

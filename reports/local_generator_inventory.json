@@ -1,0 +1,131 @@
+{
+  "report_id": "LOCAL_GENERATOR_INVENTORY",
+  "search_roots": [
+    "/mnt/ai-storage/aigc_data",
+    "/home/manan/aigc_robust_detection"
+  ],
+  "scanned_directory_count": 37,
+  "target_families": [
+    {
+      "family_id": "GLIDE",
+      "full_name": "GLIDE (Guided Language-to-Image Diffusion for Generation and Editing)",
+      "architecture_type": "Pixel-Space Cascaded Diffusion (No VAE Latents)",
+      "manifest_v6_count": 0,
+      "local_storage_status": "ABSENT",
+      "local_path": "N/A",
+      "sample_count": 0,
+      "verdict": "ABSENT",
+      "priority": "HIGH_PRIORITY_EXPANSION",
+      "scientific_rationale": "Pure pixel diffusion operates directly in RGB space without VAE autoencoder latent patch artifacts. Crucial for cross-generator robustness."
+    },
+    {
+      "family_id": "ADM",
+      "full_name": "Ablated Diffusion Models (ADM / Guided Diffusion)",
+      "architecture_type": "Pixel-Space Guided Diffusion Models",
+      "manifest_v6_count": 0,
+      "local_storage_status": "ABSENT",
+      "local_path": "N/A",
+      "sample_count": 0,
+      "verdict": "ABSENT",
+      "priority": "HIGH_PRIORITY_EXPANSION",
+      "scientific_rationale": "Foundational pixel diffusion architecture with classifier guidance; distinct frequency and noise schedule footprint."
+    },
+    {
+      "family_id": "BigGAN",
+      "full_name": "BigGAN / Generative Adversarial Networks",
+      "architecture_type": "Adversarial Generative Network (Non-Diffusion)",
+      "manifest_v6_count": 0,
+      "local_storage_status": "ABSENT",
+      "local_path": "N/A",
+      "sample_count": 0,
+      "verdict": "ABSENT",
+      "priority": "HIGH_PRIORITY_EXPANSION",
+      "scientific_rationale": "Completely non-diffusion architecture (discriminator-guided generator). Essential to prevent detector from collapsing to pure diffusion artifacts."
+    },
+    {
+      "family_id": "VQDM",
+      "full_name": "Vector Quantized Diffusion Models (VQ-Diffusion)",
+      "architecture_type": "Discrete Latent Codebook Diffusion",
+      "manifest_v6_count": 0,
+      "local_storage_status": "ABSENT",
+      "local_path": "N/A",
+      "sample_count": 0,
+      "verdict": "ABSENT",
+      "priority": "HIGH_PRIORITY_EXPANSION",
+      "scientific_rationale": "Operates over discrete VQ token spaces rather than continuous Gaussian latent space."
+    },
+    {
+      "family_id": "Wukong",
+      "full_name": "Wukong Text-to-Image Diffusion",
+      "architecture_type": "Bilingual / Cross-Lingual Latent Diffusion",
+      "manifest_v6_count": 0,
+      "local_storage_status": "ABSENT",
+      "local_path": "N/A",
+      "sample_count": 0,
+      "verdict": "ABSENT",
+      "priority": "HIGH_PRIORITY_EXPANSION",
+      "scientific_rationale": "Different text-encoder alignment and multilingual prompt latent conditioning."
+    },
+    {
+      "family_id": "SD2_x",
+      "full_name": "Stable Diffusion 2.0 / 2.1 (v-prediction, 768px)",
+      "architecture_type": "v-Objective Latent Diffusion (OpenCLIP ViT-H)",
+      "manifest_v6_count": 0,
+      "local_storage_status": "PRESENT_WEAK (Small unverified samples in diverse pool)",
+      "local_path": "N/A",
+      "sample_count": 0,
+      "verdict": "PRESENT_WEAK",
+      "priority": "HIGH_PRIORITY_EXPANSION",
+      "scientific_rationale": "v-prediction formulation and OpenCLIP text encoder create different latent noise dynamics compared to SD 1.x / SDXL."
+    },
+    {
+      "family_id": "DALLE2_UnCLIP",
+      "full_name": "DALL-E 2 / UnCLIP Architecture",
+      "architecture_type": "Cascaded Diffusion + CLIP Latent Prior",
+      "manifest_v6_count": 0,
+      "local_storage_status": "ABSENT",
+      "local_path": "N/A",
+      "sample_count": 0,
+      "verdict": "PUBLIC_TRAINING_DATA_UNAVAILABLE",
+      "priority": "RESTRICTED (Proprietary OpenAI, research-equivalent cascaded diffusion sought)",
+      "scientific_rationale": "Proprietary commercial API. Must be remediated via public cascaded diffusion equivalents (e.g. DeepFloyd-IF / GLIDE)."
+    },
+    {
+      "family_id": "FLUX_SD3",
+      "full_name": "FLUX.1 / Stable Diffusion 3 (MMDiT / Rectified Flow)",
+      "architecture_type": "Rectified Flow / Multimodal Diffusion Transformer (MMDiT)",
+      "manifest_v6_count": 0,
+      "local_storage_status": "PRESENT_BUT_UNUSABLE (Compressed raw archives ~62 GB, small 10-sample unpacked test folders)",
+      "local_path": "/mnt/ai-storage/aigc_data/datasets/flux_sd3_genimagepp/archives/",
+      "sample_count": 34,
+      "verdict": "PRESENT_BUT_UNUSABLE",
+      "priority": "TARGETED_LOCAL_UNPACKING",
+      "scientific_rationale": "Modern flow-matching and transformer-based diffusion architectures."
+    },
+    {
+      "family_id": "SDXL_Midjourney",
+      "full_name": "SDXL & Midjourney v5/v6",
+      "architecture_type": "Large-Scale Latent Diffusion Ensemble",
+      "manifest_v6_count": 16390,
+      "local_storage_status": "PRESENT_STRONG",
+      "local_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/synthetic/",
+      "sample_count": 16390,
+      "verdict": "PRESENT_STRONG",
+      "priority": "SUFFICIENT (No expansion needed)",
+      "scientific_rationale": "Well-represented in current corpus (16,390 training images)."
+    },
+    {
+      "family_id": "Photorealism_FineTunes",
+      "full_name": "Quality Paradox / RealisticVision Fine-Tunes",
+      "architecture_type": "High-Fidelity Photorealism Latent Diffusion",
+      "manifest_v6_count": 22569,
+      "local_storage_status": "PRESENT_STRONG",
+      "local_path": "/mnt/ai-storage/aigc_data/datasets/phase2_unpacked/quality_paradox/",
+      "sample_count": 22569,
+      "verdict": "PRESENT_STRONG",
+      "priority": "SUFFICIENT (No expansion needed)",
+      "scientific_rationale": "Well-represented in current corpus (22,569 training images)."
+    }
+  ],
+  "audited_at": "2026-08-30T04:46:32Z"
+}

@@ -1,0 +1,161 @@
+{
+  "inventory": [
+    {
+      "dataset_name": "balanced_scaled_train",
+      "path": "/mnt/ai-storage/aigc_data/datasets/balanced_scaled_train",
+      "total_files": 11713,
+      "inferred_type": "MIXED/UNCLASSIFIED",
+      "generator_source": "Unknown",
+      "sample_resolution": "~690x535",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/balanced_scaled_train/real/coco_000000474021.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/balanced_scaled_train/real/coco_000000249219.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/balanced_scaled_train/real/coco_000000561256.jpg"
+      ]
+    },
+    {
+      "dataset_name": "cf_slice",
+      "path": "/mnt/ai-storage/aigc_data/datasets/cf_slice",
+      "total_files": 5986,
+      "inferred_type": "MIXED/UNCLASSIFIED",
+      "generator_source": "Unknown",
+      "sample_resolution": "~552x497",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/cf_slice/real/000000219440.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/cf_slice/real/000000503823.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/cf_slice/real/000000482487.jpg"
+      ]
+    },
+    {
+      "dataset_name": "extracted_parquet_pool",
+      "path": "/mnt/ai-storage/aigc_data/datasets/extracted_parquet_pool",
+      "total_files": 131806,
+      "inferred_type": "MIXED/UNCLASSIFIED",
+      "generator_source": "Unknown",
+      "sample_resolution": "~704x704",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/extracted_parquet_pool/defactify_synthetic/f5b1ad3fde959a6bea2b1ae75f07e25af9ad8fa04e6e099632c6a0b978bdedcc.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/extracted_parquet_pool/defactify_synthetic/ccb48d8254d7539ff64d243a2c972d23be95cdbf7d687767e345e1c1ebedaa53.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/extracted_parquet_pool/defactify_synthetic/2cfd74144f07496b5dd0690609c584655c699877b0d3be82775afc56136cc088.jpg"
+      ]
+    },
+    {
+      "dataset_name": "hard_negative_remediation",
+      "path": "/mnt/ai-storage/aigc_data/datasets/hard_negative_remediation",
+      "total_files": 5066,
+      "inferred_type": "MIXED/UNCLASSIFIED",
+      "generator_source": "Unknown",
+      "sample_resolution": "~939x788",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/hard_negative_remediation/jpeg_compressed/jpeg_compressed_00915.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/hard_negative_remediation/jpeg_compressed/jpeg_compressed_00583.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/hard_negative_remediation/jpeg_compressed/jpeg_compressed_00759.jpg"
+      ]
+    },
+    {
+      "dataset_name": "massive_balanced_50k",
+      "path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k",
+      "total_files": 34746,
+      "inferred_type": "MIXED/UNCLASSIFIED",
+      "generator_source": "Unknown",
+      "sample_resolution": "~835x696",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00015-of-00249_real_00130.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00002-of-00249_real_00094.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00029-of-00249_real_00055.jpg"
+      ]
+    },
+    {
+      "dataset_name": "ntire_2026_robust_train",
+      "path": "/mnt/ai-storage/aigc_data/datasets/ntire_2026_robust_train",
+      "total_files": 250001,
+      "inferred_type": "AIGC",
+      "generator_source": "ntire_2026_robust_train",
+      "sample_resolution": "~1415x1312",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/ntire_2026_robust_train/extracted/shard_3/images/db03f66810d4a88bc260.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/ntire_2026_robust_train/extracted/shard_3/images/8e1bfa70a73d7f73fe25.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/ntire_2026_robust_train/extracted/shard_3/images/4b51a109323b945aeadb.jpg"
+      ]
+    },
+    {
+      "dataset_name": "portrait_remediation",
+      "path": "/mnt/ai-storage/aigc_data/datasets/portrait_remediation",
+      "total_files": 4239,
+      "inferred_type": "REAL",
+      "generator_source": "Authentic_Photography",
+      "sample_resolution": "~1550x1279",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/portrait_remediation/real_selfie/ultra_4fa229c7362f0477.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/portrait_remediation/real_highres/ultra_7ee316a8adc595fb.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/portrait_remediation/real_highres/ultra_82b7ce259da71b27.jpg"
+      ]
+    },
+    {
+      "dataset_name": "remediation_expansion_pool",
+      "path": "/mnt/ai-storage/aigc_data/datasets/remediation_expansion_pool",
+      "total_files": 13500,
+      "inferred_type": "MIXED/UNCLASSIFIED",
+      "generator_source": "Unknown",
+      "sample_resolution": "~256x256",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/remediation_expansion_pool/ADM_PixelDiffusion/ADM_PixelDiffusion_7fc3a255f7fb4520.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/remediation_expansion_pool/ADM_PixelDiffusion/ADM_PixelDiffusion_579628b5510cca18.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/remediation_expansion_pool/ADM_PixelDiffusion/ADM_PixelDiffusion_fafecbf95eecae59.jpg"
+      ]
+    },
+    {
+      "dataset_name": "scaled_45k",
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_45k",
+      "total_files": 11569,
+      "inferred_type": "MIXED/UNCLASSIFIED",
+      "generator_source": "Unknown",
+      "sample_resolution": "~594x483",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/scaled_45k/real/coco_000000474021.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/scaled_45k/real/coco_000000249219.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/scaled_45k/real/coco_000000561256.jpg"
+      ]
+    },
+    {
+      "dataset_name": "scaled_massive",
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive",
+      "total_files": 45409,
+      "inferred_type": "MIXED/UNCLASSIFIED",
+      "generator_source": "Unknown",
+      "sample_resolution": "~782x672",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/scaled_massive/real/train-00002-of-00249_real_00094.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/scaled_massive/real/train-00002-of-00249_real_00035.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/scaled_massive/real/coco_000000474021.jpg"
+      ]
+    },
+    {
+      "dataset_name": "scaled_train",
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_train",
+      "total_files": 9000,
+      "inferred_type": "MIXED/UNCLASSIFIED",
+      "generator_source": "Unknown",
+      "sample_resolution": "~512x512",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/scaled_train/synthetic/HFCF_small_2_fake_00641.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/scaled_train/synthetic/HFCF_small_2_fake_00060.jpg",
+        "/mnt/ai-storage/aigc_data/datasets/scaled_train/synthetic/HFCF_small_3_fake_01186.jpg"
+      ]
+    },
+    {
+      "dataset_name": "synthbuster",
+      "path": "/mnt/ai-storage/aigc_data/datasets/synthbuster",
+      "total_files": 9000,
+      "inferred_type": "AIGC",
+      "generator_source": "synthbuster",
+      "sample_resolution": "~1263x987",
+      "sample_files": [
+        "/mnt/ai-storage/aigc_data/datasets/synthbuster/synthbuster/midjourney-v5/r0b6e4254t.png",
+        "/mnt/ai-storage/aigc_data/datasets/synthbuster/synthbuster/midjourney-v5/r13907965t.png",
+        "/mnt/ai-storage/aigc_data/datasets/synthbuster/synthbuster/midjourney-v5/r12cbfb1et.png"
+      ]
+    }
+  ],
+  "timestamp": "2026-08-31T05:49:36Z"
+}

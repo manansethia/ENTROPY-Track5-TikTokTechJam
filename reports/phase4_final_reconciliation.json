@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-08-29T09:46:20Z",
+  "reconciliation_verdict": "PHASE_4_FULLY_RECONCILED_AND_VERIFIED",
+  "authoritative_champion_summary": {
+    "VERIFIED_PHASE4_CHAMPION": "Cand_C_Structured_Dropout",
+    "VERIFIED_CHECKPOINT": "/home/manan/aigc_robust_detection/checkpoints/phase4/phase4_champion_model.pt",
+    "VERIFIED_CHECKPOINT_SHA256": "b53479d0aa7c4eb1f4af9e8f4d6a39fc53ac260fdea7b58b42bc68253de37b59",
+    "VERIFIED_ARCHITECTURE": "Tri-Stream (CLIP-ViT-L/14 + SigLIP-SO400M-224 + SRM-DWT)",
+    "VERIFIED_FEATURE_DIM": 2212,
+    "VERIFIED_HEAD_TYPE": "Structured Branch Dropout MLP (drop_prob=0.15, hidden_dim=256, LayerNorm, GELU)",
+    "VERIFIED_TRAINABLE_PARAMS": 567297,
+    "VERIFIED_TRAINING_SCALE": 72509,
+    "VERIFIED_CALIBRATION_TEMPERATURE": 1.208418607711792,
+    "VERIFIED_THRESHOLD": 0.8,
+    "DATA_GOVERNANCE_STATUS": "100% PRISTINE (Zero overlap between Train, Dev, Cal, and Locked Test)",
+    "REPORT_CONSISTENCY_STATUS": "100% CONSISTENT (All 22 Phase-4 reports aligned with verified checkpoint)"
+  },
+  "verified_metrics": {
+    "pristine_final_dev_6k": {
+      "sample_count": 6000,
+      "real_samples": 2463,
+      "aigc_samples": 3537,
+      "AUROC": 0.999,
+      "AUPRC": 0.9993,
+      "Brier": 0.0108,
+      "FPR_080": 0.0097,
+      "TPR_080": 0.9822,
+      "FP_count_080": 24,
+      "FN_count_080": 63,
+      "total_errors_080": 87
+    },
+    "locked_internal_test_10k": {
+      "sample_count": 10316,
+      "real_samples": 4238,
+      "aigc_samples": 6078,
+      "AUROC": 0.9986,
+      "AUPRC": 0.9991,
+      "Brier": 0.0126,
+      "ECE": 0.0084,
+      "FPR_080": 0.0099,
+      "TPR_080": 0.9788,
+      "TP_count_080": 5949,
+      "TN_count_080": 4196,
+      "FP_count_080": 42,
+      "FN_count_080": 129,
+      "total_errors_080": 171
+    },
+    "locked_ood_benchmarks": {
+      "Synthbuster_9K_Zenodo": {
+        "sample_count": 9000,
+        "AUROC": 0.9856,
+        "AUPRC": 0.9882,
+        "FPR_080": 0.0112,
+        "TPR_080": 0.948
+      },
+      "AIGIBench_Evaluation": {
+        "AUROC": 0.9825,
+        "AUPRC": 0.986
+      }
+    }
+  },
+  "contradiction_resolution_detail": {
+    "issue": "phase4_final_report.json previously cited Cand_C_CLIP_SigLIP_Edge while all other reports and checkpoints cited Cand_C_Structured_Dropout.",
+    "cause": "Re-use of candidate letter 'Cand_C' in two sequential script pipelines: execute_phase4_master.py (micro-challenge probe sweep) vs phase4_master_execution_pipeline.py (full-scale pristine bake-off).",
+    "resolution": "phase4_final_report.json updated with Cand_C_Structured_Dropout, matching the actual saved PyTorch model state and test outputs."
+  }
+}

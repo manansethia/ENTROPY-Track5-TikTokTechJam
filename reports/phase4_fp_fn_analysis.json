@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-08-29T09:31:25Z",
+  "hard_negatives_identified": "COCO macro photography with studio flash and strong bokeh blur",
+  "hard_positives_identified": "SID low-step latent diffusion images without upsampler residuals",
+  "curriculum_recommendation": "Maintain 1.5x upweighting on Quality Paradox and 1.3x on SID Diffusion in Strategy E"
+}

@@ -1,0 +1,371 @@
+{
+  "image_path": "/home/manan/aigc_robust_detection/test_inputs/lake-landscape-photo-m.jpg",
+  "filename": "lake-landscape-photo-m.jpg",
+  "original_resolution": "1200x674",
+  "elapsed_seconds": 0.33,
+  "global_inference": {
+    "ai_probability": 0.9983,
+    "classification": "AIGC",
+    "specialist_probabilities": {
+      "C0": 0.9957,
+      "C1": 0.505,
+      "C2": 0.5217,
+      "C3": 0.5,
+      "C4": 1.0,
+      "C5": 1.0,
+      "C6": 0.9999,
+      "C7": 0.9019
+    },
+    "gating_weights": {
+      "C0": 0.0274,
+      "C1": 0.0213,
+      "C2": 0.4468,
+      "C3": 0.0176,
+      "C4": 0.2723,
+      "C5": 0.1797,
+      "C6": 0.0222,
+      "C7": 0.0126
+    }
+  },
+  "patch_inference": {
+    "total_patches_evaluated": 10,
+    "scales_used": [
+      1024,
+      768,
+      512
+    ],
+    "mean_patch_probability": 0.9964,
+    "max_patch_probability": 0.9998,
+    "patch_std_deviation": 0.0028
+  },
+  "forensic_verdict": {
+    "classification": "FULL-AIGC (SYNTHETIC GENERATION)",
+    "global_ai_probability": 0.9983,
+    "localized_ai_probability": 0.9998,
+    "suspicious_region_count": 1,
+    "interpretation": "AI generation evidence is broadly and uniformly distributed across all scales and regions."
+  },
+  "suspicious_regions": [
+    {
+      "region_id": "R1",
+      "box": [
+        0,
+        0,
+        1197,
+        671
+      ],
+      "coordinates": "x=0, y=0, w=1197, h=671",
+      "peak_probability": 0.9988,
+      "mean_probability": 0.9963,
+      "dominant_expert": "C2",
+      "cross_scale_consistency": "High",
+      "scales_detected": [
+        1024,
+        768,
+        512
+      ]
+    }
+  ],
+  "patch_records": [
+    {
+      "patch_id": "P_1024_0000",
+      "scale": 1024,
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 674,
+      "fused_prob": 0.9914541244506836,
+      "dominant_expert": "C2",
+      "weights": [
+        0.0312,
+        0.0252,
+        0.4413,
+        0.0198,
+        0.2771,
+        0.171,
+        0.0211,
+        0.0133
+      ],
+      "specialist_probs": [
+        0.9947,
+        0.469,
+        0.0593,
+        0.5,
+        1.0,
+        1.0,
+        0.9999,
+        0.7278
+      ]
+    },
+    {
+      "patch_id": "P_1024_0001",
+      "scale": 1024,
+      "x": 176,
+      "y": 0,
+      "width": 1024,
+      "height": 674,
+      "fused_prob": 0.9981720447540283,
+      "dominant_expert": "C2",
+      "weights": [
+        0.0277,
+        0.022,
+        0.433,
+        0.0176,
+        0.2758,
+        0.1894,
+        0.0219,
+        0.0125
+      ],
+      "specialist_probs": [
+        0.9955,
+        0.5164,
+        0.2849,
+        0.5,
+        1.0,
+        1.0,
+        0.9999,
+        0.6019
+      ]
+    },
+    {
+      "patch_id": "P_768_0002",
+      "scale": 768,
+      "x": 0,
+      "y": 0,
+      "width": 768,
+      "height": 674,
+      "fused_prob": 0.9958463311195374,
+      "dominant_expert": "C2",
+      "weights": [
+        0.0297,
+        0.0222,
+        0.4375,
+        0.0194,
+        0.2788,
+        0.175,
+        0.0236,
+        0.0138
+      ],
+      "specialist_probs": [
+        0.9954,
+        0.5276,
+        0.1915,
+        0.5,
+        1.0,
+        1.0,
+        0.9991,
+        0.9241
+      ]
+    },
+    {
+      "patch_id": "P_768_0003",
+      "scale": 768,
+      "x": 432,
+      "y": 0,
+      "width": 768,
+      "height": 674,
+      "fused_prob": 0.9976861476898193,
+      "dominant_expert": "C2",
+      "weights": [
+        0.0276,
+        0.0218,
+        0.4501,
+        0.0169,
+        0.2799,
+        0.1732,
+        0.0189,
+        0.0117
+      ],
+      "specialist_probs": [
+        0.9965,
+        0.5337,
+        0.3567,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        0.832
+      ]
+    },
+    {
+      "patch_id": "P_512_0004",
+      "scale": 512,
+      "x": 0,
+      "y": 0,
+      "width": 512,
+      "height": 512,
+      "fused_prob": 0.9996836185455322,
+      "dominant_expert": "C2",
+      "weights": [
+        0.0244,
+        0.0165,
+        0.3782,
+        0.0151,
+        0.3122,
+        0.2134,
+        0.0284,
+        0.0117
+      ],
+      "specialist_probs": [
+        0.9948,
+        0.4866,
+        0.7217,
+        0.5,
+        1.0,
+        1.0,
+        0.993,
+        0.9428
+      ]
+    },
+    {
+      "patch_id": "P_512_0005",
+      "scale": 512,
+      "x": 409,
+      "y": 0,
+      "width": 512,
+      "height": 512,
+      "fused_prob": 0.9965575933456421,
+      "dominant_expert": "C2",
+      "weights": [
+        0.0243,
+        0.0167,
+        0.4142,
+        0.0139,
+        0.3086,
+        0.1921,
+        0.0196,
+        0.0104
+      ],
+      "specialist_probs": [
+        0.9952,
+        0.4498,
+        0.8214,
+        0.5,
+        0.9999,
+        1.0,
+        0.9979,
+        0.615
+      ]
+    },
+    {
+      "patch_id": "P_512_0006",
+      "scale": 512,
+      "x": 688,
+      "y": 0,
+      "width": 512,
+      "height": 512,
+      "fused_prob": 0.9997934699058533,
+      "dominant_expert": "C2",
+      "weights": [
+        0.0231,
+        0.0168,
+        0.4238,
+        0.0147,
+        0.2847,
+        0.2023,
+        0.0233,
+        0.0114
+      ],
+      "specialist_probs": [
+        0.9957,
+        0.4714,
+        0.956,
+        0.5,
+        1.0,
+        1.0,
+        0.9993,
+        0.9711
+      ]
+    },
+    {
+      "patch_id": "P_512_0007",
+      "scale": 512,
+      "x": 0,
+      "y": 162,
+      "width": 512,
+      "height": 512,
+      "fused_prob": 0.9953975081443787,
+      "dominant_expert": "C2",
+      "weights": [
+        0.032,
+        0.0239,
+        0.4242,
+        0.022,
+        0.2657,
+        0.1868,
+        0.0295,
+        0.0158
+      ],
+      "specialist_probs": [
+        0.9974,
+        0.5076,
+        0.1227,
+        0.5,
+        1.0,
+        1.0,
+        0.9982,
+        0.6191
+      ]
+    },
+    {
+      "patch_id": "P_512_0008",
+      "scale": 512,
+      "x": 409,
+      "y": 162,
+      "width": 512,
+      "height": 512,
+      "fused_prob": 0.9914310574531555,
+      "dominant_expert": "C2",
+      "weights": [
+        0.0281,
+        0.0218,
+        0.4431,
+        0.0167,
+        0.2886,
+        0.1723,
+        0.0177,
+        0.0116
+      ],
+      "specialist_probs": [
+        0.9941,
+        0.5289,
+        0.2846,
+        0.5,
+        1.0,
+        1.0,
+        0.9998,
+        0.633
+      ]
+    },
+    {
+      "patch_id": "P_512_0009",
+      "scale": 512,
+      "x": 688,
+      "y": 162,
+      "width": 512,
+      "height": 512,
+      "fused_prob": 0.9980081915855408,
+      "dominant_expert": "C2",
+      "weights": [
+        0.0279,
+        0.0208,
+        0.4354,
+        0.0183,
+        0.2751,
+        0.1846,
+        0.0245,
+        0.0134
+      ],
+      "specialist_probs": [
+        0.9956,
+        0.5337,
+        0.446,
+        0.5,
+        1.0,
+        1.0,
+        0.9991,
+        0.9029
+      ]
+    }
+  ]
+}

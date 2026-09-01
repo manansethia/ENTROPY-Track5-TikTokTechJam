@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "cached_vector_head_throughput": "845,000 vectors/sec",
+  "raw_image_end_to_end_latency_ms": {
+    "stage1_only_ms": 208.48,
+    "weighted_pipeline_ms": 214.76,
+    "worst_case_ms": 300.88
+  },
+  "peak_vram_mib": 4993,
+  "host_ram_gib": 3.8
+}

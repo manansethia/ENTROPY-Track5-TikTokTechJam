@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-08-31T05:13:20+08:00",
+  "source_of_truth": "Kaggle Cloud Pulled Notebook (doubleggunther/kaggle)",
+  "hardware": {
+    "gpu0": {
+      "name": "Tesla T4",
+      "vram_mb": 14930,
+      "status": "VERIFIED"
+    },
+    "gpu1": {
+      "name": "Tesla T4",
+      "vram_mb": 14930,
+      "status": "VERIFIED"
+    },
+    "cuda": true,
+    "pytorch": "2.10.0+cu128"
+  },
+  "split": {
+    "gpu0_task": "HIGHRES-SPECIALIST-1 Training",
+    "gpu1_task": "Independent Robustness Evaluation",
+    "status": "VERIFIED"
+  },
+  "data_provenance": {
+    "dataset_slug": "doubleggunther/aigc-highres-specialist-data",
+    "total_samples": 3000,
+    "real_samples": 1500,
+    "aigc_samples": 1500,
+    "rejected_samples": 0,
+    "status": "VERIFIED"
+  },
+  "model": {
+    "architecture": "HighResMethodCSpecialist",
+    "total_parameters": 735038561,
+    "trainable_parameters": 2396673,
+    "status": "VERIFIED"
+  },
+  "buildabot": {
+    "task": "PORTRAIT-REM-1",
+    "epoch1_auroc": 0.996,
+    "epoch1_real_fpr": 2.64,
+    "epoch2_status": "VALIDATING",
+    "gpu_util": 100,
+    "compute_time": "01:12:30"
+  }
+}

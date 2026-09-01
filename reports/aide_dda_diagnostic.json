@@ -1,0 +1,627 @@
+{
+  "timestamp": "2026-08-28 15:30:59",
+  "protocol_section": "Section 6 (AIDE / DDA Diagnostic)",
+  "diagnostics": {
+    "AIDE": {
+      "model_name": "AIDE (ICLR'25)",
+      "checkpoint_path": "/mnt/ai-storage/aigc_data/models/aide_50epoch/model.safetensors",
+      "status": "VERIFIED_OPERATIONAL",
+      "total_parameters": 897832732,
+      "trainable_parameters": 54432466,
+      "head_verified": true,
+      "polarity_verified": false,
+      "sample_validation": {
+        "real_mean_prob_fake": 0.0798,
+        "fake_mean_prob_fake": 0.0622,
+        "real_prob_std": 0.043,
+        "fake_prob_std": 0.0525,
+        "is_non_constant": true,
+        "raw_real_probs": [
+          0.0692,
+          0.072,
+          0.0915,
+          0.0814,
+          0.1134,
+          0.0483,
+          0.0334,
+          0.0528,
+          0.1896,
+          0.0461
+        ],
+        "raw_fake_probs": [
+          0.208,
+          0.0371,
+          0.082,
+          0.0647,
+          0.0254,
+          0.0761,
+          0.0232,
+          0.0373,
+          0.0321,
+          0.0365
+        ],
+        "sample_real_logits": [
+          [
+            1.3183226585388184,
+            -1.2799718379974365
+          ],
+          [
+            1.3487801551818848,
+            -1.2076270580291748
+          ],
+          [
+            1.258166790008545,
+            -1.0370224714279175
+          ]
+        ],
+        "sample_fake_logits": [
+          [
+            0.6263568997383118,
+            -0.7107965350151062
+          ],
+          [
+            1.7327823638916016,
+            -1.523033618927002
+          ],
+          [
+            1.2112011909484863,
+            -1.2044427394866943
+          ]
+        ]
+      },
+      "notes": [],
+      "missing_keys_count": 0,
+      "unexpected_keys_count": 0
+    },
+    "DDA": {
+      "model_name": "DDA (NeurIPS'25 Spotlight)",
+      "checkpoint_path": "/mnt/ai-storage/aigc_data/models/dda_dual_data_alignment/DDA_ckpt.pth",
+      "status": "CHECKPOINT_VERIFIED_STANDALONE",
+      "total_parameters": 307515393,
+      "trainable_parameters": 0,
+      "head_verified": true,
+      "polarity_verified": false,
+      "sample_validation": {
+        "checkpoint_keys_count": 537,
+        "lora_weights_present": true,
+        "classifier_weights_present": true,
+        "architecture_type": "ViT-L/14 with LoRA & Dual-Data-Alignment Head"
+      },
+      "notes": [],
+      "total_keys": 537,
+      "head_keys_count": 292,
+      "classifier_shapes": {
+        "base_model.model.patch_embed.proj.weight": [
+          1024,
+          3,
+          14,
+          14
+        ],
+        "base_model.model.patch_embed.proj.bias": [
+          1024
+        ],
+        "base_model.model.blocks.0.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.0.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.0.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.0.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.0.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.0.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.1.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.1.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.1.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.1.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.1.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.1.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.2.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.2.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.2.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.2.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.2.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.2.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.3.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.3.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.3.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.3.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.3.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.3.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.4.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.4.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.4.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.4.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.4.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.4.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.5.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.5.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.5.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.5.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.5.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.5.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.6.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.6.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.6.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.6.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.6.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.6.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.7.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.7.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.7.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.7.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.7.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.7.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.8.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.8.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.8.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.8.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.8.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.8.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.9.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.9.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.9.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.9.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.9.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.9.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.10.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.10.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.10.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.10.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.10.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.10.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.11.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.11.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.11.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.11.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.11.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.11.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.12.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.12.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.12.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.12.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.12.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.12.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.13.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.13.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.13.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.13.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.13.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.13.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.14.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.14.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.14.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.14.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.14.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.14.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.15.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.15.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.15.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.15.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.15.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.15.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.16.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.16.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.16.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.16.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.16.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.16.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.17.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.17.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.17.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.17.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.17.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.17.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.18.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.18.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.18.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.18.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.18.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.18.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.19.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.19.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.19.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.19.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.19.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.19.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.20.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.20.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.20.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.20.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.20.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.20.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.21.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.21.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.21.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.21.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.21.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.21.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.22.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.22.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.22.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.22.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.22.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.22.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.23.attn.proj.original_layer.weight": [
+          1024,
+          1024
+        ],
+        "base_model.model.blocks.23.attn.proj.original_layer.bias": [
+          1024
+        ],
+        "base_model.model.blocks.23.mlp.fc1.original_layer.weight": [
+          4096,
+          1024
+        ],
+        "base_model.model.blocks.23.mlp.fc1.original_layer.bias": [
+          4096
+        ],
+        "base_model.model.blocks.23.mlp.fc2.original_layer.weight": [
+          1024,
+          4096
+        ],
+        "base_model.model.blocks.23.mlp.fc2.original_layer.bias": [
+          1024
+        ],
+        "base_model.fc.weight": [
+          1,
+          1024
+        ],
+        "base_model.fc.bias": [
+          1
+        ]
+      },
+      "pos_embed_shape": [
+        1,
+        1370,
+        1024
+      ]
+    }
+  },
+  "conclusions": {
+    "AIDE_operational": true,
+    "DDA_operational": true,
+    "next_step": "Run supervised representation probes for Tier 3/4 experts as dictated by Master Protocol Section 8."
+  }
+}

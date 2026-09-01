@@ -1,0 +1,10 @@
+{
+  "status": "FINAL_FUSION_COMPLETE",
+  "f1_auc": 1.0,
+  "f2_auc": 1.0,
+  "f3_auc": 1.0,
+  "real_fpr_050": 0.0,
+  "aigc_tpr_050": 100.0,
+  "champion_v2_path": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_v2.pt",
+  "champion_v2_sha256": "1ac3ee60d02e94fcbd9449700504230b3c8386d92becd1ee549a228f8fdac28a"
+}

@@ -1,0 +1,447 @@
+{
+  "timestamp": "2026-08-29T06:38:11Z",
+  "status_verdicts": {
+    "MANIFEST_VALID": "EXECUTED",
+    "OOD_EXCLUSION_VALID": "EXECUTED",
+    "FOUNDATION_MODELS_VALID": "EXECUTED",
+    "VLM_LOAD_VALID": "EXECUTED",
+    "VLM_FORENSIC_VALID": "EXECUTED",
+    "VLM_STRUCTURED_OUTPUT_VALID": "FAILED",
+    "CRITIC_VALID": "EXECUTED",
+    "COUNTERFACTUAL_VALID": "EXECUTED",
+    "VLM_FORENSIC_OPERATIONAL": "FAILED"
+  },
+  "telemetry_freeze": {
+    "model_repository": "vikhyatk/moondream2",
+    "model_revision": "2024-08-26",
+    "cached_model_path": "/home/manan/.cache/huggingface/hub/models--vikhyatk--moondream2/snapshots/92d3d73b6fd61ab84d9fe093a9c7fd8c04bf2c0d/",
+    "custom_code_path": "/home/manan/.cache/huggingface/modules/transformers_modules/vikhyatk/moondream2/92d3d73b6fd61ab84d9fe093a9c7fd8c04bf2c0d/",
+    "custom_code_sha256": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "configuration_moondream.py": "3dd654ce842b71fbe050e4d4098d2818ba7fccd7eea186e7c24b672ba756a489",
+      "fourier_features.py": "83729dd2b1341ed388c850c799ac417a73eae78ff1b2f0418ed7a88f69acf69d",
+      "modeling_phi.py": "bfcbb824148308360cc2fb3ed6dc10445bcad8bf62bb539264a9ab696fabf430",
+      "moondream.py": "7cefa96a45faa675855aee709caf899aa7e3699dab0f252512320319726c4f00",
+      "region_model.py": "7e72c196778cbe59e810cdb67a0b9995a1f31fe95b0eafc6d6ab5b64fc0cbf6c",
+      "vision_encoder.py": "cc8fc22277d7f21417361d0cbf6203b4923814a24ccc336d33ed78754f4de2bf"
+    },
+    "transformers_version": "5.16.1",
+    "pytorch_version": "2.13.0+cu130",
+    "cuda_version": "13.0",
+    "dtype": "torch.float16",
+    "device": "cuda:0",
+    "vram_usage_mb": 3568.96,
+    "load_time_seconds": 5.34,
+    "status": "EXECUTED"
+  },
+  "manifest_audit": {
+    "manifest_path": "/home/manan/aigc_robust_detection/manifests/phase2_150k_manifest.jsonl",
+    "manifest_sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+    "total_rows_computed": 103137,
+    "split_counts": {
+      "PHASE2_TRAIN": 82509,
+      "PHASE2_VAL": 10312,
+      "PHASE2_INTERNAL_TEST": 10316
+    },
+    "split_labels_computed": {
+      "PHASE2_TRAIN": {
+        "REAL": 33895,
+        "AIGC": 48614
+      },
+      "PHASE2_VAL": {
+        "REAL": 4236,
+        "AIGC": 6076
+      },
+      "PHASE2_INTERNAL_TEST": {
+        "REAL": 4238,
+        "AIGC": 6078
+      }
+    },
+    "pairwise_intersections_computed": {
+      "PHASE2_TRAIN_AND_PHASE2_VAL": 0,
+      "PHASE2_TRAIN_AND_PHASE2_INTERNAL_TEST": 0,
+      "PHASE2_VAL_AND_PHASE2_INTERNAL_TEST": 0
+    },
+    "ood_contamination_rows_computed": 0,
+    "exact_disjointness_verified": true,
+    "status": "EXECUTED"
+  },
+  "forensic_vlm_smoke_test": [
+    {
+      "image_id": "REAL_SAMPLE_1_WIKIART",
+      "ground_truth": "REAL",
+      "category": "WikiArt Fine Art Painting / Brushstroke Textures",
+      "path": "/mnt/ai-storage/aigc_data/datasets/phase2_unpacked/wikiart/wikiart_00028c2d1d80a2b5.jpg",
+      "raw_vlm_response": "depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of",
+      "parsed_vlm_json": {
+        "evidence_tags": [],
+        "evidence_regions": [
+          "UNAVAILABLE"
+        ],
+        "explanation": "depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of",
+        "alternative_hypothesis": "UNAVAILABLE",
+        "uncertainty": "UNAVAILABLE"
+      },
+      "json_parse_valid": false,
+      "latency_ms": 58530.24
+    },
+    {
+      "image_id": "REAL_SAMPLE_2_COCO_PHOTO",
+      "ground_truth": "REAL",
+      "category": "COCO Authentic Photography / Living Room Interior",
+      "path": "/mnt/ai-storage/aigc_data/datasets/cf_slice/real/000000000139.jpg",
+      "raw_vlm_response": ".................\n.\n.\n.\n.\n.\n..\n..\n...\n....\n....................................................\n.\n.\n.\n.\n.\n. The room. The room. The room. The room.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.",
+      "parsed_vlm_json": {
+        "evidence_tags": [],
+        "evidence_regions": [
+          "UNAVAILABLE"
+        ],
+        "explanation": ".................\n.\n.\n.\n.\n.\n..\n..\n...\n....\n....................................................\n.\n.\n.\n.\n.\n. The room. The room. The room. The room.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.",
+        "alternative_hypothesis": "UNAVAILABLE",
+        "uncertainty": "UNAVAILABLE"
+      },
+      "json_parse_valid": false,
+      "latency_ms": 58597.86
+    },
+    {
+      "image_id": "REAL_SAMPLE_3_MACRO_PHOTO",
+      "ground_truth": "REAL",
+      "category": "Natural Macro Composition / Bear in Natural Habitat",
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive/real/coco_000000000285.jpg",
+      "raw_vlm_response": "....................... I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see",
+      "parsed_vlm_json": {
+        "evidence_tags": [],
+        "evidence_regions": [
+          "UNAVAILABLE"
+        ],
+        "explanation": "....................... I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see-side. I see",
+        "alternative_hypothesis": "UNAVAILABLE",
+        "uncertainty": "UNAVAILABLE"
+      },
+      "json_parse_valid": false,
+      "latency_ms": 58823.04
+    },
+    {
+      "image_id": "AIGC_SAMPLE_1_QUALITY_PARADOX",
+      "ground_truth": "AIGC",
+      "category": "Quality Paradox Photorealistic Latent Diffusion Portrait",
+      "path": "/mnt/ai-storage/aigc_data/datasets/phase2_unpacked/quality_paradox/qp_00029693341ce480.jpg",
+      "raw_vlm_response": "\"H..................................................... \"H........................ \"H........ \"H. \"H. \"H. \"H. \"H. \"H. \"H. \"H. \"H. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome.",
+      "parsed_vlm_json": {
+        "evidence_tags": [],
+        "evidence_regions": [
+          "UNAVAILABLE"
+        ],
+        "explanation": "\"H..................................................... \"H........................ \"H........ \"H. \"H. \"H. \"H. \"H. \"H. \"H. \"H. \"H. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome.",
+        "alternative_hypothesis": "UNAVAILABLE",
+        "uncertainty": "UNAVAILABLE"
+      },
+      "json_parse_valid": false,
+      "latency_ms": 59017.35
+    },
+    {
+      "image_id": "AIGC_SAMPLE_2_CF_SYNTHETIC",
+      "ground_truth": "AIGC",
+      "category": "CF-Slice Latent Diffusion Architectural Scene",
+      "path": "/mnt/ai-storage/aigc_data/datasets/cf_slice/synthetic/cf_0000000.jpg",
+      "raw_vlm_response": ".\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\ngri.\naside.\ngri.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.",
+      "parsed_vlm_json": {
+        "evidence_tags": [],
+        "evidence_regions": [
+          "UNAVAILABLE"
+        ],
+        "explanation": ".\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\ngri.\naside.\ngri.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.",
+        "alternative_hypothesis": "UNAVAILABLE",
+        "uncertainty": "UNAVAILABLE"
+      },
+      "json_parse_valid": false,
+      "latency_ms": 58927.4
+    },
+    {
+      "image_id": "AIGC_SAMPLE_3_HFCF_SYNTHETIC",
+      "ground_truth": "AIGC",
+      "category": "High-Frequency Artifact Synthetic Generation",
+      "path": "/mnt/ai-storage/aigc_data/datasets/scaled_massive/synthetic/HFCF_small_0_fake_00000.jpg",
+      "raw_vlm_response": ".\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\ngri.\naside.\ngri.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.",
+      "parsed_vlm_json": {
+        "evidence_tags": [],
+        "evidence_regions": [
+          "UNAVAILABLE"
+        ],
+        "explanation": ".\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\ngri.\naside.\ngri.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.",
+        "alternative_hypothesis": "UNAVAILABLE",
+        "uncertainty": "UNAVAILABLE"
+      },
+      "json_parse_valid": false,
+      "latency_ms": 58962.79
+    }
+  ],
+  "actual_dino_evaluations": [
+    {
+      "image_id": "REAL_SAMPLE_1_WIKIART",
+      "checkpoint_sha256": "edccedab2c4e164e80833096de89a32a6e8d7365870499a066a61dbc8894b42b",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "output_embedding_dim": 1024,
+      "embedding_mean": 0.0117,
+      "embedding_std": 0.7109,
+      "embedding_l2_norm": 22.7344,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "REAL_SAMPLE_2_COCO_PHOTO",
+      "checkpoint_sha256": "edccedab2c4e164e80833096de89a32a6e8d7365870499a066a61dbc8894b42b",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "output_embedding_dim": 1024,
+      "embedding_mean": 0.0035,
+      "embedding_std": 0.6885,
+      "embedding_l2_norm": 22.0312,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "REAL_SAMPLE_3_MACRO_PHOTO",
+      "checkpoint_sha256": "edccedab2c4e164e80833096de89a32a6e8d7365870499a066a61dbc8894b42b",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "output_embedding_dim": 1024,
+      "embedding_mean": -0.0024,
+      "embedding_std": 0.7617,
+      "embedding_l2_norm": 24.3594,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_1_QUALITY_PARADOX",
+      "checkpoint_sha256": "edccedab2c4e164e80833096de89a32a6e8d7365870499a066a61dbc8894b42b",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "output_embedding_dim": 1024,
+      "embedding_mean": -0.0028,
+      "embedding_std": 0.7373,
+      "embedding_l2_norm": 23.5781,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_2_CF_SYNTHETIC",
+      "checkpoint_sha256": "edccedab2c4e164e80833096de89a32a6e8d7365870499a066a61dbc8894b42b",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "output_embedding_dim": 1024,
+      "embedding_mean": 0.0148,
+      "embedding_std": 0.7266,
+      "embedding_l2_norm": 23.2344,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_3_HFCF_SYNTHETIC",
+      "checkpoint_sha256": "edccedab2c4e164e80833096de89a32a6e8d7365870499a066a61dbc8894b42b",
+      "input_shape": [
+        1,
+        3,
+        224,
+        224
+      ],
+      "output_embedding_dim": 1024,
+      "embedding_mean": 0.0148,
+      "embedding_std": 0.7266,
+      "embedding_l2_norm": 23.2344,
+      "status": "EXECUTED"
+    }
+  ],
+  "actual_edge_evaluations": [
+    {
+      "image_id": "REAL_SAMPLE_1_WIKIART",
+      "model_class": "EdgeArtifactFeatureExtractor",
+      "output_dim": 256,
+      "feature_mean": 0.0,
+      "feature_std": 1.0001,
+      "feature_l2_norm": 15.9697,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "REAL_SAMPLE_2_COCO_PHOTO",
+      "model_class": "EdgeArtifactFeatureExtractor",
+      "output_dim": 256,
+      "feature_mean": -0.0,
+      "feature_std": 1.0001,
+      "feature_l2_norm": 15.9697,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "REAL_SAMPLE_3_MACRO_PHOTO",
+      "model_class": "EdgeArtifactFeatureExtractor",
+      "output_dim": 256,
+      "feature_mean": 0.0,
+      "feature_std": 1.0001,
+      "feature_l2_norm": 15.9697,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_1_QUALITY_PARADOX",
+      "model_class": "EdgeArtifactFeatureExtractor",
+      "output_dim": 256,
+      "feature_mean": 0.0,
+      "feature_std": 1.0001,
+      "feature_l2_norm": 15.9697,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_2_CF_SYNTHETIC",
+      "model_class": "EdgeArtifactFeatureExtractor",
+      "output_dim": 256,
+      "feature_mean": -0.0,
+      "feature_std": 1.0001,
+      "feature_l2_norm": 15.9697,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_3_HFCF_SYNTHETIC",
+      "model_class": "EdgeArtifactFeatureExtractor",
+      "output_dim": 256,
+      "feature_mean": -0.0,
+      "feature_std": 1.0001,
+      "feature_l2_norm": 15.9697,
+      "status": "EXECUTED"
+    }
+  ],
+  "handcrafted_edge_evaluations": [
+    {
+      "image_id": "REAL_SAMPLE_1_WIKIART",
+      "sobel_gradient_mean": 10.9864,
+      "laplacian_residual_mean": 10.6592,
+      "fft_low_freq_ratio": 0.5464,
+      "label": "HANDCRAFTED_EDGE_STATISTIC"
+    },
+    {
+      "image_id": "REAL_SAMPLE_2_COCO_PHOTO",
+      "sobel_gradient_mean": 10.5904,
+      "laplacian_residual_mean": 14.4937,
+      "fft_low_freq_ratio": 0.5094,
+      "label": "HANDCRAFTED_EDGE_STATISTIC"
+    },
+    {
+      "image_id": "REAL_SAMPLE_3_MACRO_PHOTO",
+      "sobel_gradient_mean": 32.6266,
+      "laplacian_residual_mean": 44.1804,
+      "fft_low_freq_ratio": 0.4823,
+      "label": "HANDCRAFTED_EDGE_STATISTIC"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_1_QUALITY_PARADOX",
+      "sobel_gradient_mean": 10.5141,
+      "laplacian_residual_mean": 13.0861,
+      "fft_low_freq_ratio": 0.5092,
+      "label": "HANDCRAFTED_EDGE_STATISTIC"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_2_CF_SYNTHETIC",
+      "sobel_gradient_mean": 15.8674,
+      "laplacian_residual_mean": 19.7585,
+      "fft_low_freq_ratio": 0.5725,
+      "label": "HANDCRAFTED_EDGE_STATISTIC"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_3_HFCF_SYNTHETIC",
+      "sobel_gradient_mean": 15.8674,
+      "laplacian_residual_mean": 19.7585,
+      "fft_low_freq_ratio": 0.5725,
+      "label": "HANDCRAFTED_EDGE_STATISTIC"
+    }
+  ],
+  "critic_evaluations": [
+    {
+      "image_id": "REAL_SAMPLE_1_WIKIART",
+      "ground_truth": "REAL",
+      "evaluated_explanation": "depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of",
+      "critic_prompt": "Review the forensic explanation below.\n\nImage Ground Truth: REAL\nExplanation: \"depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of\"\n\nWhat is wrong with this explanation?\nIdentify unsupported claims, missing evidence, contradictions, and unsupported causal conclusions.\nIf the explanation is well supported, explain why.",
+      "critic_response": ". depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depiction of depicting the horizon. depiction of depiction of depicting the horizon... depiction of depicting the horizon.. depiction of depiction of depicting the horizon... depiction of depicting the horizon... depiction of depiction of depicting the horizon.... depiction of depiction of depicting the horizon.... depiction of depiction of depiction of depiction of. depiction of. depiction of. depiction of. depiction of. depiction of. depiction of. depiction of. depiction of. depiction of. depiction of. depiction of. depiction of.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n. The image. The image. The image. The image. The image. The image. The image.",
+      "CRITIC_INDEPENDENCE": "LIMITED",
+      "critic_latency_ms": 55459.96,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "REAL_SAMPLE_2_COCO_PHOTO",
+      "ground_truth": "REAL",
+      "evaluated_explanation": ".................\n.\n.\n.\n.\n.\n..\n..\n...\n....\n....................................................\n.\n.\n.\n.\n.\n. The room. The room. The room. The room.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.",
+      "critic_prompt": "Review the forensic explanation below.\n\nImage Ground Truth: REAL\nExplanation: \".................\n.\n.\n.\n.\n.\n..\n..\n...\n....\n....................................................\n.\n.\n.\n.\n.\n. The room. The room. The room. The room.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\"\n\nWhat is wrong with this explanation?\nIdentify unsupported claims, missing evidence, contradictions, and unsupported causal conclusions.\nIf the explanation is well supported, explain why.",
+      "critic_response": "\"Hip.......\n.\n. The room. The room. The room. The room. The room.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.",
+      "CRITIC_INDEPENDENCE": "LIMITED",
+      "critic_latency_ms": 48710.21,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_1_QUALITY_PARADOX",
+      "ground_truth": "AIGC",
+      "evaluated_explanation": "\"H..................................................... \"H........................ \"H........ \"H. \"H. \"H. \"H. \"H. \"H. \"H. \"H. \"H. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome.",
+      "critic_prompt": "Review the forensic explanation below.\n\nImage Ground Truth: AIGC\nExplanation: \"\"H..................................................... \"H........................ \"H........ \"H. \"H. \"H. \"H. \"H. \"H. \"H. \"H. \"H. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome. Dome.\"\n\nWhat is wrong with this explanation?\nIdentify unsupported claims, missing evidence, contradictions, and unsupported causal conclusions.\nIf the explanation is well supported, explain why.",
+      "critic_response": "\"Hues.\n.\n.\n.\n.\n.\n.\n.\n.\n. \"Hues.... display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display. display",
+      "CRITIC_INDEPENDENCE": "LIMITED",
+      "critic_latency_ms": 51225.93,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_2_CF_SYNTHETIC",
+      "ground_truth": "AIGC",
+      "evaluated_explanation": ".\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\ngri.\naside.\ngri.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.",
+      "critic_prompt": "Review the forensic explanation below.\n\nImage Ground Truth: AIGC\nExplanation: \".\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\ngri.\naside.\ngri.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\"\n\nWhat is wrong with this explanation?\nIdentify unsupported claims, missing evidence, contradictions, and unsupported causal conclusions.\nIf the explanation is well supported, explain why.",
+      "critic_response": "The leaves.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nvs.\nand.\nvs.\nand.\nvs.\nvs.\nand.\nvs.\nvs.\nvs.\nand.\nvs.\nand.\nvs.\nvs.\nvs.\nvs.\nvs.\nand.\nvs.\nvs.\nvs.\nvs.",
+      "CRITIC_INDEPENDENCE": "LIMITED",
+      "critic_latency_ms": 55338.09,
+      "status": "EXECUTED"
+    }
+  ],
+  "counterfactual_evaluations": [
+    {
+      "image_id": "REAL_SAMPLE_1_WIKIART",
+      "ground_truth": "REAL",
+      "vlm_claimed_region": "UNAVAILABLE",
+      "spatial_localization_status": "SPATIAL_LOCALIZATION_UNAVAILABLE",
+      "masked_bounding_box_pixels": [
+        524.2,
+        345.5,
+        1572.8,
+        1036.5
+      ],
+      "original_detector_probability": 0.724739,
+      "masked_detector_probability": 0.719998,
+      "delta_probability": -0.004741,
+      "status": "EXECUTED"
+    },
+    {
+      "image_id": "AIGC_SAMPLE_1_QUALITY_PARADOX",
+      "ground_truth": "AIGC",
+      "vlm_claimed_region": "UNAVAILABLE",
+      "spatial_localization_status": "SPATIAL_LOCALIZATION_UNAVAILABLE",
+      "masked_bounding_box_pixels": [
+        156.0,
+        236.0,
+        468.0,
+        708.0
+      ],
+      "original_detector_probability": 0.718321,
+      "masked_detector_probability": 0.716894,
+      "delta_probability": -0.001427,
+      "status": "EXECUTED"
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "model_name": "V5-CAG (Context-Conditioned Attention-Gated Multi-Scale Engine)",
+  "precision": "FP32",
+  "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/experimental/v5/v5_champion_cag.pt",
+  "checkpoint_sha256": "1c49bdebf6802611e73b7f263e0a88e4bec7c4ffd48e7a6aba45010b80637b8d",
+  "best_val_score": 0.6822,
+  "validation_metrics": {
+    "partition": "Validation Partition",
+    "sample_count": 1500,
+    "accuracy": 71.53,
+    "macro_auc": 0.8796,
+    "macro_f1": 0.7339,
+    "partial_ap": 0.6031,
+    "mean_iou": 0.67,
+    "mean_dice": 0.6763,
+    "affected_area_error_pct": 7.03,
+    "brier_score": 0.3781,
+    "hard_real_fpr": 20.79,
+    "confusion_matrix": [
+      [
+        446,
+        219,
+        18
+      ],
+      [
+        164,
+        269,
+        3
+      ],
+      [
+        20,
+        3,
+        358
+      ]
+    ]
+  },
+  "independent_test_metrics": {
+    "partition": "Independent Held-Out Test Partition",
+    "sample_count": 1500,
+    "accuracy": 71.07,
+    "macro_auc": 0.8816,
+    "macro_f1": 0.7341,
+    "partial_ap": 0.6122,
+    "mean_iou": 0.6828,
+    "mean_dice": 0.6861,
+    "affected_area_error_pct": 6.62,
+    "brier_score": 0.3534,
+    "hard_real_fpr": 19.35,
+    "confusion_matrix": [
+      [
+        381,
+        283,
+        19
+      ],
+      [
+        107,
+        322,
+        7
+      ],
+      [
+        16,
+        2,
+        363
+      ]
+    ]
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.7099,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 68.2,
+        "macro_auc": 0.8762,
+        "macro_f1": 0.7047,
+        "partial_ap": 0.6172,
+        "mean_iou": 0.6626,
+        "mean_dice": 0.664,
+        "affected_area_error_pct": 9.53,
+        "brier_score": 0.36,
+        "hard_real_fpr": 30.9,
+        "confusion_matrix": [
+          [
+            329,
+            327,
+            27
+          ],
+          [
+            78,
+            342,
+            16
+          ],
+          [
+            27,
+            2,
+            352
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.2
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5372,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 65.47,
+        "macro_auc": 0.8758,
+        "macro_f1": 0.6662,
+        "partial_ap": 0.6097,
+        "mean_iou": 0.6263,
+        "mean_dice": 0.6324,
+        "affected_area_error_pct": 9.35,
+        "brier_score": 0.3817,
+        "hard_real_fpr": 45.79,
+        "confusion_matrix": [
+          [
+            195,
+            451,
+            37
+          ],
+          [
+            4,
+            419,
+            13
+          ],
+          [
+            6,
+            7,
+            368
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.0
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.4494,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 67.27,
+        "macro_auc": 0.8724,
+        "macro_f1": 0.6988,
+        "partial_ap": 0.5867,
+        "mean_iou": 0.6696,
+        "mean_dice": 0.6716,
+        "affected_area_error_pct": 8.35,
+        "brier_score": 0.3633,
+        "hard_real_fpr": 33.71,
+        "confusion_matrix": [
+          [
+            311,
+            346,
+            26
+          ],
+          [
+            87,
+            344,
+            5
+          ],
+          [
+            16,
+            11,
+            354
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.0
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.3948,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 67.87,
+        "macro_auc": 0.8846,
+        "macro_f1": 0.7058,
+        "partial_ap": 0.6304,
+        "mean_iou": 0.6447,
+        "mean_dice": 0.6509,
+        "affected_area_error_pct": 8.57,
+        "brier_score": 0.3572,
+        "hard_real_fpr": 31.18,
+        "confusion_matrix": [
+          [
+            281,
+            391,
+            11
+          ],
+          [
+            47,
+            386,
+            3
+          ],
+          [
+            24,
+            6,
+            351
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.0
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.3471,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 70.27,
+        "macro_auc": 0.8892,
+        "macro_f1": 0.7264,
+        "partial_ap": 0.6319,
+        "mean_iou": 0.6637,
+        "mean_dice": 0.669,
+        "affected_area_error_pct": 7.63,
+        "brier_score": 0.337,
+        "hard_real_fpr": 30.06,
+        "confusion_matrix": [
+          [
+            332,
+            325,
+            26
+          ],
+          [
+            73,
+            359,
+            4
+          ],
+          [
+            15,
+            3,
+            363
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.0
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.2984,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 70.47,
+        "macro_auc": 0.885,
+        "macro_f1": 0.7273,
+        "partial_ap": 0.628,
+        "mean_iou": 0.6813,
+        "mean_dice": 0.6858,
+        "affected_area_error_pct": 7.61,
+        "brier_score": 0.3504,
+        "hard_real_fpr": 23.88,
+        "confusion_matrix": [
+          [
+            378,
+            282,
+            23
+          ],
+          [
+            110,
+            317,
+            9
+          ],
+          [
+            16,
+            3,
+            362
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.0
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.2548,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 70.0,
+        "macro_auc": 0.88,
+        "macro_f1": 0.7209,
+        "partial_ap": 0.6107,
+        "mean_iou": 0.6683,
+        "mean_dice": 0.673,
+        "affected_area_error_pct": 8.14,
+        "brier_score": 0.3612,
+        "hard_real_fpr": 21.91,
+        "confusion_matrix": [
+          [
+            400,
+            252,
+            31
+          ],
+          [
+            140,
+            292,
+            4
+          ],
+          [
+            19,
+            4,
+            358
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.0
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.2186,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 70.4,
+        "macro_auc": 0.8797,
+        "macro_f1": 0.726,
+        "partial_ap": 0.5946,
+        "mean_iou": 0.6685,
+        "mean_dice": 0.6738,
+        "affected_area_error_pct": 7.36,
+        "brier_score": 0.3774,
+        "hard_real_fpr": 23.88,
+        "confusion_matrix": [
+          [
+            404,
+            256,
+            23
+          ],
+          [
+            140,
+            292,
+            4
+          ],
+          [
+            17,
+            4,
+            360
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.0
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.1861,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 71.2,
+        "macro_auc": 0.8779,
+        "macro_f1": 0.7317,
+        "partial_ap": 0.5931,
+        "mean_iou": 0.6644,
+        "mean_dice": 0.6705,
+        "affected_area_error_pct": 7.1,
+        "brier_score": 0.3803,
+        "hard_real_fpr": 21.07,
+        "confusion_matrix": [
+          [
+            433,
+            230,
+            20
+          ],
+          [
+            159,
+            274,
+            3
+          ],
+          [
+            17,
+            3,
+            361
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.0
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.1648,
+      "val_metrics": {
+        "partition": "Validation Partition",
+        "sample_count": 1500,
+        "accuracy": 71.53,
+        "macro_auc": 0.8796,
+        "macro_f1": 0.7339,
+        "partial_ap": 0.6031,
+        "mean_iou": 0.67,
+        "mean_dice": 0.6763,
+        "affected_area_error_pct": 7.03,
+        "brier_score": 0.3781,
+        "hard_real_fpr": 20.79,
+        "confusion_matrix": [
+          [
+            446,
+            219,
+            18
+          ],
+          [
+            164,
+            269,
+            3
+          ],
+          [
+            20,
+            3,
+            358
+          ]
+        ]
+      },
+      "epoch_time_sec": 24.0
+    }
+  ]
+}

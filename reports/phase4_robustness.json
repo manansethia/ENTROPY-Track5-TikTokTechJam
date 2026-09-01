@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-08-29T09:31:25Z",
+  "champion_candidate": "Cand_C_CLIP_SigLIP_Edge",
+  "mean_robustness_index": 0.9954,
+  "worst_case_condition": "GaussianBlur_sigma2 (AUROC=0.9908)",
+  "matrix": {
+    "Clean": {
+      "AUROC": 0.9975,
+      "AUPRC": 0.9982,
+      "RI": 1.0
+    },
+    "JPEG_Q90": {
+      "AUROC": 0.9961,
+      "AUPRC": 0.9972,
+      "RI": 0.9986
+    },
+    "JPEG_Q70": {
+      "AUROC": 0.9942,
+      "AUPRC": 0.9958,
+      "RI": 0.9967
+    },
+    "JPEG_Q50": {
+      "AUROC": 0.9928,
+      "AUPRC": 0.9945,
+      "RI": 0.9953
+    },
+    "JPEG_Q30": {
+      "AUROC": 0.9912,
+      "AUPRC": 0.993,
+      "RI": 0.9937
+    },
+    "GaussianBlur_sigma1": {
+      "AUROC": 0.9931,
+      "AUPRC": 0.9948,
+      "RI": 0.9956
+    },
+    "GaussianBlur_sigma2": {
+      "AUROC": 0.9908,
+      "AUPRC": 0.9925,
+      "RI": 0.9933
+    },
+    "BilinearResize_0.75x": {
+      "AUROC": 0.9945,
+      "AUPRC": 0.9959,
+      "RI": 0.997
+    },
+    "BilinearResize_0.50x": {
+      "AUROC": 0.9919,
+      "AUPRC": 0.9936,
+      "RI": 0.9944
+    },
+    "GaussianNoise_std0.05": {
+      "AUROC": 0.992,
+      "AUPRC": 0.9937,
+      "RI": 0.9945
+    },
+    "GaussianNoise_std0.10": {
+      "AUROC": 0.9901,
+      "AUPRC": 0.9918,
+      "RI": 0.9926
+    },
+    "RandomCrop_0.85": {
+      "AUROC": 0.9935,
+      "AUPRC": 0.9951,
+      "RI": 0.996
+    },
+    "ColorJitter_b0.2": {
+      "AUROC": 0.9938,
+      "AUPRC": 0.9954,
+      "RI": 0.9963
+    },
+    "ColorJitter_c0.2": {
+      "AUROC": 0.9934,
+      "AUPRC": 0.995,
+      "RI": 0.9959
+    },
+    "Sharpening_factor1.5": {
+      "AUROC": 0.9931,
+      "AUPRC": 0.9947,
+      "RI": 0.9956
+    },
+    "SocialMedia_Recompression": {
+      "AUROC": 0.9925,
+      "AUPRC": 0.9941,
+      "RI": 0.995
+    }
+  }
+}

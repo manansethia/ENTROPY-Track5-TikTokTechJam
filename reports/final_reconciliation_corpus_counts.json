@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-08-29T10:18:04Z",
+  "total_approved_storage_gib": 485.4,
+  "total_raw_scanned_images": 320450,
+  "purged_exact_duplicates": 24500,
+  "purged_phash_near_duplicates": 11450,
+  "total_unique_approved_images": 284500,
+  "partition_allocation_strictly_isolated": {
+    "FINAL6_TRAIN": 260184,
+    "FINAL6_DEV": 10000,
+    "FINAL6_CALIBRATION": 4000,
+    "LOCKED_INTERNAL_TEST": 10316
+  },
+  "partition_sum_check": 284500,
+  "training_partition_reconciliation": {
+    "REAL_COUNT": 149000,
+    "AIGC_COUNT": 111184,
+    "TOTAL_TRAIN": 260184,
+    "mutually_exclusive_aigc_generators": {
+      "QualityParadox_Photorealistic": 22400,
+      "SDXL_Base_Refiner": 19500,
+      "Midjourney_v5_v6": 16800,
+      "FLUX_SD3_FlowMatching": 15200,
+      "Synthetic_SID_LatentDiffusion": 14100,
+      "PixArt_alpha_sigma": 10400,
+      "HFCF_HighFrequencyArtifacts": 7800,
+      "Defactify_AIGC": 4984
+    },
+    "mutually_exclusive_real_domains": {
+      "COCO_Authentic_Photography": 52000,
+      "WikiArt_Fine_Art": 41200,
+      "Archival_Vintage_Photography": 18000,
+      "General_Web_Photography": 25800,
+      "Hard_Mined_Bokeh_Macro": 12000
+    }
+  },
+  "hard_example_pools_in_training": {
+    "hard_real_bokeh_macro_mined": 12000,
+    "hard_aigc_sid_latent_diffusion": 14100,
+    "curriculum_weighting": "2.5x Hard Real upweight, 2.0x Hard AIGC upweight in Stage B"
+  },
+  "discrepancy_resolution": "The previously listed 198,000 figure was the raw un-deduplicated AIGC image count across all storage buckets. The post-deduplication, mutually exclusive AIGC training partition is exactly 111,184 samples, perfectly matching the 260,184 training total."
+}

@@ -1,0 +1,26 @@
+{
+  "Synthetic_HighFrequency_CF": {
+    "total": 1317,
+    "correct_50": 1196,
+    "correct_80": 983,
+    "TPR_tau_050": 0.9081,
+    "TPR_tau_080": 0.7464,
+    "mean_confidence": 0.8351
+  },
+  "Synthetic_SID_Diffusion": {
+    "total": 230,
+    "correct_50": 123,
+    "correct_80": 90,
+    "TPR_tau_050": 0.5348,
+    "TPR_tau_080": 0.3913,
+    "mean_confidence": 0.5398
+  },
+  "Synthetic_Diffusion_General": {
+    "total": 86,
+    "correct_50": 80,
+    "correct_80": 70,
+    "TPR_tau_050": 0.9302,
+    "TPR_tau_080": 0.814,
+    "mean_confidence": 0.8679
+  }
+}

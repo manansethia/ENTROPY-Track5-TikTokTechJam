@@ -1,0 +1,245 @@
+{
+  "benchmark_isolation": "BLOCKED_OFFICIAL_BENCHMARK_HASH_LIST_REQUIRED",
+  "generated_at": "2026-08-31T23:05:31+00:00",
+  "manifest": "manifests/final_284500_governed_manifest_v6.jsonl",
+  "manifest_exists": true,
+  "status": "BLOCKED",
+  "unsafe_training_findings": [
+    {
+      "file": "scripts/benchmark_io_and_pilot_training.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/benchmark_io_and_pilot_training.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/execute_actual_large_scale_training_and_feedback.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/execute_authoritative_final_training.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/execute_authoritative_final_training.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/execute_final_training_and_feedback_v6.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/execute_final_training_and_feedback_v6.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/execute_fresh_master_training_protocol.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/execute_master_remediation_pipeline.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/execute_master_remediation_pipeline.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/execute_master_training_pipeline_final.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/execute_optimized_full_training_v6.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/execute_optimized_full_training_v6.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/execute_true_full_training.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/execute_true_full_training.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/execute_true_full_training_v6.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/execute_true_full_training_v6.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/fast_v3_fusion_audit_and_feedback.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/final_master_training_pipeline.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/final_pretraining_reconciliation_engine.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/final_pretraining_reconciliation_v2.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/fresh_definitive_master_training.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/master_production_remediation_pipeline_v2.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/master_production_remediation_pipeline_v2.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/phase4_master_execution_pipeline.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/phase5_master_execution_engine.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/phase6_master_validation_engine.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/phase7_master_pretraining_validation_engine.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/phase_b_and_c_specialist_and_fusion.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/run_all_models_fusion_master_experiment.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/run_definitive_master_training.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/run_fresh_master_execution.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/run_fresh_master_execution.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/run_master_protocol_sections_8_to_16.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/run_master_raw_image_training_session.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/run_master_raw_image_training_session.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/run_stage1_master_evaluation.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/sanity_test_trainable_vision.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/sanity_test_trainable_vision.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/train_buildabot_gpu_fusion.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/train_final_highres_specialists_master.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_full_260k_corpus.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/train_full_260k_corpus.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/train_full_3epoch_specialists_and_3epoch_fusion.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_heavy_production_specialist.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_large_scale_robust_detector.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/train_live_all_models_c0_c7_unified_engine.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_master_production_specialists.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_phase2_detector.py",
+      "issue": "synthetic PIL fallback"
+    },
+    {
+      "file": "scripts/train_phase3_fusion_challenge.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_phase3_fusion_challenge.py",
+      "issue": "random tensor fallback"
+    },
+    {
+      "file": "scripts/train_phase3_fusion_challenge.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/train_portrait_rem_1.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_portrait_rem_1.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/train_quad_hybrid_gating.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_sequential_fp32_full_precision_pipeline.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_sequential_fp32_full_precision_pipeline.py",
+      "issue": "synthetic fusion logits"
+    },
+    {
+      "file": "scripts/train_v3_gating_fusion_and_audit.py",
+      "issue": "zero tensor fallback"
+    },
+    {
+      "file": "scripts/train_v3_master_pipeline.py",
+      "issue": "synthetic PIL fallback"
+    }
+  ]
+}

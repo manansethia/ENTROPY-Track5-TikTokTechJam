@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-08-28T20:41:31Z",
+  "authorization_status": "READY FOR PHASE 1 TRAINING \u2014 ALL PRE-TRAINING CRITERIA VERIFIED",
+  "dataset_manifest_audit": {
+    "manifest_path": "manifests/phase1_50k_manifest.jsonl",
+    "manifest_sha256": "a642c22c1758a68b7a0950e50846b2343c74c41932c664b4c825b63dac989b47",
+    "total_samples": 50000,
+    "class_counts": {
+      "authentic_real": 17373,
+      "synthetic_fake": 32627
+    },
+    "split_counts": {
+      "PHASE1_TRAIN": 40000,
+      "PHASE1_VAL": 5000,
+      "PHASE1_INTERNAL_TEST": 5000
+    },
+    "generator_family_counts": {
+      "Synthetic_SID_Diffusion": 5214,
+      "Synthetic_HighFrequency_CF": 26077,
+      "Authentic_COCO": 2392,
+      "Authentic_Real_General": 12805,
+      "Authentic_HighRes_Photo": 2176,
+      "Synthetic_Diffusion_General": 1336
+    },
+    "dataset_source_counts": {
+      "sid_parquet": 5214,
+      "massive_balanced_50k": 38882,
+      "coco": 2392,
+      "scaled_massive": 3512
+    },
+    "cryptographic_isolation": {
+      "train_val_overlap": 0,
+      "train_test_overlap": 0,
+      "val_test_overlap": 0,
+      "status": "ZERO OVERLAP (100% ISOLATED)"
+    },
+    "external_benchmark_quarantine": {
+      "synthbuster_quarantine": "LOCKED (0 samples)",
+      "aigibench_quarantine": "LOCKED (0 samples)",
+      "status": "ZERO CONTAMINATION"
+    }
+  },
+  "model_and_representation_audit": {
+    "architecture": "Tri-Stream Hybrid: CLIP-ViT-L/14 + SigLIP-SO400M-224 + SRM-DWT Wavelet",
+    "feature_dimensions": {
+      "clip_vitl14_vision_pooler": 1024,
+      "siglip_so400m_vision_pooler": 1152,
+      "srm_dwt_moments": 36,
+      "total_concatenated_dim": 2212
+    },
+    "parameters": {
+      "total_instantiated_params": 1304979032,
+      "frozen_backbone_params": 1304976819,
+      "trainable_fusion_head_params": 2213,
+      "parameter_budget_limit": 2000000000,
+      "budget_compliance": "PASSED (< 2.0B ceiling)"
+    }
+  },
+  "training_protocol": {
+    "loss_function": "False-Positive Weighted Binary Cross-Entropy with L2 Regularization (alpha = 1e-4)",
+    "lambda_fp": 2.0,
+    "optimizer": "AdamW (lr = 1e-3, weight_decay = 1e-4)",
+    "batch_size": 64,
+    "precision": "FP16 Mixed Precision on CUDA 13.0",
+    "calibration_plan": "Post-hoc comparison of Temperature Scaling vs Platt Scaling on dedicated 2,500-sample calibration split",
+    "threshold_plan": "Dense sweep on validation set; freeze operational threshold before internal test evaluation"
+  },
+  "hardware_and_io_telemetry": {
+    "target_gpu": "NVIDIA GeForce RTX 3050 (6GB VRAM, CUDA 13.0)",
+    "io_pipeline": "Config C (NVMe Dataset Cache -> Bounded Async Pinned Host RAM -> Non-Blocking GPU Transfer @ 624.88 img/s)",
+    "swap_stability": "Static 0.52 GB (Zero sustained swap activity)",
+    "peak_vram_gb": 3.7,
+    "vram_headroom_gb": 2.3
+  }
+}

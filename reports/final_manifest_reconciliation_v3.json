@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-08-29T06:50:49Z",
+  "status_verdicts": {
+    "MANIFEST_CONSTRUCTED": "EXECUTED",
+    "DEDUPLICATION_VERIFIED": "EXECUTED",
+    "SPLIT_DISJOINTNESS_VERIFIED": "EXECUTED",
+    "OOD_EXCLUSION_VERIFIED": "EXECUTED",
+    "TARGET_POPULATION_RECONCILIATION": "DEFICIT_IDENTIFIED",
+    "FINAL_TRAINING_MANIFEST_VALID": "FAILED"
+  },
+  "canonical_manifest_metadata": {
+    "manifest_path": "/home/manan/aigc_robust_detection/manifests/final_284500_governed_manifest.jsonl",
+    "manifest_sha256": "130b193e6067776e957fadf3e744dfaf7a7417ba42f62ca5c171dd19dbe7eaa1",
+    "total_rows_assembled": 167419,
+    "split_counts": {
+      "TRAIN": 146791,
+      "DEV": 9236,
+      "CALIBRATION": 1076,
+      "INTERNAL_TEST": 10316
+    },
+    "split_labels": {
+      "TRAIN": {
+        "REAL": 51198,
+        "AIGC": 95593
+      },
+      "DEV": {
+        "REAL": 4236,
+        "AIGC": 5000
+      },
+      "CALIBRATION": {
+        "REAL": 0,
+        "AIGC": 1076
+      },
+      "INTERNAL_TEST": {
+        "REAL": 4238,
+        "AIGC": 6078
+      }
+    },
+    "pairwise_intersections": {
+      "TRAIN_AND_DEV": 0,
+      "TRAIN_AND_CALIBRATION": 0,
+      "TRAIN_AND_INTERNAL_TEST": 0,
+      "DEV_AND_CALIBRATION": 0,
+      "DEV_AND_INTERNAL_TEST": 0,
+      "CALIBRATION_AND_INTERNAL_TEST": 0
+    },
+    "ood_contamination_count": 0
+  },
+  "governed_target_vs_assembled": {
+    "TRAIN": {
+      "target": 260184,
+      "assembled": 146791,
+      "delta": -113393
+    },
+    "TRAIN_REAL": {
+      "target": 149000,
+      "assembled": 51198,
+      "delta": -97802
+    },
+    "TRAIN_AIGC": {
+      "target": 111184,
+      "assembled": 95593,
+      "delta": -15591
+    },
+    "DEV": {
+      "target": 10000,
+      "assembled": 9236,
+      "delta": -764
+    },
+    "CALIBRATION": {
+      "target": 4000,
+      "assembled": 1076,
+      "delta": -2924
+    },
+    "INTERNAL_TEST": {
+      "target": 10316,
+      "assembled": 10316,
+      "delta": 0
+    },
+    "TOTAL_GOVERNED": {
+      "target": 284500,
+      "assembled": 167419,
+      "delta": -117081
+    }
+  },
+  "storage_reserve_inventory": {
+    "parquet_hfcf_rows": 152621,
+    "defactify_parquet_rows": 96000,
+    "sid_parquet_rows": 43044,
+    "aigi_quality_paradox_rows": 24000,
+    "total_available_raw_rows": 483084
+  },
+  "blocker_resolution": {
+    "manifest_status": "Reconstruction from raw Parquet pools required to reach exact 260,184 without oversampling",
+    "training_authorized": false
+  }
+}

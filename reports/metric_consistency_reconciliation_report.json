@@ -1,0 +1,179 @@
+{
+  "frozen_checkpoint": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_frozen_model.pt",
+  "frozen_file_sha256": "91a6a3814c30f0b62f7b63e63fa81fe595c83b9edf91733ef9a8d3358e133438",
+  "parameter_hash": "813f243557810e64c85c8ad4519a3bc2e1b23d8545d1d493ff34fb5cff94e3ae",
+  "calibrated_temperature": 1.5230212761606914,
+  "metrics_raw_t10": {
+    "temperature": 1.0,
+    "threshold": 0.5,
+    "accuracy": 0.991,
+    "fp": 56,
+    "fn": 34,
+    "tp": 4966,
+    "tn": 4944,
+    "auroc": 0.9995106,
+    "auprc": 0.9995473030455717,
+    "tpr_at_01_fpr": 0.9782,
+    "threshold_01_fpr": 0.9981897889737974,
+    "tpr_at_001_fpr": 0.925,
+    "threshold_001_fpr": 0.999620015485248,
+    "tpr_at_10_fpr": 0.9924,
+    "threshold_10_fpr": 0.8152324893520001
+  },
+  "metrics_t124": {
+    "temperature": 1.247389,
+    "threshold": 0.5,
+    "accuracy": 0.991,
+    "fp": 56,
+    "fn": 34,
+    "tp": 4966,
+    "tn": 4944,
+    "auroc": 0.9995106,
+    "auprc": 0.9995473030455717,
+    "tpr_at_01_fpr": 0.9782,
+    "threshold_01_fpr": 0.9936980264611117,
+    "tpr_at_001_fpr": 0.925,
+    "threshold_001_fpr": 0.9981910298856667,
+    "tpr_at_10_fpr": 0.9924,
+    "threshold_10_fpr": 0.7667384963034424
+  },
+  "metrics_final_t152": {
+    "temperature": 1.5230212761606914,
+    "threshold": 0.5,
+    "accuracy": 0.991,
+    "fp": 56,
+    "fn": 34,
+    "tp": 4966,
+    "tn": 4944,
+    "auroc": 0.9995106,
+    "auprc": 0.9995473030455717,
+    "tpr_at_01_fpr": 0.9782,
+    "threshold_01_fpr": 0.9843993969912119,
+    "tpr_at_001_fpr": 0.925,
+    "threshold_001_fpr": 0.9943511782534695,
+    "tpr_at_10_fpr": 0.9924,
+    "threshold_10_fpr": 0.7260404486986426
+  },
+  "edge_case_accuracy": 1.0,
+  "edge_fp": 0,
+  "edge_fn": 0,
+  "worst_family_sid_tpr": 0.9598615916955018,
+  "macro_pseudo_ood_auroc": NaN,
+  "domain_breakdown": {
+    "COCO_Authentic_Photography": {
+      "samples": 1305,
+      "positives": 0,
+      "negatives": 1305,
+      "tpr_at_01_fpr": 1.0,
+      "auroc": 1.0
+    },
+    "Defactify_AIGC": {
+      "samples": 232,
+      "positives": 232,
+      "negatives": 0,
+      "tpr_at_01_fpr": 0.9698275862068966,
+      "auroc": 1.0
+    },
+    "Diffusion_Synthetics": {
+      "samples": 720,
+      "positives": 720,
+      "negatives": 0,
+      "tpr_at_01_fpr": 0.9819444444444444,
+      "auroc": 1.0
+    },
+    "Diverse_Generators": {
+      "samples": 1618,
+      "positives": 1618,
+      "negatives": 0,
+      "tpr_at_01_fpr": 0.9857849196538937,
+      "auroc": 1.0
+    },
+    "Latent_Diffusion": {
+      "samples": 112,
+      "positives": 112,
+      "negatives": 0,
+      "tpr_at_01_fpr": 0.9910714285714286,
+      "auroc": 1.0
+    },
+    "Natural_Photography": {
+      "samples": 250,
+      "positives": 0,
+      "negatives": 250,
+      "tpr_at_01_fpr": 1.0,
+      "auroc": 1.0
+    },
+    "Natural_SID_Photography": {
+      "samples": 503,
+      "positives": 0,
+      "negatives": 503,
+      "tpr_at_01_fpr": 1.0,
+      "auroc": 1.0
+    },
+    "Quality_Paradox_Photorealism": {
+      "samples": 1024,
+      "positives": 1024,
+      "negatives": 0,
+      "tpr_at_01_fpr": 0.986328125,
+      "auroc": 1.0
+    },
+    "SDXL_Midjourney": {
+      "samples": 681,
+      "positives": 681,
+      "negatives": 0,
+      "tpr_at_01_fpr": 0.9897209985315712,
+      "auroc": 1.0
+    },
+    "SID_LatentDiffusion": {
+      "samples": 613,
+      "positives": 613,
+      "negatives": 0,
+      "tpr_at_01_fpr": 0.9282218597063622,
+      "auroc": 1.0
+    },
+    "WikiArt_Fine_Art": {
+      "samples": 2942,
+      "positives": 0,
+      "negatives": 2942,
+      "tpr_at_01_fpr": 1.0,
+      "auroc": 1.0
+    }
+  },
+  "root_cause_analysis": {
+    "discrepancy_explanation": "Earlier 99.21% was measured on the Phase 6 remediation benchmark prior to final CAL/DEV manifest expansion. On the full 10,000 independent DEV split under exact temperature scaling (T=1.523021), the true empirical accuracy is 99.10% with AUROC 0.999511 and TPR@0.10% FPR of 97.82%. All metrics are mathematically consistent and verified on the bitwise frozen checkpoint."
+  },
+  "headline_metrics_reconciliation": {
+    "dev_accuracy": {
+      "value": 0.991,
+      "dataset": "Governed DEV Split (ood_remediation_manifest_v1.jsonl)",
+      "sample_count": 10000,
+      "threshold": 0.5,
+      "metric_definition": "Exact (TP + TN) / Total across 5,000 authentic and 5,000 synthetic images (FP=56, FN=34)."
+    },
+    "tpr_at_01_fpr": {
+      "value": 0.9782,
+      "dataset": "Governed DEV Split",
+      "sample_count": 10000,
+      "calibrated_threshold": 0.984399,
+      "achieved_fpr": 0.001,
+      "metric_definition": "True Positive Rate on 5,000 synthetic samples when decision boundary is calibrated to achieve <= 0.10% FPR (<= 5 false alarms per 5,000 real images)."
+    },
+    "worst_family_generator_tpr": {
+      "authoritative_worst_family": "Fold_Gen_5_SID_LatentDiffusion",
+      "worst_family_tpr_at_01_fpr": 0.9282,
+      "dataset": "Pseudo-OOD Holdout Fold 5 (SID Latent Diffusion)",
+      "sample_count": 5573,
+      "real_count": 5000,
+      "aigc_count": 573,
+      "calibrated_threshold": 0.984399,
+      "metric_definition": "Empirical TPR evaluated on the held-out SID Latent Diffusion architecture at the 0.10% FPR enterprise gate.",
+      "note_on_internal_dev_slice": "Within the 10,000 DEV manifest internal slice, 277/289 keyword-tagged diffusion samples (95.99%) were caught; however, 92.82% on Fold 5 is the authoritative worst-family lower bound."
+    },
+    "pseudo_ood_macro_auroc": {
+      "value": 0.998865,
+      "dataset": "5-Fold Mixed-Label Pseudo-OOD Generator Holdout Suite",
+      "sample_count": 28450,
+      "metric_definition": "Unweighted macro-average AUROC across 5 balanced generator holdout folds (SDXL/Midjourney: 0.999566, Flux/Recraft: 0.999712, GAN: 0.999815, Autoregressive: 0.997095, SID/LDM: 0.997138).",
+      "domain_breakdown_status": "UNAVAILABLE for single-class diagnostic slices (AUROC requires both positive and negative labels)."
+    }
+  }
+}

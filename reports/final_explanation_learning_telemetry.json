@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-08-29T10:59:54Z",
+  "VLM_available": false,
+  "VLM_name": "NONE",
+  "VLM_checkpoint": "NONE",
+  "explanations_generated": 0,
+  "explanations_verified": 0,
+  "supported": 0,
+  "partially_supported": 0,
+  "unsupported": 0,
+  "contradicted": 0,
+  "undetermined": 0,
+  "critic_calls": 0,
+  "critic_rejections": 0,
+  "critic_uncertain": 0,
+  "counterfactual_tests": 600,
+  "counterfactual_supported": 0,
+  "reward_distribution": {
+    "+1.0": 0,
+    "-2.5": 600
+  },
+  "explanation_optimizer_steps": 0,
+  "evidence_optimizer_steps": 4265,
+  "feedback_optimizer_steps": 4265,
+  "auxiliary_loss": 0.0421,
+  "parameter_delta": 0.1428
+}

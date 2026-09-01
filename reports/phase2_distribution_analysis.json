@@ -1,0 +1,23 @@
+{
+  "manifest_sha256": "91bcd1de69689017859fa275825bed146aaf241ef71e57eb64f5562c615ceb23",
+  "generator_family_counts": {
+    "Synthetic_HighFrequency_CF": 29917,
+    "Authentic_WikiArt_FineArt": 24996,
+    "Synthetic_QualityParadox_ModernDiffusion": 24000,
+    "Synthetic_SID_Diffusion": 6851,
+    "Authentic_Real_General": 14380,
+    "Authentic_COCO": 2993
+  },
+  "dataset_source_counts": {
+    "loose_synthetic_corpus": 36768,
+    "wikiart_fine_art": 24996,
+    "aigi_quality_paradox": 24000,
+    "loose_authentic_corpus": 17373
+  },
+  "domain_counts": {
+    "Synthetic_Generative_Media": 36768,
+    "Fine_Art_Paintings_and_Drawings": 24996,
+    "Modern_Photorealistic_AIGC": 24000,
+    "Natural_and_Studio_Photography": 17373
+  }
+}

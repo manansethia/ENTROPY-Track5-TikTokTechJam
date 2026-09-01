@@ -1,0 +1,66 @@
+{
+  "C0_Champion_Frozen": {
+    "auroc": 1.0,
+    "average_precision": 1.0,
+    "real_fpr_percent": 0.0,
+    "aigc_tpr_percent": 100.0,
+    "gpu_latency_seconds": 0.0004837512969970703,
+    "peak_vram_mb": 0.0
+  },
+  "C1_Portrait_REM1_E3": {
+    "auroc": 1.0,
+    "average_precision": 1.0,
+    "real_fpr_percent": 0.0,
+    "aigc_tpr_percent": 100.0,
+    "gpu_latency_seconds": 0.0004429817199707031,
+    "peak_vram_mb": 0.0
+  },
+  "C2_SPAI_TFG": {
+    "auroc": 1.0,
+    "average_precision": 1.0,
+    "real_fpr_percent": 0.0,
+    "aigc_tpr_percent": 100.0,
+    "gpu_latency_seconds": 0.00045037269592285156,
+    "peak_vram_mb": 0.0
+  },
+  "C3_CommunityForensics_ViT": {
+    "auroc": 1.0,
+    "average_precision": 1.0,
+    "real_fpr_percent": 0.0,
+    "aigc_tpr_percent": 100.0,
+    "gpu_latency_seconds": 0.00045609474182128906,
+    "peak_vram_mb": 0.0
+  },
+  "C4_divine2k_ConvNeXt": {
+    "auroc": 1.0,
+    "average_precision": 1.0,
+    "real_fpr_percent": 0.0,
+    "aigc_tpr_percent": 100.0,
+    "gpu_latency_seconds": 0.0004525184631347656,
+    "peak_vram_mb": 0.0
+  },
+  "C5_divine2k_ConvNeXt_Tiny": {
+    "auroc": 1.0,
+    "average_precision": 1.0,
+    "real_fpr_percent": 0.0,
+    "aigc_tpr_percent": 100.0,
+    "gpu_latency_seconds": 0.0005064010620117188,
+    "peak_vram_mb": 0.0
+  },
+  "C6_divine2k_EfficientNet_B0": {
+    "auroc": 1.0,
+    "average_precision": 1.0,
+    "real_fpr_percent": 0.0,
+    "aigc_tpr_percent": 100.0,
+    "gpu_latency_seconds": 0.00048613548278808594,
+    "peak_vram_mb": 0.0
+  },
+  "C7_divine2k_ResNet50": {
+    "auroc": 1.0,
+    "average_precision": 1.0,
+    "real_fpr_percent": 0.0,
+    "aigc_tpr_percent": 100.0,
+    "gpu_latency_seconds": 0.0004730224609375,
+    "peak_vram_mb": 0.0
+  }
+}

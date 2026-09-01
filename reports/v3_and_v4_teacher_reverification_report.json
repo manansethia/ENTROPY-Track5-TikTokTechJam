@@ -1,0 +1,211 @@
+[
+  {
+    "file": "d3b177be-gp0su1gn2_medium-res-1200px-1024x683.jpg",
+    "resolution": "1024x683",
+    "v2_score": 0.7867027521133423,
+    "v3_score": 0.9575155377388,
+    "v4_patch_mean": 0.6279820303122202,
+    "v4_patch_max": 0.9575155377388,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.141,
+      0.05,
+      0.133,
+      0.05,
+      0.247,
+      0.222,
+      0.094,
+      0.064
+    ]
+  },
+  {
+    "file": "images (1) (1).jpeg",
+    "resolution": "208x370",
+    "v2_score": 0.9561845660209656,
+    "v3_score": 0.9874250292778015,
+    "v4_patch_mean": 0.9874250292778015,
+    "v4_patch_max": 0.9874250292778015,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.129,
+      0.051,
+      0.201,
+      0.052,
+      0.264,
+      0.177,
+      0.066,
+      0.059
+    ]
+  },
+  {
+    "file": "images (1).jpeg",
+    "resolution": "415x739",
+    "v2_score": 0.9919179081916809,
+    "v3_score": 0.995090126991272,
+    "v4_patch_mean": 0.828188568353653,
+    "v4_patch_max": 0.995090126991272,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.104,
+      0.045,
+      0.296,
+      0.06,
+      0.264,
+      0.104,
+      0.072,
+      0.054
+    ]
+  },
+  {
+    "file": "images.jpeg",
+    "resolution": "399x501",
+    "v2_score": 0.5421909093856812,
+    "v3_score": 0.9088379740715027,
+    "v4_patch_mean": 0.9088379740715027,
+    "v4_patch_max": 0.9088379740715027,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.114,
+      0.044,
+      0.128,
+      0.037,
+      0.278,
+      0.263,
+      0.085,
+      0.051
+    ]
+  },
+  {
+    "file": "lake-landscape-photo-m.jpg",
+    "resolution": "1200x674",
+    "v2_score": 0.9566631317138672,
+    "v3_score": 0.9970124959945679,
+    "v4_patch_mean": 0.9971897999445597,
+    "v4_patch_max": 0.9982386827468872,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.079,
+      0.04,
+      0.513,
+      0.062,
+      0.168,
+      0.058,
+      0.036,
+      0.044
+    ]
+  },
+  {
+    "file": "photo-1472214103451-9374bd1c798e.avif",
+    "resolution": "3000x2001",
+    "v2_score": 0.9907360672950745,
+    "v3_score": 0.9992691874504089,
+    "v4_patch_mean": 0.9914923906326294,
+    "v4_patch_max": 0.999679446220398,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.071,
+      0.036,
+      0.543,
+      0.053,
+      0.166,
+      0.06,
+      0.032,
+      0.039
+    ]
+  },
+  {
+    "file": "realistic-AI-photo-maker.jpg",
+    "resolution": "1008x944",
+    "v2_score": 0.9972031116485596,
+    "v3_score": 0.998677670955658,
+    "v4_patch_mean": 0.9981677889823913,
+    "v4_patch_max": 0.9992269277572632,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.103,
+      0.041,
+      0.278,
+      0.064,
+      0.255,
+      0.085,
+      0.113,
+      0.06
+    ]
+  },
+  {
+    "file": "realistic-AI-photo-maker1.jpg",
+    "resolution": "504x472",
+    "v2_score": 0.9952347874641418,
+    "v3_score": 0.9975538849830627,
+    "v4_patch_mean": 0.9975538849830627,
+    "v4_patch_max": 0.9975538849830627,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.105,
+      0.041,
+      0.239,
+      0.058,
+      0.275,
+      0.096,
+      0.129,
+      0.057
+    ]
+  },
+  {
+    "file": "realistic-AI-photo-maker2.jpg",
+    "resolution": "252x236",
+    "v2_score": 0.941336989402771,
+    "v3_score": 0.985551118850708,
+    "v4_patch_mean": 0.985551118850708,
+    "v4_patch_max": 0.985551118850708,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.114,
+      0.046,
+      0.171,
+      0.045,
+      0.309,
+      0.152,
+      0.113,
+      0.051
+    ]
+  },
+  {
+    "file": "selfie-smile-portrait-beautiful-woman-relaxing-calm-content-house-happy-cute-face-girl-photo-pose-happiness-267043739.webp",
+    "resolution": "747x900",
+    "v2_score": 0.9985811710357666,
+    "v3_score": 0.9994039535522461,
+    "v4_patch_mean": 0.5508118905127048,
+    "v4_patch_max": 0.9994039535522461,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.107,
+      0.042,
+      0.327,
+      0.077,
+      0.212,
+      0.086,
+      0.08,
+      0.069
+    ]
+  },
+  {
+    "file": "whats-the-most-realistic-ai-photo-generator-online-v0-lav1uhmvubre1.webp",
+    "resolution": "1408x1408",
+    "v2_score": 0.6006328463554382,
+    "v3_score": 0.9251149296760559,
+    "v4_patch_mean": 0.9645744519574302,
+    "v4_patch_max": 0.9991181492805481,
+    "verdict": "FULL-AIGC (SYNTHETIC GENERATION) \ud83e\udd16",
+    "weights_v3": [
+      0.136,
+      0.052,
+      0.125,
+      0.049,
+      0.253,
+      0.25,
+      0.077,
+      0.058
+    ]
+  }
+]

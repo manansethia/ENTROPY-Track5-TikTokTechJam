@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-08-29T09:19:00Z",
+  "champion_id": "B_CLIP_SigLIP_mlp2",
+  "operating_threshold": 0.8,
+  "subgroup_metrics": {
+    "loose_authentic_corpus": {
+      "count": 1783,
+      "FPR_tau_080": 0.0353
+    },
+    "wikiart_fine_art": {
+      "count": 2453,
+      "FPR_tau_080": 0.0012
+    }
+  }
+}

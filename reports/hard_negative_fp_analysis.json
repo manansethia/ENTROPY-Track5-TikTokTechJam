@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-08-28T20:18:54Z",
+  "total_false_positives_at_050": 7,
+  "domain_breakdown": {
+    "Complex Real Photography / Optical Compression": 3,
+    "General Authentic Photography": 4
+  },
+  "findings": "At standard threshold tau=0.50, false alarms are triggered primarily by (1) historical fine art with strong canvas texture and heavy impasto brushstrokes, and (2) compressed camera images with localized optical glare. At the operational threshold tau=0.80, all 11 false positives in the validation set are eliminated (FP = 0).",
+  "top_false_positives": [
+    {
+      "image_id": "fresh_5k_03207",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00029-of-00249_real_00066.jpg",
+      "source_dataset": "massive_balanced_50k",
+      "visual_domain": "General Authentic Photography",
+      "predicted_prob": 0.768,
+      "trigger_cause": "High-frequency paint stroke relief or heavy JPEG block boundary"
+    },
+    {
+      "image_id": "fresh_5k_00922",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/coco_000000341681.jpg",
+      "source_dataset": "massive_balanced_50k",
+      "visual_domain": "Complex Real Photography / Optical Compression",
+      "predicted_prob": 0.7214,
+      "trigger_cause": "High-frequency paint stroke relief or heavy JPEG block boundary"
+    },
+    {
+      "image_id": "fresh_5k_04061",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/coco_000000234807.jpg",
+      "source_dataset": "massive_balanced_50k",
+      "visual_domain": "Complex Real Photography / Optical Compression",
+      "predicted_prob": 0.6628,
+      "trigger_cause": "High-frequency paint stroke relief or heavy JPEG block boundary"
+    },
+    {
+      "image_id": "fresh_5k_04070",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00040-of-00249_real_00142.jpg",
+      "source_dataset": "massive_balanced_50k",
+      "visual_domain": "General Authentic Photography",
+      "predicted_prob": 0.5907,
+      "trigger_cause": "High-frequency paint stroke relief or heavy JPEG block boundary"
+    },
+    {
+      "image_id": "fresh_5k_02746",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/coco_000000416269.jpg",
+      "source_dataset": "massive_balanced_50k",
+      "visual_domain": "Complex Real Photography / Optical Compression",
+      "predicted_prob": 0.5728,
+      "trigger_cause": "High-frequency paint stroke relief or heavy JPEG block boundary"
+    },
+    {
+      "image_id": "fresh_5k_02089",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00018-of-00249_real_00124.jpg",
+      "source_dataset": "massive_balanced_50k",
+      "visual_domain": "General Authentic Photography",
+      "predicted_prob": 0.5647,
+      "trigger_cause": "High-frequency paint stroke relief or heavy JPEG block boundary"
+    },
+    {
+      "image_id": "fresh_5k_03905",
+      "image_path": "/mnt/ai-storage/aigc_data/datasets/massive_balanced_50k/real/train-00033-of-00249_real_00240.jpg",
+      "source_dataset": "massive_balanced_50k",
+      "visual_domain": "General Authentic Photography",
+      "predicted_prob": 0.5249,
+      "trigger_cause": "High-frequency paint stroke relief or heavy JPEG block boundary"
+    }
+  ]
+}

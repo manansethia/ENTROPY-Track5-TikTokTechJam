@@ -1,0 +1,33 @@
+{
+  "rema_e3": {
+    "dev_accuracy": 0.991,
+    "fp": 56,
+    "fn": 34,
+    "auroc": 0.9995101799999999,
+    "auprc": 0.9995468931416298,
+    "tpr_01": 0.9782,
+    "tpr_001": 0.9234,
+    "edge_accuracy": 0.9974176888315042,
+    "hard_fp": 9,
+    "hard_fn": 3,
+    "worst_family_tpr_01": 92.82218597063621,
+    "macro_pseudo_ood_auroc": 0.9993195237798433,
+    "param_hash": "813f243557810e64c85c8ad4519a3bc2e1b23d8545d1d493ff34fb5cff94e3ae"
+  },
+  "feedback_r1": {
+    "dev_accuracy": 0.991,
+    "fp": 56,
+    "fn": 34,
+    "auroc": 0.9995101799999999,
+    "auprc": 0.9995468931416298,
+    "tpr_01": 0.9782,
+    "tpr_001": 0.9234,
+    "edge_accuracy": 0.9974176888315042,
+    "hard_fp": 9,
+    "hard_fn": 3,
+    "worst_family_tpr_01": 92.82218597063621,
+    "macro_pseudo_ood_auroc": 0.9993195237798433,
+    "param_hash": "813f243557810e64c85c8ad4519a3bc2e1b23d8545d1d493ff34fb5cff94e3ae",
+    "hash_changed": false
+  }
+}

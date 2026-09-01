@@ -1,0 +1,11 @@
+{
+  "production_model": "Config A (31.94M Trainable Parameters)",
+  "optimal_temperature": 1.5695312500000018,
+  "operating_threshold_0.10_fpr": 0.9486469626426697,
+  "dev_auroc": 0.99942964,
+  "test_auroc": 0.9999539182386099,
+  "test_tpr_at_0.10_fpr": 99.25962487660415,
+  "test_tpr_at_0.01_fpr": 98.14083580125042,
+  "frozen_checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/production/final_champion_frozen_model.pt",
+  "status": "PRODUCTION_SYSTEM_LOCKED_AND_VERIFIED"
+}

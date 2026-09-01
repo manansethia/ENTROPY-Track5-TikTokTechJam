@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-29T10:06:26Z",
+  "audit_verdict": "VERIFIER_PROVENANCE_RESOLVED",
+  "questions_answered": {
+    "A_source_of_rescue_numbers": "The 18 FP and 112 FN rescue counts were measured during Stage 2 specialist profiling on the development set (10,312 samples) where borderline predictions in [0.35, 0.85] were routed through DINOv2 patch geometry and Edge-Specialist gradient moments.",
+    "B_connection_to_checkpoint": "The saved checkpoint checkpoints/phase5/phase5_champion_model.pt stores the 2,212-d Tri-Stream Structured Dropout trunk weights, normalizers, and calibration parameters.",
+    "C_locked_test_pipeline_execution": "The evaluation in phase5_internal_test.json was conducted strictly on the monolithic Stage-1 model (2,212d) alone, yielding 40 FP (0.94% FPR) and 146 FN (97.60% TPR). Stage-2 specialists were not invoked on the locked holdout to prevent multi-model inference complexity.",
+    "D_conditional_routing_efficacy": "When conditional routing is active on the development set with uncertainty window [0.35, 0.85], 6.8% of samples are routed to Stage 2, reducing validation FP by 18 and FN by 112."
+  }
+}

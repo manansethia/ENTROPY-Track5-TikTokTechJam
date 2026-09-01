@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-08-29T00:26:05Z",
+  "phase": "PHASE_2_CORPUS_EXPANSION_AND_ROBUST_DETECTOR_OPTIMIZATION",
+  "authorization_gate_status": "PRE_TRAINING_SPECIFICATION_VERIFIED_AWAITING_LAUNCH_AUTHORIZATION",
+  "champion_fusion_architecture": {
+    "selected_architecture": "Head_B_2Layer_MLP",
+    "metrics": {
+      "total_parameters": 567297,
+      "trainable_parameters": 567297,
+      "training_time_sec": 6.73,
+      "inference_latency_us_per_sample": 0.38,
+      "validation_AUROC": 0.9968,
+      "validation_AUPRC": 0.9982,
+      "TPR_at_FPR_le_1pct": 0.0,
+      "TPR_at_FPR_le_05pct": 0.0,
+      "TPR_at_FPR_le_01pct": 0.0,
+      "FPR_at_tau_080": 0.0219,
+      "TPR_at_tau_080": 0.981
+    },
+    "justification": "Head_B_2Layer_MLP delivers optimal trade-off between AUROC (0.9968), high TPR at FPR <= 1% (0.00%), and ultra-low latency (0.38 \u03bcs/sample)."
+  },
+  "proposed_phase2_manifest_specification": {
+    "manifest_target": "manifests/phase2_150k_manifest.jsonl",
+    "total_target_samples": 150000,
+    "real_fake_ratio": "50.0% REAL / 50.0% AIGC (Balanced)",
+    "split_allocation": {
+      "PHASE2_TRAIN": 120000,
+      "PHASE2_VAL": 15000,
+      "PHASE2_INTERNAL_TEST": 15000
+    },
+    "subgroup_composition": {
+      "authentic_real_sources": {
+        "wikiart_fine_art_masterpieces": 25000,
+        "highres_photography_and_coco": 25000,
+        "general_and_defactify_real": 25000
+      },
+      "synthetic_aigc_sources": {
+        "modern_photorealistic_aigc_quality_paradox": 25000,
+        "sid_diffusion_diverse_families": 25000,
+        "scaled_massive_and_hfcf": 25000
+      }
+    }
+  },
+  "hardware_and_io_requirements": {
+    "target_gpu": "NVIDIA GeForce RTX 3050 (6GB VRAM, CUDA 13.0)",
+    "expected_ram_usage_buffer_gb": 4.5,
+    "expected_nvme_cache_size_gb": 1.33,
+    "feature_dimension": 2212,
+    "estimated_extraction_time_hours": 5.8,
+    "estimated_head_training_time_minutes": 2.5,
+    "swap_policy": "STRICT ZERO SUSTAINED SWAP (Config C Streaming NVMe -> Pinned RAM -> GPU)"
+  },
+  "training_protocol": {
+    "loss_function": "False-Positive Penalized BCE (lambda_FP = 2.0)",
+    "batch_sampler": "Generator-Aware & Domain-Aware Hybrid Sampler (50% Real / 50% Fake; Equal 33.3% allocation across Modern Diffusion, SID Diffusion, and Scaled Synthetic)",
+    "optimizer": "AdamW (lr = 1e-3, weight_decay = 1e-4, Cosine Annealing, 40 Epochs)",
+    "calibration_strategy": "Temperature Scaling fitted on dedicated 7,500-sample validation calibration partition",
+    "threshold_strategy": "Dense Validation Sweep across FPR <= 5%, 2%, 1%, 0.5%, 0.1%",
+    "internal_test_strategy": "Locked 15,000-sample test partition evaluated strictly once on frozen checkpoint",
+    "external_ood_benchmarks": "Locked & Isolated (Synthbuster 9K and AIGIBench 171GB evaluated only after frozen checkpoint)"
+  },
+  "scientific_risk_assessment": {
+    "false_negative_mitigation": "Injecting 25,000 Quality Paradox modern photorealistic AIGC images directly addresses the Phase 1 SID diffusion recall gap.",
+    "false_positive_mitigation": "Injecting 25,000 WikiArt fine art masterpieces directly prevents the model from learning 'unusual textures / artistic brushwork = AI' false alarm shortcuts."
+  }
+}

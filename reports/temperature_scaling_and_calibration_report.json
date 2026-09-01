@@ -1,0 +1,10 @@
+{
+  "report_id": "TEMPERATURE_SCALING_CALIBRATION_REPORT",
+  "optimal_temperature": 1.5695312500000018,
+  "calibration_dataset_size": 4000,
+  "uncalibrated_brier": 0.006974351853384738,
+  "uncalibrated_ece": 0.006691371714085549,
+  "calibrated_brier": 0.0064600073385562475,
+  "calibrated_ece": 0.00482863023960088,
+  "completed_at": "2026-08-30T03:46:12Z"
+}

@@ -1,0 +1,135 @@
+{
+  "timestamp": "2026-08-29T09:19:00Z",
+  "champion_id": "B_CLIP_SigLIP_mlp2",
+  "robustness_matrix_15_conditions": {
+    "Clean": {
+      "condition": "Clean",
+      "AUROC": 0.9971,
+      "AUPRC": 0.9977,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9699,
+      "Robustness_Index_RI": 0.9999
+    },
+    "JPEG_Q70": {
+      "condition": "JPEG_Q70",
+      "AUROC": 0.9935,
+      "AUPRC": 0.9948,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9696,
+      "Robustness_Index_RI": 0.9963
+    },
+    "JPEG_Q50": {
+      "condition": "JPEG_Q50",
+      "AUROC": 0.9922,
+      "AUPRC": 0.993,
+      "FPR_tau_080": 0.0153,
+      "TPR_tau_080": 0.9694,
+      "Robustness_Index_RI": 0.995
+    },
+    "JPEG_Q30": {
+      "condition": "JPEG_Q30",
+      "AUROC": 0.9904,
+      "AUPRC": 0.9923,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9694,
+      "Robustness_Index_RI": 0.9932
+    },
+    "GaussianBlur_sigma1": {
+      "condition": "GaussianBlur_sigma1",
+      "AUROC": 0.9917,
+      "AUPRC": 0.9932,
+      "FPR_tau_080": 0.0153,
+      "TPR_tau_080": 0.9692,
+      "Robustness_Index_RI": 0.9945
+    },
+    "GaussianBlur_sigma2": {
+      "condition": "GaussianBlur_sigma2",
+      "AUROC": 0.9898,
+      "AUPRC": 0.9911,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9682,
+      "Robustness_Index_RI": 0.9926
+    },
+    "BilinearResize_0.75x": {
+      "condition": "BilinearResize_0.75x",
+      "AUROC": 0.9932,
+      "AUPRC": 0.9942,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9696,
+      "Robustness_Index_RI": 0.996
+    },
+    "BilinearResize_0.50x": {
+      "condition": "BilinearResize_0.50x",
+      "AUROC": 0.9907,
+      "AUPRC": 0.9918,
+      "FPR_tau_080": 0.0153,
+      "TPR_tau_080": 0.9696,
+      "Robustness_Index_RI": 0.9935
+    },
+    "GaussianNoise_std0.05": {
+      "condition": "GaussianNoise_std0.05",
+      "AUROC": 0.991,
+      "AUPRC": 0.9923,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9691,
+      "Robustness_Index_RI": 0.9938
+    },
+    "GaussianNoise_std0.10": {
+      "condition": "GaussianNoise_std0.10",
+      "AUROC": 0.9893,
+      "AUPRC": 0.9903,
+      "FPR_tau_080": 0.0151,
+      "TPR_tau_080": 0.9681,
+      "Robustness_Index_RI": 0.9921
+    },
+    "RandomCrop_0.85": {
+      "condition": "RandomCrop_0.85",
+      "AUROC": 0.9921,
+      "AUPRC": 0.9931,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9697,
+      "Robustness_Index_RI": 0.9949
+    },
+    "ColorJitter_b0.2": {
+      "condition": "ColorJitter_b0.2",
+      "AUROC": 0.9926,
+      "AUPRC": 0.9936,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9694,
+      "Robustness_Index_RI": 0.9954
+    },
+    "ColorJitter_c0.2": {
+      "condition": "ColorJitter_c0.2",
+      "AUROC": 0.9921,
+      "AUPRC": 0.9935,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9697,
+      "Robustness_Index_RI": 0.9949
+    },
+    "Sharpening_factor1.5": {
+      "condition": "Sharpening_factor1.5",
+      "AUROC": 0.9919,
+      "AUPRC": 0.9923,
+      "FPR_tau_080": 0.0156,
+      "TPR_tau_080": 0.9694,
+      "Robustness_Index_RI": 0.9947
+    },
+    "SocialMedia_Recompression": {
+      "condition": "SocialMedia_Recompression",
+      "AUROC": 0.9911,
+      "AUPRC": 0.9922,
+      "FPR_tau_080": 0.0153,
+      "TPR_tau_080": 0.9692,
+      "Robustness_Index_RI": 0.9939
+    }
+  },
+  "mean_robustness_index": 0.9947,
+  "worst_case_condition": {
+    "condition": "GaussianNoise_std0.10",
+    "AUROC": 0.9893,
+    "AUPRC": 0.9903,
+    "FPR_tau_080": 0.0151,
+    "TPR_tau_080": 0.9681,
+    "Robustness_Index_RI": 0.9921
+  }
+}

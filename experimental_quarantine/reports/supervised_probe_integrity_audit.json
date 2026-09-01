@@ -1,0 +1,728 @@
+{
+  "timestamp": "2026-08-28T17:00:36Z",
+  "audit_scope": "Master Protocol Section 8 Supervised Representation Probes",
+  "overall_integrity_status": "ALL_MODELS_VALID",
+  "num_models_audited": 9,
+  "audit_details": {
+    "CLIP-ViT-L": {
+      "expert_name": "CLIP-ViT-L",
+      "status": "VALID",
+      "checks": {
+        "1_fitted_only_on_300_train_split": {
+          "passed": true,
+          "train_count": 300,
+          "train_real": 150,
+          "train_fake": 150
+        },
+        "2_val_split_strictly_quarantined": {
+          "passed": true,
+          "val_count": 100,
+          "val_real": 50,
+          "val_fake": 50
+        },
+        "3_single_probe_evaluated_on_all_7_conditions": {
+          "passed": true,
+          "conditions_evaluated": [
+            "clean",
+            "jpeg30",
+            "blur2",
+            "resize0.25",
+            "noise0.10",
+            "crop80",
+            "color_jitter"
+          ]
+        },
+        "4_no_per_transformation_classifier_fitting": {
+          "passed": true,
+          "method": "Single frozen logistic regression probe fit on clean train features only"
+        },
+        "5_identical_preprocessing_between_train_and_val": {
+          "passed": true,
+          "pipeline": "Model-specific standard ImageProcessor / Tensor norm without data leakage"
+        },
+        "6_zero_train_val_duplicate_leakage": {
+          "passed": true,
+          "train_set_size": 300,
+          "val_set_size": 100
+        },
+        "7_exact_sample_counts_recorded": {
+          "passed": true,
+          "train_samples": 300,
+          "val_samples_per_condition": {
+            "clean": 100,
+            "jpeg30": 100,
+            "blur2": 100,
+            "resize0.25": 100,
+            "noise0.10": 100,
+            "crop80": 100,
+            "color_jitter": 100
+          }
+        },
+        "8_metrics_from_validation_predictions_only": {
+          "passed": true,
+          "clean_auroc": 0.9988,
+          "clean_fpr": 0.02
+        },
+        "9_ri_arithmetic_mean_of_7_aurocs": {
+          "passed": true,
+          "calculated_mean_ri": 0.9907,
+          "reported_mean_ri": 0.9907
+        }
+      },
+      "summary_metrics": {
+        "clean_auroc": 0.9988,
+        "mean_robustness_index": 0.9907,
+        "worst_case_auroc": 0.9736,
+        "worst_case_degradation": 0.0252,
+        "clean_fpr": 0.02,
+        "clean_fnr": 0.02,
+        "clean_auprc": 0.9988,
+        "expected_calibration_error": 0.0208,
+        "brier_score": 0.0143,
+        "inference_latency_ms": 79.57,
+        "parameter_count": 427616513,
+        "peak_vram_gb": 2.121
+      }
+    },
+    "SigLIP-SO400M": {
+      "expert_name": "SigLIP-SO400M",
+      "status": "VALID",
+      "checks": {
+        "1_fitted_only_on_300_train_split": {
+          "passed": true,
+          "train_count": 300,
+          "train_real": 150,
+          "train_fake": 150
+        },
+        "2_val_split_strictly_quarantined": {
+          "passed": true,
+          "val_count": 100,
+          "val_real": 50,
+          "val_fake": 50
+        },
+        "3_single_probe_evaluated_on_all_7_conditions": {
+          "passed": true,
+          "conditions_evaluated": [
+            "clean",
+            "jpeg30",
+            "blur2",
+            "resize0.25",
+            "noise0.10",
+            "crop80",
+            "color_jitter"
+          ]
+        },
+        "4_no_per_transformation_classifier_fitting": {
+          "passed": true,
+          "method": "Single frozen logistic regression probe fit on clean train features only"
+        },
+        "5_identical_preprocessing_between_train_and_val": {
+          "passed": true,
+          "pipeline": "Model-specific standard ImageProcessor / Tensor norm without data leakage"
+        },
+        "6_zero_train_val_duplicate_leakage": {
+          "passed": true,
+          "train_set_size": 300,
+          "val_set_size": 100
+        },
+        "7_exact_sample_counts_recorded": {
+          "passed": true,
+          "train_samples": 300,
+          "val_samples_per_condition": {
+            "clean": 100,
+            "jpeg30": 100,
+            "blur2": 100,
+            "resize0.25": 100,
+            "noise0.10": 100,
+            "crop80": 100,
+            "color_jitter": 100
+          }
+        },
+        "8_metrics_from_validation_predictions_only": {
+          "passed": true,
+          "clean_auroc": 1.0,
+          "clean_fpr": 0.0
+        },
+        "9_ri_arithmetic_mean_of_7_aurocs": {
+          "passed": true,
+          "calculated_mean_ri": 0.9777,
+          "reported_mean_ri": 0.9777
+        }
+      },
+      "summary_metrics": {
+        "clean_auroc": 1.0,
+        "mean_robustness_index": 0.9777,
+        "worst_case_auroc": 0.9268,
+        "worst_case_degradation": 0.0732,
+        "clean_fpr": 0.0,
+        "clean_fnr": 0.0,
+        "clean_auprc": 1.0,
+        "expected_calibration_error": 0.0189,
+        "brier_score": 0.0042,
+        "inference_latency_ms": 106.15,
+        "parameter_count": 877360306,
+        "peak_vram_gb": 3.698
+      }
+    },
+    "DINOv2-Registers": {
+      "expert_name": "DINOv2-Registers",
+      "status": "VALID",
+      "checks": {
+        "1_fitted_only_on_300_train_split": {
+          "passed": true,
+          "train_count": 300,
+          "train_real": 150,
+          "train_fake": 150
+        },
+        "2_val_split_strictly_quarantined": {
+          "passed": true,
+          "val_count": 100,
+          "val_real": 50,
+          "val_fake": 50
+        },
+        "3_single_probe_evaluated_on_all_7_conditions": {
+          "passed": true,
+          "conditions_evaluated": [
+            "clean",
+            "jpeg30",
+            "blur2",
+            "resize0.25",
+            "noise0.10",
+            "crop80",
+            "color_jitter"
+          ]
+        },
+        "4_no_per_transformation_classifier_fitting": {
+          "passed": true,
+          "method": "Single frozen logistic regression probe fit on clean train features only"
+        },
+        "5_identical_preprocessing_between_train_and_val": {
+          "passed": true,
+          "pipeline": "Model-specific standard ImageProcessor / Tensor norm without data leakage"
+        },
+        "6_zero_train_val_duplicate_leakage": {
+          "passed": true,
+          "train_set_size": 300,
+          "val_set_size": 100
+        },
+        "7_exact_sample_counts_recorded": {
+          "passed": true,
+          "train_samples": 300,
+          "val_samples_per_condition": {
+            "clean": 100,
+            "jpeg30": 100,
+            "blur2": 100,
+            "resize0.25": 100,
+            "noise0.10": 100,
+            "crop80": 100,
+            "color_jitter": 100
+          }
+        },
+        "8_metrics_from_validation_predictions_only": {
+          "passed": true,
+          "clean_auroc": 0.9676,
+          "clean_fpr": 0.02
+        },
+        "9_ri_arithmetic_mean_of_7_aurocs": {
+          "passed": true,
+          "calculated_mean_ri": 0.9601,
+          "reported_mean_ri": 0.9601
+        }
+      },
+      "summary_metrics": {
+        "clean_auroc": 0.9676,
+        "mean_robustness_index": 0.9601,
+        "worst_case_auroc": 0.9384,
+        "worst_case_degradation": 0.0292,
+        "clean_fpr": 0.02,
+        "clean_fnr": 0.16,
+        "clean_auprc": 0.9771,
+        "expected_calibration_error": 0.0602,
+        "brier_score": 0.0663,
+        "inference_latency_ms": 82.11,
+        "parameter_count": 304372736,
+        "peak_vram_gb": 1.638
+      }
+    },
+    "EVA-02-Large-448": {
+      "expert_name": "EVA-02-Large-448",
+      "status": "VALID",
+      "checks": {
+        "1_fitted_only_on_300_train_split": {
+          "passed": true,
+          "train_count": 300,
+          "train_real": 150,
+          "train_fake": 150
+        },
+        "2_val_split_strictly_quarantined": {
+          "passed": true,
+          "val_count": 100,
+          "val_real": 50,
+          "val_fake": 50
+        },
+        "3_single_probe_evaluated_on_all_7_conditions": {
+          "passed": true,
+          "conditions_evaluated": [
+            "clean",
+            "jpeg30",
+            "blur2",
+            "resize0.25",
+            "noise0.10",
+            "crop80",
+            "color_jitter"
+          ]
+        },
+        "4_no_per_transformation_classifier_fitting": {
+          "passed": true,
+          "method": "Single frozen logistic regression probe fit on clean train features only"
+        },
+        "5_identical_preprocessing_between_train_and_val": {
+          "passed": true,
+          "pipeline": "Model-specific standard ImageProcessor / Tensor norm without data leakage"
+        },
+        "6_zero_train_val_duplicate_leakage": {
+          "passed": true,
+          "train_set_size": 300,
+          "val_set_size": 100
+        },
+        "7_exact_sample_counts_recorded": {
+          "passed": true,
+          "train_samples": 300,
+          "val_samples_per_condition": {
+            "clean": 100,
+            "jpeg30": 100,
+            "blur2": 100,
+            "resize0.25": 100,
+            "noise0.10": 100,
+            "crop80": 100,
+            "color_jitter": 100
+          }
+        },
+        "8_metrics_from_validation_predictions_only": {
+          "passed": true,
+          "clean_auroc": 0.9868,
+          "clean_fpr": 0.06
+        },
+        "9_ri_arithmetic_mean_of_7_aurocs": {
+          "passed": true,
+          "calculated_mean_ri": 0.9539,
+          "reported_mean_ri": 0.9539
+        }
+      },
+      "summary_metrics": {
+        "clean_auroc": 0.9868,
+        "mean_robustness_index": 0.9539,
+        "worst_case_auroc": 0.8812,
+        "worst_case_degradation": 0.1056,
+        "clean_fpr": 0.06,
+        "clean_fnr": 0.06,
+        "clean_auprc": 0.9886,
+        "expected_calibration_error": 0.04,
+        "brier_score": 0.0432,
+        "inference_latency_ms": 629.92,
+        "parameter_count": 304055232,
+        "peak_vram_gb": 3.048
+      }
+    },
+    "ConvNeXt-V2": {
+      "expert_name": "ConvNeXt-V2",
+      "status": "VALID",
+      "checks": {
+        "1_fitted_only_on_300_train_split": {
+          "passed": true,
+          "train_count": 300,
+          "train_real": 150,
+          "train_fake": 150
+        },
+        "2_val_split_strictly_quarantined": {
+          "passed": true,
+          "val_count": 100,
+          "val_real": 50,
+          "val_fake": 50
+        },
+        "3_single_probe_evaluated_on_all_7_conditions": {
+          "passed": true,
+          "conditions_evaluated": [
+            "clean",
+            "jpeg30",
+            "blur2",
+            "resize0.25",
+            "noise0.10",
+            "crop80",
+            "color_jitter"
+          ]
+        },
+        "4_no_per_transformation_classifier_fitting": {
+          "passed": true,
+          "method": "Single frozen logistic regression probe fit on clean train features only"
+        },
+        "5_identical_preprocessing_between_train_and_val": {
+          "passed": true,
+          "pipeline": "Model-specific standard ImageProcessor / Tensor norm without data leakage"
+        },
+        "6_zero_train_val_duplicate_leakage": {
+          "passed": true,
+          "train_set_size": 300,
+          "val_set_size": 100
+        },
+        "7_exact_sample_counts_recorded": {
+          "passed": true,
+          "train_samples": 300,
+          "val_samples_per_condition": {
+            "clean": 100,
+            "jpeg30": 100,
+            "blur2": 100,
+            "resize0.25": 100,
+            "noise0.10": 100,
+            "crop80": 100,
+            "color_jitter": 100
+          }
+        },
+        "8_metrics_from_validation_predictions_only": {
+          "passed": true,
+          "clean_auroc": 0.9728,
+          "clean_fpr": 0.12
+        },
+        "9_ri_arithmetic_mean_of_7_aurocs": {
+          "passed": true,
+          "calculated_mean_ri": 0.891,
+          "reported_mean_ri": 0.891
+        }
+      },
+      "summary_metrics": {
+        "clean_auroc": 0.9728,
+        "mean_robustness_index": 0.891,
+        "worst_case_auroc": 0.7856,
+        "worst_case_degradation": 0.1872,
+        "clean_fpr": 0.12,
+        "clean_fnr": 0.02,
+        "clean_auprc": 0.9725,
+        "expected_calibration_error": 0.0747,
+        "brier_score": 0.0689,
+        "inference_latency_ms": 11.42,
+        "parameter_count": 27866496,
+        "peak_vram_gb": 0.637
+      }
+    },
+    "2D-FFT-Spectral": {
+      "expert_name": "2D-FFT-Spectral",
+      "status": "VALID",
+      "checks": {
+        "1_fitted_only_on_300_train_split": {
+          "passed": true,
+          "train_count": 300,
+          "train_real": 150,
+          "train_fake": 150
+        },
+        "2_val_split_strictly_quarantined": {
+          "passed": true,
+          "val_count": 100,
+          "val_real": 50,
+          "val_fake": 50
+        },
+        "3_single_probe_evaluated_on_all_7_conditions": {
+          "passed": true,
+          "conditions_evaluated": [
+            "clean",
+            "jpeg30",
+            "blur2",
+            "resize0.25",
+            "noise0.10",
+            "crop80",
+            "color_jitter"
+          ]
+        },
+        "4_no_per_transformation_classifier_fitting": {
+          "passed": true,
+          "method": "Single frozen logistic regression probe fit on clean train features only"
+        },
+        "5_identical_preprocessing_between_train_and_val": {
+          "passed": true,
+          "pipeline": "Model-specific standard ImageProcessor / Tensor norm without data leakage"
+        },
+        "6_zero_train_val_duplicate_leakage": {
+          "passed": true,
+          "train_set_size": 300,
+          "val_set_size": 100
+        },
+        "7_exact_sample_counts_recorded": {
+          "passed": true,
+          "train_samples": 300,
+          "val_samples_per_condition": {
+            "clean": 100,
+            "jpeg30": 100,
+            "blur2": 100,
+            "resize0.25": 100,
+            "noise0.10": 100,
+            "crop80": 100,
+            "color_jitter": 100
+          }
+        },
+        "8_metrics_from_validation_predictions_only": {
+          "passed": true,
+          "clean_auroc": 0.6944,
+          "clean_fpr": 0.26
+        },
+        "9_ri_arithmetic_mean_of_7_aurocs": {
+          "passed": true,
+          "calculated_mean_ri": 0.6107,
+          "reported_mean_ri": 0.6107
+        }
+      },
+      "summary_metrics": {
+        "clean_auroc": 0.6944,
+        "mean_robustness_index": 0.6107,
+        "worst_case_auroc": 0.5676,
+        "worst_case_degradation": 0.1268,
+        "clean_fpr": 0.26,
+        "clean_fnr": 0.38,
+        "clean_auprc": 0.6562,
+        "expected_calibration_error": 0.1793,
+        "brier_score": 0.2416,
+        "inference_latency_ms": 3.16,
+        "parameter_count": 0,
+        "peak_vram_gb": 0.195
+      }
+    },
+    "SRM-DWT-Wavelet": {
+      "expert_name": "SRM-DWT-Wavelet",
+      "status": "VALID",
+      "checks": {
+        "1_fitted_only_on_300_train_split": {
+          "passed": true,
+          "train_count": 300,
+          "train_real": 150,
+          "train_fake": 150
+        },
+        "2_val_split_strictly_quarantined": {
+          "passed": true,
+          "val_count": 100,
+          "val_real": 50,
+          "val_fake": 50
+        },
+        "3_single_probe_evaluated_on_all_7_conditions": {
+          "passed": true,
+          "conditions_evaluated": [
+            "clean",
+            "jpeg30",
+            "blur2",
+            "resize0.25",
+            "noise0.10",
+            "crop80",
+            "color_jitter"
+          ]
+        },
+        "4_no_per_transformation_classifier_fitting": {
+          "passed": true,
+          "method": "Single frozen logistic regression probe fit on clean train features only"
+        },
+        "5_identical_preprocessing_between_train_and_val": {
+          "passed": true,
+          "pipeline": "Model-specific standard ImageProcessor / Tensor norm without data leakage"
+        },
+        "6_zero_train_val_duplicate_leakage": {
+          "passed": true,
+          "train_set_size": 300,
+          "val_set_size": 100
+        },
+        "7_exact_sample_counts_recorded": {
+          "passed": true,
+          "train_samples": 300,
+          "val_samples_per_condition": {
+            "clean": 100,
+            "jpeg30": 100,
+            "blur2": 100,
+            "resize0.25": 100,
+            "noise0.10": 100,
+            "crop80": 100,
+            "color_jitter": 100
+          }
+        },
+        "8_metrics_from_validation_predictions_only": {
+          "passed": true,
+          "clean_auroc": 0.8044,
+          "clean_fpr": 0.2
+        },
+        "9_ri_arithmetic_mean_of_7_aurocs": {
+          "passed": true,
+          "calculated_mean_ri": 0.6612,
+          "reported_mean_ri": 0.6612
+        }
+      },
+      "summary_metrics": {
+        "clean_auroc": 0.8044,
+        "mean_robustness_index": 0.6612,
+        "worst_case_auroc": 0.5312,
+        "worst_case_degradation": 0.2732,
+        "clean_fpr": 0.2,
+        "clean_fnr": 0.26,
+        "clean_auprc": 0.7732,
+        "expected_calibration_error": 0.1448,
+        "brier_score": 0.1834,
+        "inference_latency_ms": 1.11,
+        "parameter_count": 0,
+        "peak_vram_gb": 0.108
+      }
+    },
+    "Edge-Specialist": {
+      "expert_name": "Edge-Specialist",
+      "status": "VALID",
+      "checks": {
+        "1_fitted_only_on_300_train_split": {
+          "passed": true,
+          "train_count": 300,
+          "train_real": 150,
+          "train_fake": 150
+        },
+        "2_val_split_strictly_quarantined": {
+          "passed": true,
+          "val_count": 100,
+          "val_real": 50,
+          "val_fake": 50
+        },
+        "3_single_probe_evaluated_on_all_7_conditions": {
+          "passed": true,
+          "conditions_evaluated": [
+            "clean",
+            "jpeg30",
+            "blur2",
+            "resize0.25",
+            "noise0.10",
+            "crop80",
+            "color_jitter"
+          ]
+        },
+        "4_no_per_transformation_classifier_fitting": {
+          "passed": true,
+          "method": "Single frozen logistic regression probe fit on clean train features only"
+        },
+        "5_identical_preprocessing_between_train_and_val": {
+          "passed": true,
+          "pipeline": "Model-specific standard ImageProcessor / Tensor norm without data leakage"
+        },
+        "6_zero_train_val_duplicate_leakage": {
+          "passed": true,
+          "train_set_size": 300,
+          "val_set_size": 100
+        },
+        "7_exact_sample_counts_recorded": {
+          "passed": true,
+          "train_samples": 300,
+          "val_samples_per_condition": {
+            "clean": 100,
+            "jpeg30": 100,
+            "blur2": 100,
+            "resize0.25": 100,
+            "noise0.10": 100,
+            "crop80": 100,
+            "color_jitter": 100
+          }
+        },
+        "8_metrics_from_validation_predictions_only": {
+          "passed": true,
+          "clean_auroc": 0.7984,
+          "clean_fpr": 0.18
+        },
+        "9_ri_arithmetic_mean_of_7_aurocs": {
+          "passed": true,
+          "calculated_mean_ri": 0.715,
+          "reported_mean_ri": 0.715
+        }
+      },
+      "summary_metrics": {
+        "clean_auroc": 0.7984,
+        "mean_robustness_index": 0.715,
+        "worst_case_auroc": 0.6268,
+        "worst_case_degradation": 0.1716,
+        "clean_fpr": 0.18,
+        "clean_fnr": 0.48,
+        "clean_auprc": 0.7966,
+        "expected_calibration_error": 0.1993,
+        "brier_score": 0.2091,
+        "inference_latency_ms": 1.5,
+        "parameter_count": 128960,
+        "peak_vram_gb": 0.298
+      }
+    },
+    "Patch-MIL": {
+      "expert_name": "Patch-MIL",
+      "status": "VALID",
+      "checks": {
+        "1_fitted_only_on_300_train_split": {
+          "passed": true,
+          "train_count": 300,
+          "train_real": 150,
+          "train_fake": 150
+        },
+        "2_val_split_strictly_quarantined": {
+          "passed": true,
+          "val_count": 100,
+          "val_real": 50,
+          "val_fake": 50
+        },
+        "3_single_probe_evaluated_on_all_7_conditions": {
+          "passed": true,
+          "conditions_evaluated": [
+            "clean",
+            "jpeg30",
+            "blur2",
+            "resize0.25",
+            "noise0.10",
+            "crop80",
+            "color_jitter"
+          ]
+        },
+        "4_no_per_transformation_classifier_fitting": {
+          "passed": true,
+          "method": "Single frozen logistic regression probe fit on clean train features only"
+        },
+        "5_identical_preprocessing_between_train_and_val": {
+          "passed": true,
+          "pipeline": "Model-specific standard ImageProcessor / Tensor norm without data leakage"
+        },
+        "6_zero_train_val_duplicate_leakage": {
+          "passed": true,
+          "train_set_size": 300,
+          "val_set_size": 100
+        },
+        "7_exact_sample_counts_recorded": {
+          "passed": true,
+          "train_samples": 300,
+          "val_samples_per_condition": {
+            "clean": 100,
+            "jpeg30": 100,
+            "blur2": 100,
+            "resize0.25": 100,
+            "noise0.10": 100,
+            "crop80": 100,
+            "color_jitter": 100
+          }
+        },
+        "8_metrics_from_validation_predictions_only": {
+          "passed": true,
+          "clean_auroc": 0.6384,
+          "clean_fpr": 0.38
+        },
+        "9_ri_arithmetic_mean_of_7_aurocs": {
+          "passed": true,
+          "calculated_mean_ri": 0.6294,
+          "reported_mean_ri": 0.6294
+        }
+      },
+      "summary_metrics": {
+        "clean_auroc": 0.6384,
+        "mean_robustness_index": 0.6294,
+        "worst_case_auroc": 0.606,
+        "worst_case_degradation": 0.0324,
+        "clean_fpr": 0.38,
+        "clean_fnr": 0.46,
+        "clean_auprc": 0.694,
+        "expected_calibration_error": 0.085,
+        "brier_score": 0.2322,
+        "inference_latency_ms": 0.91,
+        "parameter_count": 393985,
+        "peak_vram_gb": 0.057
+      }
+    }
+  }
+}

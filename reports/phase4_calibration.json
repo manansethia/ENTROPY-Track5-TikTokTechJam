@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-08-29T09:31:25Z",
+  "champion_candidate": "Cand_C_CLIP_SigLIP_Edge",
+  "optimal_temperature_T": 1.2526,
+  "ECE_before_calibration": 0.0342,
+  "ECE_after_calibration": 0.0089,
+  "Brier_score": 0.0196
+}

@@ -1,0 +1,98 @@
+{
+  "image_path": "in_memory_image",
+  "prob_aigc": 0.9700337052345276,
+  "verdict": "SYNTHETIC AIGC",
+  "is_synthetic": true,
+  "spectral_metrics": {
+    "high_freq_energy_ratio": 0.3881722092628479,
+    "grid_peak_anomaly_score": 9.147324562072754,
+    "is_frequency_anomalous": true
+  },
+  "edge_metrics": {
+    "edge_anomaly_score": 0.5900330543518066
+  },
+  "top_anomalous_patches": [
+    {
+      "patch_idx": 85,
+      "bbox": [
+        37,
+        219,
+        73,
+        256
+      ],
+      "gradcam_score": 0.4607226252555847,
+      "attention_score": 0.5,
+      "frequency_score": 0.2053466827804219,
+      "edge_score": 0.128142848610878,
+      "composite_risk": 0.35295082511771464,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 104,
+      "bbox": [
+        219,
+        256,
+        256,
+        293
+      ],
+      "gradcam_score": 0.5308037400245667,
+      "attention_score": 0.5,
+      "frequency_score": 0.13156065735532452,
+      "edge_score": 0.07351968437433243,
+      "composite_risk": 0.35179737735452976,
+      "primary_anomaly_category": "Semantic Saliency"
+    },
+    {
+      "patch_idx": 124,
+      "bbox": [
+        439,
+        293,
+        475,
+        329
+      ],
+      "gradcam_score": 0.5050589442253113,
+      "attention_score": 0.5,
+      "frequency_score": 0.14008130284349704,
+      "edge_score": 0.08578990399837494,
+      "composite_risk": 0.3469448718472333,
+      "primary_anomaly_category": "Semantic Saliency"
+    },
+    {
+      "patch_idx": 108,
+      "bbox": [
+        366,
+        256,
+        402,
+        293
+      ],
+      "gradcam_score": 0.49089083075523376,
+      "attention_score": 0.5,
+      "frequency_score": 0.14595163002962155,
+      "edge_score": 0.09825564175844193,
+      "composite_risk": 0.3456532451219445,
+      "primary_anomaly_category": "ViT Patch Focus"
+    },
+    {
+      "patch_idx": 93,
+      "bbox": [
+        329,
+        219,
+        366,
+        256
+      ],
+      "gradcam_score": 0.4736908972263336,
+      "attention_score": 0.5,
+      "frequency_score": 0.16669107595247434,
+      "edge_score": 0.09700291603803635,
+      "composite_risk": 0.34353061242731886,
+      "primary_anomaly_category": "ViT Patch Focus"
+    }
+  ],
+  "model_gates": [
+    0.41635236144065857,
+    0.16157487034797668,
+    0.2500031292438507,
+    0.17206965386867523
+  ],
+  "dashboard_output_path": "reports/explainability/synthetic_cf_0000000_diagnosis.jpg"
+}

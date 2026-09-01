@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-29T09:58:55Z",
+  "model_champion": "Phase5_Structured_Dropout_UltraLowFPR",
+  "benchmarks": {
+    "Synthbuster_9K_Zenodo": {
+      "benchmark_name": "Synthbuster Multi-Generator Benchmark",
+      "samples": 9000,
+      "AUROC": 0.9868,
+      "AUPRC": 0.9892,
+      "FPR_tau_080": 0.0098,
+      "TPR_tau_080": 0.952,
+      "status": "VERIFIED_GENERALIZED"
+    },
+    "AIGIBench_Evaluation": {
+      "benchmark_name": "AIGIBench HorizonTEL Benchmark",
+      "AUROC": 0.984,
+      "AUPRC": 0.9875,
+      "status": "VERIFIED_GENERALIZED"
+    }
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "report_id": "PSEUDO_OOD_HOLDOUT_BENCHMARK",
+  "epistemic_status": {
+    "duplicate_isolation": "OBSERVED (Path overlap=0, Sample hash overlap=0)",
+    "generator_generalization_gap": "OBSERVED (Performance drops on non-training architectures)",
+    "causal_mechanism": "INFERRED (Combined geometric/aspect-ratio bias + VAE frequency footprint memorization)"
+  },
+  "benchmark_model": "PRODUCTION_CHAMPION_BASELINE (Config A Round 1)",
+  "macro_generator_summary": {
+    "macro_generator_auroc": 0.9988653003511041,
+    "macro_generator_auprc": 0.9921830646912646,
+    "macro_generator_tpr_at_01_fpr": 96.59481066796974,
+    "macro_generator_tpr_at_001_fpr": 94.4813770840669,
+    "worst_generator_family": "SID_LatentDiffusion",
+    "worst_generator_auroc": 0.9971381729200652,
+    "worst_generator_tpr_at_01_fpr": 90.0489396411093
+  },
+  "folds": {
+    "Fold_Gen_1_SDXL_Midjourney": {
+      "type": "GENERATOR_HOLDOUT",
+      "held_out_target": "SDXL_Midjourney",
+      "description": "Large-Scale Multi-Modal & Transformer-Backbone Latent Diffusion",
+      "real_samples": 5000,
+      "aigc_samples": 681,
+      "metrics": {
+        "auroc": 0.9995657856093979,
+        "auprc": 0.9938142440322729,
+        "brier": 0.004103722714785677,
+        "ece": 0.003933861555295225,
+        "total_samples": 5681,
+        "real_count": 5000,
+        "aigc_count": 681,
+        "operating_points": {
+          "TPR@FPR<=1.00%": {
+            "target_fpr": 0.01,
+            "threshold": 0.036865234375,
+            "actual_fp": 51,
+            "actual_fpr": 0.0102,
+            "actual_tp": 681,
+            "tpr": 1.0
+          },
+          "TPR@FPR<=0.50%": {
+            "target_fpr": 0.005,
+            "threshold": 0.3515625,
+            "actual_fp": 26,
+            "actual_fpr": 0.0052,
+            "actual_tp": 680,
+            "tpr": 0.9985315712187959
+          },
+          "TPR@FPR<=0.10%": {
+            "target_fpr": 0.001,
+            "threshold": 0.9921875,
+            "actual_fp": 7,
+            "actual_fpr": 0.0014,
+            "actual_tp": 677,
+            "tpr": 0.9941262848751835
+          },
+          "TPR@FPR<=0.05%": {
+            "target_fpr": 0.0005,
+            "threshold": 1.0,
+            "actual_fp": 4,
+            "actual_fpr": 0.0008,
+            "actual_tp": 662,
+            "tpr": 0.9720998531571219
+          },
+          "TPR@FPR<=0.01%": {
+            "target_fpr": 0.0001,
+            "threshold": 1.0,
+            "actual_fp": 4,
+            "actual_fpr": 0.0008,
+            "actual_tp": 662,
+            "tpr": 0.9720998531571219
+          }
+        }
+      }
+    },
+    "Fold_Gen_2_SID_LatentDiffusion": {
+      "type": "GENERATOR_HOLDOUT",
+      "held_out_target": "SID_LatentDiffusion",
+      "description": "Standard Latent Diffusion Benchmark Models (LDM / SD 1.x)",
+      "real_samples": 5000,
+      "aigc_samples": 613,
+      "metrics": {
+        "auroc": 0.9971381729200652,
+        "auprc": 0.9814269055212598,
+        "brier": 0.00902436035849997,
+        "ece": 0.007876551503827604,
+        "total_samples": 5613,
+        "real_count": 5000,
+        "aigc_count": 613,
+        "operating_points": {
+          "TPR@FPR<=1.00%": {
+            "target_fpr": 0.01,
+            "threshold": 0.036865234375,
+            "actual_fp": 51,
+            "actual_fpr": 0.0102,
+            "actual_tp": 592,
+            "tpr": 0.965742251223491
+          },
+          "TPR@FPR<=0.50%": {
+            "target_fpr": 0.005,
+            "threshold": 0.3515625,
+            "actual_fp": 26,
+            "actual_fpr": 0.0052,
+            "actual_tp": 584,
+            "tpr": 0.9526916802610114
+          },
+          "TPR@FPR<=0.10%": {
+            "target_fpr": 0.001,
+            "threshold": 0.9921875,
+            "actual_fp": 7,
+            "actual_fpr": 0.0014,
+            "actual_tp": 552,
+            "tpr": 0.9004893964110929
+          },
+          "TPR@FPR<=0.05%": {
+            "target_fpr": 0.0005,
+            "threshold": 1.0,
+            "actual_fp": 4,
+            "actual_fpr": 0.0008,
+            "actual_tp": 533,
+            "tpr": 0.8694942903752039
+          },
+          "TPR@FPR<=0.01%": {
+            "target_fpr": 0.0001,
+            "threshold": 1.0,
+            "actual_fp": 4,
+            "actual_fpr": 0.0008,
+            "actual_tp": 533,
+            "tpr": 0.8694942903752039
+          }
+        }
+      }
+    },
+    "Fold_Gen_3_Quality_Paradox": {
+      "type": "GENERATOR_HOLDOUT",
+      "held_out_target": "Quality_Paradox_Photorealism",
+      "description": "High-Fidelity Photorealism Fine-Tunes & Noise-Offset Latent Diffusion",
+      "real_samples": 5000,
+      "aigc_samples": 1024,
+      "metrics": {
+        "auroc": 0.9994666015625,
+        "auprc": 0.9955169079280848,
+        "brier": 0.0041677109151200716,
+        "ece": 0.003718571349048361,
+        "total_samples": 6024,
+        "real_count": 5000,
+        "aigc_count": 1024,
+        "operating_points": {
+          "TPR@FPR<=1.00%": {
+            "target_fpr": 0.01,
+            "threshold": 0.036865234375,
+            "actual_fp": 51,
+            "actual_fpr": 0.0102,
+            "actual_tp": 1023,
+            "tpr": 0.9990234375
+          },
+          "TPR@FPR<=0.50%": {
+            "target_fpr": 0.005,
+            "threshold": 0.3515625,
+            "actual_fp": 26,
+            "actual_fpr": 0.0052,
+            "actual_tp": 1021,
+            "tpr": 0.9970703125
+          },
+          "TPR@FPR<=0.10%": {
+            "target_fpr": 0.001,
+            "threshold": 0.9921875,
+            "actual_fp": 7,
+            "actual_fpr": 0.0014,
+            "actual_tp": 1010,
+            "tpr": 0.986328125
+          },
+          "TPR@FPR<=0.05%": {
+            "target_fpr": 0.0005,
+            "threshold": 1.0,
+            "actual_fp": 4,
+            "actual_fpr": 0.0008,
+            "actual_tp": 993,
+            "tpr": 0.9697265625
+          },
+          "TPR@FPR<=0.01%": {
+            "target_fpr": 0.0001,
+            "threshold": 1.0,
+            "actual_fp": 4,
+            "actual_fpr": 0.0008,
+            "actual_tp": 993,
+            "tpr": 0.9697265625
+          }
+        }
+      }
+    },
+    "Fold_Gen_4_Diverse_Synthetics": {
+      "type": "GENERATOR_HOLDOUT",
+      "held_out_target": "Diverse_Generators & Diffusion_Synthetics",
+      "description": "Mixed Pixel & Latent Diffusion Synthetics (HFCF / Defactify)",
+      "real_samples": 5000,
+      "aigc_samples": 2682,
+      "metrics": {
+        "auroc": 0.9992906413124534,
+        "auprc": 0.9979742012834405,
+        "brier": 0.005298086189415773,
+        "ece": 0.004572669352072348,
+        "total_samples": 7682,
+        "real_count": 5000,
+        "aigc_count": 2682,
+        "operating_points": {
+          "TPR@FPR<=1.00%": {
+            "target_fpr": 0.01,
+            "threshold": 0.036865234375,
+            "actual_fp": 51,
+            "actual_fpr": 0.0102,
+            "actual_tp": 2667,
+            "tpr": 0.9944071588366891
+          },
+          "TPR@FPR<=0.50%": {
+            "target_fpr": 0.005,
+            "threshold": 0.3515625,
+            "actual_fp": 26,
+            "actual_fpr": 0.0052,
+            "actual_tp": 2663,
+            "tpr": 0.9929157345264727
+          },
+          "TPR@FPR<=0.10%": {
+            "target_fpr": 0.001,
+            "threshold": 0.9921875,
+            "actual_fp": 7,
+            "actual_fpr": 0.0014,
+            "actual_tp": 2636,
+            "tpr": 0.9828486204325131
+          },
+          "TPR@FPR<=0.05%": {
+            "target_fpr": 0.0005,
+            "threshold": 1.0,
+            "actual_fp": 4,
+            "actual_fpr": 0.0008,
+            "actual_tp": 2596,
+            "tpr": 0.9679343773303505
+          },
+          "TPR@FPR<=0.01%": {
+            "target_fpr": 0.0001,
+            "threshold": 1.0,
+            "actual_fp": 4,
+            "actual_fpr": 0.0008,
+            "actual_tp": 2596,
+            "tpr": 0.9679343773303505
+          }
+        }
+      }
+    },
+    "Fold_Real_1_WikiArt_Fine_Art": {
+      "type": "REAL_DOMAIN_HOLDOUT",
+      "held_out_target": "WikiArt_Fine_Art",
+      "description": "Historical Oil Paintings, Brushstrokes, Canvas Texture",
+      "real_samples": 2942,
+      "aigc_samples": 5000,
+      "metrics": {
+        "auroc": 0.9995645819170632,
+        "auprc": 0.9995348883447844,
+        "brier": 0.006933653361854964,
+        "ece": 0.006704776803722491,
+        "total_samples": 7942,
+        "real_count": 2942,
+        "aigc_count": 5000,
+        "operating_points": {
+          "TPR@FPR<=1.00%": {
+            "target_fpr": 0.01,
+            "threshold": 0.00141143798828125,
+            "actual_fp": 30,
+            "actual_fpr": 0.010197144799456152,
+            "actual_tp": 4983,
+            "tpr": 0.9966
+          },
+          "TPR@FPR<=0.50%": {
+            "target_fpr": 0.005,
+            "threshold": 0.018798828125,
+            "actual_fp": 15,
+            "actual_fpr": 0.005098572399728076,
+            "actual_tp": 4971,
+            "tpr": 0.9942
+          },
+          "TPR@FPR<=0.10%": {
+            "target_fpr": 0.001,
+            "threshold": 0.97265625,
+            "actual_fp": 3,
+            "actual_fpr": 0.0010197144799456153,
+            "actual_tp": 4915,
+            "tpr": 0.983
+          },
+          "TPR@FPR<=0.05%": {
+            "target_fpr": 0.0005,
+            "threshold": 1.0,
+            "actual_fp": 2,
+            "actual_fpr": 0.0006798096532970768,
+            "actual_tp": 4784,
+            "tpr": 0.9568
+          },
+          "TPR@FPR<=0.01%": {
+            "target_fpr": 0.0001,
+            "threshold": 1.0,
+            "actual_fp": 2,
+            "actual_fpr": 0.0006798096532970768,
+            "actual_tp": 4784,
+            "tpr": 0.9568
+          }
+        }
+      }
+    },
+    "Fold_Real_2_COCO_Photography": {
+      "type": "REAL_DOMAIN_HOLDOUT",
+      "held_out_target": "COCO_Authentic_Photography",
+      "description": "Authentic In-The-Wild Natural Camera Photography",
+      "real_samples": 1305,
+      "aigc_samples": 5000,
+      "metrics": {
+        "auroc": 0.9991031417624522,
+        "auprc": 0.9997754249530283,
+        "brier": 0.009286020979986577,
+        "ece": 0.009108688129875791,
+        "total_samples": 6305,
+        "real_count": 1305,
+        "aigc_count": 5000,
+        "operating_points": {
+          "TPR@FPR<=1.00%": {
+            "target_fpr": 0.01,
+            "threshold": 0.119140625,
+            "actual_fp": 14,
+            "actual_fpr": 0.010727969348659003,
+            "actual_tp": 4951,
+            "tpr": 0.9902
+          },
+          "TPR@FPR<=0.50%": {
+            "target_fpr": 0.005,
+            "threshold": 0.9296875,
+            "actual_fp": 7,
+            "actual_fpr": 0.0053639846743295016,
+            "actual_tp": 4932,
+            "tpr": 0.9864
+          },
+          "TPR@FPR<=0.10%": {
+            "target_fpr": 0.001,
+            "threshold": 0.98828125,
+            "actual_fp": 2,
+            "actual_fpr": 0.0015325670498084292,
+            "actual_tp": 4893,
+            "tpr": 0.9786
+          },
+          "TPR@FPR<=0.05%": {
+            "target_fpr": 0.0005,
+            "threshold": 0.9921875,
+            "actual_fp": 1,
+            "actual_fpr": 0.0007662835249042146,
+            "actual_tp": 4875,
+            "tpr": 0.975
+          },
+          "TPR@FPR<=0.01%": {
+            "target_fpr": 0.0001,
+            "threshold": 0.9921875,
+            "actual_fp": 1,
+            "actual_fpr": 0.0007662835249042146,
+            "actual_tp": 4875,
+            "tpr": 0.975
+          }
+        }
+      }
+    },
+    "Fold_Real_3_Natural_SID_Photography": {
+      "type": "REAL_DOMAIN_HOLDOUT",
+      "held_out_target": "Natural_SID_Photography",
+      "description": "High-Resolution DSLR Raw Photography Benchmark",
+      "real_samples": 503,
+      "aigc_samples": 5000,
+      "metrics": {
+        "auroc": 0.9976538767395626,
+        "auprc": 0.9996597768679899,
+        "brier": 0.010386845983353581,
+        "ece": 0.010447295821625036,
+        "total_samples": 5503,
+        "real_count": 503,
+        "aigc_count": 5000,
+        "operating_points": {
+          "TPR@FPR<=1.00%": {
+            "target_fpr": 0.01,
+            "threshold": 0.96875,
+            "actual_fp": 6,
+            "actual_fpr": 0.011928429423459244,
+            "actual_tp": 4919,
+            "tpr": 0.9838
+          },
+          "TPR@FPR<=0.50%": {
+            "target_fpr": 0.005,
+            "threshold": 0.9921875,
+            "actual_fp": 3,
+            "actual_fpr": 0.005964214711729622,
+            "actual_tp": 4875,
+            "tpr": 0.975
+          },
+          "TPR@FPR<=0.10%": {
+            "target_fpr": 0.001,
+            "threshold": 1.0,
+            "actual_fp": 1,
+            "actual_fpr": 0.0019880715705765406,
+            "actual_tp": 4784,
+            "tpr": 0.9568
+          },
+          "TPR@FPR<=0.05%": {
+            "target_fpr": 0.0005,
+            "threshold": 1.0,
+            "actual_fp": 1,
+            "actual_fpr": 0.0019880715705765406,
+            "actual_tp": 4784,
+            "tpr": 0.9568
+          },
+          "TPR@FPR<=0.01%": {
+            "target_fpr": 0.0001,
+            "threshold": 1.0,
+            "actual_fp": 1,
+            "actual_fpr": 0.0019880715705765406,
+            "actual_tp": 4784,
+            "tpr": 0.9568
+          }
+        }
+      }
+    }
+  },
+  "audited_at": "2026-08-30T04:46:19Z"
+}

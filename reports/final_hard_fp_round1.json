@@ -1,0 +1,172 @@
+[
+  {
+    "case_id": "HARD_FP_054673",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FP_026153",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FP_026150",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FP_026144",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FP_026134",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FP_054744",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FP_054738",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FP_054734",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FP_054733",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  },
+  {
+    "case_id": "HARD_FP_054611",
+    "true_label": "REAL",
+    "detector_probability": 1.0,
+    "vlm_forensic_explanation": "Authentic studio flash photography with specular highlights and fine hair texture that triggered artificial texture threshold.",
+    "qualitative_region": "hair and cheek highlight",
+    "forensic_signals": {
+      "dino_embedding_norm": 23.41,
+      "sobel_gradient_mean": 24.18,
+      "laplacian_residual": 0.041,
+      "srm_energy": 12.87
+    },
+    "spatial_counterfactual": "UNAVAILABLE",
+    "critic_status": "VERIFIED_SUPPORTED",
+    "critic_reward": 1.0,
+    "feedback_action": "REINFORCE_REAL_ATTRIBUTION"
+  }
+]

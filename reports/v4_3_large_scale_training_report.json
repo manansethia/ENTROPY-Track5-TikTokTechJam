@@ -1,0 +1,499 @@
+{
+  "architecture": "V4.3 Config C (Global + Patch Conditioning)",
+  "precision": "FP32",
+  "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/experimental/v4_3_champion_config_c.pt",
+  "checkpoint_sha256": "7c9b537d9947e9b82511ce9333d79633b6714ab8462fa44c300f2827d474590d",
+  "best_val_score": 0.4241,
+  "test_metrics": {
+    "dataset": "Independent Test Partition",
+    "sample_count": 1000,
+    "accuracy": 79.1,
+    "macro_auc": 0.8201,
+    "macro_f1": 0.6231,
+    "partial_ap": 0.1882,
+    "mean_iou": 0.1322,
+    "mean_dice": 0.2844,
+    "hard_real_fpr": 0.0,
+    "confusion_matrix": [
+      [
+        665,
+        73,
+        19
+      ],
+      [
+        88,
+        19,
+        3
+      ],
+      [
+        22,
+        4,
+        107
+      ]
+    ]
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.9156,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 85.4,
+        "macro_auc": 0.8472,
+        "macro_f1": 0.573,
+        "partial_ap": 0.1874,
+        "mean_iou": 0.1494,
+        "mean_dice": 0.3056,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            738,
+            0,
+            33
+          ],
+          [
+            91,
+            0,
+            1
+          ],
+          [
+            21,
+            0,
+            116
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.5
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7647,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 85.3,
+        "macro_auc": 0.8351,
+        "macro_f1": 0.5669,
+        "partial_ap": 0.1646,
+        "mean_iou": 0.1455,
+        "mean_dice": 0.3053,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            748,
+            0,
+            23
+          ],
+          [
+            91,
+            0,
+            1
+          ],
+          [
+            32,
+            0,
+            105
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.5
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.653,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 83.9,
+        "macro_auc": 0.8215,
+        "macro_f1": 0.5861,
+        "partial_ap": 0.146,
+        "mean_iou": 0.1495,
+        "mean_dice": 0.3056,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            734,
+            23,
+            14
+          ],
+          [
+            89,
+            3,
+            0
+          ],
+          [
+            35,
+            0,
+            102
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.3
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5559,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 81.7,
+        "macro_auc": 0.8204,
+        "macro_f1": 0.604,
+        "partial_ap": 0.1406,
+        "mean_iou": 0.1464,
+        "mean_dice": 0.3054,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            699,
+            46,
+            26
+          ],
+          [
+            81,
+            10,
+            1
+          ],
+          [
+            22,
+            7,
+            108
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.4
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5024,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 83.3,
+        "macro_auc": 0.7994,
+        "macro_f1": 0.5933,
+        "partial_ap": 0.1282,
+        "mean_iou": 0.1422,
+        "mean_dice": 0.3052,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            727,
+            31,
+            13
+          ],
+          [
+            87,
+            5,
+            0
+          ],
+          [
+            35,
+            1,
+            101
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.3
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.4671,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 81.4,
+        "macro_auc": 0.7952,
+        "macro_f1": 0.5764,
+        "partial_ap": 0.1348,
+        "mean_iou": 0.1397,
+        "mean_dice": 0.305,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            718,
+            38,
+            15
+          ],
+          [
+            82,
+            8,
+            2
+          ],
+          [
+            47,
+            2,
+            88
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.2
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.4542,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 81.6,
+        "macro_auc": 0.8068,
+        "macro_f1": 0.6091,
+        "partial_ap": 0.1388,
+        "mean_iou": 0.1433,
+        "mean_dice": 0.305,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            697,
+            53,
+            21
+          ],
+          [
+            78,
+            11,
+            3
+          ],
+          [
+            23,
+            6,
+            108
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.3
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.4356,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 79.4,
+        "macro_auc": 0.8054,
+        "macro_f1": 0.6026,
+        "partial_ap": 0.137,
+        "mean_iou": 0.1372,
+        "mean_dice": 0.3042,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            682,
+            74,
+            15
+          ],
+          [
+            76,
+            15,
+            1
+          ],
+          [
+            29,
+            11,
+            97
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.1
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.4236,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 81.6,
+        "macro_auc": 0.8198,
+        "macro_f1": 0.6154,
+        "partial_ap": 0.1452,
+        "mean_iou": 0.1409,
+        "mean_dice": 0.3044,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            682,
+            57,
+            32
+          ],
+          [
+            79,
+            10,
+            3
+          ],
+          [
+            11,
+            2,
+            124
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.1
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.417,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 81.7,
+        "macro_auc": 0.8143,
+        "macro_f1": 0.6335,
+        "partial_ap": 0.1553,
+        "mean_iou": 0.135,
+        "mean_dice": 0.3037,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            691,
+            64,
+            16
+          ],
+          [
+            75,
+            16,
+            1
+          ],
+          [
+            22,
+            5,
+            110
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.1
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.4054,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 82.2,
+        "macro_auc": 0.7907,
+        "macro_f1": 0.5975,
+        "partial_ap": 0.132,
+        "mean_iou": 0.137,
+        "mean_dice": 0.3041,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            720,
+            43,
+            8
+          ],
+          [
+            82,
+            9,
+            1
+          ],
+          [
+            40,
+            4,
+            93
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.3
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.3991,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 83.3,
+        "macro_auc": 0.8131,
+        "macro_f1": 0.6201,
+        "partial_ap": 0.1434,
+        "mean_iou": 0.138,
+        "mean_dice": 0.304,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            703,
+            40,
+            28
+          ],
+          [
+            80,
+            9,
+            3
+          ],
+          [
+            15,
+            1,
+            121
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.5
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.3938,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 79.7,
+        "macro_auc": 0.8183,
+        "macro_f1": 0.601,
+        "partial_ap": 0.1478,
+        "mean_iou": 0.1447,
+        "mean_dice": 0.3047,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            662,
+            69,
+            40
+          ],
+          [
+            78,
+            10,
+            4
+          ],
+          [
+            10,
+            2,
+            125
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.4
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.3915,
+      "val_metrics": {
+        "dataset": "Validation Partition",
+        "sample_count": 1000,
+        "accuracy": 79.9,
+        "macro_auc": 0.8078,
+        "macro_f1": 0.6242,
+        "partial_ap": 0.1352,
+        "mean_iou": 0.1418,
+        "mean_dice": 0.3044,
+        "hard_real_fpr": 0.0,
+        "confusion_matrix": [
+          [
+            666,
+            84,
+            21
+          ],
+          [
+            77,
+            14,
+            1
+          ],
+          [
+            16,
+            2,
+            119
+          ]
+        ]
+      },
+      "epoch_time_sec": 14.2
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "forensic_ontology": [
+    "Anatomical/Semantic (Hand/Finger Anomaly, Facial Geometry, Eye Asymmetry)",
+    "Text/Symbol (Malformed Text, Inconsistent Characters, Impossible Glyphs)",
+    "Geometry/Physics (Perspective Inconsistency, Reflection Mismatch, Shadow Alignment)",
+    "Texture (Repeated Texture, Unnatural Smoothness, Brushstroke Inconsistency)",
+    "Forensic Artifacts (Edge Gradient Discontinuity, SRM Wavelet Subband Peaks, FFT Spectral Grid)",
+    "Image Processing (Resampling Artifacts, Double JPEG Compression Anomalies)"
+  ],
+  "evidence_verification_protocol": "Counterfactual Occlusion Sensitivity Testing (Delta P(AIGC) >= 0.20 required for causal attribution)",
+  "verified_explanations_count": 520,
+  "causally_supported_pct": 86.4,
+  "unsupported_speculative_pct": 13.6
+}

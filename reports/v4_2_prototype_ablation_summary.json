@@ -1,0 +1,128 @@
+{
+  "Config_A_Frozen_V3_ZeroShot": {
+    "whole_auc": 0.6926,
+    "macro_f1": 0.439,
+    "partial_ap": 0.385,
+    "mean_iou": 0.182,
+    "mean_dice": 0.245,
+    "hard_real_fpr": 86.36,
+    "highres_auc": 0.7022,
+    "checkpoint_sha256": "76307af1ff1e1874a68e4731e660f88c2ae6c316d6dfed162af76379f765e786"
+  },
+  "Config_B_Patch_Only": {
+    "whole_auc": 0.9204,
+    "macro_f1": 0.7759,
+    "partial_ap": 0.8713,
+    "mean_iou": 0.307,
+    "mean_dice": 0.6259,
+    "hard_real_fpr": 0.0,
+    "highres_auc": 0.8928,
+    "training_time_sec": 9.65,
+    "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/experimental/v4_2_proto_config_b_patch_only.pt",
+    "checkpoint_sha256": "7dcd944d5765f061a380170e418a7bbacb5fcaffcb615d3b308f741010340da7",
+    "confusion_matrix": [
+      [
+        37,
+        0,
+        7
+      ],
+      [
+        2,
+        13,
+        7
+      ],
+      [
+        2,
+        0,
+        20
+      ]
+    ]
+  },
+  "Config_C_Global_Plus_Patch": {
+    "whole_auc": 0.946,
+    "macro_f1": 0.8677,
+    "partial_ap": 0.8779,
+    "mean_iou": 0.2813,
+    "mean_dice": 0.6242,
+    "hard_real_fpr": 0.0,
+    "highres_auc": 0.9176,
+    "training_time_sec": 10.44,
+    "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/experimental/v4_2_proto_config_c_global_plus_patch.pt",
+    "checkpoint_sha256": "47e1ff32c4134092adf259aba9f3e9f9e0abb0b1d997e6679e47fbd780bda7ac",
+    "confusion_matrix": [
+      [
+        41,
+        2,
+        1
+      ],
+      [
+        1,
+        17,
+        4
+      ],
+      [
+        1,
+        1,
+        20
+      ]
+    ]
+  },
+  "Config_D_Global_Patch_Position": {
+    "whole_auc": 0.9451,
+    "macro_f1": 0.8083,
+    "partial_ap": 0.8566,
+    "mean_iou": 0.2814,
+    "mean_dice": 0.6242,
+    "hard_real_fpr": 0.0,
+    "highres_auc": 0.9167,
+    "training_time_sec": 11.16,
+    "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/experimental/v4_2_proto_config_d_global_patch_position.pt",
+    "checkpoint_sha256": "15fef41aaa45193b6ef2642c4a0458b9cc381b832c6aedb8f5e6f9e912e05a28",
+    "confusion_matrix": [
+      [
+        35,
+        7,
+        2
+      ],
+      [
+        1,
+        18,
+        3
+      ],
+      [
+        1,
+        2,
+        19
+      ]
+    ]
+  },
+  "Config_E_Full_MultiScale_Pyramid": {
+    "whole_auc": 0.9335,
+    "macro_f1": 0.7769,
+    "partial_ap": 0.8644,
+    "mean_iou": 0.2888,
+    "mean_dice": 0.6248,
+    "hard_real_fpr": 0.0,
+    "highres_auc": 0.9055,
+    "training_time_sec": 11.29,
+    "checkpoint_path": "/home/manan/aigc_robust_detection/checkpoints/experimental/v4_2_proto_config_e_full_multiscale_pyramid.pt",
+    "checkpoint_sha256": "1ed5b0f1b912ed32977f852095aba923e433e64ba61969facce210197b83037f",
+    "confusion_matrix": [
+      [
+        34,
+        1,
+        9
+      ],
+      [
+        1,
+        15,
+        6
+      ],
+      [
+        2,
+        0,
+        20
+      ]
+    ]
+  }
+}

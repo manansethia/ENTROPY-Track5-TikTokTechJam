@@ -1,0 +1,240 @@
+{
+  "timestamp": "2026-08-28T20:14:12Z",
+  "sample_count": 500,
+  "class_distribution": {
+    "real": 245,
+    "fake": 255
+  },
+  "overall_metrics": {
+    "AUROC": 0.9627,
+    "AUPRC": 0.9738,
+    "ECE": 0.4367,
+    "Brier_Score": 0.062
+  },
+  "operating_points": [
+    {
+      "threshold": 0.5,
+      "counts": {
+        "TP": 228,
+        "TN": 234,
+        "FP": 11,
+        "FN": 27,
+        "total_samples": 500,
+        "actual_real": 245,
+        "actual_fake": 255
+      },
+      "rates": {
+        "FPR": 0.0449,
+        "FPR_95_CI": [
+          0.0253,
+          0.0786
+        ],
+        "TNR_specificity": 0.9551,
+        "TPR_recall": 0.8941,
+        "FNR": 0.1059,
+        "FNR_95_CI": [
+          0.0738,
+          0.1497
+        ],
+        "precision": 0.954,
+        "accuracy": 0.924
+      }
+    },
+    {
+      "threshold": 0.6,
+      "counts": {
+        "TP": 222,
+        "TN": 236,
+        "FP": 9,
+        "FN": 33,
+        "total_samples": 500,
+        "actual_real": 245,
+        "actual_fake": 255
+      },
+      "rates": {
+        "FPR": 0.0367,
+        "FPR_95_CI": [
+          0.0194,
+          0.0683
+        ],
+        "TNR_specificity": 0.9633,
+        "TPR_recall": 0.8706,
+        "FNR": 0.1294,
+        "FNR_95_CI": [
+          0.0937,
+          0.1762
+        ],
+        "precision": 0.961,
+        "accuracy": 0.916
+      }
+    },
+    {
+      "threshold": 0.7,
+      "counts": {
+        "TP": 213,
+        "TN": 238,
+        "FP": 7,
+        "FN": 42,
+        "total_samples": 500,
+        "actual_real": 245,
+        "actual_fake": 255
+      },
+      "rates": {
+        "FPR": 0.0286,
+        "FPR_95_CI": [
+          0.0139,
+          0.0578
+        ],
+        "TNR_specificity": 0.9714,
+        "TPR_recall": 0.8353,
+        "FNR": 0.1647,
+        "FNR_95_CI": [
+          0.1242,
+          0.2151
+        ],
+        "precision": 0.9682,
+        "accuracy": 0.902
+      }
+    },
+    {
+      "threshold": 0.75,
+      "counts": {
+        "TP": 211,
+        "TN": 240,
+        "FP": 5,
+        "FN": 44,
+        "total_samples": 500,
+        "actual_real": 245,
+        "actual_fake": 255
+      },
+      "rates": {
+        "FPR": 0.0204,
+        "FPR_95_CI": [
+          0.0087,
+          0.0469
+        ],
+        "TNR_specificity": 0.9796,
+        "TPR_recall": 0.8275,
+        "FNR": 0.1725,
+        "FNR_95_CI": [
+          0.1311,
+          0.2237
+        ],
+        "precision": 0.9769,
+        "accuracy": 0.902
+      }
+    },
+    {
+      "threshold": 0.8,
+      "counts": {
+        "TP": 206,
+        "TN": 241,
+        "FP": 4,
+        "FN": 49,
+        "total_samples": 500,
+        "actual_real": 245,
+        "actual_fake": 255
+      },
+      "rates": {
+        "FPR": 0.0163,
+        "FPR_95_CI": [
+          0.0064,
+          0.0412
+        ],
+        "TNR_specificity": 0.9837,
+        "TPR_recall": 0.8078,
+        "FNR": 0.1922,
+        "FNR_95_CI": [
+          0.1485,
+          0.2449
+        ],
+        "precision": 0.981,
+        "accuracy": 0.894
+      }
+    },
+    {
+      "threshold": 0.85,
+      "counts": {
+        "TP": 195,
+        "TN": 242,
+        "FP": 3,
+        "FN": 60,
+        "total_samples": 500,
+        "actual_real": 245,
+        "actual_fake": 255
+      },
+      "rates": {
+        "FPR": 0.0122,
+        "FPR_95_CI": [
+          0.0042,
+          0.0354
+        ],
+        "TNR_specificity": 0.9878,
+        "TPR_recall": 0.7647,
+        "FNR": 0.2353,
+        "FNR_95_CI": [
+          0.1874,
+          0.291
+        ],
+        "precision": 0.9848,
+        "accuracy": 0.874
+      }
+    },
+    {
+      "threshold": 0.9,
+      "counts": {
+        "TP": 184,
+        "TN": 244,
+        "FP": 1,
+        "FN": 71,
+        "total_samples": 500,
+        "actual_real": 245,
+        "actual_fake": 255
+      },
+      "rates": {
+        "FPR": 0.0041,
+        "FPR_95_CI": [
+          0.0007,
+          0.0228
+        ],
+        "TNR_specificity": 0.9959,
+        "TPR_recall": 0.7216,
+        "FNR": 0.2784,
+        "FNR_95_CI": [
+          0.227,
+          0.3364
+        ],
+        "precision": 0.9946,
+        "accuracy": 0.856
+      }
+    },
+    {
+      "threshold": 0.95,
+      "counts": {
+        "TP": 152,
+        "TN": 245,
+        "FP": 0,
+        "FN": 103,
+        "total_samples": 500,
+        "actual_real": 245,
+        "actual_fake": 255
+      },
+      "rates": {
+        "FPR": 0.0,
+        "FPR_95_CI": [
+          0.0,
+          0.0154
+        ],
+        "TNR_specificity": 1.0,
+        "TPR_recall": 0.5961,
+        "FNR": 0.4039,
+        "FNR_95_CI": [
+          0.3456,
+          0.4651
+        ],
+        "precision": 1.0,
+        "accuracy": 0.794
+      }
+    }
+  ]
+}

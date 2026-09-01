@@ -1,0 +1,38 @@
+{
+  "status": "PASSED_ALL_CHECKS",
+  "timestamp": "2026-08-31 17:45:06 UTC",
+  "train_manifest": "/home/manan/aigc_robust_detection/reports/v5/v5_master_train_manifest.json",
+  "val_manifest": "/home/manan/aigc_robust_detection/reports/v5/v5_master_val_manifest.json",
+  "test_manifest": "/home/manan/aigc_robust_detection/reports/v5/v5_master_test_manifest.json",
+  "train_manifest_sha256": "ae3c709ce2522af58e4fb7ee7f5d6e2f313182e34212ac11646d22996b9c02f3",
+  "val_manifest_sha256": "180890989b76e056f7809cd13b8b68dff4a30914d414b2f12ccb92d3b908151e",
+  "test_manifest_sha256": "01479c285a102ebf9b7f2fe0457d82fe3a2cd9264fa0379d93650785703aa186",
+  "split_counts": {
+    "train": 20000,
+    "val": 2500,
+    "test": 2500
+  },
+  "class_proportions": {
+    "train": {
+      "PARTIAL_AIGC": 6000,
+      "REAL": 9000,
+      "FULL_AIGC": 5000
+    },
+    "val": {
+      "REAL": 1125,
+      "PARTIAL_AIGC": 750,
+      "FULL_AIGC": 625
+    },
+    "test": {
+      "REAL": 1125,
+      "PARTIAL_AIGC": 750,
+      "FULL_AIGC": 625
+    }
+  },
+  "leakage_audit": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "zero_leakage_passed": true
+  }
+}

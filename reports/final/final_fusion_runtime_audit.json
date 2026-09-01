@@ -1,0 +1,927 @@
+{
+  "Image 1: Crab Nebula (Hubble)": {
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.8472,
+    "ai_probability": 0.5849,
+    "real_probability": 0.4151,
+    "partial_ai_probability": 0.3904,
+    "full_aigc_probability": 0.506,
+    "affected_area_percentage": 54.17,
+    "max_patch_anomaly": 0.8472,
+    "suspicious_regions_count": 4,
+    "suspicious_regions": [
+      {
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8349,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8472,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.8138,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.7369,
+        "scale": 768
+      }
+    ],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.4321,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.0146,
+        "C1_Portrait_Remediation": 0.9609,
+        "C2_SPAI_MultiFreq_ViT": 0.4232,
+        "C3_CommunityForensics_ViT": 0.5747,
+        "C4_ConvNeXt_HighRes": 0.2467,
+        "C5_ConvNeXt_Tiny_divine2k": 0.969,
+        "C6_EfficientNet_B0": 0.0888,
+        "C7_ResNet50_Deep": 0.2025
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0062,
+        "C1": 0.005,
+        "C2": 0.0091,
+        "C3": 0.0015,
+        "C4": 0.6292,
+        "C5": 0.2099,
+        "C6": 0.1376,
+        "C7": 0.0015
+      },
+      "V5_CAG_Spatial_Score": 0.8963,
+      "Specialist_Disagreement_Std": 0.3247
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": -4.2109,
+          "prob": 0.0146
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 3.2019,
+          "prob": 0.9609
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.3097,
+          "prob": 0.4232
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.301,
+          "prob": 0.5747
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": -1.1164,
+          "prob": 0.2467
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 3.4424,
+          "prob": 0.969
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": -2.3284,
+          "prob": 0.0888
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": -1.3706,
+          "prob": 0.2025
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.4321,
+          "routing_weights": {
+            "C0": 0.0062,
+            "C1": 0.005,
+            "C2": 0.0091,
+            "C3": 0.0015,
+            "C4": 0.6292,
+            "C5": 0.2099,
+            "C6": 0.1376,
+            "C7": 0.0015
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.1037,
+          "v5_partial": 0.3904,
+          "v5_full": 0.506,
+          "max_patch_anomaly": 0.8472
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 9.326
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img1_crab_nebula_unified_heatmap.jpg"
+  },
+  "Image 2: Earth from Space (Satellite)": {
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.6031,
+    "ai_probability": 0.8868,
+    "real_probability": 0.1132,
+    "partial_ai_probability": 0.3062,
+    "full_aigc_probability": 0.6567,
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.6031,
+    "suspicious_regions_count": 1,
+    "suspicious_regions": [
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.6031,
+        "scale": 512
+      }
+    ],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.9959,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.9961,
+        "C1_Portrait_Remediation": 0.9694,
+        "C2_SPAI_MultiFreq_ViT": 0.3666,
+        "C3_CommunityForensics_ViT": 0.5647,
+        "C4_ConvNeXt_HighRes": 1.0,
+        "C5_ConvNeXt_Tiny_divine2k": 1.0,
+        "C6_EfficientNet_B0": 0.9747,
+        "C7_ResNet50_Deep": 0.1558
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0283,
+        "C1": 0.0187,
+        "C2": 0.3833,
+        "C3": 0.0171,
+        "C4": 0.323,
+        "C5": 0.185,
+        "C6": 0.0313,
+        "C7": 0.0133
+      },
+      "V5_CAG_Spatial_Score": 0.963,
+      "Specialist_Disagreement_Std": 0.2988
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": 5.5312,
+          "prob": 0.9961
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 3.4566,
+          "prob": 0.9694
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.5469,
+          "prob": 0.3666
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.2603,
+          "prob": 0.5647
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 10.5033,
+          "prob": 1.0
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 15.2218,
+          "prob": 1.0
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": 3.6514,
+          "prob": 0.9747
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": -1.6896,
+          "prob": 0.1558
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.9959,
+          "routing_weights": {
+            "C0": 0.0283,
+            "C1": 0.0187,
+            "C2": 0.3833,
+            "C3": 0.0171,
+            "C4": 0.323,
+            "C5": 0.185,
+            "C6": 0.0313,
+            "C7": 0.0133
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.037,
+          "v5_partial": 0.3062,
+          "v5_full": 0.6567,
+          "max_patch_anomaly": 0.6031
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 7.157
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img2_earth_globe_unified_heatmap.jpg"
+  },
+  "Image 3: Prehistoric Volcanic Earth (Art)": {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.7636,
+    "ai_probability": 0.7636,
+    "real_probability": 0.2364,
+    "partial_ai_probability": 0.4111,
+    "full_aigc_probability": 0.1398,
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.0212,
+    "suspicious_regions_count": 0,
+    "suspicious_regions": [],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.9968,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.745,
+        "C1_Portrait_Remediation": 0.9487,
+        "C2_SPAI_MultiFreq_ViT": 0.3726,
+        "C3_CommunityForensics_ViT": 0.3119,
+        "C4_ConvNeXt_HighRes": 1.0,
+        "C5_ConvNeXt_Tiny_divine2k": 0.9998,
+        "C6_EfficientNet_B0": 0.9888,
+        "C7_ResNet50_Deep": 0.5326
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0257,
+        "C1": 0.023,
+        "C2": 0.3625,
+        "C3": 0.017,
+        "C4": 0.2856,
+        "C5": 0.236,
+        "C6": 0.0363,
+        "C7": 0.0139
+      },
+      "V5_CAG_Spatial_Score": 0.5509,
+      "Specialist_Disagreement_Std": 0.2625
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": 1.0723,
+          "prob": 0.745
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 2.9165,
+          "prob": 0.9487
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.5211,
+          "prob": 0.3726
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.791,
+          "prob": 0.3119
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 15.7468,
+          "prob": 1.0
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 8.6609,
+          "prob": 0.9998
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": 4.478,
+          "prob": 0.9888
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": 0.1306,
+          "prob": 0.5326
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.9968,
+          "routing_weights": {
+            "C0": 0.0257,
+            "C1": 0.023,
+            "C2": 0.3625,
+            "C3": 0.017,
+            "C4": 0.2856,
+            "C5": 0.236,
+            "C6": 0.0363,
+            "C7": 0.0139
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.4491,
+          "v5_partial": 0.4111,
+          "v5_full": 0.1398,
+          "max_patch_anomaly": 0.0212
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 7.489
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img3_volcano_meteors_unified_heatmap.jpg"
+  },
+  "Image 4: Dakshineswar Temple (Photo)": {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.798,
+    "ai_probability": 0.798,
+    "real_probability": 0.202,
+    "partial_ai_probability": 0.693,
+    "full_aigc_probability": 0.0003,
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.0939,
+    "suspicious_regions_count": 0,
+    "suspicious_regions": [],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.98,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.9999,
+        "C1_Portrait_Remediation": 0.9968,
+        "C2_SPAI_MultiFreq_ViT": 0.4625,
+        "C3_CommunityForensics_ViT": 0.5327,
+        "C4_ConvNeXt_HighRes": 1.0,
+        "C5_ConvNeXt_Tiny_divine2k": 1.0,
+        "C6_EfficientNet_B0": 0.9997,
+        "C7_ResNet50_Deep": 0.9773
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0379,
+        "C1": 0.0259,
+        "C2": 0.5775,
+        "C3": 0.0247,
+        "C4": 0.219,
+        "C5": 0.0804,
+        "C6": 0.0167,
+        "C7": 0.0179
+      },
+      "V5_CAG_Spatial_Score": 0.6934,
+      "Specialist_Disagreement_Std": 0.2213
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": 9.2812,
+          "prob": 0.9999
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 5.7547,
+          "prob": 0.9968
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.1503,
+          "prob": 0.4625
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.131,
+          "prob": 0.5327
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 12.9213,
+          "prob": 1.0
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 12.7984,
+          "prob": 1.0
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": 8.0315,
+          "prob": 0.9997
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": 3.7638,
+          "prob": 0.9773
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.98,
+          "routing_weights": {
+            "C0": 0.0379,
+            "C1": 0.0259,
+            "C2": 0.5775,
+            "C3": 0.0247,
+            "C4": 0.219,
+            "C5": 0.0804,
+            "C6": 0.0167,
+            "C7": 0.0179
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.3066,
+          "v5_partial": 0.693,
+          "v5_full": 0.0003,
+          "max_patch_anomaly": 0.0939
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 7.107
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img4_temple_reflection_unified_heatmap.jpg"
+  },
+  "Image 5: Sci-Fi Floating City (AI)": {
+    "verdict": "FULL_AIGC",
+    "confidence": 0.7338,
+    "ai_probability": 0.7338,
+    "real_probability": 0.2662,
+    "partial_ai_probability": 0.4456,
+    "full_aigc_probability": 0.0021,
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.0067,
+    "suspicious_regions_count": 0,
+    "suspicious_regions": [],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.999,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.9999,
+        "C1_Portrait_Remediation": 0.9997,
+        "C2_SPAI_MultiFreq_ViT": 0.6108,
+        "C3_CommunityForensics_ViT": 0.4576,
+        "C4_ConvNeXt_HighRes": 1.0,
+        "C5_ConvNeXt_Tiny_divine2k": 1.0,
+        "C6_EfficientNet_B0": 0.9161,
+        "C7_ResNet50_Deep": 0.6963
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0379,
+        "C1": 0.0232,
+        "C2": 0.4397,
+        "C3": 0.0261,
+        "C4": 0.2663,
+        "C5": 0.137,
+        "C6": 0.0475,
+        "C7": 0.0222
+      },
+      "V5_CAG_Spatial_Score": 0.4477,
+      "Specialist_Disagreement_Std": 0.2312
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": 9.7656,
+          "prob": 0.9999
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 8.2774,
+          "prob": 0.9997
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.4508,
+          "prob": 0.6108
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": -0.1698,
+          "prob": 0.4576
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 18.8053,
+          "prob": 1.0
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 15.3582,
+          "prob": 1.0
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": 2.3911,
+          "prob": 0.9161
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": 0.8297,
+          "prob": 0.6963
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.999,
+          "routing_weights": {
+            "C0": 0.0379,
+            "C1": 0.0232,
+            "C2": 0.4397,
+            "C3": 0.0261,
+            "C4": 0.2663,
+            "C5": 0.137,
+            "C6": 0.0475,
+            "C7": 0.0222
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.5523,
+          "v5_partial": 0.4456,
+          "v5_full": 0.0021,
+          "max_patch_anomaly": 0.0067
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 7.437
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/img5_scifi_globe_city_unified_heatmap.jpg"
+  },
+  "Image 6: 4-Women Collage (Multi-Scale)": {
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.9976,
+    "ai_probability": 0.6863,
+    "real_probability": 0.3137,
+    "partial_ai_probability": 0.2982,
+    "full_aigc_probability": 0.6046,
+    "affected_area_percentage": 100.0,
+    "max_patch_anomaly": 0.9976,
+    "suspicious_regions_count": 11,
+    "suspicious_regions": [
+      {
+        "bbox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8894,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.8467,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          768,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.6378,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          1152,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.7942,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          1536,
+          0,
+          512,
+          512
+        ],
+        "probability": 0.5245,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.8593,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          384,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.9757,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          1152,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.7414,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          1536,
+          384,
+          512,
+          512
+        ],
+        "probability": 0.8776,
+        "scale": 512
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          768,
+          768
+        ],
+        "probability": 0.9973,
+        "scale": 768
+      },
+      {
+        "bbox": [
+          0,
+          0,
+          1024,
+          1024
+        ],
+        "probability": 0.9976,
+        "scale": 1024
+      }
+    ],
+    "evidence_breakdown": {
+      "V2_AIDE_Spectral_Score": 0.5,
+      "V3_Ensemble_Gated_Score": 0.631,
+      "V3_Specialist_Scores": {
+        "C0_TripleHybrid_Champion": 0.9537,
+        "C1_Portrait_Remediation": 0.2012,
+        "C2_SPAI_MultiFreq_ViT": 0.525,
+        "C3_CommunityForensics_ViT": 0.5865,
+        "C4_ConvNeXt_HighRes": 0.3701,
+        "C5_ConvNeXt_Tiny_divine2k": 0.9942,
+        "C6_EfficientNet_B0": 0.5068,
+        "C7_ResNet50_Deep": 0.1303
+      },
+      "V3_Gating_Weights": {
+        "C0": 0.0202,
+        "C1": 0.0087,
+        "C2": 0.0992,
+        "C3": 0.0069,
+        "C4": 0.6011,
+        "C5": 0.1713,
+        "C6": 0.0879,
+        "C7": 0.0048
+      },
+      "V5_CAG_Spatial_Score": 0.9028,
+      "Specialist_Disagreement_Std": 0.2734
+    },
+    "provenance": {
+      "c2pa_manifest_detected": false,
+      "ai_software_signatures": [],
+      "exif_metadata": {},
+      "raw_provenance_flags": []
+    },
+    "runtime_telemetry": {
+      "total_parameters_instantiated": 920662149,
+      "execution_trace": {
+        "V2_AIDE_Spectral_898M": {
+          "executed": false,
+          "error": "No module named 'models.AIDE'"
+        },
+        "C0_TripleHybrid_Champion": {
+          "executed": true,
+          "parameters": 734968253,
+          "logit": 3.0254,
+          "prob": 0.9537
+        },
+        "C1_Portrait_Remediation": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": -1.3789,
+          "prob": 0.2012
+        },
+        "C2_SPAI_MultiFreq_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.1002,
+          "prob": 0.525
+        },
+        "C3_CommunityForensics_ViT": {
+          "executed": true,
+          "parameters": 21811969,
+          "logit": 0.3494,
+          "prob": 0.5865
+        },
+        "C4_ConvNeXt_HighRes": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": -0.5317,
+          "prob": 0.3701
+        },
+        "C5_ConvNeXt_Tiny_divine2k": {
+          "executed": true,
+          "parameters": 27820897,
+          "logit": 5.1484,
+          "prob": 0.9942
+        },
+        "C6_EfficientNet_B0": {
+          "executed": true,
+          "parameters": 4008829,
+          "logit": 0.0272,
+          "prob": 0.5068
+        },
+        "C7_ResNet50_Deep": {
+          "executed": true,
+          "parameters": 23510081,
+          "logit": -1.8982,
+          "prob": 0.1303
+        },
+        "V3_Learned_Gating_Network": {
+          "executed": true,
+          "temperature": 1.15,
+          "v3_fused_probability": 0.631,
+          "routing_weights": {
+            "C0": 0.0202,
+            "C1": 0.0087,
+            "C2": 0.0992,
+            "C3": 0.0069,
+            "C4": 0.6011,
+            "C5": 0.1713,
+            "C6": 0.0879,
+            "C7": 0.0048
+          }
+        },
+        "V5_CAG_Spatial_Engine": {
+          "executed": true,
+          "parameters": 31088357,
+          "v5_real": 0.0972,
+          "v5_partial": 0.2982,
+          "v5_full": 0.6046,
+          "max_patch_anomaly": 0.9976
+        }
+      },
+      "peak_vram_allocated_mib": 1416.76,
+      "inference_time_seconds": 8.737
+    },
+    "heatmap_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/4women_unified_heatmap.jpg"
+  }
+}

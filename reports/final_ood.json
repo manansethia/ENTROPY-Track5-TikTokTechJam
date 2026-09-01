@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-08-29T10:59:54Z",
+  "benchmarks": {
+    "Synthbuster": {
+      "N": 9000,
+      "AUROC": 0.9981,
+      "TPR_at_1pct_FPR": 0.9812
+    },
+    "AIGIBench": {
+      "N": 5000,
+      "AUROC": 0.9976,
+      "TPR_at_1pct_FPR": 0.9744
+    },
+    "Chameleon": {
+      "N": 4000,
+      "AUROC": 0.9984,
+      "TPR_at_1pct_FPR": 0.982
+    },
+    "VCT2": {
+      "N": 3500,
+      "AUROC": 0.9969,
+      "TPR_at_1pct_FPR": 0.968
+    },
+    "WildRF": {
+      "N": 6000,
+      "AUROC": 0.9979,
+      "TPR_at_1pct_FPR": 0.979
+    },
+    "SynthWildX": {
+      "N": 4500,
+      "AUROC": 0.9982,
+      "TPR_at_1pct_FPR": 0.9831
+    }
+  }
+}

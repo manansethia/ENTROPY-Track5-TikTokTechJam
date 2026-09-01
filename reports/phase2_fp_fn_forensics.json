@@ -1,0 +1,186 @@
+{
+  "false_positives": [
+    {
+      "generator_family": "Authentic_Real_General",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 1.0,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_WikiArt_FineArt",
+      "dataset_source": "wikiart_fine_art",
+      "calibrated_prob": 0.9841,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_Real_General",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.947,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_Real_General",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.8947,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_Real_General",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.8324,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_Real_General",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.9849,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_COCO",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.9818,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_COCO",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.9996,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_Real_General",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.9785,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_COCO",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.9784,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_COCO",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.9998,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_Real_General",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.9996,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_COCO",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.8647,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_Real_General",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 0.9923,
+      "error_type": "FALSE_POSITIVE"
+    },
+    {
+      "generator_family": "Authentic_Real_General",
+      "dataset_source": "loose_authentic_corpus",
+      "calibrated_prob": 1.0,
+      "error_type": "FALSE_POSITIVE"
+    }
+  ],
+  "false_negatives": [
+    {
+      "generator_family": "Synthetic_SID_Diffusion",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.6592,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_SID_Diffusion",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.4997,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_SID_Diffusion",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.0001,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_HighFrequency_CF",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.4769,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_SID_Diffusion",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.3396,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_QualityParadox_ModernDiffusion",
+      "dataset_source": "aigi_quality_paradox",
+      "calibrated_prob": 0.1915,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_QualityParadox_ModernDiffusion",
+      "dataset_source": "aigi_quality_paradox",
+      "calibrated_prob": 0.3917,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_SID_Diffusion",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.0,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_SID_Diffusion",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.1424,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_QualityParadox_ModernDiffusion",
+      "dataset_source": "aigi_quality_paradox",
+      "calibrated_prob": 0.0262,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_SID_Diffusion",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.0,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_SID_Diffusion",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.0012,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_HighFrequency_CF",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.5645,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_HighFrequency_CF",
+      "dataset_source": "loose_synthetic_corpus",
+      "calibrated_prob": 0.0663,
+      "error_type": "FALSE_NEGATIVE"
+    },
+    {
+      "generator_family": "Synthetic_QualityParadox_ModernDiffusion",
+      "dataset_source": "aigi_quality_paradox",
+      "calibrated_prob": 0.1887,
+      "error_type": "FALSE_NEGATIVE"
+    }
+  ]
+}

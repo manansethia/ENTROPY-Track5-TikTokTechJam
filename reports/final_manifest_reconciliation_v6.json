@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-08-29T07:30:32Z",
+  "manifest_version": "v6 (Final Master Governed)",
+  "manifest_path": "/home/manan/aigc_robust_detection/manifests/final_284500_governed_manifest_v6.jsonl",
+  "manifest_sha256": "8ec2b6916391a7e2122b0f4993c71d7a02eced0f3c6719a6b287bcb9a76070ec",
+  "total_rows": 268571,
+  "partitions": {
+    "TRAIN": {
+      "total": 244255,
+      "real": 132102,
+      "aigc": 112153,
+      "governance_status": "TRAIN_ELIGIBLE"
+    },
+    "DEV": {
+      "total": 10000,
+      "real": 5000,
+      "aigc": 5000,
+      "governance_status": "DEV_ONLY"
+    },
+    "CALIBRATION": {
+      "total": 4000,
+      "real": 2000,
+      "aigc": 2000,
+      "governance_status": "CALIBRATION_ONLY"
+    },
+    "INTERNAL_TEST": {
+      "total": 10316,
+      "real": 4238,
+      "aigc": 6078,
+      "governance_status": "LOCKED_TEST"
+    }
+  },
+  "split_isolation_check": {
+    "TRAIN_AND_DEV": 0,
+    "TRAIN_AND_CALIBRATION": 0,
+    "TRAIN_AND_TEST": 0,
+    "DEV_AND_CALIBRATION": 0,
+    "DEV_AND_TEST": 0,
+    "CALIBRATION_AND_TEST": 0,
+    "all_intersections_zero": true
+  },
+  "ood_isolation_check": {
+    "synthbuster_in_train": 0,
+    "aigibench_in_train": 0,
+    "coco_val2017_in_train": 0,
+    "chameleon_in_train": 0,
+    "vct2_in_train": 0,
+    "wildrf_in_train": 0,
+    "synthwildx_in_train": 0,
+    "ood_contamination_count": 0,
+    "ood_isolation_verified": true
+  },
+  "real_domain_accounting": {
+    "wikiart_fine_art": 81444,
+    "coco_authentic_photography": 36366,
+    "natural_sid_photography": 21292,
+    "total_unique_real_available": 139102,
+    "real_train_allocated": 132102,
+    "real_dev_allocated": 5000,
+    "real_cal_allocated": 2000
+  },
+  "aigc_generator_accounting": {
+    "quality_paradox_photorealism": 24000,
+    "sid_latent_diffusion": 14982,
+    "defactify_inpainting_generative": 5000,
+    "sdxl_midjourney": 17373,
+    "diverse_generators_scaled": 38497,
+    "pixart_hfcf_diffusion": 19301,
+    "total_aigc_allocated": 119153,
+    "aigc_train_allocated": 112153,
+    "aigc_dev_allocated": 5000,
+    "aigc_cal_allocated": 2000
+  }
+}

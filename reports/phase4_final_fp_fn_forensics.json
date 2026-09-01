@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "dominant_fp_source": "COCO macro captures with intense flash blur",
+  "dominant_fn_source": "Subtle SID low-step diffusion lacking high-frequency artifacts",
+  "mitigation": "Asymmetric loss lambda_fp=2.0 with Strategy E hybrid sampling"
+}

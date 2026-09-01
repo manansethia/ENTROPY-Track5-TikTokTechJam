@@ -1,0 +1,29 @@
+{
+  "checkpoint_identity": {
+    "rema_epoch3_sha256": "b1d9ad41aecca908be0d2238a1f8f7940d118d7c599864313ca8c56a6b309eca",
+    "champion_base_sha256": "b1d9ad41aecca908be0d2238a1f8f7940d118d7c599864313ca8c56a6b309eca",
+    "feedback_round1_sha256": "96291a72b872ab0ebb8603b2ee2f8f2a897c31864acadf0936a47afa887b78e4",
+    "feedback_parameter_change": false,
+    "audit_verdict": "FEEDBACK_LEARNING_DID_NOT_ALTER_ROUND_1_CHECKPOINT"
+  },
+  "parameter_counts": {
+    "total_parameters": 735038561,
+    "trainable_parameters": 32013809,
+    "frozen_parameters": 703024752
+  },
+  "gradient_verification": {
+    "classification_gradient_norm": 0.1627107858657837,
+    "evidence_gradient_norm": 6.872111797332764,
+    "counterfactual_gradient_norm": 0.009229793213307858,
+    "total_gradient_norm": 6.8462677001953125,
+    "all_components_active": true
+  },
+  "optimizer_step_verification": {
+    "optimizer_step_modifies_parameters": true,
+    "parameter_hash_changed_on_step": true,
+    "changed_parameter_count": 31996831,
+    "l2_parameter_delta": 0.04931817576289177,
+    "max_absolute_delta": 1.0251998901367188e-05,
+    "mean_absolute_delta": 8.269722457043827e-06
+  }
+}

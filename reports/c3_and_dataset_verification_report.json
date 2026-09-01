@@ -1,0 +1,110 @@
+{
+  "c3_verification": {
+    "verified_loading": true,
+    "checkpoint_dir": "/mnt/ai-storage/aigc_data/models/community_forensics_vit_small",
+    "parameter_count": 21811969,
+    "is_static_output": false,
+    "prob_range": [
+      0.0015147539088502526,
+      0.8688871264457703
+    ],
+    "sample_evaluations": [
+      {
+        "file": "real_ultra_highres_0000_3474x2316.jpg",
+        "type": "REAL",
+        "logit": 1.8912,
+        "probability": 0.8689
+      },
+      {
+        "file": "real_ultra_highres_0001_4522x3014.jpg",
+        "type": "REAL",
+        "logit": -1.3406,
+        "probability": 0.2074
+      },
+      {
+        "file": "real_ultra_highres_0002_4691x2639.jpg",
+        "type": "REAL",
+        "logit": -1.5359,
+        "probability": 0.1771
+      },
+      {
+        "file": "real_ultra_highres_0003_4427x2490.jpg",
+        "type": "REAL",
+        "logit": -2.8944,
+        "probability": 0.0524
+      },
+      {
+        "file": "real_ultra_highres_0004_4416x2484.jpg",
+        "type": "REAL",
+        "logit": -3.6976,
+        "probability": 0.0242
+      },
+      {
+        "file": "aigc_ultra_highres_0000_2048x1536.jpg",
+        "type": "AIGC",
+        "logit": -1.3633,
+        "probability": 0.2037
+      },
+      {
+        "file": "aigc_ultra_highres_0001_3024x4032.jpg",
+        "type": "AIGC",
+        "logit": -4.529,
+        "probability": 0.0107
+      },
+      {
+        "file": "aigc_ultra_highres_0002_4032x3024.jpg",
+        "type": "AIGC",
+        "logit": -6.491,
+        "probability": 0.0015
+      },
+      {
+        "file": "aigc_ultra_highres_0003_2048x1536.jpg",
+        "type": "AIGC",
+        "logit": 0.0624,
+        "probability": 0.5156
+      },
+      {
+        "file": "aigc_ultra_highres_0004_2496x1840.jpg",
+        "type": "AIGC",
+        "logit": -1.5334,
+        "probability": 0.1775
+      }
+    ]
+  },
+  "dataset_verification": {
+    "train_count": 352,
+    "val_count": 88,
+    "source_overlap": 0,
+    "class_breakdown": {
+      "train": {
+        "REAL": 176,
+        "PARTIAL_AIGC": 88,
+        "FULL_AIGC": 88
+      },
+      "val": {
+        "REAL": 44,
+        "PARTIAL_AIGC": 22,
+        "FULL_AIGC": 22
+      }
+    },
+    "manipulation_types": {
+      "none_pure_authentic": 110,
+      "clahe_tone_curve": 28,
+      "sky_background_replacement": 28,
+      "jpeg_q45_sharpen": 28,
+      "organic_blob_inpainting": 28,
+      "bilateral_denoise_webp": 27,
+      "generative_infill_region": 27,
+      "lightroom_hdr_vibrance": 27,
+      "object_insertion_dual": 27,
+      "full_synthetic_generation": 110
+    },
+    "mask_area_stats": {
+      "min_pct": 3.0736618500028228,
+      "median_pct": 8.306637014963613,
+      "max_pct": 44.675925925925924
+    },
+    "mask_audit_passed": true
+  },
+  "all_checks_passed": true
+}

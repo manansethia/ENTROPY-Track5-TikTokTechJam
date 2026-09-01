@@ -1,0 +1,22 @@
+{
+  "aigi_quality_paradox": {
+    "count": 1226,
+    "TPR_tau_050": 0.9935,
+    "TPR_tau_080": 0.9927
+  },
+  "loose_authentic_corpus": {
+    "count": 882,
+    "FPR_tau_050": 0.0306,
+    "FPR_tau_080": 0.0272
+  },
+  "loose_synthetic_corpus": {
+    "count": 1825,
+    "TPR_tau_050": 0.9863,
+    "TPR_tau_080": 0.9819
+  },
+  "wikiart_fine_art": {
+    "count": 1223,
+    "FPR_tau_050": 0.0008,
+    "FPR_tau_080": 0.0008
+  }
+}

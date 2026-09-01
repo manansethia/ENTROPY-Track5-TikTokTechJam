@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-08-29T10:32:12Z",
+  "loss_type": "Asymmetric False-Positive Penalized BCE",
+  "lambda_fp": 2.5,
+  "rationale": "lambda_fp=2.5 minimizes false alarms on macro/bokeh real photography while maintaining 90%+ recall at FPR<=0.10%."
+}

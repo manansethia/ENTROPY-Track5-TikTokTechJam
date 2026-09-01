@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-08-28T20:43:57Z",
+  "current_manifest_composition": {
+    "total_samples": 50000,
+    "authentic_real_count": 17373,
+    "authentic_real_pct": "34.75%",
+    "synthetic_aigc_count": 32627,
+    "synthetic_aigc_pct": "65.25%",
+    "synthetic_generator_breakdown": {
+      "Synthetic_HighFrequency_CF": {
+        "count": 26077,
+        "pct_of_synthetic": "79.92%"
+      },
+      "Synthetic_SID_Diffusion": {
+        "count": 5214,
+        "pct_of_synthetic": "15.98%"
+      },
+      "Synthetic_Diffusion_General": {
+        "count": 1336,
+        "pct_of_synthetic": "4.09%"
+      }
+    },
+    "authentic_source_breakdown": {
+      "Authentic_Real_General": {
+        "count": 12805,
+        "pct_of_authentic": "73.71%"
+      },
+      "Authentic_COCO": {
+        "count": 2392,
+        "pct_of_authentic": "13.77%"
+      },
+      "Authentic_HighRes_Photo": {
+        "count": 2176,
+        "pct_of_authentic": "12.53%"
+      }
+    }
+  },
+  "scientific_audit_answers": {
+    "1_why_available_corpus_produces_this_ratio": "The approved storage corpus contains 17,373 unique authentic real images in pre-extracted JPEG format on disk (from massive_balanced_50k/real), while pre-extracted synthetic images total over 74,000. Compiling a 50,000-sample manifest purely from pre-extracted image files without unpacking additional parquet shards consumes 100% of available pre-extracted real images (17,373) and fills the remaining 32,627 slots with synthetic images.",
+    "2_decision_boundary_bias_analysis": "The 34.7% / 65.3% class ratio creates a theoretical unweighted prior logit shift of +0.6302 toward predicting Fake. However, our objective function applies lambda_FP = 2.0. The effective gradient weight on Real is 2.0 * 17,373 = 34,746 vs 1.0 * 32,627 = 32,627 on Fake (an effective ratio of 1.0649:1). Therefore, lambda_FP = 2.0 almost perfectly counteracts the class-frequency prior shift at the loss level.",
+    "3_class_weighting_vs_dataset_balancing": "Class weighting (lambda_FP = 2.0) and Stratified Batch Sampling (50% Real / 50% Fake per mini-batch) are mathematically superior to arbitrarily discarding 15,254 synthetic images to enforce an artificial 17,373/17,373 size limit, PROVIDED THAT generator concentration within the synthetic class is bounded.",
+    "4_per_generator_synthetic_concentration_risk": "CRITICAL FINDING: In the current 50K manifest, Synthetic_HighFrequency_CF represents 26,077 out of 32,627 synthetic images (79.9% of all synthetic data). This severe concentration poses a major overfitting risk: the linear fusion head could learn to detect HFCF-specific Fourier artifacts rather than learning general multi-generator synthesis signatures.",
+    "5_per_source_real_distribution": "The authentic real distribution is composed of 12,805 General Photography (73.7%), 2,392 COCO Photography (13.8%), and 2,176 High-Resolution Photography (12.5%).",
+    "6_hard_negative_real_representation": "COCO complex scenes with compression artifacts, specular glare, and sharp edges are adequately represented (2,392 samples). However, historical oil paintings (WikiArt) are stored in 72 parquet shards and are not in this pre-extracted set.",
+    "7_subtle_photorealistic_aigc_representation": "Subtle photorealistic diffusion is represented by 5,214 Synthetic_SID_Diffusion samples and 1,336 Synthetic_Diffusion_General samples (totaling 6,550 samples, or 20.1% of the synthetic class).",
+    "8_validation_and_test_independence": "The 5K Validation and 5K Internal Test partitions have 0.00% cryptographic SHA-256 hash overlap with Train and each other, ensuring strict statistical independence.",
+    "9_stratified_sampler_requirement": "A Generator-Aware Stratified Sampler MUST be used during training: every mini-batch must sample 50% Real and 50% Fake, with inverse-frequency sampling across generator families so that HFCF does not dominate 80% of every gradient step.",
+    "10_dataset_decision": "The manifest should NOT be trained as-is without generator capping and stratified sampling."
+  },
+  "recommendation": {
+    "should_we_train_this_exact_50k_distribution": "NO",
+    "primary_reason": "Synthetic_HighFrequency_CF constitutes 79.9% of the synthetic class (26,077 / 32,627), creating severe generator-specific shortcut learning risk.",
+    "minimum_required_correction": {
+      "action": "Rebalance synthetic generator composition by capping Synthetic_HighFrequency_CF and enforcing 1:1 class balance during training.",
+      "option_a_balanced_manifest": "Build a 1:1 balanced 34,746-sample manifest (17,373 Real / 17,373 Fake) where HFCF is capped at 10,823 samples (62.3%), SID_Diffusion is 5,214 samples (30.0%), and Diffusion_General is 1,336 samples (7.7%).",
+      "option_b_generator_balanced_batch_sampler": "Retain the 50,000-sample pool but enforce a GeneratorAwareWeightedRandomSampler during DataLoader iteration that samples (Real: 0.50, Fake: 0.50) with sub-weights (SID: 0.40, Diffusion_General: 0.20, HFCF: 0.40).",
+      "recommended_choice": "Option A + Option B: A 1:1 balanced manifest (17,373 Real / 17,373 Fake = 34,746 total) with generator-balanced batch sampling in Phase 1, followed by full parquet extraction in Phase 2."
+    }
+  }
+}

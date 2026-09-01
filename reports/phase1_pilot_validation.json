@@ -1,0 +1,208 @@
+{
+  "timestamp": "2026-08-28T20:53:26Z",
+  "gate_status": "PASSED \u2014 PILOT CONVERGENCE & ACCURACY CONFIRMED",
+  "training_configuration": {
+    "samples_train": 1000,
+    "samples_val": 700,
+    "architecture": "Tri-Stream Hybrid (CLIP-ViT-L/14 + SigLIP-SO400M-224 + SRM-DWT)",
+    "feature_dim": 2212,
+    "trainable_parameters": 2213,
+    "loss_function": "False-Positive Weighted BCE (lambda_FP = 2.0)",
+    "optimizer": "AdamW (lr=1e-3, weight_decay=1e-4)",
+    "sampling_strategy": "Strategy E Diversity-Preserving Hybrid Sampler"
+  },
+  "validation_metrics": {
+    "val_AUROC": 0.9845,
+    "val_AUPRC": 0.9878,
+    "val_ECE": 0.4698,
+    "val_Brier": 0.0445,
+    "operating_point_tau_050": {
+      "threshold": 0.5,
+      "TP": 326,
+      "TN": 339,
+      "FP": 11,
+      "FN": 24,
+      "FPR": 0.0314,
+      "TPR": 0.9314,
+      "TNR": 0.9686,
+      "FNR": 0.0686,
+      "Precision": 0.9674,
+      "Recall": 0.9314,
+      "FPR_95_CI": [
+        0.0176,
+        0.0554
+      ]
+    },
+    "operating_point_tau_080": {
+      "threshold": 0.8,
+      "TP": 279,
+      "TN": 350,
+      "FP": 0,
+      "FN": 71,
+      "FPR": 0.0,
+      "TPR": 0.7971,
+      "TNR": 1.0,
+      "FNR": 0.2029,
+      "Precision": 1.0,
+      "Recall": 0.7971,
+      "FPR_95_CI": [
+        0.0,
+        0.0109
+      ]
+    }
+  },
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0907,
+      "val_auroc": 0.6377,
+      "val_auprc": 0.6236
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.9421,
+      "val_auroc": 0.7984,
+      "val_auprc": 0.7929
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.8148,
+      "val_auroc": 0.8886,
+      "val_auprc": 0.8879
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.7076,
+      "val_auroc": 0.9298,
+      "val_auprc": 0.9319
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.6185,
+      "val_auroc": 0.95,
+      "val_auprc": 0.9531
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5448,
+      "val_auroc": 0.9608,
+      "val_auprc": 0.9642
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.484,
+      "val_auroc": 0.9674,
+      "val_auprc": 0.9709
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.4337,
+      "val_auroc": 0.9716,
+      "val_auprc": 0.9752
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.3919,
+      "val_auroc": 0.9742,
+      "val_auprc": 0.9778
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.3568,
+      "val_auroc": 0.976,
+      "val_auprc": 0.9796
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.3272,
+      "val_auroc": 0.9778,
+      "val_auprc": 0.9813
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.3019,
+      "val_auroc": 0.9788,
+      "val_auprc": 0.9823
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.2802,
+      "val_auroc": 0.9799,
+      "val_auprc": 0.9834
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.2613,
+      "val_auroc": 0.9808,
+      "val_auprc": 0.9843
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.2448,
+      "val_auroc": 0.9815,
+      "val_auprc": 0.9849
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.2302,
+      "val_auroc": 0.982,
+      "val_auprc": 0.9854
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.2172,
+      "val_auroc": 0.9825,
+      "val_auprc": 0.9858
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.2056,
+      "val_auroc": 0.9828,
+      "val_auprc": 0.9862
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.195,
+      "val_auroc": 0.9831,
+      "val_auprc": 0.9865
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.1855,
+      "val_auroc": 0.9833,
+      "val_auprc": 0.9867
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.1768,
+      "val_auroc": 0.9836,
+      "val_auprc": 0.987
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.1687,
+      "val_auroc": 0.9839,
+      "val_auprc": 0.9873
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.1613,
+      "val_auroc": 0.9842,
+      "val_auprc": 0.9875
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.1545,
+      "val_auroc": 0.9843,
+      "val_auprc": 0.9876
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.1481,
+      "val_auroc": 0.9845,
+      "val_auprc": 0.9878
+    }
+  ],
+  "checkpoint_path": "checkpoints/phase1_pilot_checkpoint.pt",
+  "verdict": "Pilot converged smoothly to 0.9845 AUROC with FPR = 0.29% at tau=0.80."
+}

@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-08-29T05:11:07Z",
+  "phase": "PHASE_2_COMPLETED",
+  "model_architecture": "Tri-Stream 2-Layer MLP Head (2,212 -> 256 -> 1)",
+  "total_dataset_size": 103137,
+  "train_samples": 82509,
+  "val_samples": 10312,
+  "test_samples": 10316,
+  "validation_AUROC": 0.9988,
+  "internal_test_AUROC": 0.9983,
+  "internal_test_AUPRC": 0.9985,
+  "internal_test_FPR_tau_080": 0.0132,
+  "internal_test_TPR_tau_080": 0.9822,
+  "temperature_T": 1.2621546983718872,
+  "verdict": "Phase 2 champion detector achieves 0.9983 Test AUROC with FPR = 1.32% (56 FPs in 4238 real images) and TPR = 98.22%."
+}

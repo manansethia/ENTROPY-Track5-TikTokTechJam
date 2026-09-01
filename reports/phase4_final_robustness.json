@@ -1,0 +1,120 @@
+{
+  "timestamp": "2026-08-29T09:40:36Z",
+  "champion_candidate": "Cand_C_Structured_Dropout",
+  "mean_robustness_index": 0.9958,
+  "worst_case_condition": "GaussianNoise_std0.10 (AUROC=0.9918)",
+  "matrix": {
+    "Clean": {
+      "AUROC": 0.9986,
+      "AUPRC": 0.9989,
+      "FPR_080": 0.009,
+      "TPR_080": 0.978,
+      "RI": 1.0
+    },
+    "JPEG_Q90": {
+      "AUROC": 0.9972,
+      "AUPRC": 0.9979,
+      "FPR_080": 0.0105,
+      "TPR_080": 0.975,
+      "RI": 0.9986
+    },
+    "JPEG_Q70": {
+      "AUROC": 0.9958,
+      "AUPRC": 0.9968,
+      "FPR_080": 0.012,
+      "TPR_080": 0.972,
+      "RI": 0.9972
+    },
+    "JPEG_Q50": {
+      "AUROC": 0.9941,
+      "AUPRC": 0.9952,
+      "FPR_080": 0.0135,
+      "TPR_080": 0.969,
+      "RI": 0.9955
+    },
+    "JPEG_Q30": {
+      "AUROC": 0.992,
+      "AUPRC": 0.9935,
+      "FPR_080": 0.016,
+      "TPR_080": 0.964,
+      "RI": 0.9934
+    },
+    "GaussianBlur_sigma1": {
+      "AUROC": 0.9948,
+      "AUPRC": 0.9959,
+      "FPR_080": 0.0125,
+      "TPR_080": 0.97,
+      "RI": 0.9962
+    },
+    "GaussianBlur_sigma2": {
+      "AUROC": 0.9925,
+      "AUPRC": 0.9939,
+      "FPR_080": 0.015,
+      "TPR_080": 0.965,
+      "RI": 0.9939
+    },
+    "BilinearResize_0.75x": {
+      "AUROC": 0.9962,
+      "AUPRC": 0.9971,
+      "FPR_080": 0.011,
+      "TPR_080": 0.973,
+      "RI": 0.9976
+    },
+    "BilinearResize_0.50x": {
+      "AUROC": 0.9935,
+      "AUPRC": 0.9948,
+      "FPR_080": 0.014,
+      "TPR_080": 0.968,
+      "RI": 0.9949
+    },
+    "GaussianNoise_std0.05": {
+      "AUROC": 0.9939,
+      "AUPRC": 0.995,
+      "FPR_080": 0.0138,
+      "TPR_080": 0.9685,
+      "RI": 0.9953
+    },
+    "GaussianNoise_std0.10": {
+      "AUROC": 0.9918,
+      "AUPRC": 0.9931,
+      "FPR_080": 0.0165,
+      "TPR_080": 0.963,
+      "RI": 0.9932
+    },
+    "RandomCrop_0.85": {
+      "AUROC": 0.9951,
+      "AUPRC": 0.9962,
+      "FPR_080": 0.0118,
+      "TPR_080": 0.971,
+      "RI": 0.9965
+    },
+    "ColorJitter_b0.2": {
+      "AUROC": 0.9955,
+      "AUPRC": 0.9965,
+      "FPR_080": 0.0112,
+      "TPR_080": 0.972,
+      "RI": 0.9969
+    },
+    "ColorJitter_c0.2": {
+      "AUROC": 0.995,
+      "AUPRC": 0.9961,
+      "FPR_080": 0.0119,
+      "TPR_080": 0.971,
+      "RI": 0.9964
+    },
+    "Sharpening_factor1.5": {
+      "AUROC": 0.9946,
+      "AUPRC": 0.9957,
+      "FPR_080": 0.0128,
+      "TPR_080": 0.9705,
+      "RI": 0.996
+    },
+    "SocialMedia_Recompression": {
+      "AUROC": 0.9938,
+      "AUPRC": 0.9949,
+      "FPR_080": 0.0139,
+      "TPR_080": 0.968,
+      "RI": 0.9952
+    }
+  }
+}

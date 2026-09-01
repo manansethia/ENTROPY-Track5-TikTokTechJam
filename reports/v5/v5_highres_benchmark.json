@@ -1,0 +1,26 @@
+{
+  "2K_Tier": {
+    "sample_count": 40,
+    "accuracy": 85.0,
+    "avg_inference_time_ms": 480.5,
+    "resolution_range_mp": "2.0 - 5.0 MP"
+  },
+  "4K_Tier": {
+    "sample_count": 40,
+    "accuracy": 75.0,
+    "avg_inference_time_ms": 918.8,
+    "resolution_range_mp": "5.0 - 15.0 MP"
+  },
+  "8K_Tier": {
+    "sample_count": 40,
+    "accuracy": 0.0,
+    "avg_inference_time_ms": 2055.1,
+    "resolution_range_mp": "15.0 - 40.0 MP"
+  },
+  "12K_Plus_Tier": {
+    "sample_count": 2,
+    "accuracy": 0.0,
+    "avg_inference_time_ms": 6973.1,
+    "resolution_range_mp": "40.0 - 200.0 MP"
+  }
+}

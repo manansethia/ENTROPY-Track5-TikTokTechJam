@@ -1,0 +1,32 @@
+{
+  "Authentic_COCO": {
+    "count": 167,
+    "FPR_tau_050": 0.0539,
+    "FPR_tau_080": 0.0479
+  },
+  "Authentic_Real_General": {
+    "count": 715,
+    "FPR_tau_050": 0.0252,
+    "FPR_tau_080": 0.0224
+  },
+  "Authentic_WikiArt_FineArt": {
+    "count": 1223,
+    "FPR_tau_050": 0.0008,
+    "FPR_tau_080": 0.0008
+  },
+  "Synthetic_HighFrequency_CF": {
+    "count": 1482,
+    "TPR_tau_050": 0.9933,
+    "TPR_tau_080": 0.9919
+  },
+  "Synthetic_QualityParadox_ModernDiffusion": {
+    "count": 1226,
+    "TPR_tau_050": 0.9935,
+    "TPR_tau_080": 0.9927
+  },
+  "Synthetic_SID_Diffusion": {
+    "count": 343,
+    "TPR_tau_050": 0.9563,
+    "TPR_tau_080": 0.9388
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "FP32": {
+    "precision": "FP32",
+    "verdict": "FULL_AIGC",
+    "confidence": 0.7603,
+    "fused_ai_prob": 0.6309,
+    "v2_aide_score": 0.1265,
+    "v3_gated_score": 0.6338,
+    "v5_spatial_score": 0.9624,
+    "max_patch_anomaly": 0.9976,
+    "quadrant_anomalies": {
+      "top_left_real": 0.9684,
+      "top_right_ai": 0.7365,
+      "bottom_left_ai": 0.5928,
+      "bottom_right_ai": 0.4414
+    },
+    "specialist_scores": {
+      "C0_TripleHybrid": 0.9592,
+      "C1_Portrait": 0.2012,
+      "C2_SPAI_ViT": 0.7496,
+      "C3_CommunityForensics": 0.559,
+      "C4_ConvNeXt_HighRes": 0.3701,
+      "C5_ConvNeXt_divine2k": 0.9942,
+      "C6_EfficientNet": 0.5068,
+      "C7_ResNet50": 0.1303
+    },
+    "suspicious_regions_count": 23,
+    "heatmap_saved_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/4women_heatmap_fp32.jpg",
+    "peak_vram_mib": 3623.31,
+    "latency_seconds": 19.757
+  },
+  "FP16": {
+    "precision": "FP16",
+    "verdict": "FULL_AIGC",
+    "confidence": 0.7602,
+    "fused_ai_prob": 0.6487,
+    "v2_aide_score": 0.127,
+    "v3_gated_score": 0.6692,
+    "v5_spatial_score": 0.9624,
+    "max_patch_anomaly": 0.9976,
+    "quadrant_anomalies": {
+      "top_left_real": 0.9685,
+      "top_right_ai": 0.7366,
+      "bottom_left_ai": 0.5929,
+      "bottom_right_ai": 0.4415
+    },
+    "specialist_scores": {
+      "C0_TripleHybrid": 0.9537,
+      "C1_Portrait": 0.2009,
+      "C2_SPAI_ViT": 0.489,
+      "C3_CommunityForensics": 0.4626,
+      "C4_ConvNeXt_HighRes": 0.3676,
+      "C5_ConvNeXt_divine2k": 0.9941,
+      "C6_EfficientNet": 0.509,
+      "C7_ResNet50": 0.1294
+    },
+    "suspicious_regions_count": 23,
+    "heatmap_saved_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/4women_heatmap_fp16.jpg",
+    "peak_vram_mib": 3433.73,
+    "latency_seconds": 19.449
+  },
+  "INT8": {
+    "precision": "INT8",
+    "verdict": "FULL_AIGC",
+    "confidence": 0.761,
+    "fused_ai_prob": 0.5405,
+    "v2_aide_score": 0.1121,
+    "v3_gated_score": 0.457,
+    "v5_spatial_score": 0.9652,
+    "max_patch_anomaly": 0.9975,
+    "quadrant_anomalies": {
+      "top_left_real": 0.971,
+      "top_right_ai": 0.7494,
+      "bottom_left_ai": 0.5915,
+      "bottom_right_ai": 0.4526
+    },
+    "specialist_scores": {
+      "C0_TripleHybrid": 0.9877,
+      "C1_Portrait": 0.2158,
+      "C2_SPAI_ViT": 0.3569,
+      "C3_CommunityForensics": 0.6578,
+      "C4_ConvNeXt_HighRes": 0.2039,
+      "C5_ConvNeXt_divine2k": 0.9973,
+      "C6_EfficientNet": 0.6749,
+      "C7_ResNet50": 0.1953
+    },
+    "suspicious_regions_count": 23,
+    "heatmap_saved_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/4women_heatmap_int8.jpg",
+    "peak_vram_mib": 3865.56,
+    "latency_seconds": 18.626
+  },
+  "INT4": {
+    "precision": "INT4",
+    "verdict": "PARTIAL_AIGC",
+    "confidence": 0.667,
+    "fused_ai_prob": 0.8955,
+    "v2_aide_score": 0.9872,
+    "v3_gated_score": 0.9198,
+    "v5_spatial_score": 0.7937,
+    "max_patch_anomaly": 0.667,
+    "quadrant_anomalies": {
+      "top_left_real": 0.2992,
+      "top_right_ai": 0.2031,
+      "bottom_left_ai": 0.2573,
+      "bottom_right_ai": 0.0613
+    },
+    "specialist_scores": {
+      "C0_TripleHybrid": 1.0,
+      "C1_Portrait": 0.085,
+      "C2_SPAI_ViT": 0.555,
+      "C3_CommunityForensics": 0.5086,
+      "C4_ConvNeXt_HighRes": 0.691,
+      "C5_ConvNeXt_divine2k": 0.7392,
+      "C6_EfficientNet": 1.0,
+      "C7_ResNet50": 0.6472
+    },
+    "suspicious_regions_count": 3,
+    "heatmap_saved_path": "/home/manan/aigc_robust_detection/reports/production_heatmaps/4women_heatmap_int4.jpg",
+    "peak_vram_mib": 3865.56,
+    "latency_seconds": 18.265
+  }
+}

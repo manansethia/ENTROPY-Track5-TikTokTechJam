@@ -1,0 +1,327 @@
+{
+  "benchmark_summary": {
+    "teacher_ensemble": {
+      "params": 1818496169,
+      "accuracy": 60.0,
+      "real_fpr": 100.0,
+      "latency_ms": 1221.61,
+      "size_mb_fp16": 3470.25
+    },
+    "compressed_student_4m": {
+      "params": 4668324,
+      "accuracy": 30.0,
+      "real_fpr": 70.0,
+      "latency_ms": 3.48,
+      "size_mb_fp32": 17.89
+    },
+    "highcap_student_96m": {
+      "params": 96590564,
+      "accuracy": 46.67,
+      "real_fpr": 50.0,
+      "latency_ms": 27.93,
+      "size_mb_fp32": 368.62
+    }
+  },
+  "sample_evaluations": [
+    {
+      "file": "train-00050-of-00249_real_00272.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.438,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.557,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.53
+    },
+    {
+      "file": "train-00050-of-00249_real_00273.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.445,
+      "student_4m_pred": "FULL_AIGC",
+      "student_4m_prob": 0.428,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.485
+    },
+    {
+      "file": "train-00050-of-00249_real_00274.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.444,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.712,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.414
+    },
+    {
+      "file": "train-00050-of-00249_real_00275.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.451,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.702,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.437
+    },
+    {
+      "file": "train-00050-of-00249_real_00276.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.436,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.618,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.507
+    },
+    {
+      "file": "highres_9e8f1504ee03f592.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.448,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.611,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.449
+    },
+    {
+      "file": "highres_c40c0a71715b72ba.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.857,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.589,
+      "student_96m_pred": "PARTIAL_AIGC",
+      "student_96m_prob": 0.398
+    },
+    {
+      "file": "highres_d13c3fd85851573c.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.468,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.701,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.454
+    },
+    {
+      "file": "highres_fa3d0588071df873.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.841,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.592,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.485
+    },
+    {
+      "file": "ultra_00970ac8c7d2ac53.jpg",
+      "gt_class": "REAL",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.901,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.703,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.489
+    },
+    {
+      "file": "partial_ai_009990.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.45,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.63,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.465
+    },
+    {
+      "file": "partial_ai_009991.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.436,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.87,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.424
+    },
+    {
+      "file": "partial_ai_009992.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.435,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.899,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.373
+    },
+    {
+      "file": "partial_ai_009993.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.46,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.711,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.397
+    },
+    {
+      "file": "partial_ai_009994.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.434,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.74,
+      "student_96m_pred": "PARTIAL_AIGC",
+      "student_96m_prob": 0.386
+    },
+    {
+      "file": "partial_ai_009995.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.425,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.743,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.49
+    },
+    {
+      "file": "partial_ai_009996.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.444,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.696,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.371
+    },
+    {
+      "file": "partial_ai_009997.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.433,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.716,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.556
+    },
+    {
+      "file": "partial_ai_009998.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.444,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.712,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.506
+    },
+    {
+      "file": "partial_ai_009999.jpg",
+      "gt_class": "PARTIAL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.431,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.469,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.532
+    },
+    {
+      "file": "train-00003-of-00249_sidfake_00374.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.893,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.623,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.552
+    },
+    {
+      "file": "train-00003-of-00249_sidfake_00375.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.438,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.573,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.415
+    },
+    {
+      "file": "train-00003-of-00249_sidfake_00376.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.915,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.817,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.436
+    },
+    {
+      "file": "train-00003-of-00249_sidfake_00377.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "PARTIAL_AIGC",
+      "teacher_ai_score": 0.494,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.617,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.493
+    },
+    {
+      "file": "train-00003-of-00249_sidfake_00378.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.852,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.385,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.47
+    },
+    {
+      "file": "HFCF_small_5_fake_01495.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.9,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.798,
+      "student_96m_pred": "REAL",
+      "student_96m_prob": 0.502
+    },
+    {
+      "file": "HFCF_small_5_fake_01496.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.861,
+      "student_4m_pred": "PARTIAL_AIGC",
+      "student_4m_prob": 0.532,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.524
+    },
+    {
+      "file": "HFCF_small_5_fake_01497.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.908,
+      "student_4m_pred": "REAL",
+      "student_4m_prob": 0.657,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.416
+    },
+    {
+      "file": "HFCF_small_5_fake_01498.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.848,
+      "student_4m_pred": "FULL_AIGC",
+      "student_4m_prob": 0.751,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.519
+    },
+    {
+      "file": "HFCF_small_5_fake_01499.jpg",
+      "gt_class": "FULL_AIGC",
+      "teacher_pred": "FULL_AIGC",
+      "teacher_ai_score": 0.857,
+      "student_4m_pred": "FULL_AIGC",
+      "student_4m_prob": 0.438,
+      "student_96m_pred": "FULL_AIGC",
+      "student_96m_prob": 0.479
+    }
+  ]
+}

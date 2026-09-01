@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-08-29T09:58:40Z",
+  "hard_real_pool_size": 5000,
+  "dominant_sources": {
+    "loose_authentic_corpus": 4732,
+    "wikiart_fine_art": 268
+  },
+  "dominant_failure_modes": "COCO macro captures, intense studio flash, strong optical bokeh, and fine canvas brushstrokes."
+}

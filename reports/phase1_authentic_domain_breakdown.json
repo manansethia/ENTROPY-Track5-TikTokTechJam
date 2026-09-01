@@ -1,0 +1,26 @@
+{
+  "Authentic_Real_General": {
+    "total": 810,
+    "fp_50": 6,
+    "fp_80": 0,
+    "FPR_tau_050": 0.0074,
+    "FPR_tau_080": 0.0,
+    "mean_confidence": 0.0512
+  },
+  "Authentic_HighRes_Photo": {
+    "total": 51,
+    "fp_50": 2,
+    "fp_80": 0,
+    "FPR_tau_050": 0.0392,
+    "FPR_tau_080": 0.0,
+    "mean_confidence": 0.0679
+  },
+  "Authentic_COCO": {
+    "total": 6,
+    "fp_50": 0,
+    "fp_80": 0,
+    "FPR_tau_050": 0.0,
+    "FPR_tau_080": 0.0,
+    "mean_confidence": 0.061
+  }
+}

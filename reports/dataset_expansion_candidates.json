@@ -1,0 +1,94 @@
+{
+  "report_id": "DATASET_EXPANSION_CANDIDATES",
+  "source_dataset": "TheKernel01/Tiny-GenImage",
+  "source_url": "https://huggingface.co/datasets/TheKernel01/Tiny-GenImage",
+  "license": "CC BY-NC-SA 4.0",
+  "license_verified": true,
+  "date_checked": "2026-08-30",
+  "total_extracted_samples": 13500,
+  "quarantined_duplicates": 0,
+  "manifest_path": "/home/manan/aigc_robust_detection/manifests/ood_remediation_manifest_v1.jsonl",
+  "generator_breakdown": [
+    {
+      "generator_family": "ImageNet_Authentic_Photo",
+      "architecture_category": "REAL_PHOTOGRAPHY",
+      "class_label": "REAL",
+      "samples_added": 3500,
+      "license": "CC BY-NC-SA 4.0",
+      "status": "INCORPORATED",
+      "scientific_rationale": "Targets novel architectural representation for REAL_PHOTOGRAPHY."
+    },
+    {
+      "generator_family": "ADM_PixelDiffusion",
+      "architecture_category": "Pixel_Space_Guided_Diffusion",
+      "class_label": "AIGC",
+      "samples_added": 2000,
+      "license": "CC BY-NC-SA 4.0",
+      "status": "INCORPORATED",
+      "scientific_rationale": "Targets novel architectural representation for Pixel_Space_Guided_Diffusion."
+    },
+    {
+      "generator_family": "BigGAN_Adversarial",
+      "architecture_category": "Generative_Adversarial_Network",
+      "class_label": "AIGC",
+      "samples_added": 2000,
+      "license": "CC BY-NC-SA 4.0",
+      "status": "INCORPORATED",
+      "scientific_rationale": "Targets novel architectural representation for Generative_Adversarial_Network."
+    },
+    {
+      "generator_family": "GLIDE_PixelDiffusion",
+      "architecture_category": "Text_Guided_Pixel_Diffusion",
+      "class_label": "AIGC",
+      "samples_added": 2000,
+      "license": "CC BY-NC-SA 4.0",
+      "status": "INCORPORATED",
+      "scientific_rationale": "Targets novel architectural representation for Text_Guided_Pixel_Diffusion."
+    },
+    {
+      "generator_family": "Midjourney_v5",
+      "architecture_category": "Latent_Diffusion_Ensemble",
+      "class_label": "AIGC",
+      "samples_added": 0,
+      "license": "CC BY-NC-SA 4.0",
+      "status": "EXCLUDED (Redundant with existing v6)",
+      "scientific_rationale": "Already strongly represented in base corpus."
+    },
+    {
+      "generator_family": "SD14_LatentDiffusion",
+      "architecture_category": "Latent_Diffusion_SD14",
+      "class_label": "AIGC",
+      "samples_added": 0,
+      "license": "CC BY-NC-SA 4.0",
+      "status": "EXCLUDED (Redundant with existing v6)",
+      "scientific_rationale": "Already strongly represented in base corpus."
+    },
+    {
+      "generator_family": "SD15_LatentDiffusion",
+      "architecture_category": "Latent_Diffusion_SD15",
+      "class_label": "AIGC",
+      "samples_added": 0,
+      "license": "CC BY-NC-SA 4.0",
+      "status": "EXCLUDED (Redundant with existing v6)",
+      "scientific_rationale": "Already strongly represented in base corpus."
+    },
+    {
+      "generator_family": "VQDM_DiscreteDiffusion",
+      "architecture_category": "Discrete_Latent_Codebook_Diffusion",
+      "class_label": "AIGC",
+      "samples_added": 2000,
+      "license": "CC BY-NC-SA 4.0",
+      "status": "INCORPORATED",
+      "scientific_rationale": "Targets novel architectural representation for Discrete_Latent_Codebook_Diffusion."
+    },
+    {
+      "generator_family": "Wukong_BilingualDiffusion",
+      "architecture_category": "Multilingual_Latent_Diffusion",
+      "class_label": "AIGC",
+      "samples_added": 2000,
+      "license": "CC BY-NC-SA 4.0",
+      "status": "INCORPORATED",
+      "scientific_rationale": "Targets novel architectural representation for Multilingual_Latent_Diffusion."
+    }
+  ]
+}
