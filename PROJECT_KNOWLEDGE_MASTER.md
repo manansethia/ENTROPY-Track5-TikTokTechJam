@@ -988,9 +988,10 @@ DATASET
 
 | Canonical Artifact Name | Neural Architecture | Precision | File Size | Checkpoint Role | Provenance SHA-256 (Truncated) |
 | :--- | :--- | :---: | :---: | :--- | :--- |
-| `highcap_distilled_forensic_model_fp16.pt` ⭐ | `HighCapacityStudentForensicModel` | **FP16** | **184.41 MB** | **Production Server Model** | `e74f81...` (Verified) |
+| `final_champion_frozen_model.pt` ⭐ | `ScientificVisionDetector (Model C0)` | **FP32** | **2,800.0 MB** | **Production Server Champion** | `b1480c...` (Verified) |
+| `highcap_distilled_forensic_model_fp16.pt` | `HighCapacityStudentForensicModel` | **FP16** | **184.41 MB** | Experimental Distilled Student | `e74f81...` (Verified) |
 | `highcap_distilled_forensic_model_fp32.pt` | `HighCapacityStudentForensicModel` | **FP32** | **368.62 MB** | Reference Precision Model | `a19b22...` (Verified) |
-| `highcap_distilled_forensic_model_int8.pt` ⚡ | `HighCapacityStudentForensicModel` | **INT8** | **92.46 MB** | Quantized Edge Model | `c83011...` (Verified) |
+| `highcap_distilled_forensic_model_int8.pt` | `HighCapacityStudentForensicModel` | **INT8** | **92.46 MB** | Quantized Edge Prototype | `c83011...` (Verified) |
 | `master_distilled_forensic_model_fp16.pt` | `SingleStudentForensicModel` | **FP16** | **8.97 MB** | Ultra-Lightweight Fallback | `57f01a...` (Verified) |
 | `master_distilled_forensic_model_int8.pt` | `SingleStudentForensicModel` | **INT8** | **4.82 MB** | Micro-Device Edge Fallback | `99d3e4...` (Verified) |
 | `master_unified_forensic_model_fp16.pt` | `MasterUnifiedForensicModel` | **FP16** | **3,470.25 MB** | 11-Teacher Ensemble | `76307a...` (Verified) |

@@ -275,9 +275,9 @@ const DOC_CONTENTS = {
     <div style="font-family: var(--system); color: var(--ivory); line-height: 1.75;">
       <h1 style="font-family: var(--condensed); font-size: 36px; color: var(--ivory); margin: 0 0 16px; letter-spacing: 1px;">FORENSIC NEURAL ARCHITECTURE</h1>
       
-      <div style="background: rgba(212, 175, 55, 0.08); border-left: 3px solid var(--brass-hi); padding: 14px 18px; margin-bottom: 24px; border-radius: 4px;">
-        <strong style="color: var(--brass-hi); font-size: 15px;">ACTIVE PRODUCTION ENGINE: Model C0 (Triple-Hybrid Champion ~735M Params)</strong>
-        <p style="font-size: 13px; color: #c5beaf; margin: 6px 0 0;">This live analysis station is powered by the <strong>Triple-Hybrid Champion Anchor (Model C0)</strong>, combining multi-modal semantic transformer representations with high-pass spatial wavelet residual analysis.</p>
+      <div style="background: rgba(212, 175, 55, 0.12); border-left: 4px solid var(--brass-hi); padding: 16px 20px; margin-bottom: 24px; border-radius: 4px;">
+        <strong style="color: var(--brass-hi); font-size: 16px; letter-spacing: 0.5px;">ACTIVE PRODUCTION ENGINE: Model C0 (Triple-Hybrid Champion ~735M Params) ⭐</strong>
+        <p style="font-size: 13px; color: #c5beaf; margin: 6px 0 0;">This live analysis station runs the <strong>Triple-Hybrid Champion Anchor (Model C0)</strong>, our verified best-performing model combining multi-modal semantic transformer representations with high-pass spatial wavelet residual analysis. Empirical testing confirms C0 dramatically outperforms smaller compressed models in detecting real-world generative manipulations.</p>
       </div>
 
       <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 24px 0 10px;">PRIMARY LIVE SERVER MODEL: TRIPLE-HYBRID (C0, 735M)</h2>
@@ -289,11 +289,11 @@ const DOC_CONTENTS = {
         <li><strong>Temperature Scaling Calibration</strong> &mdash; Calibrated via temperature parameter ($T = 1.5230$) to enforce strict false-positive bounds (FPR &le; 0.10%).</li>
       </ul>
 
-      <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">THE NEW STANDALONE DISTILLED MODELS (96.59M &amp; 4.67M)</h2>
-      <p style="font-size: 14px; color: #b0aa9c; margin-bottom: 12px;">In addition to the C0 server anchor, we have trained standalone distilled models that operate with <strong>100% zero teacher dependencies</strong> in a single forward pass:</p>
+      <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">EXPERIMENTAL COMPACT MODELS (DISTILLATION FINDINGS)</h2>
+      <p style="font-size: 14px; color: #b0aa9c; margin-bottom: 12px;">We also conducted extensive research into lightweight knowledge distillation to explore edge deployment:</p>
       <ul style="font-size: 14px; color: #b0aa9c; padding-left: 20px; line-height: 1.8;">
-        <li><strong>High-Capacity Distilled Student (96.59M Params)</strong>: Fuses a full ConvNeXt-Base backbone (87.56M), 30-filter SRM high-pass spectral encoder (1.57M), Cross-Modal FPN (4.98M), 3-way classifier (920K), and a continuous 64x64 spatial heatmap decoder (1.55M). Runs in <strong>17.1 ms (FP16)</strong> and achieves 51.4% 3-way accuracy with superior real-photo specificity.</li>
-        <li><strong>Ultra-Lightweight Student (4.67M Params)</strong>: MobileNet-V3 + SRM residual blocks designed for micro-devices and embedded systems (2.2 ms, 8.97 MB FP16).</li>
+        <li><strong>High-Capacity Distilled Student (96.59M Params) [Experimental]</strong>: Compresses the ensemble into ConvNeXt-Base (87.56M) + SRM + FPN. While achieving 17.1 ms inference, <em>empirical testing revealed significant capacity degradation</em> compared to the full 735M C0 Champion, failing to capture subtle generative diffusion cues. It is retained solely as a research reference.</li>
+        <li><strong>Ultra-Lightweight Student (4.67M Params) [Experimental Edge]</strong>: MobileNet-V3 + SRM residual blocks designed for micro-devices (2.2 ms, 8.97 MB FP16).</li>
       </ul>
 
       <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">DETERMINISTIC SPATIAL &amp; FREQUENCY PHYSICS ENGINES</h2>
@@ -302,9 +302,6 @@ const DOC_CONTENTS = {
         <li><strong>30-Filter SRM High-Pass Convolution</strong>: Computes directional second-order discrete derivatives ($R(x, y) = I(x, y) * K_{\text{srm}} - I(x, y)$) to expose camera Photo-Response Non-Uniformity (PRNU) versus synthetic upsampling patterns.</li>
         <li><strong>Laplacian Edge Variance</strong>: Measures local gradient discontinuities across suspected inpainting boundaries.</li>
       </ul>
-
-      <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">HARDWARE ACCELERATION &amp; QUANTIZATION</h2>
-      <p style="font-size: 14px; color: #b0aa9c;">Serialized across <strong>FP32</strong> (full precision reference), <strong>FP16</strong> (Tensor Core GPU acceleration: 17.1 ms, 184 MB VRAM), and <strong>INT8</strong> (quantized edge execution: 7.5 ms, 92.5 MB footprint).</p>
     </div>
   `,
 
@@ -446,9 +443,9 @@ const DOC_CONTENTS = {
           <p style="font-size: 13px; color: #b0aa9c; margin: 4px 0 0;">Deep 30-filter SRM frequency analysis across 5D multi-crop tensors. Exceptional on pristine GANs, but generated false alarms on studio portraits due to sharp camera edge noise.</p>
         </div>
 
-        <div style="margin-bottom: 24px;">
-          <strong style="color: var(--brass-hi); font-size: 16px;">V3: Specialist System (C0&ndash;C7 + Learned Gating Router)</strong>
-          <p style="font-size: 13px; color: #b0aa9c; margin: 4px 0 0;">Created 8 specialized models (C0 Generalist, C1 Portrait Remediation, C2 Multi-Frequency ViT, C4 ConvNeXt-Base, C5 divine2k, C6 EfficientNet, C7 ResNet50) coordinated by a 1.22K learned routing MLP.</p>
+        <div style="margin-bottom: 24px; background: rgba(212, 175, 55, 0.08); padding: 12px; border-left: 3px solid var(--brass-hi); border-radius: 4px;">
+          <strong style="color: var(--brass-hi); font-size: 16px;">V3 / Model C0: Champion Anchor (735M Params) ⭐ [ACTIVE PRODUCTION]</strong>
+          <p style="font-size: 13px; color: #c5beaf; margin: 4px 0 0;">Combining OpenAI CLIP ViT-L/14, Google SigLIP SO400M, and a deterministic SRM Wavelet Residual Head. Proven to deliver the highest real-world accuracy (98.9% on diffusion) and lowest false alarm rates across practical web and social media inputs.</p>
         </div>
 
         <div style="margin-bottom: 24px;">
@@ -463,12 +460,12 @@ const DOC_CONTENTS = {
 
         <div style="margin-bottom: 24px;">
           <strong style="color: var(--brass-hi); font-size: 16px;">Master Unified Ensemble (1.82B Params, 11 Models)</strong>
-          <p style="font-size: 13px; color: #b0aa9c; margin: 4px 0 0;">Compiled all 11 constituent teachers into a 3.47 GB sequential pipeline. High accuracy (56.8%) but heavy latency (1,252 ms) and excessive memory overhead.</p>
+          <p style="font-size: 13px; color: #b0aa9c; margin: 4px 0 0;">Compiled all 11 constituent teachers into a 3.47 GB sequential pipeline. Highly comprehensive but heavy compute overhead (1,252 ms).</p>
         </div>
 
         <div>
-          <strong style="color: var(--brass-hi); font-size: 16px;">Final Standalone Distilled Student (96.59M Params) ⭐</strong>
-          <p style="font-size: 13px; color: #b0aa9c; margin: 4px 0 0;">Distilled the knowledge of all 11 teachers into a single ConvNeXt-Base + SRM + FPN neural network. <strong>100% standalone</strong>, runs in <strong>17.1 ms (73x faster)</strong>, occupies 184 MB FP16 / 92 MB INT8, with superior real-photo specificity.</p>
+          <strong style="color: #e5a970; font-size: 16px;">Experimental Distilled Student (96.59M Params) [Research Prototype]</strong>
+          <p style="font-size: 13px; color: #b0aa9c; margin: 4px 0 0;">Attempted distillation of all teachers into ConvNeXt-Base + SRM. While fast (17.1 ms), empirical testing proved it suffered significant capacity loss and underperformed Model C0 on complex real-world prompts.</p>
         </div>
       </div>
     </div>
@@ -477,7 +474,7 @@ const DOC_CONTENTS = {
   releases: `
     <div style="font-family: var(--system); color: var(--ivory); line-height: 1.75;">
       <h1 style="font-family: var(--condensed); font-size: 36px; color: var(--ivory); margin: 0 0 16px; letter-spacing: 1px;">OFFICIAL MODEL RELEASES &amp; DOWNLOADS</h1>
-      <p style="font-size: 15px; color: #c5beaf; margin-bottom: 16px;">All models are verified, tested, and cataloged. Click below to download weights directly for local execution:</p>
+      <p style="font-size: 15px; color: #c5beaf; margin-bottom: 16px;">All models are cataloged below. Click any download link to retrieve weights directly:</p>
 
       <div style="overflow-x: auto; margin-bottom: 24px;">
         <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; background: rgba(0,0,0,0.3); border: 1px solid rgba(212, 175, 55, 0.2);">
@@ -492,67 +489,17 @@ const DOC_CONTENTS = {
             </tr>
           </thead>
           <tbody>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">HighCap Distilled (INT8) ⚡</td>
-              <td style="padding: 10px;">96.59M</td>
-              <td style="padding: 10px; color: var(--brass-hi);">INT8</td>
-              <td style="padding: 10px;">92.5 MB</td>
-              <td style="padding: 10px;">7.5 ms</td>
-              <td style="padding: 10px;">
-                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/raw/main/checkpoints/distilled/highcap_distilled_forensic_model_int8.pt" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
-              </td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">HighCap Distilled (FP16) ⭐</td>
-              <td style="padding: 10px;">96.59M</td>
-              <td style="padding: 10px; color: var(--brass-hi);">FP16</td>
-              <td style="padding: 10px;">184.4 MB</td>
-              <td style="padding: 10px;">17.1 ms</td>
-              <td style="padding: 10px;">
-                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
-              </td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">HighCap Distilled (FP32)</td>
-              <td style="padding: 10px;">96.59M</td>
-              <td style="padding: 10px; color: var(--brass-hi);">FP32</td>
-              <td style="padding: 10px;">368.6 MB</td>
-              <td style="padding: 10px;">26.9 ms</td>
-              <td style="padding: 10px;">
-                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(255, 255, 255, 0.1); border: 1px solid #888; border-radius: 3px; color: #ccc; text-decoration: none; font-size: 11px;">DOWNLOAD (.PT)</a>
-              </td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">UltraLight Distilled (FP16)</td>
-              <td style="padding: 10px;">4.67M</td>
-              <td style="padding: 10px; color: var(--brass-hi);">FP16</td>
-              <td style="padding: 10px;">8.97 MB</td>
-              <td style="padding: 10px;">2.2 ms</td>
-              <td style="padding: 10px;">
-                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/raw/main/checkpoints/distilled/master_distilled_forensic_model_fp16.pt" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
-              </td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">UltraLight Distilled (INT8)</td>
-              <td style="padding: 10px;">4.67M</td>
-              <td style="padding: 10px; color: var(--brass-hi);">INT8</td>
-              <td style="padding: 10px;">4.82 MB</td>
-              <td style="padding: 10px;">1.8 ms</td>
-              <td style="padding: 10px;">
-                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/raw/main/checkpoints/distilled/master_distilled_forensic_model_int8.pt" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">Model C0 (Triple-Hybrid Champion)</td>
-              <td style="padding: 10px;">735.0M</td>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(212, 175, 55, 0.08);">
+              <td style="padding: 10px; font-weight: 600; color: var(--brass-hi);">Model C0 (Triple-Hybrid Champion) ⭐</td>
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">735.0M</td>
               <td style="padding: 10px; color: var(--brass-hi);">FP32</td>
               <td style="padding: 10px;">1,470 MB</td>
               <td style="padding: 10px;">45.0 ms</td>
               <td style="padding: 10px;">
-                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--brass-hi); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px; font-weight: 600;">DOWNLOAD (.PT)</a>
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 5px 12px; background: var(--brass-hi); border-radius: 3px; color: #000; text-decoration: none; font-size: 11px; font-weight: 700;">DOWNLOAD (.PT) ⭐</a>
               </td>
             </tr>
-            <tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
               <td style="padding: 10px; font-weight: 600; color: var(--ivory);">Master Unified Teacher Ensemble</td>
               <td style="padding: 10px;">1,818.5M</td>
               <td style="padding: 10px; color: var(--brass-hi);">FP16</td>
@@ -562,19 +509,49 @@ const DOC_CONTENTS = {
                 <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(255, 255, 255, 0.1); border: 1px solid #888; border-radius: 3px; color: #ccc; text-decoration: none; font-size: 11px;">DOWNLOAD (.PT)</a>
               </td>
             </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: #c5beaf;">HighCap Distilled (INT8) [Experimental]</td>
+              <td style="padding: 10px;">96.59M</td>
+              <td style="padding: 10px; color: var(--brass-hi);">INT8</td>
+              <td style="padding: 10px;">92.5 MB</td>
+              <td style="padding: 10px;">7.5 ms</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/raw/main/checkpoints/distilled/highcap_distilled_forensic_model_int8.pt" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.15); border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px;">DOWNLOAD (.PT)</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: #c5beaf;">HighCap Distilled (FP16) [Experimental]</td>
+              <td style="padding: 10px;">96.59M</td>
+              <td style="padding: 10px; color: var(--brass-hi);">FP16</td>
+              <td style="padding: 10px;">184.4 MB</td>
+              <td style="padding: 10px;">17.1 ms</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/releases" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(212, 175, 55, 0.15); border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 3px; color: var(--brass-hi); text-decoration: none; font-size: 11px;">DOWNLOAD (.PT)</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">UltraLight Distilled (FP16) [Edge]</td>
+              <td style="padding: 10px;">4.67M</td>
+              <td style="padding: 10px; color: var(--brass-hi);">FP16</td>
+              <td style="padding: 10px;">8.97 MB</td>
+              <td style="padding: 10px;">2.2 ms</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/raw/main/checkpoints/distilled/master_distilled_forensic_model_fp16.pt" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(255, 255, 255, 0.1); border: 1px solid #888; border-radius: 3px; color: #ccc; text-decoration: none; font-size: 11px;">DOWNLOAD (.PT)</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; font-weight: 600; color: var(--ivory);">UltraLight Distilled (INT8) [Edge]</td>
+              <td style="padding: 10px;">4.67M</td>
+              <td style="padding: 10px; color: var(--brass-hi);">INT8</td>
+              <td style="padding: 10px;">4.82 MB</td>
+              <td style="padding: 10px;">1.8 ms</td>
+              <td style="padding: 10px;">
+                <a href="https://github.com/manansethia/ENTROPY-Track5-TikTokTechJam/raw/main/checkpoints/distilled/master_distilled_forensic_model_int8.pt" target="_blank" style="display: inline-block; padding: 4px 10px; background: rgba(255, 255, 255, 0.1); border: 1px solid #888; border-radius: 3px; color: #ccc; text-decoration: none; font-size: 11px;">DOWNLOAD (.PT)</a>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
-
-      <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">HOW TO LOAD IN PYTHON (3 LINES)</h2>
-      <pre style="background: rgba(0,0,0,0.5); padding: 14px; border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 4px; font-family: var(--mono); font-size: 12px; color: var(--ivory); overflow-x: auto;">
-import torch
-from scripts.final.highcap_distilled_forensic_model import HighCapacityStudentForensicModel
-
-model = HighCapacityStudentForensicModel().eval().cuda().half()
-ckpt = torch.load("checkpoints/distilled/highcap_distilled_forensic_model_int8.pt")
-model.load_state_dict(ckpt["model_state_dict"])
-out = model(image_tensor_224) # Returns class_logits, probabilities, segmentation_heatmap</pre>
     </div>
   `,
 
@@ -589,7 +566,7 @@ out = model(image_tensor_224) # Returns class_logits, probabilities, segmentatio
 # Single Image Evaluation
 python infer.py \
   --image test_inputs/sample.jpg \
-  --checkpoint checkpoints/distilled/highcap_distilled_forensic_model_int8.pt \
+  --checkpoint checkpoints/production/final_champion_frozen_model.pt \
   --device cuda
 
 # Batch Directory Evaluation with Full Forensic Metadata
@@ -630,12 +607,12 @@ python predict.py \
             </tr>
           </thead>
           <tbody>
-            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <td style="padding: 10px; font-weight: 600; color: var(--brass-hi);">C0 (Champion Anchor)</td>
-              <td style="padding: 10px;">CLIP ViT-L/14 + ConvNeXt</td>
-              <td style="padding: 10px;">Generalist Full-AIGC</td>
-              <td style="padding: 10px;">Combines macro-semantic realism with SRM wavelet residual features.</td>
-              <td style="padding: 10px; color: #ff9999;">Misses localized inpainting covering &lt;5% of image canvas.</td>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(212, 175, 55, 0.08);">
+              <td style="padding: 10px; font-weight: 600; color: var(--brass-hi);">C0 (Champion Anchor) ⭐</td>
+              <td style="padding: 10px;">CLIP ViT-L/14 + SigLIP + SRM (735M)</td>
+              <td style="padding: 10px; color: var(--brass-hi); font-weight: 600;">ACTIVE PRODUCTION CHAMPION</td>
+              <td style="padding: 10px;">Combines deep semantic realism with SRM wavelet residual features. Top empirical accuracy (98.9% on diffusion).</td>
+              <td style="padding: 10px; color: #9fe2bf;">Highest empirical reliability; higher VRAM usage (~2.8 GB) than edge prototypes.</td>
             </tr>
             <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
               <td style="padding: 10px; font-weight: 600; color: var(--brass-hi);">C1 (Portrait Remediation)</td>
@@ -673,11 +650,11 @@ python predict.py \
               <td style="padding: 10px; color: #ff9999;">Used default ImageNet backbone weights in research prototype.</td>
             </tr>
             <tr>
-              <td style="padding: 10px; font-weight: 600; color: #9fe2bf;">HighCap Distilled (96M) ⭐</td>
+              <td style="padding: 10px; font-weight: 600; color: #e5a970;">HighCap Distilled (96M) [Experimental]</td>
               <td style="padding: 10px;">ConvNeXt-Base + SRM + FPN</td>
-              <td style="padding: 10px;">All-in-One Standalone</td>
-              <td style="padding: 10px;">Distilled across all 11 teachers; 17.1 ms latency, 50% lower false positive rate.</td>
-              <td style="padding: 10px; color: #9fe2bf;">None (Current recommended production model).</td>
+              <td style="padding: 10px;">Compact Edge Prototype</td>
+              <td style="padding: 10px;">Distillation compressed 11 teachers into 96M parameters for fast inference (17.1 ms).</td>
+              <td style="padding: 10px; color: #ff9999;">Severe distillation capacity loss; poor real-world sensitivity; underperforms C0 Champion.</td>
             </tr>
           </tbody>
         </table>
@@ -715,10 +692,10 @@ python predict.py \
 
       <h2 style="font-family: var(--condensed); font-size: 24px; color: var(--brass-hi); margin: 28px 0 10px;">4. SUMMARY: WHEN TO USE WHICH MODEL</h2>
       <ul style="font-size: 14px; color: #b0aa9c; padding-left: 20px; line-height: 1.8;">
-        <li><strong>Web Application / Server Deployment</strong>: Use <strong>HighCap_96M_FP16</strong> (184 MB, 17.1 ms, standalone) or the live <strong>C0 Triple-Hybrid</strong> (735M).</li>
-        <li><strong>Edge / Low-Memory Server</strong>: Use <strong>HighCap_96M_INT8</strong> (92.5 MB, 7.5 ms).</li>
-        <li><strong>IoT / Mobile Client Device</strong>: Use <strong>UltraLight_4M_INT8</strong> (4.8 MB, 1.8 ms).</li>
-        <li><strong>Forensic Research &amp; Benchmark Audit</strong>: Use <strong>MasterUnified_1.82B_FP16</strong> (11-teacher ensemble).</li>
+        <li><strong>Primary Production Deployment (Recommended) ⭐</strong>: Use <strong>Model C0 Triple-Hybrid Champion</strong> (735M params, OpenAI CLIP + Google SigLIP + SRM Wavelet) for maximum forensic reliability and real-world accuracy.</li>
+        <li><strong>Experimental Compact Student (Research Only)</strong>: <strong>HighCap 96M</strong> was an experimental distillation attempt into ConvNeXt-Base; it provides fast edge speeds but suffers substantial accuracy and sensitivity degradation on diverse prompts.</li>
+        <li><strong>Micro-Device Edge Fallback</strong>: Use <strong>UltraLight 4.67M</strong> (4.8 MB INT8, 1.8 ms) for embedded/IoT sensors.</li>
+        <li><strong>Master Research Benchmark</strong>: Use <strong>MasterUnified 1.82B</strong> for 11-teacher offline ablation studies.</li>
       </ul>
     </div>
   `
