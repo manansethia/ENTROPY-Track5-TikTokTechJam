@@ -1,8 +1,8 @@
 """
 server/forensic_adapter.py
 Pluggable Forensic Model Adapter Architecture.
-Restored Production Engine: Model C0 (Triple-Hybrid Champion ~735M Parameters).
-Architecture: OpenAI CLIP ViT-L/14 + Google SigLIP SO400M + SRM Wavelet Residual Head.
+Production Engine: Model C0 (Triple-Hybrid Champion ~735M Parameters).
+With neural SRM residual heatmap extraction directly from model filter banks.
 """
 
 import os
@@ -10,10 +10,11 @@ import sys
 import time
 import io
 import platform
+import base64
 from abc import ABC, abstractmethod
 from pathlib import Path
-from typing import Dict, Any, List, Union, Optional
-from PIL import Image
+from typing import Dict, Any, List, Union, Optional, Tuple
+from PIL import Image, ImageFilter
 import numpy as np
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -57,7 +58,7 @@ class TripleHybridChampionAdapter(ForensicModelAdapter):
     """
     Primary Production Adapter: Triple-Hybrid Champion Model (~735M Parameters).
     Architecture: OpenAI CLIP ViT-L/14 + Google SigLIP SO400M + Deterministic SRM Wavelet Residual + Bottleneck Fusion.
-    Runs in full acceleration mode on Linux/GPU.
+    Runs in full acceleration mode on Linux/GPU with direct SRM feature map heatmap extraction.
     """
 
     def __init__(self, checkpoint_path: Optional[str] = None, device: Optional[str] = None):
@@ -120,6 +121,63 @@ class TripleHybridChampionAdapter(ForensicModelAdapter):
             print(f"[ForensicAdapter] Notice during model load: {e}")
             self._init_lightweight_client_mode()
 
+    def _build_model_c0_heatmap(self, srm_tensor_224: np.ndarray, orig_w: int, orig_h: int) -> Tuple[str, List[Dict[str, Any]], float]:
+        """
+        Builds a smooth, accurate continuous heatmap overlay directly from Model C0 SRM residual maps.
+        """
+        import cv2
+
+        # 1. Normalize SRM map to [0, 1] using robust percentile scaling
+        p_min = np.percentile(srm_tensor_224, 2)
+        p_max = np.percentile(srm_tensor_224, 98)
+        norm_map = np.clip((srm_tensor_224 - p_min) / (p_max - p_min + 1e-6), 0.0, 1.0)
+
+        # 2. Smooth map with 2D Gaussian filter
+        blurred = cv2.GaussianBlur(norm_map, (7, 7), 2.0)
+        
+        # 3. Resize to 384x384 canvas
+        canvas_size = (384, 384)
+        resized = cv2.resize(blurred, canvas_size, interpolation=cv2.INTER_CUBIC)
+        resized = np.clip(resized, 0.0, 1.0)
+
+        # 4. Compute affected area percentage
+        threshold = 0.58
+        affected_pixels = np.sum(resized > threshold)
+        affected_area_pct = float((affected_pixels / resized.size) * 100.0)
+
+        # 5. Extract localized bounding boxes
+        suspicious_boxes = []
+        binary_mask = (resized > threshold).astype(np.uint8) * 255
+        contours, _ = cv2.findContours(binary_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        scale_x = orig_w / canvas_size[0]
+        scale_y = orig_h / canvas_size[1]
+        
+        for cnt in contours:
+            if cv2.contourArea(cnt) > 300:
+                x, y, w, h = cv2.boundingRect(cnt)
+                box_conf = float(np.mean(resized[y:y+h, x:x+w]))
+                suspicious_boxes.append({
+                    "box_2d": [int(y * scale_y), int(x * scale_x), int((y + h) * scale_y), int((x + w) * scale_x)],
+                    "confidence": round(box_conf, 4),
+                    "label": "Manipulated_AIGC_Region"
+                })
+
+        # 6. Build high-contrast Jet/Turbo colormap with adaptive alpha
+        rgba = np.zeros((canvas_size[1], canvas_size[0], 4), dtype=np.uint8)
+        uint8_map = (resized * 255.0).astype(np.uint8)
+        color_bgr = cv2.applyColorMap(uint8_map, cv2.COLORMAP_JET)
+        color_rgb = cv2.cvtColor(color_bgr, cv2.COLOR_BGR2RGB)
+
+        rgba[..., 0:3] = color_rgb
+        # Dynamic alpha: low on cool background (~30-50), high on anomalous regions (~180-210)
+        alpha = np.clip(30 + (resized ** 1.5) * 180.0, 25, 215).astype(np.uint8)
+        rgba[..., 3] = alpha
+
+        heatmap_pil = Image.fromarray(rgba, mode="RGBA")
+        heatmap_b64 = pil_to_base64(heatmap_pil)
+
+        return heatmap_b64, suspicious_boxes, round(affected_area_pct, 1)
+
     def predict(
         self,
         image_input: Union[Image.Image, bytes, str],
@@ -148,6 +206,8 @@ class TripleHybridChampionAdapter(ForensicModelAdapter):
         else:
             raise ValueError(f"Unsupported image input type: {type(image_input)}")
 
+        orig_w, orig_h = pil_img.size
+
         # 2. Metadata & Provenance Stage
         timeline.append({"stage": "METADATA", "timestamp": time.strftime("%H:%M:%S"), "detail": "Extracted EXIF, XMP, IPTC & C2PA markers"})
         meta_prov = inspect_image_provenance_full(image_bytes, filename=filename)
@@ -163,13 +223,26 @@ class TripleHybridChampionAdapter(ForensicModelAdapter):
 
         try:
             import torch
+            import torch.nn.functional as F
             from deployment.portable_model import portable_eval_transform
             tensor = portable_eval_transform(pil_img).unsqueeze(0).to(self.device_str)
             with torch.no_grad():
                 logits = self.model(tensor)
                 raw_logit = float(logits[0].item() if isinstance(logits, tuple) else logits.item())
+                
+                # Extract neural SRM residual map directly from Model C0 filter bank
+                filters = self.model.srm_extractor.filters.to(dtype=tensor.dtype, device=tensor.device)
+                srm_res = F.conv2d(tensor, filters, padding=2)
+                srm_map = torch.abs(srm_res).mean(dim=1).squeeze(0).cpu().numpy()
+
             calibrated_logit = raw_logit / self.temperature
             prob_aigc = float(1.0 / (1.0 + np.exp(-calibrated_logit)))
+            
+            # Build high-fidelity Model C0 heatmap
+            heatmap_b64, suspicious_boxes, affected_area = self._build_model_c0_heatmap(srm_map, orig_w, orig_h)
+            spatial_evidence["artifacts"]["heatmap_overlay_base64"] = heatmap_b64
+            spatial_evidence["affected_area_percentage"] = affected_area
+
         except Exception as error:
             raise RuntimeError("MODEL_INFERENCE_FAILED: no forensic verdict was produced.") from error
 
@@ -179,8 +252,6 @@ class TripleHybridChampionAdapter(ForensicModelAdapter):
         # 6. Verdict Classification Stage
         timeline.append({"stage": "VERDICT", "timestamp": time.strftime("%H:%M:%S"), "detail": "Multi-tier decision gating finalized"})
 
-        affected_area = spatial_evidence.get("affected_area_percentage", 0.0)
-        
         if prob_aigc >= 0.78:
             verdict = "FULL_AIGC"
             verdict_label = "FULL-AIGC"
@@ -233,7 +304,8 @@ class TripleHybridChampionAdapter(ForensicModelAdapter):
                 "PARTIAL_AIGC": round(partial_prob, 4),
                 "FULL_AIGC": round(full_prob, 4)
             },
-            "affected_area_percentage": round(affected_area, 1),
+            "affected_area_percentage": affected_area,
+            "suspicious_regions": suspicious_boxes,
             "operating_mode": operating_mode,
             "model_metadata": {
                 "name": self.metadata.get("model_name", "Triple-Hybrid Champion"),
